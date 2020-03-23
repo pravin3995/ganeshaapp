@@ -42,12 +42,11 @@ const useStyles  =  makeStyles((theme: Theme)  =>
 export default function ReceiptDetails() {
   const classes  =  useStyles()
   return (
-    <div>
-			  <Card className = 'receipt-main-card'> 
+     <div>
 			    <h2 className='h1-title t-center'> My Receipt </h2>
-            <CardContent  >  
+            <CardContent className='pt-0' >  
               <Grid spacing={2} style={style.AlignMent} >
-              <Grid item xs={12} sm={8} md={6} lg={4}>        
+                 <Grid item xs={12} sm={8} md={6} lg={4}>        
                   <Card>
                   <CardContent>
                   <Box className='receipt-icon-b-border' pt={3} pb={3}>
@@ -111,7 +110,7 @@ export default function ReceiptDetails() {
                       </Grid>
                     </Grid>
                   </Box>
-                  <Box pt={4}>
+                  <Box pt={3}>
                     <Typography variant="h4" className='f-bold t-center'>
                       Thank You!
                     </Typography>
@@ -119,9 +118,8 @@ export default function ReceiptDetails() {
                   </CardContent>
                 </Card>
               </Grid>
-           </Grid>
+              </Grid>
             </CardContent>
-        </Card>
 			</div>
   )
 }

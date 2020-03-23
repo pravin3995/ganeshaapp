@@ -31,8 +31,13 @@ const useStyles = makeStyles((theme: Theme) =>
     grow: {
       flexGrow: 1,
     },
+    ProfileSize:{
+        width:'28px',
+        height:'28px',
+        marginRight:'8px'
+    },
     menuButton: {
-      marginRight: theme.spacing(2),
+      // marginRight: theme.spacing(2),
     },
     title: {
       display: 'none',
@@ -75,18 +80,18 @@ const useStyles = makeStyles((theme: Theme) =>
         width: 200,
       },
     },
-    sectionDesktop: {
-      display: 'none',
-      [theme.breakpoints.up('md')]: {
-        display: 'flex',
-      },
-    },
-    sectionMobile: {
-      display: 'flex',
-      [theme.breakpoints.up('md')]: {
-        display: 'none',
-      },
-    },
+    // sectionDesktop: {
+    //   display: 'none',
+    //   [theme.breakpoints.up('md')]: {
+    //     display: 'flex',
+    //   },
+    // },
+    // sectionMobile: {
+    //   display: 'flex',
+    //   [theme.breakpoints.up('md')]: {
+    //     display: 'none',
+    //   },
+    // },
     Notification:{
         display:'flex',
         justifyContent:'space-between',
@@ -106,7 +111,8 @@ const useStyles = makeStyles((theme: Theme) =>
     time :{
         fontSize:12,
         color:'gray'
-    }
+    },
+    
   }),
 );
 
@@ -284,24 +290,13 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
+          <Avatar className={classes.ProfileSize}>H</Avatar>
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            Ganesha App
           </Typography>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
+    
           <div className={classes.grow} />
-          <div className={classes.sectionDesktop}>
+          <div >
             {/* <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
@@ -329,7 +324,7 @@ export default function PrimarySearchAppBar() {
               <AccountCircle />
             </IconButton>
           </div>
-          <div className={classes.sectionMobile}>
+          {/* <div className={classes.sectionMobile}>
             <IconButton
               aria-label="show more"
               aria-controls={mobileMenuId}
@@ -339,7 +334,7 @@ export default function PrimarySearchAppBar() {
             >
               <MoreIcon />
             </IconButton>
-          </div>
+          </div> */}
         </Toolbar>
       </AppBar>
       {renderMobileMenu}

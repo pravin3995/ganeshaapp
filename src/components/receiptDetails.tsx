@@ -9,15 +9,13 @@ import Grid, { GridSpacing } from '@material-ui/core/Grid'
 export default function Receipt() {
   return (
     <div >
-
-      <Card className = 'receipt-main-card'>
         <Grid container  >
            <Grid item xs={12} md={6} lg={4}>
-              <CardContent>
+              <CardContent className='pt-0 pb-0'>
               <h2> 2020 </h2>
               <Link to='/details' className= 'text-decoration-none'>
                 <Card>
-                  <CardContent className= 'p-relative'>
+                  <CardContent className= 'p-relative '>
                     <AppleIcon className='apple-icon'/>
                       <Typography> 
                         <Box mt={1} mb={1}>
@@ -51,7 +49,7 @@ export default function Receipt() {
             </CardContent>
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <CardContent>
+              <CardContent className='pt-0 pb-0'>
               <h2> 2019 </h2>
               <Link to='/details' className= 'text-decoration-none'>
                 <Card>
@@ -89,8 +87,8 @@ export default function Receipt() {
             </CardContent>
             </Grid>
             <Grid item xs={12} md={6} lg={4}>
-              <CardContent>
-        <h2> 2018 </h2>
+              <CardContent className='pt-0'>
+                <h2> 2018 </h2>
         <Link to='/details' className= 'text-decoration-none'>
           <Card>
             <CardContent className= 'p-relative'>
@@ -127,12 +125,7 @@ export default function Receipt() {
       </CardContent>
              </Grid>
         </Grid>
-    </Card>
-
-    <div>
-      
-    </div>
-    </div>
+  </div>
     
     
     )
