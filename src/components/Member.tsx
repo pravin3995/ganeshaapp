@@ -97,14 +97,14 @@ export default function Member() {
   return (
     <div>
         <Card  variant = 'outlined' className='receipt-main-card'>
-			<CardContent>	
-				<CardContent >
-					<Box display="flex" alignItems="center" justifyContent="space-between">
-						<span className='h1-title'>
+			<CardContent  className='pb-0'>	
+				<CardContent className='pt-0 pb-0' >
+					<Box display="flex" alignItems="center" flexWrap='wrap' justifyContent="space-between">
+						<div className='h1-title mb-10'>
 							Members
-						</span>
+						</div>
 						<Box display='flex' alignItems='center'>
-							<SearchIcon />
+							<SearchIcon className='mr-10' />
 							<Button variant="contained" className={classes.button}> Add Member </Button>		
 						</Box>
 					</Box>
@@ -118,18 +118,18 @@ export default function Member() {
 								<Box className="delete-dialogbox">	
 									<DeleteIcon  onClick={handleClickOpen} />								
 									<Dialog className="delete-popup" onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-										<DialogTitle id="customized-dialog-title" onClose={handleClose}>
+										<DialogTitle id="customized-dialog-title" onClose={handleClose} >
 											Delete Member
 										</DialogTitle>
 										<DialogContent >
-											<Typography gutterBottom style={{fontWeight: 500 , fontSize: '13px' , textAlign: 'center'}}>
+											<Typography gutterBottom style={{fontWeight: 500,margin:0 , fontSize: '13px' , textAlign: 'center'}}>
 												Are you sure you want to remove this member ?
 											</Typography>
 											<CardContent >	
-												<Card className='t-center'>
+												<Card className='t-center b-radius'>
 													<CardContent>
-													<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo' />	
-													<Typography style={{color: 'black' ,fontWeight: 500 , fontSize: '20px', paddingTop: '10px'}}> Abhijit Jachak </Typography>
+													<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo mb-10' />	
+													<Typography style={{color: 'black' ,fontWeight: 500 , fontSize: '20px', paddingTop: '10px'}}> Yogesh Jadhav </Typography>
 													<Box className='label t-center' mb={2}> President </Box>
 													<Button variant = 'contained' className={classes.button}> 
 														Follow
@@ -158,9 +158,9 @@ export default function Member() {
 										</DialogTitle>
 									
 										<DialogContent >
-											<span className='member-photo t-center'  >
+											<p className='member-photo t-center f-14 m-0'  >
 												Are you sure you want to edit this member ?
-											</span>
+											</p>
 											<CardContent >			
 												<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg' className='member-photo' />	
 												<Box mt={2} mb={2}>
@@ -187,9 +187,9 @@ export default function Member() {
 								</Box>
 							</Box>
 							<Box className='t-center' >
-								<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo' />
-								<Typography variant='h6'> Abhijit Jachak </Typography>
-								<Box className='label' mb={2}> President </Box>
+								<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo mb-10' />
+								<Typography variant='h6' > Abhijit Jachak </Typography>
+									<Box className='label' mb={2}> President </Box>
 								<Button variant = 'contained' className={classes.button}> 
 									Follow
 								</Button> 
@@ -214,10 +214,10 @@ export default function Member() {
 												Are you sure you want to remove this member ?
 											</Typography>
 											<CardContent >	
-												<Card className='t-center'>
+												<Card className='t-center b-radius'>
 													<CardContent>
-													<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo' />	
-													<Typography style={{color: 'black' ,fontWeight: 500 , fontSize: '20px', paddingTop: '10px'}}> Abhijit Jachak </Typography>
+													<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo mb-10' />	
+													<Typography style={{color: 'black' ,fontWeight: 500 , fontSize: '20px', paddingTop: '10px'}}> Akshay </Typography>
 													<Box className='label t-center' mb={2}> President </Box>
 													<Button variant = 'contained' className={classes.button}> 
 														Follow
@@ -246,9 +246,9 @@ export default function Member() {
 										</DialogTitle>
 									
 										<DialogContent >
-											<span className='member-photo t-center'  >
+											<p className='member-photo t-center f-14 m-0'  >
 												Are you sure you want to edit this member ?
-											</span>
+											</p>
 											<CardContent >			
 												<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg' className='member-photo' />	
 												<Box mt={2} mb={2}>
@@ -275,7 +275,7 @@ export default function Member() {
 								</Box>
 							</Box>
 							<Box className='t-center' >
-								<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo' />
+								<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo mb-10' />
 								<Typography variant='h6'> Abhijit Jachak </Typography>
 								<Box className='label' mb={2}> President </Box>
 								<Button variant = 'contained' className={classes.button}> 

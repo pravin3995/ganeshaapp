@@ -78,7 +78,7 @@ export default function ReceiptDetails() {
                   <Box className='receipt-icon-b-border'> 
                     <Grid container spacing = {3}>
                       <Grid item xs = {6}>
-                        <Box mt={3} mb={2}> 
+                        <Box mt={2} mb={2}> 
                           <span className='label d-block
                           '> Receipt Number: </span>
                           <span className='f-bold'> #002 </span>

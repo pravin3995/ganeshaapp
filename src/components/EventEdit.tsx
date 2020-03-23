@@ -73,15 +73,14 @@ export default function Eventedit() {
 
   return (
 		<div className='add-edit-event'>		
-		  <Card className = 'receipt-main-card'>
-			<CardContent >
+		  	<CardContent >
 				<span  className='h1-title'>
 					Add / Edit Event
 				</span>			
 
 				</CardContent>
         
-        <CardContent>
+        <CardContent className='pt-0'>
           <Card>
             <CardContent>
             <Grid container spacing={3}>
@@ -170,7 +169,6 @@ export default function Eventedit() {
           </Card>
        
         </CardContent>
-    	</Card>
 		</div>
   )
 }

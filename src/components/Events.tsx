@@ -81,147 +81,145 @@ export default function EventPage() {
     setOpen(false);
   };
   return (
-		<div className='receipt-main-card events-page'>	
-			<div>
-				<Card className='receipt-main-card'>
-					<CardContent>
-						<Box display='flex' justifyContent='space-between' alignItems='center'>
-							<Box>
-								<Typography>
-									<span className='h1-title'>Events</span>
-								</Typography>
-							</Box>
-
-							<Box display='flex' alignContent='center' > 
-								<Box mr={2}>
-								<ButtonGroup size='small' variant="contained" color="primary" ref={anchorRef} aria-label="split button">
-									<Button onClick={handleClick}>{options[selectedIndex]}</Button>
-									<Button
-										color="primary"
-										size="small"
-										aria-controls={open ? 'split-button-menu' : undefined}
-										aria-expanded={open ? 'true' : undefined}
-										aria-label="select merge strategy"
-										aria-haspopup="menu"
-										onClick={handleToggle}
-										>
-										<ArrowDropDownIcon />
-									</Button>
-								</ButtonGroup>	
-
-								<Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
-									{({ TransitionProps, placement }) => (
-										<Grow
-										{...TransitionProps}
-										style={{
-												transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom',
-											}}
-										>
-										<Paper>
-											<ClickAwayListener onClickAway={handleClose}>
-											<MenuList id="split-button-menu">
-												{options.map((option, index) => (
-													<MenuItem
-														key={option}
-														selected={index === selectedIndex}
-														onClick={event => handleMenuItemClick(event, index)}
-													>
-														{option}
-													</MenuItem>
-												))}
-											</MenuList>
-										</ClickAwayListener>
-										</Paper>
-										</Grow>
-									)}
-								</Popper>
-							</Box>
-
-								<Box>
-									<Button variant = 'contained' className={classes.button} size="small"> Add New Event </Button>
-								</Box>
-							</Box>
-						</Box>
-					</CardContent>
-						<Grid container className={classes.root} spacing={2}>
-      					  	<Grid item xs={12} md={6}>								
-								<CardContent>
-						<Box mb = {1} className='f-w-500'>
-						Upcoming Events
+	<div className=' events-page'>	
+		<div>
+			<CardContent>
+				<Box display='flex' justifyContent='space-between' flexWrap='wrap' alignItems='center'>
+					<Box>
+						<Typography className='mb-10'>
+							<span className='h1-title'>Events</span>
+						</Typography>
 					</Box>
-						<Card>
-						<CardContent>
-							<Grid container>
-								<Grid item xs={12}>
-									<span className='label'>
-										Feb 27,2020
-									</span>
-									<Typography variant = 'h6' component = 'h2' gutterBottom >
-										Ganesh Chaturthi
-									</Typography>
-									<Box mb={2} className='ganesh-chathurti-description'> 
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-											Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-									</Box>
 
-									<Box className="mandal-premises">
-										<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
-											<LocationOnIcon />
-											<span >Mandal Premises </span>
-										</Link>
-									</Box>
-								</Grid>		
-							</Grid>
-						</CardContent>
-					</Card>
-						<Box mt={1} className='t-right'>
-							<Button href='/events' size='small' target='_bank' className={classes.button}>
-								See All Recent Events
+					<Box display='flex' alignContent='center' > 
+						<Box mr={2}>
+						<ButtonGroup size='small' variant="contained" color="primary" ref={anchorRef} aria-label="split button">
+							<Button onClick={handleClick}>{options[selectedIndex]}</Button>
+							<Button
+								color="primary"
+								size="small"
+								aria-controls={open ? 'split-button-menu' : undefined}
+								aria-expanded={open ? 'true' : undefined}
+								aria-label="select merge strategy"
+								aria-haspopup="menu"
+								onClick={handleToggle}
+								>
+								<ArrowDropDownIcon />
 							</Button>
-						</Box>
-					</CardContent>
-							</Grid>
-						
-							<Grid item xs={12} md={6}>
-								<CardContent>
-					<Box mb = {1} className='f-w-500'>
-						Recent Events
-					</Box>
-					<Card>
-						<CardContent>
-							<Grid container>
-								<Grid item xs={12}>
-									<span className='label'>
-										Feb 27,2020
-									</span>
-									<Typography variant = 'h6' component = 'h2' gutterBottom >
-										Ganesh Chaturthi
-									</Typography>
-									<Box mb={2} className='ganesh-chathurti-description'> 
-											Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-											Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-									</Box>
+						</ButtonGroup>	
 
-									<Box className="mandal-premises">
-										<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
-											<LocationOnIcon />
-											<span >Mandal Premises </span>
-										</Link>
-									</Box>
-								</Grid>		
-							</Grid>
-						</CardContent>
-					</Card>
-					<Box mt={1} className='t-right'>
-						<Button href='/events' size='small' target='_bank' className={classes.button}>
-							See All Upcoming Events
-						</Button>
+						<Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+							{({ TransitionProps, placement }) => (
+								<Grow
+								{...TransitionProps}
+								style={{
+										transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom',
+									}}
+								>
+								<Paper>
+									<ClickAwayListener onClickAway={handleClose}>
+									<MenuList id="split-button-menu">
+										{options.map((option, index) => (
+											<MenuItem
+												key={option}
+												selected={index === selectedIndex}
+												onClick={event => handleMenuItemClick(event, index)}
+											>
+												{option}
+											</MenuItem>
+										))}
+									</MenuList>
+								</ClickAwayListener>
+								</Paper>
+								</Grow>
+							)}
+						</Popper>
 					</Box>
+
+						<Box>
+							<Button variant = 'contained' className={classes.button} size="small"> Add New Event </Button>
+						</Box>
+					</Box>
+				</Box>
+			</CardContent>
+				<Grid container >
+					<Grid item xs={12} md={6}>								
+						<CardContent className='pb-0'>
+							<Box mb = {1} className='f-w-500'>
+								Upcoming Events
+							</Box>
+							<Card>
+								<CardContent >
+						<Grid container>
+						  <Grid item xs={12}>
+							<span className='label'>
+								Feb 27,2020
+							</span>
+							<Typography variant = 'h6' component = 'h2' gutterBottom >
+								Ganesh Chaturthi
+							</Typography>
+							<Box mb={2} className='ganesh-chathurti-description'> 
+									Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+							</Box>
+
+							<Box className="mandal-premises">
+								<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
+									<LocationOnIcon />
+									<span >Mandal Premises </span>
+								</Link>
+							</Box>
+						</Grid>		
+					</Grid>
 				</CardContent>
-							</Grid>	
-						</Grid>	
-			</Card>  	
+							</Card>
+							<Box mt={1} className='t-right'>
+								<Button href='/events' size='small' target='_bank' className={classes.button}>
+									See All Recent Events
+								</Button>
+							</Box>
+						</CardContent>
+					</Grid>
+				
+					<Grid item xs={12} md={6}>
+						<CardContent>
+			<Box mb = {1} className='f-w-500'>
+				Recent Events
+			</Box>
+			<Card>
+				<CardContent>
+					<Grid container>
+						<Grid item xs={12}>
+							<span className='label'>
+								Feb 27,2020
+							</span>
+							<Typography variant = 'h6' component = 'h2' gutterBottom >
+								Ganesh Chaturthi
+							</Typography>
+							<Box mb={2} className='ganesh-chathurti-description'> 
+									Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+									Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+							</Box>
+
+							<Box className="mandal-premises">
+								<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
+									<LocationOnIcon />
+									<span >Mandal Premises </span>
+								</Link>
+							</Box>
+						</Grid>		
+					</Grid>
+				</CardContent>
+			</Card>
+			<Box mt={1} className='t-right'>
+				<Button href='/events' size='small' target='_bank' className={classes.button}>
+					See All Upcoming Events
+				</Button>
+			</Box>
+		</CardContent>
+		</Grid>	
+	</Grid>	
 		</div>
-		</div>
+	</div>
   )
 }

@@ -28,6 +28,7 @@ body {
 .mb-16{margin-bottom: 16px;}
 .mt-16{margin-top:16px;}
 .p-15{padding:0 24px 24px;}
+.mb-10{margin-bottom: 10px!important;}
 .p-0{padding:0!important};
 .m-20{margin:20px;}
 .mt-30{margin-top:30px;}
@@ -40,6 +41,7 @@ body {
 .p-16{padding:16px 0!important;}
 .pt-0{padding-top:0!important;}
 .pb-0{padding-bottom: 0!important;}
+.mr-10{margin-right: 10px!important;}
 
 .MUIRichTextEditor-placeHolder-169 {
     font-size: 14px;
@@ -90,10 +92,12 @@ body {
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid #8f8484;
+        padding-top: 6px;
+        padding-bottom: 6px;
     }
-    .MuiTypography-gutterBottom{
-        margin-bottom: 15px;
-    }
+    // .MuiTypography-gutterBottom{
+    //     // margin-bottom: 15px;
+    // }
     DialogTitle {
         border-bottom: 1ps solid white;
     }
@@ -187,6 +191,7 @@ body {
 .receipt-amout {
     font-size: 42px;
     font-weight: bold;
+    line-height: 1;
 }
 
 .receipt-icon-b-border{
