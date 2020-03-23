@@ -1,0 +1,62 @@
+import React from 'react';
+import Receipt from './components/receiptDetails'
+import { 
+	BrowserRouter, 
+	Route
+} from 'react-router-dom'; 
+import ReceiptDetails from './components/Receipt';
+import Events from './components/Events';
+import Eventedit from './components/EventEdit';
+import Member from './components/Member';
+import AboutMandal from './components/AboutMandal';
+import EditAboutMandal from './components/EditAboutMandal';
+import EditDonationAboutMandal from './components/EditDonationAboutMandal';
+import BasicSetting from './components/basicSetting';
+import ResetPAsswordPopup from './components/ResetPasswordPopup';
+import NavBar from './components/NavBar';
+import BillingSystem from './components/BillingSytem'
+import AdminBilling from './components/AdminBilling'
+import UserHomePage from './components/UserHomePage'
+import MenuBar from './components/MenuBar'
+import UserProfileSetting from './components/UserProfileSetting'
+import Successfully from './components/Successfully'
+import ReceiptForm from './components/ReceiptForm'
+import Profile from './components/Profile'
+import MemberPrfilePage from './components/MemberHomePage'
+import Feedback from './components/Feedback'
+import BasicInfo from './components/BasicInfo'
+import AddNewPost from './components/AddNewPost'
+import AccountSetting from './components/AccountSetting'
+export default function App() {
+
+  return (
+      <div>
+        <BrowserRouter>
+        <NavBar/>
+        <Route exact path='/' component={Receipt}></Route> 
+        <Route exact path='/details' component={ReceiptDetails}></Route> 
+        <Route exact path='/events' component={Events}></Route> 
+        <Route exact path='/eventsedit' component={Eventedit}></Route> 
+        <Route exact path='/member' component={Member}></Route> 
+        <Route exact path='/aboutmandal' component={AboutMandal}></Route> 
+        <Route exact path='/editaboutmandal' component={EditAboutMandal}></Route> 
+        <Route exact path='/editdonationaboutmandal' component={EditDonationAboutMandal}></Route> 
+        <Route exact path='/basicsetting' component={BasicSetting}></Route>
+        <Route exact path='/resetpassword' component={ResetPAsswordPopup}></Route>
+        <Route exact path='/billingsystem' component={BillingSystem}></Route>
+        <Route exact path='/adminbilling' component={AdminBilling}></Route>
+        <Route exact path='/menubar' component={MenuBar}></Route>
+        <Route exact path='/userhome' component={UserHomePage}></Route>
+        <Route exact path='/userprofilesetting' component={UserProfileSetting}></Route>
+        <Route exact path='/successfully' component={Successfully}></Route>
+        <Route exact path='/receiptform' component={ReceiptForm}></Route>
+        <Route exact path='/profile' component={Profile}></Route>
+        <Route exact path='/memberprofile' component={MemberPrfilePage}></Route>
+        <Route exact path='/feedback' component={Feedback}></Route>
+        <Route exact path='/basicinfo' component={BasicInfo}></Route>
+        <Route exact path='/addnewpost' component={AddNewPost}></Route>
+        <Route exact path='/accountsetting' component={AccountSetting}></Route>
+        </BrowserRouter>
+      </div>
+    );
+}

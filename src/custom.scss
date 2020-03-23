@@ -1,0 +1,789 @@
+body {
+    background-color: rgb(250, 250, 250);
+}
+
+.text-capital { text-transform: uppercase; }
+.m-0 {margin: 0;}
+.mb-0 {margin-bottom: 0;}
+.line-h-28 {line-height: 28px;}
+.font-14{font-size: 14px;}
+.font-36{font-size: 36px;}
+.d-flex {display: flex;}
+.justify-between {justify-content: space-between;}
+.bg-white {background-color: white;}
+.justify-center {justify-content: center;}
+.h1-title {font-size: 24px;} 
+.main-card { background-color: #fafafa; }
+.main-wrapper {margin: 40px 15px;}
+.text-decoration-none {text-decoration: none;}
+.p-relative {position: relative;}
+.b-radius {border-radius: 15px!important; }
+.d-block {display: block;}
+.t-center {text-align: center;}
+.t-right {text-align: right;}
+.label-color {color: #929294; }
+.label-f-size {font-size: 13px; }
+.f-bold{font-weight: bold;}
+.f-w-500 {font-weight: 500;}
+.mb-16{margin-bottom: 16px;}
+.mt-16{margin-top:16px;}
+.p-15{padding:0 24px 24px;}
+.p-0{padding:0!important};
+.m-20{margin:20px;}
+.mt-30{margin-top:30px;}
+.w-100{width: 100%}
+.ml-10{margin-left: 10px;}
+.mt-16{margin-top:16px;}
+.border-top{border-top:1px solid gainsboro}
+.h-34{height: 34px;}
+.p-8{padding: 8px;}
+.p-16{padding:16px 0!important;}
+
+
+.MUIRichTextEditor-placeHolder-169 {
+    font-size: 14px;
+}
+
+.MuiFormControl-root {
+    .MuiOutlinedInput-adornedStart {
+        padding-left: 0;
+    }
+    .MuiOutlinedInput-root{
+        background-color: white;
+        border-radius: 15px;
+    }
+}
+
+.MuiInputBase-input {
+    border-color:white;
+    border:1;
+}
+
+
+.MuiInputBase-root {
+    .MuiOutlinedInput-inputMarginDense {
+        padding-top: 7.5px;
+        padding-bottom: 7.5px;
+    }
+}
+
+.MuiFormControl-fullWidth{
+    .MuiInputLabel-outlined.MuiInputLabel-marginDense {
+            font-size: 14px;
+    }
+}
+
+.MuiFormControl-root .MuiInputLabel-root{
+    font-size: 14px;
+}
+.delete-popup {
+    .MuiDialog-paper {
+        background-color:#FAFAFA;
+        margin-right: 50px;
+        min-width: 350px;
+        border-radius: 15px;
+        // margin-Bottom:110px;
+    }
+    .MuiDialogTitle-root {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #8f8484;
+    }
+    .MuiTypography-gutterBottom{
+        margin-bottom: 15px;
+    }
+    DialogTitle {
+        border-bottom: 1ps solid white;
+    }
+}
+
+.mandal-premises {
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+    }
+}
+.MUIRichTextEditor-placeHolder-137{
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.mui-rte-container .MUIRichTextEditor-editorContainer-133 {
+    padding: 0px 0px 8px 7px;
+    font-size: 14px;
+}
+
+
+// Common Css
+.MuiBox-root {
+    .MuiButton-root:hover{
+        background-color: #df3088;
+        box-shadow: none;
+    }
+}
+
+.MuiButton-contained:hover {
+    background-color: #df3088 !important;
+    box-shadow: none;
+}
+
+
+
+.label {
+    line-height: 2.0;
+    box-shadow: none;
+    color: #929294; 
+    font-size: 13px;
+    // display: block;
+}
+#root .MuiPaper-elevation1{
+    border-radius: 15px;
+    box-shadow: none;
+    border: 1px solid #ccc9c9;
+}
+
+
+
+//About Mandal css
+// .about-mandal .MuiTabs-flexContainer {
+//     display: flex;
+//     justify-content: center;
+//     padding-top: 16px;
+// }
+
+.about-mandal-tabs {
+    .MuiTabs-fixed {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+// Receipt Page css
+.receipt-main-card {
+    border-radius: 15px;
+    background-color: #FAFAFA  !important;
+    border: 1px solid #ccc9c9;
+}
+
+.apple-icon.MuiSvgIcon-root{
+    position: absolute;
+    top: -52px;
+    right: -64px;
+    color: #f3f3f3;
+    border-radius: 15px;
+    font-size: 250px;
+    transform: rotate(-1deg);
+    overflow: hidden;
+}
+
+.receipt-amout {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.receipt-icon-b-border{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.receipt-avtar {
+    width:80px !important;
+    height: 80px !important;
+}
+
+::placeholder {
+    font-size: 14px !important;
+  }
+  
+
+
+//   About Mandal
+.about-mandal {
+    .MuiPaper-root{
+        padding:0 !important;
+    }
+    .donation-details {
+        border: 1px solid #ccc9c9;
+        padding: 16px;
+        border-radius: 15px;
+        line-height: 1.8;
+        margin-top: 16px;
+    }
+    .MuiGrid-spacing-xs-3 > .MuiGrid-item {
+        padding: 0;
+    }
+
+}
+ 
+
+
+// edit-about-mandal
+
+.edit-about-mandal {
+    .editor #mui-rte-root {
+        #mui-rte-container {
+            padding: 0 3px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 150px;
+            font-size: 14px;
+            border: 1px solid #ccc9c9;
+        }
+        #mui-rte-toolbar {
+            order: 2;
+            border-top: 1px solid #ccc9c9;
+            padding: 5px 5px;
+        }
+        .MuiIconButton-root {
+            padding: 3px;
+            .MuiSvgIcon-root {
+                height: 16px;
+                width: 16px;
+            }
+        }
+    }
+    }
+
+
+    // edit-donation-about-mandal
+
+    .edit-donation-about-mandal {
+        .editor #mui-rte-root {
+            #mui-rte-container {
+                padding: 0 3px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 150px;
+                border: 1px solid #ccc9c9;
+                font-size: 14px;
+            }
+            #mui-rte-toolbar {
+                order: 2;
+                border-top: 1px solid #ccc9c9;
+                padding: 5px 5px;
+            }
+            .MuiIconButton-root {
+                padding: 3px;
+                .MuiSvgIcon-root {
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+       
+        }
+    }
+
+
+
+
+    // add-edit-event
+    .add-edit-event {
+        .MuiButton-contained:hover{
+            box-shadow: none;
+            background: #df3088;
+        }
+        .editor #mui-rte-root {
+            #mui-rte-container {
+            padding: 0 3px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 150px;
+            font-size: 14px;
+                #mui-rte-toolbar {
+                order: 2;
+                border-top: 1px solid #ccc9c9;
+                border-radius: 15px;
+                padding: 5px 5px;     
+                }
+           }
+             
+            .MuiBox-root {
+                .MuiButton-root:hover {
+                    text-decoration: none;
+                    background-color: #df3088;
+                }
+            }
+            .MuiSvgIcon-root {
+                width: 16px;
+                height: 16px;
+            }
+            .MuiIconButton-root {
+                padding: 2px;
+            }
+        }
+        .MuiOutlinedInput-input {
+            font-size: 14px;
+        }
+    }
+   
+    .add-edit-event  {
+        .MuiSvgIcon-root {
+            height: 16px;
+            width: 16px;
+        }
+
+        #mui-rte-container {
+            display:flex;
+            flex-direction: column;
+            border: 1px solid #ccc9c9;
+            padding: 3px;
+            height: 150px;
+            justify-content: space-between;
+            font-size: 14px;
+            border-radius: 15px;
+
+            #mui-rte-toolbar {
+                order: 2;
+                border-top: 1px solid #ccc9c9;
+                padding: 5px 5px;   
+            }
+        }
+        .MuiIconButton-root{
+            padding: 3px;
+        }
+
+        }
+        
+
+
+        // Event Page Css
+        .events-page {
+            .MuiButtonGroup-root .MuiButton-containedPrimary {
+                background-color:#df3088 ;
+            }
+
+            .MuiButton-root:hover:hover{
+                box-shadow: none;
+                background: #df3088;
+            }
+            .ganesh-chathurti-description {
+                line-height: 22px;
+                font-size: 14px;
+            }
+        }
+        
+
+
+
+
+        // Member Page Css
+
+      .MuiCardContent-root  .member-photo {
+            width: 80%;
+            height: 200px;
+            border-radius: 15px;
+            margin: 0 auto;
+        }
+
+
+
+        // Setting page css
+        
+        .setting-page{
+   
+        .MuiButton-containedPrimary {
+            color: #fff;
+            background-color: #df3088;
+        }
+        //user
+        .userseditform{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .useredit{
+            display: flex;
+            align-items: center;
+            button{
+                padding: 0;
+                margin-left: 10px;
+            }
+        }
+        //delete-popup
+        .MuiCardContent-root:last-child{
+            padding-bottom: 16px;
+        }
+  
+    }
+    .delete-post{
+        h2{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+        }
+     }
+     .popup-button{
+         justify-content: flex-end!important;
+         button{
+             margin:  0 24px;
+         }
+     }
+     .boxshadow{
+        box-shadow: 0px 7px 30px 0px rgba(77, 84, 93, 0.08), 0px 9px 30px 0px rgba(0, 177, 179, 0.08), 0px 9px 1px -1px rgba(54, 98, 154, 0.08)!important;
+     }
+     .notification-wrapper{
+        .MuiMenu-paper{
+            border-radius: 15px;
+        }
+         ul{
+             padding: 0;
+             h3{
+                 padding: 0 20px;
+             }
+         }
+         .all-notification{
+             background:#cccccc;
+             padding: 16px;
+         }
+     }
+     .opening-heading{
+         display: flex;
+         h3{
+             margin: 0
+         }
+     }
+     //Billing
+     .billing-history{
+         .billing-heading{
+             display: flex;
+             justify-content: space-between;
+         }
+         th.MuiTableCell-root.MuiTableCell-head {
+            font-weight: 700;
+        }
+     }
+     .select-wrapper{
+        .transform{
+            transform: translate(14px, 11px) scale(1);
+        }
+     }
+  
+    .slectbox{
+        select{
+            padding: 8px;
+        }
+    }
+//Pravin 
+.iconposition{
+    position: relative;
+    .icon{
+        position: absolute;
+        top:28px;
+        color: rgba(0, 0, 0, 0.54);
+        padding-left: 10px;
+    }
+    .MuiInputLabel-outlined{
+        padding-left: 26px;
+    }
+    .MuiOutlinedInput-input {
+        padding: 18.5px 36px;
+    }
+}
+.PrivateNotchedOutline-legendLabelled-161{
+    span{
+        padding: 20px!important;
+    }
+} 
+.changepass{
+    .PrivateNotchedOutline-legendLabelled-161{
+        span{
+            padding: 0 5px 0 5px!important;
+        }
+    } 
+}
+// Receipt Form
+.w-100{
+    width: 100%;
+}
+.amount,.tab{
+    flex: 1;
+}
+.date{
+    margin:26px 0 26px 30px;
+}
+.latedate{
+    flex:50%;
+    margin: 26px 0 0 0;
+}
+.button{
+    margin-top:26px;
+    text-align: right;
+}
+.receipt-form{
+    // width:500px;
+    // margin:0 auto;
+    background:rgb(210, 216, 255);
+}
+.heading{
+    text-align: center;
+}
+.pending-card{
+    margin-bottom:20px;
+    border-radius:15px!important;
+    margin-top:40;
+    // width:420px;
+    box-shadow: 4px 5px 14px -2px rgba(0,0,0,0.33);
+}
+.card-content{
+    padding:30px!important;
+    .pending-amount{
+        font-size:30px;
+        font-weight:600;
+         line-height:1;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    .amount-text{
+        margin-top:20px;
+        margin-bottom:0;
+        font-size:13px;
+    }
+    .due-date{
+        font-size:16px;
+        font-weight:600;
+    }
+    .pending-name{
+        font-size:18px;
+        font-weight:600;
+    }
+    .due-date-text{
+        font-size: 13px;
+    }
+    .pending-details{
+        display:flex;
+        justify-content:space-between;
+    }
+    .edit-icon{
+        padding: 0;
+    }
+}
+// Profile form
+.mt-30{
+    margin-top: 30px;
+}
+.profile{
+    // width:440px;
+    // margin:0 auto;
+    padding-bottom: 20px;
+    background: #FAFAFA!important;
+    .profile-details{
+        border-radius:20px;
+        background:#fff9c7;
+        h3{
+            margin-bottom: 5px;
+        }
+    }
+    .post{
+        background: #fff;
+    }
+    .role{
+        margin:0;
+        font-size:12px;
+    }
+    .editprofile{
+        text-align: right;
+    }
+    .profil-img{
+        display:flex;
+        // padding-bottom:16px;
+    }
+    .changephoto{
+        text-align: right;
+    }
+    .follow{
+        text-align: center;
+        margin-top: 36px;
+    }
+}
+.f-14{
+    font-size: 14px;
+}
+//BAsic Information Form 
+.basic-info{
+    margin:20px;
+    padding:10px;
+    border-radius:15px!important;
+}
+.text-color-size{
+    font-size:14px;
+    color: rgba(0, 0, 0, 0.54);
+}
+//Account Setting
+.account-setting-wrap{
+    margin-top: 30px;
+}
+//Add new post
+
+.add-new-post{
+    margin-top: 30px;
+    .icon{
+        text-align: center;
+    }
+    .background-icon{
+        font-size:170px!important;
+        color:#80808057;
+    }
+    .add-new-button{
+        text-align: center;
+        margin-top: 26px;
+    }
+}
+//Text Editor
+.editor {
+    #mui-rte-root{
+        #mui-rte-container {
+            padding: 0 3px;
+            // height: 120PX;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+           min-height: 120px;
+            #mui-rte-toolbar {
+                border-top: 1px solid #C4C4C4;
+                order: 2;
+                .MuiIconButton-root {
+                    padding: 3px;
+                    .MuiSvgIcon-root {
+                        height: 23px;
+                        width: 18px;
+                    }
+}
+                }
+                // .MUIRichTextEditor-placeHolder-480{
+                //     // height: 90px;
+                // }
+            }
+        }
+    }
+.editor {
+    position: relative;
+    #mui-rte-root{
+        #mui-rte-container {
+            #mui-rte-editor
+                    {
+                margin-top: 20px;
+            }
+        }
+    }
+    .user-pic{
+        position: absolute;
+    }
+    .MUIRichTextEditor-placeHolder-480{
+        padding: 8px 0 0 65px;
+    }
+    .MUIRichTextEditor-placeHolder-537{
+        padding: 8px 0 0 65px;
+    }
+}
+.editor #mui-rte-root #mui-rte-container #mui-rte-editor {
+    margin: 0;
+    padding-left:67px;
+    margin-top: 10px;
+}
+.MUIRichTextEditor-placeHolder-169 {
+    font-size: 14px;
+}
+.MuiFormControl-root {
+    .MuiOutlinedInput-adornedStart {
+        padding-left: 0;
+    }
+    .MuiOutlinedInput-root{
+        background-color: white;
+        border-radius: 15px;
+    }
+}
+.MuiInputBase-input {
+    border-color:white;
+    border:1;
+}
+.MuiInputBase-root {
+    .MuiOutlinedInput-inputMarginDense {
+        padding-top: 7.5px;
+        padding-bottom: 7.5px;
+    }
+}
+.MuiFormControl-fullWidth{
+    .MuiInputLabel-outlined.MuiInputLabel-marginDense {
+            font-size: 14px;
+    }
+}
+//Commnets
+
+.comment-content{
+    padding-left: 70px!important;
+    .comments-action{
+        a{
+            font-size: 12px;
+            margin-right: 10px;
+            color: #838080;
+            text-decoration: none;
+        }
+    }
+    .comment-paragraph{
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+}
+.comment-border{
+    border-top:1px solid #C4C4C4;
+    border-bottom:1px solid #C4C4C4;
+}
+.post-card{
+    box-shadow: 0px 7px 30px 0px rgba(77, 84, 93, 0.08), 0px 9px 30px 0px rgba(0, 177, 179, 0.08), 0px 9px 1px -1px rgba(54, 98, 154, 0.08)!important;
+    border-radius:20px!important;
+    margin-bottom: 30px;
+}
+//Delete Popup
+.delete-post-heading{
+    h2{
+        font-weight: 600;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+    }
+}
+.popup-button{
+    justify-content: flex-end!important;
+    button{
+        margin: 0 18px;
+    }
+}
+.f-w-600{
+    font-weight: 600;
+}
+.reply-field{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    .send{
+        position: absolute;
+        right: 9px;
+        color: rgba(0, 0, 0, 0.54);
+    }
+}
+.button-wrapper{
+    margin-top: 10px;
+    text-align: right;
+    button{
+        margin-right: 10px;
+    }
+}
+.edit-text{
+    padding: 10px;
+    border-radius: 15px;
+    &:focus{
+        outline: none;
+    }
+}
