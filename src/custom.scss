@@ -835,9 +835,26 @@ h6{
 
 button.MuiButton-contained,
 .MuiButtonBase-root,
-.events-page .MuiButtonGroup-root .MuiButton-containedPrimary{
+.events-page .MuiButtonGroup-root .MuiButton-containedPrimary,
+button.MuiButton-outlinedSizeSmall,
+a.MuiButton-outlined{
     background-color: $primary;
     &:hover{
         background-color: darken($color: $primary, $amount: 15) !important;
+    }
+}
+
+//Notification
+.notification-wrapper .MuiMenu-paper{
+    .MuiCard-root{
+        position: relative;
+        .MuiCardContent-root{
+            position: absolute;
+            right: 0;
+            top: 0;
+            span{
+                font-size: 11px;
+            }
+        }
     }
 }
