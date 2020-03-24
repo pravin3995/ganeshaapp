@@ -1,5 +1,35 @@
+//Vendor
+// @import "scss/vendor/";
+
+//Abstracts
+@import "scss/abstracts/fonts";
+@import "scss/abstracts/mixins";
+@import "scss/abstracts/variables";
+
+//Base Styles
+@import "scss/base/reset";
+@import "scss/base/typography";
+
+//Components
+@import "scss/components/button";
+@import "scss/components/input";
+@import "scss/components/modal";
+
+//Layout
+@import "scss/layouts/footer";
+@import "scss/layouts/main-navigation.scss";
+
 body {
-    background-color: rgb(250, 250, 250);
+    background-color: $bgcolor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: $primary;
 }
 
 .text-capital { text-transform: uppercase; }
@@ -147,7 +177,8 @@ body {
 #root .MuiPaper-elevation1{
     border-radius: 15px;
     box-shadow: none;
-    border: 1px solid #ccc9c9;
+    border: 1px solid 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: $boxShadow;
 }
 
 
@@ -793,5 +824,14 @@ body {
     border-radius: 15px;
     &:focus{
         outline: none;
+    }
+}
+
+button.MuiButton-contained,
+.MuiButtonBase-root,
+.events-page .MuiButtonGroup-root .MuiButton-containedPrimary{
+    background-color: $primary;
+    &:hover{
+        background-color: darken($color: $primary, $amount: 15) !important;
     }
 }
