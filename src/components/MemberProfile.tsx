@@ -178,7 +178,7 @@ export default function CenteredGrid() {
 
   const handleClose = (value: string) => {
     setOpen(false);
-    setSelectedValue(value);
+    // setSelectedValue(value);
   };
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
@@ -284,7 +284,7 @@ export default function CenteredGrid() {
                             <MenuItem >Disable Commnets</MenuItem>
                             <MenuItem >Disable Sharing</MenuItem>
                           </Menu>
-                          <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
+                          {/* <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} /> */}
                       </div>
                   </IconButton>
                   }

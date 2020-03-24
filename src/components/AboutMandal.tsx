@@ -71,10 +71,11 @@ export default function SimpleTabs() {
   return (
     <div className={classes.root}>
       <Box className='about-mandal'>
-        <Card className = 'receipt-main-card'>
           <CardContent>
-            <Box display='flex' justifyContent='space-between' alignItems='center' m={1}> 
-            <h2 className='h1-title'> About Mandal </h2>
+            <Box display='flex' justifyContent='space-between' alignItems='center' > 
+              <div className='h1-title mb-10'>
+                About Mandal
+              </div>
             <Button variant="contained" href='#' size='small' target='_bank' className={classes.button}>
               Edit Info
             </Button>
@@ -83,9 +84,8 @@ export default function SimpleTabs() {
          <Grid container spacing={3}>
           <Grid item xs={12}>
             <TabPanel value={value} index={0}>
-              <Card>
-                <CardContent>
-                  <Box>
+              
+                  <Box >
                     <AppBar position="static">
                       <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
                         <Tab label="About US" {...a11yProps(0)} />
@@ -115,13 +115,11 @@ export default function SimpleTabs() {
                   It has roots in a piece of classical Latin literature from 45 BC.
                 </Typography>
                 </Box> 
-                  </CardContent>
-                </Card>
+             
               </TabPanel>
 
             <TabPanel value={value} index={1}>
-                <Card className='abc'>
-                  <CardContent>
+                
                     <Grid container> 
                       <Grid item xs={12}>
                       <AppBar position="static">
@@ -157,13 +155,11 @@ export default function SimpleTabs() {
                       </Box>
                       </Grid>
                     </Grid>
-                  </CardContent>
-                </Card>
+               
               </TabPanel>
           </Grid>
       </Grid>
         </CardContent>
-      </Card>
       </Box>
     </div>
   );
