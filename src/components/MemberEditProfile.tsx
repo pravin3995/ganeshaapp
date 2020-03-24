@@ -122,7 +122,7 @@ export default function VariantAvatars() {
   // }, []);
   const [age, setAge] = React.useState('');
   return (
-   <div style={{marginTop:30}}>
+   <div>
         <Paper elevation={1} className='profile'>   
            <Paper className='profile-details' elevation={1}>
             <div className='changephoto'>
