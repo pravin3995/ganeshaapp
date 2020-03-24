@@ -555,7 +555,7 @@ h6{
     margin: 26px 0 0 0;
 }
 .button{
-    margin-top:26px;
+    @include mt(2);
     text-align: right;
 }
 .receipt-form{
@@ -857,4 +857,23 @@ a.MuiButton-outlined{
             }
         }
     }
+}
+
+//wrapper
+.main-wrapper{
+    max-width: 700px;
+    margin: 0px auto;    
+    @include my(3);
+}
+.editor{
+    box-shadow: 1px 0px 30px rgba(77, 84, 93, 0.08);
+    background: $white;
+}
+.MuiTypography-noWrap{
+    color: $white;
+}
+.MuiCardHeader-root .MuiCardHeader-action{
+    align-self: initial;
+    margin-top: 0;
+    margin-right: 0;
 }
