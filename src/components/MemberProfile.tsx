@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       flexGrow: 1,
-      marginTop: 30
+      // marginTop: 30
     },
     paper: {
       padding: theme.spacing(1),
@@ -228,11 +228,11 @@ export default function CenteredGrid() {
             </div>
           </Paper>
         </div>
-      <Grid container spacing={2}>
+      <Grid container >
         <Grid item xs={12} sm={6} md={6} lg={4}>  
            <div className={classes.paper} >
             <div className='follow' style={{textAlign:'center'}}>
-                <Grid container spacing={1}>
+                <Grid container >
                     <Grid item xs={4}>
                         <p  className='f-14'>Post</p>
                         <h2>02</h2>

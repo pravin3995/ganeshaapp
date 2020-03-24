@@ -33,7 +33,7 @@ export default function App() {
       <div>
         <BrowserRouter>
         <NavBar/>
-        <Route exact path='/' component={Receipt}></Route> 
+        <Route exact path='/receipt' component={Receipt}></Route> 
         <Route exact path='/details' component={ReceiptDetails}></Route> 
         <Route exact path='/events' component={Events}></Route> 
         <Route exact path='/eventsedit' component={Eventedit}></Route> 
@@ -51,7 +51,7 @@ export default function App() {
         <Route exact path='/successfully' component={Successfully}></Route>
         <Route exact path='/receiptform' component={ReceiptForm}></Route>
         <Route exact path='/memberprofile' component={MemberProfile}></Route>
-        <Route exact path='/memberhomepage' component={MemberHomeePage}></Route>
+        <Route exact path='/' component={MemberHomeePage}></Route>
         <Route exact path='/feedback' component={Feedback}></Route>
         <Route exact path='/membereditprofile' component={MemberEditProfile}></Route>
         <Route exact path='/addnewpost' component={AddNewPost}></Route>

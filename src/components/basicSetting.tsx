@@ -201,14 +201,9 @@ export default function SimpleTabs() {
   return (
     <div className='setting-page'>
       <Box className='about-mandal'>
-        <Card className = 'receipt-main-card'>
-          <CardContent>
-            <Box> 
+            <CardContent className='pt-0 pb-0'> 
               <h2 className='h1-title'> Basic Informastion </h2>
-            </Box>
-          </CardContent>
-
-          <CardContent>
+            </CardContent>
             <AppBar position="static">
               <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
                 <Tab label="Basic Information" {...a11yProps(0)} />
@@ -216,9 +211,7 @@ export default function SimpleTabs() {
                 <Tab label="Users" {...a11yProps(2)} />
               </Tabs>
             </AppBar>
-          </CardContent>
 
-          <CardContent>
               <TabPanel value={value} index={0}>
                  <Card className='abc'>
                     <CardContent>
@@ -234,7 +227,7 @@ export default function SimpleTabs() {
                                       size='small'
                                       rowsMax="4"
                                       variant="outlined"
-                                      />
+                                 />
                               </Typography>
                             </Box>
                         </Grid>
@@ -330,9 +323,7 @@ export default function SimpleTabs() {
                     </CardContent>
                   </Card>
               </TabPanel>  
-          </CardContent>
 
-            <CardContent style={{padding:0}}>  
               <TabPanel value={value} index={1}>
                  <Card>
                  <CardContent >
@@ -417,11 +408,9 @@ export default function SimpleTabs() {
                 </CardContent>
               </Card>
               </TabPanel>   
-            </CardContent>
 
-            <CardContent>
               <TabPanel value={value} index={2}>
-              <Grid container spacing={2}>
+                 <Grid container spacing={2}>
                 <Grid item xs={12} md={6}> 
                     <Card className='boxshadow'>
                       <CardContent>
@@ -435,7 +424,7 @@ export default function SimpleTabs() {
                           </div>
                       </CardContent>
                     </Card>
-                    <Card className='mt-16 addmember m-20 boxshadow'>
+                    <Card className='mt-16 addmember boxshadow'>
                      < CardContent>
                         <TextField   size='small' id="outlined-basic" value='Treasure' variant="outlined" className={classes.TextField}/>
                         <div className={classes.EditUserAccess}>
@@ -520,8 +509,6 @@ export default function SimpleTabs() {
                 
               </Grid> 
               </TabPanel>
-            </CardContent>
-        </Card>
       </Box>
     </div>
   );

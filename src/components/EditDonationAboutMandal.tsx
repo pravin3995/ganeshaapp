@@ -42,10 +42,9 @@ export default function EditAboutMandal() {
   };
   return (
     <div className='edit-donation-about-mandal'>
-			  <Card className = 'receipt-main-card'> 
-            <CardContent >      
+            <CardContent className="pt-0">      
             <h2 className='h1-title'> Edit Donations Information </h2>    
-            <h3> Welcome Text</h3>
+            <h3 className='f-w-500'> Welcome Text</h3>
               <Card>
                 <CardContent>
                 <Box>
@@ -188,7 +187,6 @@ export default function EditAboutMandal() {
                 </CardContent>
               </Card>
             </CardContent>
-        </Card>
 			</div>
   )
 }

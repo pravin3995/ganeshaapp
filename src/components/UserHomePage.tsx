@@ -103,7 +103,7 @@ export default function VariantAvatars() {
   }
   return (
    <div className='add-new-post'>
-        <Paper elevation={1} className='profile'>   
+        <div className='profile'>   
     
             <div className={classes.Addpost} >
                 <div className='icon' >
@@ -118,7 +118,7 @@ export default function VariantAvatars() {
                       </Button>
                   </div>
             </div>
-       </Paper>
+       </div>
    </div>
   );
  }

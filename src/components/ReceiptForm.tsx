@@ -147,7 +147,7 @@ export default function SimpleTabs() {
 
 
   return (
-    <Grid container  spacing={2} style={styles.AlignMent}>
+    <Grid container   style={styles.AlignMent}>
       <Grid item xs={12} md={6}>
          <div  className='receipt-form'>
       <AppBar position="static">
@@ -159,7 +159,7 @@ export default function SimpleTabs() {
       <TabPanel value={value} index={0}>
         <Paper elevation={1} style={styles.paper}>
           <form className={classes.root} noValidate autoComplete="off">
-             <h2 className='heading'>Receipt Form</h2>
+             <h2 className='heading mt-0'>Receipt Form</h2>
              <div className='iconposition' style={styles.TextField}>
                 <TextField id="outlined-basic" label="User Name" variant="outlined" className='w-100'/>
                 <InputAdornment position="start" className='icon'>

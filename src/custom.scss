@@ -250,7 +250,7 @@ h6{
         padding: 16px;
         border-radius: 15px;
         line-height: 1.8;
-        margin-top: 16px;
+        // margin-top: 16px;
     }
     .MuiGrid-spacing-xs-3 > .MuiGrid-item {
         padding: 0;
@@ -272,6 +272,7 @@ h6{
             height: 150px;
             font-size: 14px;
             border: 1px solid #ccc9c9;
+            border-radius: 15px;
         }
         #mui-rte-toolbar {
             order: 2;
@@ -301,6 +302,7 @@ h6{
                 height: 150px;
                 border: 1px solid #ccc9c9;
                 font-size: 14px;
+                border-radius: 15px;
             }
             #mui-rte-toolbar {
                 order: 2;
@@ -517,6 +519,7 @@ h6{
         top:28px;
         color: rgba(0, 0, 0, 0.54);
         padding-left: 10px;
+        z-index: 1;
     }
     .MuiInputLabel-outlined{
         padding-left: 26px;
@@ -647,7 +650,7 @@ h6{
 }
 //BAsic Information Form 
 .basic-info{
-    margin:20px;
+    margin: 20px 20px 0 20px;
     padding:10px;
     border-radius:15px!important;
 }
@@ -677,6 +680,11 @@ h6{
 }
 //Text Editor
 .editor {
+    .MUIRichTextEditor-placeHolder-266{
+        position: absolute;
+        left: 65px;
+        top: 18px;
+    }
     #mui-rte-root{
         #mui-rte-container {
             padding: 0 3px;
@@ -818,7 +826,7 @@ h6{
     }
 }
 .edit-text{
-    padding: 10px;
+    // padding: 10px;
     border-radius: 15px;
     &:focus{
         outline: none;

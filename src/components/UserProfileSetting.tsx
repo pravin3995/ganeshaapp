@@ -110,7 +110,7 @@ export default function VariantAvatars() {
   // }, []);
   const [age, setAge] = React.useState('');
   return (
-   <div style={{marginTop:30}}>
+   <div >
         <Paper elevation={1} className='profile'>   
            <Paper className='profile-details' elevation={1}>
             {/* <div className='changephoto'>
@@ -142,7 +142,7 @@ export default function VariantAvatars() {
             </div> */}
           </Paper>
           <div className='follow' style={{textAlign:'center'}}>
-                <Grid container spacing={1} justify='center'>
+                <Grid container  justify='center'>
                     {/* <Grid item xs={4}>
                         <p  className='f-14'>Post</p>
                         <h2>02</h2>
