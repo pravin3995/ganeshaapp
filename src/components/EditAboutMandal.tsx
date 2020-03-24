@@ -37,8 +37,7 @@ export default function EditAboutMandal() {
   };
   return (
     <div className='edit-about-mandal'> 
-			  <Card className = 'receipt-main-card'> 
-            <CardContent >      
+            <CardContent className='pt-0' >      
             <h2 className='h1-title'> Edit About Mandal </h2>    
               <Card>
                 <CardContent>
@@ -51,6 +50,7 @@ export default function EditAboutMandal() {
                         fullWidth
                         id="outlined-number"
                         size='small'
+                        placeholder='Enter Name of the mandal'
                         rowsMax="4"
                         variant="outlined"
                         />
@@ -87,7 +87,6 @@ export default function EditAboutMandal() {
                 </CardContent>
               </Card>
             </CardContent>
-        </Card>
 			</div>
   )
 }

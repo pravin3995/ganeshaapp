@@ -201,14 +201,9 @@ export default function SimpleTabs() {
   return (
     <div className='setting-page'>
       <Box className='about-mandal'>
-        <Card className = 'receipt-main-card'>
-          <CardContent>
-            <Box> 
+            <CardContent className='pt-0 pb-0'> 
               <h2 className='h1-title'> Basic Informastion </h2>
-            </Box>
-          </CardContent>
-
-          <CardContent>
+            </CardContent>
             <AppBar position="static">
               <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
                 <Tab label="Basic Information" {...a11yProps(0)} />
@@ -216,7 +211,6 @@ export default function SimpleTabs() {
                 <Tab label="Users" {...a11yProps(2)} />
               </Tabs>
             </AppBar>
-          </CardContent>
 
           <CardContent>
               <TabPanel value={value} index={0}>
@@ -521,7 +515,6 @@ export default function SimpleTabs() {
               </Grid> 
               </TabPanel>
             </CardContent>
-        </Card>
       </Box>
     </div>
   );
