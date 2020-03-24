@@ -48,7 +48,8 @@ const useStyles = makeStyles((theme: Theme) =>
         height: '130px',
         borderRadius: '20px',
         marginTop:100,
-        background:'#ff9688'
+        background:'#ff9688',
+        marginBottom:0
       },
       ProfileEdit: {
           position: 'absolute',
@@ -134,7 +135,7 @@ export default function VariantAvatars() {
             </div>
           </Paper>
             <div className='follow'>
-                <Grid container spacing={3}>
+                <Grid container >
                     <Grid item xs={4}>
                         <p className='f-14'>Post</p>
                         <h2>0</h2>

@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     AccountSetting:{
-       margin:'60px 16px 16px 16px'
+       margin:'40px 16px 16px 16px'
     },
     ChangePass:{
         margin: theme.spacing(2),
@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme: Theme) =>
         height: '130px',
         borderRadius: '20px',
         marginTop:100,
+        marginBottom:0,
         background:'#ff9688'
       },
       ProfileEdit: {
