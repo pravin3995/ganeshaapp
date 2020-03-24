@@ -155,7 +155,7 @@ export default function SimpleTabs() {
       </AppBar>
       <TabPanel value={value} index={0}>
          <Card className={classes.Card}>
-             <h3 className='mb-0'>Billing Details</h3>
+             <h3 className='m-0'>Billing Details</h3>
              <CardContent className='p-16'>
                 <Grid container  spacing={2}>
                     <Grid item xs={12} md={6} lg={6}>
@@ -348,7 +348,7 @@ export default function SimpleTabs() {
       </TabPanel>
       <TabPanel value={value} index={1}>
          <div className='billing-history'>
-            <div className='billing-heading mt-16 mb-16'>
+            <div className='billing-heading mt-0 mb-16'>
               <h3 className='m-0'>Billing History</h3>
               <a href=""  className='ml-10'> <SearchTwoToneIcon/></a>
             </div>

@@ -37,7 +37,7 @@ export default function CustomizedSnackbars() {
       <Button variant="outlined" onClick={handleClick}>
         Update
       </Button>
-      <Snackbar style={{width:'100%'}}  open={open} autoHideDuration={6000} onClose={handleClose}>
+      <Snackbar   open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" style={{width:'100%'}}>
           This is a success message!
         </Alert>

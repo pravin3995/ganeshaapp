@@ -203,7 +203,7 @@ export default function CenteredGrid() {
   };
   return (
     <div className={classes.root}>
-      <Grid container spacing={2}>
+      <Grid container>
   
         <Grid item xs={12} sm={6} md={6} lg={4}>
          <div className={classes.paper}>
