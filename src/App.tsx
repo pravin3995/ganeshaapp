@@ -56,6 +56,7 @@ export default function App() {
         <Route exact path='/membereditprofile' component={MemberEditProfile}></Route>
         <Route exact path='/addnewpost' component={AddNewPost}></Route>
         <Route exact path='/accountsetting' component={AccountSetting}></Route>
+
         </BrowserRouter>
       </div>
     );
