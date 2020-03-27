@@ -21,6 +21,7 @@
 
 body {
     background-color: $bgcolor;
+    color: $textColor;
 }
 
 h1,
@@ -877,4 +878,14 @@ a.MuiButton-outlined{
     align-self: initial;
     margin-top: 0;
     margin-right: 0;
+}
+.MuiAvatar-colorDefault.MuiAvatar-circle,
+.MuiBadge-colorSecondary{
+    background-color: $secondary;
+}
+.notification-wrapper .all-notification{
+    background-color: $grey;
+    a{
+        color: $textColor;
+    }
 }
