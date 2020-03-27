@@ -73,10 +73,10 @@ export default function Eventedit() {
 
   return (
 		<div className='add-edit-event'>		
-		  	<CardContent >
-				<span  className='h1-title'>
+		  	<CardContent className='pb-0 pt-0' >
+				<h2  className='h1-title'>
 					Add / Edit Event
-				</span>			
+				</h2>			
 
 				</CardContent>
         

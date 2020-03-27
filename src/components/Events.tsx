@@ -83,11 +83,11 @@ export default function EventPage() {
   return (
 	<div className=' events-page'>	
 		<div>
-			<CardContent>
+			<CardContent className='pb-0 pt-0'>
 				<Box display='flex' justifyContent='space-between' flexWrap='wrap' alignItems='center'>
 					<Box>
 						<Typography className='mb-10'>
-							<span className='h1-title'>Events</span>
+							<h2 className='h1-title'>Events</h2>
 						</Typography>
 					</Box>
 

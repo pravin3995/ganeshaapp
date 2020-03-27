@@ -71,11 +71,9 @@ export default function SimpleTabs() {
   return (
     <div className={classes.root}>
       <Box className='about-mandal'>
-        <CardContent>
+        <CardContent className='pt-0 pb-0'>
             <Box display='flex' justifyContent='space-between' alignItems='center' > 
-                  <div className='h1-title '>
-                    About Mandal
-                  </div>
+                  <h2 className='h1-title'>  About Mandal </h2>
                 <Button variant="contained" href='#' size='small' target='_bank' className={classes.button}>
                   Edit Info
                 </Button>

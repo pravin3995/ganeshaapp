@@ -27,6 +27,7 @@ import Feedback from './components/Feedback'
 import MemberEditProfile from './components/MemberEditProfile'
 import AddNewPost from './components/AddNewPost'
 import AccountSetting from './components/AccountSetting'
+
 export default function App() {
 
   return (
@@ -56,6 +57,7 @@ export default function App() {
         <Route exact path='/membereditprofile' component={MemberEditProfile}></Route>
         <Route exact path='/addnewpost' component={AddNewPost}></Route>
         <Route exact path='/accountsetting' component={AccountSetting}></Route>
+
 
         </BrowserRouter>
       </div>

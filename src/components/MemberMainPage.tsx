@@ -97,12 +97,12 @@ export default function Member() {
   return (
     <div>
         <Card  variant = 'outlined' className='receipt-main-card'>
-			<CardContent  className='pb-0'>	
+			<CardContent  className='pb-0 pt-0'>	
 				<CardContent className='pt-0 pb-0' >
 					<Box display="flex" alignItems="center" flexWrap='wrap' justifyContent="space-between">
-						<div className='h1-title mb-10'>
+						<h2 className='h1-title '>
 							Members
-						</div>
+						</h2>
 						<Box display='flex' alignItems='center'>
 							<SearchIcon className='mr-10' />
 							<Button variant="contained" className={classes.button}> Add Member </Button>		
