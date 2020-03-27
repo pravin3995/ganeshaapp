@@ -1,4 +1,5 @@
 import React from 'react';
+import { Router, Route, Link } from "react-router-dom";
 import { fade, makeStyles, Theme, createStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -41,10 +42,10 @@ const useStyles = makeStyles((theme: Theme) =>
     grow: {
       flexGrow: 1,
     },
-    ProfileSize:{
-        width:'28px',
-        height:'28px',
-        marginRight:'8px'
+    ProfileSize: {
+      width: '28px',
+      height: '28px',
+      marginRight: '8px'
     },
     menuButton: {
       // marginRight: theme.spacing(2),
@@ -102,25 +103,25 @@ const useStyles = makeStyles((theme: Theme) =>
     //     display: 'none',
     //   },
     // },
-    Notification:{
-        display:'flex',
-        justifyContent:'space-between',
-        alignItems:'center',
-        margin:'6px 6px',
-        border: '1px solid transparent',
-        '&:hover':{
-            borderRadius:'15px',
-            border: '1px solid #c3c3c3',
-            cursor:'pointer',
-            color:'#3f51b5',
-        }
+    Notification: {
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      margin: '6px 6px',
+      border: '1px solid transparent',
+      '&:hover': {
+        borderRadius: '15px',
+        border: '1px solid #c3c3c3',
+        cursor: 'pointer',
+        color: '#3f51b5',
+      }
     },
-    MenuWrapper :{
-        padding:'20px'
+    MenuWrapper: {
+      padding: '20px'
     },
-    time :{
-        fontSize:12,
-        color:'gray'
+    time: {
+      fontSize: 12,
+      color: 'gray'
     },
     appBar: {
       transition: theme.transitions.create(['margin', 'width'], {
@@ -194,7 +195,7 @@ export default function PrimarySearchAppBar() {
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState<null | HTMLElement>(null);
 
   const isMenuOpen = Boolean(anchorEl);
-  
+
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   const handleProfileMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
@@ -251,55 +252,55 @@ export default function PrimarySearchAppBar() {
       <h3>Notification</h3>
 
       <Card elevation={0} className={classes.Notification}>
-          <CardHeader
-            avatar={
-                <Avatar aria-label="recipe" >
-                  C
+        <CardHeader
+          avatar={
+            <Avatar aria-label="recipe" >
+              C
                 </Avatar>
-              }
-              title="Chinmay Joshi"
-            //   classes={{
-            //       title:classes.Notification
-            //   }}
-              subheader="Just have posted a new Events"
-       
-          />
-          <CardContent>
-              <span className={classes.time}>20 mins ago</span>
-          </CardContent>
+          }
+          title="Chinmay Joshi"
+          //   classes={{
+          //       title:classes.Notification
+          //   }}
+          subheader="Just have posted a new Events"
+
+        />
+        <CardContent>
+          <span className={classes.time}>20 mins ago</span>
+        </CardContent>
       </Card>
-      <Card  elevation={0} className={classes.Notification}>
-          <CardHeader
-            avatar={
-                <Avatar aria-label="recipe" >
-                  R
+      <Card elevation={0} className={classes.Notification}>
+        <CardHeader
+          avatar={
+            <Avatar aria-label="recipe" >
+              R
                 </Avatar>
-              }
-              title="Chinmay Joshi"
-              subheader="Just have posted a new Events"
-       
-          />
-          <CardContent>
-              <span className={classes.time}>20 mins ago</span>
-          </CardContent>
+          }
+          title="Chinmay Joshi"
+          subheader="Just have posted a new Events"
+
+        />
+        <CardContent>
+          <span className={classes.time}>20 mins ago</span>
+        </CardContent>
       </Card>
-      <Card  elevation={0} className={classes.Notification}>
-          <CardHeader
-            avatar={
-                <Avatar aria-label="recipe" >
-                  R
+      <Card elevation={0} className={classes.Notification}>
+        <CardHeader
+          avatar={
+            <Avatar aria-label="recipe" >
+              R
                 </Avatar>
-              }
-              title="Chinmay Joshi"
-              subheader="Just have posted a new Events"
-       
-          />
-          <CardContent>
-             <span className={classes.time}>20 mins ago</span>
-          </CardContent>
+          }
+          title="Chinmay Joshi"
+          subheader="Just have posted a new Events"
+
+        />
+        <CardContent>
+          <span className={classes.time}>20 mins ago</span>
+        </CardContent>
       </Card>
       <div className='t-center f-w-500 all-notification'>
-          <a href=''>See All</a>
+        <a href=''>See All</a>
       </div>
     </Menu>
   );
@@ -324,11 +325,11 @@ export default function PrimarySearchAppBar() {
         <p>Messages</p>
       </MenuItem> */}
       <MenuItem>
-        <IconButton aria-label="show 11 new notifications" 
-           aria-controls="primary-search-account-menus"
-           aria-haspopup="true"
-           onClick={handleProfileMenuOpen}
-           color="inherit">
+        <IconButton aria-label="show 11 new notifications"
+          aria-controls="primary-search-account-menus"
+          aria-haspopup="true"
+          onClick={handleProfileMenuOpen}
+          color="inherit">
           <Badge badgeContent={11} color="secondary">
             <NotificationsIcon />
           </Badge>
@@ -374,11 +375,11 @@ export default function PrimarySearchAppBar() {
               </Badge>
             </IconButton> */}
             <IconButton aria-label="show 17 new notifications" color="inherit"
-                edge="end"
-                aria-controls={menuIds}
-                aria-haspopup="true"
-                onClick={handleProfileMenuOpen}
-            
+              edge="end"
+              aria-controls={menuIds}
+              aria-haspopup="true"
+              onClick={handleProfileMenuOpen}
+
             >
               <Badge badgeContent={17} color="secondary">
                 <NotificationsIcon />
@@ -394,7 +395,7 @@ export default function PrimarySearchAppBar() {
             >
               <AccountCircle />
             </IconButton>
-            
+
           </div>
           {/* <div className={classes.sectionMobile}>
             <IconButton
@@ -425,24 +426,74 @@ export default function PrimarySearchAppBar() {
         </div>
         <Divider />
         <List>
-          {['Home', 'About Mandal', 'Profile', 'Receipt'].map((text, index) => (
+          <ListItem button component={Link} to="/">
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText>Home</ListItemText>
+          </ListItem>
+          <ListItem button component={Link} to="/aboutMandal">
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText>About Mandal</ListItemText>
+          </ListItem>
+          <ListItem button component={Link} to="/memberprofile">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText>Profile</ListItemText>
+          </ListItem>
+          <ListItem button component={Link} to="/receipt">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText>Receipt</ListItemText>
+          </ListItem>
+          <ListItem button component={Link} to="/membermainpage">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText>Members</ListItemText>
+          </ListItem>
+          <ListItem button component={Link} to="/events">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText>Events</ListItemText>
+          </ListItem>
+
+          {/* {['Home', 'About Mandal', 'Profile', 'Receipt'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
-          ))}
+          ))} */}
         </List>
         <Divider />
         <List>
-          {['Change Language', 'Log Out', 'Spam'].map((text, index) => (
+          <ListItem button component={Link} to="#.">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText>Change Language</ListItemText>
+          </ListItem>
+          <ListItem button component={Link} to="#.">
+            <ListItemIcon>
+              <MailIcon />
+            </ListItemIcon>
+            <ListItemText>Log Out</ListItemText>
+          </ListItem>
+
+          {/* {['Change Language', 'Log Out', 'Spam'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
-          ))}
+          ))}*/}
         </List>
       </Drawer>
-   
+
       {renderMobileMenu}
       {}
       {noti ? Notification : renderMenu}
