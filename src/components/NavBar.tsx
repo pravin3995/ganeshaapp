@@ -440,7 +440,7 @@ export default function PrimarySearchAppBar() {
           </ListItem>
           <ListItem button component={Link} to="/memberprofile">
             <ListItemIcon>
-              <MailIcon />
+              <AccountCircle />
             </ListItemIcon>
             <ListItemText>Profile</ListItemText>
           </ListItem>
@@ -471,7 +471,7 @@ export default function PrimarySearchAppBar() {
           ))} */}
         </List>
         <Divider />
-        <List>
+        <List className="mt-auto">
           <ListItem button component={Link} to="#.">
             <ListItemIcon>
               <MailIcon />
