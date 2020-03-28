@@ -56,7 +56,7 @@ h6{
 .label-f-size {font-size: 13px; }
 .f-bold{font-weight: bold;}
 .f-w-500 {font-weight: 500;}
-.mb-16{margin-bottom: 16px;}
+.mb-16{margin-bottom: 16px!important;}
 .mt-16{margin-top:16px;}
 .p-15{padding:0 24px 24px;}
 .mb-10{margin-bottom: 10px!important;}
@@ -73,6 +73,8 @@ h6{
 .pt-0{padding-top:0!important;}
 .pb-0{padding-bottom: 0!important;}
 .mr-10{margin-right: 10px!important;}
+.mt-0{margin-top: 0;}
+.pr-0{padding-right: 0!important;}
 
 .MUIRichTextEditor-placeHolder-169 {
     font-size: 14px;
@@ -154,17 +156,17 @@ h6{
 
 
 // Common Css
-.MuiBox-root {
-    .MuiButton-root:hover{
-        background-color: #df3088;
-        box-shadow: none;
-    }
-}
+// .MuiBox-root {
+//     .MuiButton-root:hover{
+//         background-color: #df3088;
+//         box-shadow: none;
+//     }
+// }
 
-.MuiButton-contained:hover {
-    background-color: #df3088 !important;
-    box-shadow: none;
-}
+// .MuiButton-contained:hover {
+//     background-color: #df3088 !important;
+//     box-shadow: none;
+// }
 
 
 
@@ -326,10 +328,10 @@ h6{
 
     // add-edit-event
     .add-edit-event {
-        .MuiButton-contained:hover{
-            box-shadow: none;
-            background: #df3088;
-        }
+        // .MuiButton-contained:hover{
+        //     box-shadow: none;
+        //     background: #df3088;
+        // }
         .editor #mui-rte-root {
             #mui-rte-container {
             padding: 0 3px;
@@ -346,12 +348,12 @@ h6{
                 }
            }
              
-            .MuiBox-root {
-                .MuiButton-root:hover {
-                    text-decoration: none;
-                    background-color: #df3088;
-                }
-            }
+            // .MuiBox-root {
+            //     // .MuiButton-root:hover {
+            //     //     text-decoration: none;
+            //     //     background-color: #df3088;
+            //     // }
+            // }
             .MuiSvgIcon-root {
                 width: 16px;
                 height: 16px;
@@ -397,14 +399,14 @@ h6{
 
         // Event Page Css
         .events-page {
-            .MuiButtonGroup-root .MuiButton-containedPrimary {
-                background-color:#df3088 ;
-            }
+            // .MuiButtonGroup-root .MuiButton-containedPrimary {
+            //     background-color:#df3088 ;
+            // }
 
-            .MuiButton-root:hover:hover{
-                box-shadow: none;
-                background: #df3088;
-            }
+            // .MuiButton-root:hover:hover{
+            //     box-shadow: none;
+            //     background: #df3088;
+            // }
             .ganesh-chathurti-description {
                 line-height: 22px;
                 font-size: 14px;
@@ -430,10 +432,10 @@ h6{
         
         .setting-page{
    
-        .MuiButton-containedPrimary {
-            color: #fff;
-            background-color: #df3088;
-        }
+        // .MuiButton-containedPrimary {
+        //     color: #fff;
+        //     background-color: #df3088;
+        // }
         //user
         .userseditform{
             display: flex;
@@ -501,17 +503,17 @@ h6{
             font-weight: 700;
         }
      }
-     .select-wrapper{
-        .transform{
-            transform: translate(14px, 11px) scale(1);
-        }
-     }
+    //  .select-wrapper{
+    //     .transform{
+    //         transform: translate(14px, 11px) scale(1);
+    //     }
+    //  }
   
-    .slectbox{
-        select{
-            padding: 8px;
-        }
-    }
+    // .slectbox{
+    //     select{
+    //         padding: 8px;
+    //     }
+    // }
 //Pravin 
 .iconposition{
     position: relative;
@@ -559,11 +561,11 @@ h6{
     @include mt(2);
     text-align: right;
 }
-.receipt-form{
-    // width:500px;
-    // margin:0 auto;
-    background:rgb(210, 216, 255);
-}
+// .receipt-form{
+//     // width:500px;
+//     // margin:0 auto;
+//     background:rgb(210, 216, 255);
+// }
 .heading{
     text-align: center;
 }
@@ -612,11 +614,18 @@ h6{
 .mt-30{
     margin-top: 30px;
 }
+.h-600{
+    height: 600px;
+}
 .profile{
     // width:440px;
     // margin:0 auto;
     padding-bottom: 20px;
     background: #FAFAFA!important;
+    // height: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     .profile-details{
         border-radius:20px;
         background:#fff9c7;
@@ -651,7 +660,7 @@ h6{
 }
 //BAsic Information Form 
 .basic-info{
-    margin: 20px 20px 0 20px;
+    // margin: 20px 20px 0 20px;
     padding:10px;
     border-radius:15px!important;
 }
@@ -828,8 +837,9 @@ h6{
     }
 }
 .edit-text{
-    // padding: 10px;
+    padding: 10px;
     border-radius: 15px;
+    box-sizing: border-box;
     &:focus{
         outline: none;
     }
@@ -868,7 +878,7 @@ a.MuiButton-outlined{
 .main-wrapper{
     max-width: 700px;
     margin: 0px auto;    
-    @include my(3);
+    // @include my(3);
 }
 .editor{
     box-shadow: 1px 0px 30px rgba(77, 84, 93, 0.08);
@@ -892,3 +902,51 @@ a.MuiButton-outlined{
         color: $textColor;
     }
 }
+//Choose file css
+.file-input {
+    display: inline-block;
+    text-align: left;
+    // background: #fff;
+    // padding: 16px;
+    width: 100%;
+    position: relative;
+    border-radius: 15px;
+    box-sizing: border-box;
+  }
+  
+  .file-input > [type='file'] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .file-input > .button {
+    display: inline-block;
+    cursor: pointer;
+    background: #fb734e;
+    padding: 8px 16px;
+    border-radius: 30px;
+    margin-right: 8px;
+    color:white;
+
+  }
+  
+  .file-input:hover > .button {
+    background: dodgerblue;
+    color: white;
+  }
+  
+  .file-input > .label {
+    color: #333;
+    white-space: nowrap;
+    // opacity: .3;
+  }
+  
+  .file-input.-chosen > .label {
+    opacity: 1;
+  }

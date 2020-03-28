@@ -199,11 +199,9 @@ export default function SimpleTabs() {
   };
 
   return (
-    <div className='setting-page'>
+    <div className='setting-page main-wrapper'>
       <Box className='about-mandal'>
-            <CardContent className='pt-0 pb-0'> 
-              <h2 className='h1-title'> Basic Informastion </h2>
-            </CardContent>
+            
             <AppBar position="static">
               <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
                 <Tab label="Basic Information" {...a11yProps(0)} />
@@ -213,8 +211,8 @@ export default function SimpleTabs() {
             </AppBar>
 
               <TabPanel value={value} index={0}>
-                 <Card className='abc'>
-                    <CardContent>
+                 <div className='abc'>
+                    <h2 className='h1-title m-0'> Basic Informastion </h2>
                       <Grid container spacing={2}> 
                         <Grid item xs={12} md={6}>
                           <Box mt={2}>
@@ -223,8 +221,7 @@ export default function SimpleTabs() {
                                 <TextField
                                       fullWidth
                                       id="outlined-number"
-                                      label="Enter Mandal Name Here..."
-                                      size='small'
+                                      placeholder="Enter Mandal Name Here..."
                                       rowsMax="4"
                                       variant="outlined"
                                  />
@@ -248,8 +245,7 @@ export default function SimpleTabs() {
                                 <TextField
                                       fullWidth
                                       id="outlined-number"
-                                      label="Enter Mandal Address Here..."
-                                      size='small'
+                                      placeholder="Enter Mandal Address Here..."
                                       rowsMax="4"
                                       variant="outlined"
                                       />
@@ -264,8 +260,7 @@ export default function SimpleTabs() {
                               <TextField
                                     fullWidth
                                     id="outlined-number"
-                                    label="Enter Registration Number Here..."
-                                    size='small'
+                                    placeholder="Enter Registration Number Here..."
                                     rowsMax="4"
                                     variant="outlined"
                                     />
@@ -287,8 +282,7 @@ export default function SimpleTabs() {
                               <TextField
                                     fullWidth
                                     id="outlined-number"
-                                    label="Enter Facebook Link Here..."
-                                    size='small'
+                                    placeholder="Enter Facebook Link Here..."
                                     rowsMax="4"
                                     variant="outlined"
                                     />
@@ -303,8 +297,7 @@ export default function SimpleTabs() {
                               <TextField
                                     fullWidth
                                     id="outlined-number"
-                                    label="Enter Instagram Link Here..."
-                                    size='small'
+                                    placeholder="Enter Instagram Link Here..."
                                     rowsMax="4"
                                     variant="outlined"
                                     />
@@ -312,21 +305,18 @@ export default function SimpleTabs() {
                           </Box>
                         </Grid>
                       </Grid>
-                    </CardContent>
 
                     <CardContent>
                       <Box className='t-right'>
-                        <Button variant="outlined" href='/events' size='small' target='_bank' className={classes.button}>
+                        <Button variant="outlined" href='/events'  target='_bank' className={classes.button}>
                             Save
                         </Button>
                       </Box>
                     </CardContent>
-                  </Card>
+                  </div>
               </TabPanel>  
 
               <TabPanel value={value} index={1}>
-                 <Card>
-                 <CardContent >
                     <Grid container spacing={1}>
                       <Grid item xs={8} sm={10} md={11}lg={11}>
                       <Box mb={1}>
@@ -336,7 +326,6 @@ export default function SimpleTabs() {
                                   fullWidth
                                   id="outlined-number"
                                   placeholder="Enter User Role Name Here..."
-                                  size='small'
                                   rowsMax="4"
                                   variant="outlined"
                                   />
@@ -346,7 +335,7 @@ export default function SimpleTabs() {
 
                       <Grid item xs={4} sm={2} md={1} lg={1}> 
                       <Box className='t-right' mt={3}  mb={1}>
-                        <Button variant="outlined" href='/events' size='small' target='_bank' className={classes.button}>
+                        <Button variant="outlined" href='/events'  target='_bank' className={classes.button}>
                           Add
                         </Button>
                       </Box>
@@ -354,7 +343,7 @@ export default function SimpleTabs() {
                       
                       <Grid item xs={12} sm={6}>
                         <Box mr={1} mb={1}>
-                        <FormControl size='small' fullWidth variant="outlined" className={classes.formControl}>
+                        <FormControl  fullWidth variant="outlined" className={classes.formControl}>
                           <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
                               Member Name
                           </InputLabel>
@@ -377,7 +366,7 @@ export default function SimpleTabs() {
 
                       <Grid item xs={12} sm={6}>
                         <Box mr={2}>
-                        <FormControl size='small' fullWidth variant="outlined" className={classes.formControl}>
+                        <FormControl  fullWidth variant="outlined" className={classes.formControl}>
                           <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
                               User Access Type
                           </InputLabel>
@@ -398,20 +387,18 @@ export default function SimpleTabs() {
                         </Box> 
                       </Grid>
                     </Grid>
-                </CardContent>
                 <CardContent>
                 <Box className='t-right' mb={2}>
-                    <Button variant="outlined" href='/events' size='small' target='_bank' className={classes.button}>
+                    <Button variant="outlined" href='/events'  target='_bank' className={classes.button}>
                       Save
                     </Button>
                   </Box>
                 </CardContent>
-              </Card>
               </TabPanel>   
 
               <TabPanel value={value} index={2}>
                  <Grid container spacing={2}>
-                <Grid item xs={12} md={6}> 
+                <Grid item xs={12} > 
                     <Card className='boxshadow'>
                       <CardContent>
                           <div className='userseditform'>
@@ -426,14 +413,14 @@ export default function SimpleTabs() {
                     </Card>
                     <Card className='mt-16 addmember boxshadow'>
                      < CardContent>
-                        <TextField   size='small' id="outlined-basic" value='Treasure' variant="outlined" className={classes.TextField}/>
+                        <TextField   id="outlined-basic" value='Treasure' variant="outlined" className={classes.TextField}/>
                         <div className={classes.EditUserAccess}>
                           <p className='f-w-500 '>
                             Edit User Access
                           </p>
                           <a href="">Add New</a>
                         </div>
-                        <TextField  size='small' id="outlined-basic" placeholder='Type Member Name Here...' variant="outlined" className={classes.TextField}/>
+                        <TextField  id="outlined-basic" placeholder='Type Member Name Here...' variant="outlined" className={classes.TextField}/>
                         <Card  className='mt-16 boxshadow'>
                           <CardContent className={classes.CardContents}>
                               <div className='userseditform'>
@@ -460,14 +447,14 @@ export default function SimpleTabs() {
                         </Card>
          
                         <Box className='t-right mt-16'>
-                          <Button variant="outlined" href='/events' size='small' target='_bank' className={classes.button}>
+                          <Button variant="outlined" href='/events'  target='_bank' className={classes.button}>
                             Save
                           </Button>
                         </Box>
                      </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} >
                    <Card className='boxshadow'>
                       <CardContent>
                           <div className='userseditform'>
@@ -480,7 +467,7 @@ export default function SimpleTabs() {
                       </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} >
                    <Card className='boxshadow'>
                       <CardContent>
                           <div className='userseditform'>
@@ -493,7 +480,7 @@ export default function SimpleTabs() {
                       </CardContent>
                     </Card>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} >
                    <Card className='boxshadow'>
                       <CardContent>
                           <div className='userseditform'>

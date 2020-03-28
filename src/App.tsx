@@ -27,13 +27,14 @@ import Feedback from './components/Feedback'
 import MemberEditProfile from './components/MemberEditProfile'
 import AddNewPost from './components/AddNewPost'
 import AccountSetting from './components/AccountSetting'
+import ErrorMessage from './components/ErrorMessage'
 
 export default function App() {
 
   return (
       <div>
         <BrowserRouter>
-        <NavBar/>
+        <NavBar/> 
         <Route exact path='/receipt' component={Receipt}></Route> 
         <Route exact path='/details' component={ReceiptDetails}></Route> 
         <Route exact path='/events' component={Events}></Route> 
@@ -57,6 +58,7 @@ export default function App() {
         <Route exact path='/membereditprofile' component={MemberEditProfile}></Route>
         <Route exact path='/addnewpost' component={AddNewPost}></Route>
         <Route exact path='/accountsetting' component={AccountSetting}></Route>
+        <Route exact path='/error' component={ErrorMessage}></Route>
 
 
         </BrowserRouter>

@@ -36,11 +36,9 @@ export default function EditAboutMandal() {
     console.log(data);
   };
   return (
-    <div className='edit-about-mandal'> 
+    <div className='edit-about-mandal main-wrapper'> 
             <CardContent className='pt-0' >      
             <h2 className='h1-title'> Edit About Mandal </h2>    
-              <Card>
-                <CardContent>
                 <Box>
                   <Grid container spacing = {3} >
                     <Grid item  md={6} xs = {12}>
@@ -49,7 +47,6 @@ export default function EditAboutMandal() {
                         <TextField
                         fullWidth
                         id="outlined-number"
-                        size='small'
                         placeholder='Enter Name of the mandal'
                         rowsMax="4"
                         variant="outlined"
@@ -59,8 +56,11 @@ export default function EditAboutMandal() {
 
                       <Grid item  md={6} xs = {12}>
                       <Box>
-                        <span className='label d-block'> Featured Image:</span>
-                        <input type='file' />
+                      <div className='file-input'>
+                          <input type='file'/>
+                          <span className='button'>Choose</span>
+                          <span className='label' data-js-label>No file selected</span>
+                        </div>
                       </Box>
                       </Grid>
 
@@ -84,8 +84,6 @@ export default function EditAboutMandal() {
                       </Grid>    
                    </Grid>
                 </Box>
-                </CardContent>
-              </Card>
             </CardContent>
 			</div>
   )

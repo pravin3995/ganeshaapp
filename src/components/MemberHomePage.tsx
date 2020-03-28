@@ -247,6 +247,7 @@ export default function CenteredGrid() {
                         aria-controls="long-menu"
                         aria-haspopup="true"
                         onClick={handleClick}
+                        className='pr-0'
                       >
                         <MoreVertIcon />
                       </IconButton>

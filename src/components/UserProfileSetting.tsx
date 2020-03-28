@@ -131,7 +131,7 @@ export default function VariantAvatars() {
                     </div>
                 </div>
                 <div className={classes.ProfileName}>
-                    <h3 >User Profile Page</h3>
+                    <h3 >Yogesh Jadhav</h3>
                     <p className='role'>Member</p>
                 </div>
             </div>
@@ -157,12 +157,12 @@ export default function VariantAvatars() {
                     </Grid> */}
                 </Grid>
           </div>
-          <Paper className='basic-info' elevation={2}>
+          <div className='basic-info main-wrapper' >
               <div className={classes.BasicInfo}>
                 <h3>Basic Information:</h3>
                 <form noValidate autoComplete="off">
                   <Grid container spacing={3}>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12} >
                       <div className='iconposition' style={styles.TextField} >
                           <TextField id="outlined-basic" label="User Name" variant="outlined"  className='w-100'/>
                           <InputAdornment position="start" className='icon'>
@@ -170,7 +170,7 @@ export default function VariantAvatars() {
                           </InputAdornment>
                       </div>
                      </Grid>
-                     <Grid item xs={12} sm={6}>
+                     <Grid item xs={12} >
                       <div className='iconposition' style={styles.TextField}>
                           <TextField id="outlined-basic" label="Email Address" variant="outlined"  className='w-100'/>
                           <InputAdornment position="start" className='icon'>
@@ -178,7 +178,7 @@ export default function VariantAvatars() {
                           </InputAdornment>
                       </div>
                      </Grid>
-                     <Grid item xs={12} sm={6}>
+                     <Grid item xs={12} >
                       <div className='iconposition' style={styles.TextField}>
                           <TextField id="outlined-basic" label="Mobile Number" variant="outlined"  className='w-100'/>
                           <InputAdornment position="start" className='icon'>
@@ -186,7 +186,7 @@ export default function VariantAvatars() {
                           </InputAdornment>
                       </div>
                      </Grid>
-                     <Grid item xs={12} sm={6}>
+                     <Grid item xs={12} >
                       <div className='iconposition' style={styles.TextField}>
                           <TextField id="outlined-basic" label="City" variant="outlined"  className='w-100'/>
                           <InputAdornment position="start" className='icon'>
@@ -194,7 +194,7 @@ export default function VariantAvatars() {
                           </InputAdornment>
                       </div>
                      </Grid>
-                     <Grid item xs={12} sm={6} style={{textAlign:'right'}}>
+                     <Grid item xs={12}  style={{textAlign:'right'}}>
                         <Button variant="contained" color="primary">
                             Submit
                         </Button>
@@ -203,7 +203,7 @@ export default function VariantAvatars() {
                 </form>
    
             </div>
-            </Paper>
+            </div>
   
         </Paper>
    </div>

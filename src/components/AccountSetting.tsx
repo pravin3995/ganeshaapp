@@ -16,6 +16,7 @@ import CallIcon from '@material-ui/icons/Call';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import '../custom.scss';
+import { Grid } from '@material-ui/core';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -50,7 +51,7 @@ const useStyles = makeStyles((theme: Theme) =>
       ProfileEdit: {
           position: 'absolute',
           left:'68%',
-          bottom :'12px'
+          bottom :'-6px'
 
       },
       ProfileEditPosition :{
@@ -74,6 +75,10 @@ const useStyles = makeStyles((theme: Theme) =>
         height: 0,
         paddingTop: '30.25%', // 16:9
       },
+      Alignment:{
+        display:'flex',
+        justifyContent:'center'
+      },
       expand: {
         transform: 'rotate(0deg)',
         marginLeft: 'auto',
@@ -89,7 +94,7 @@ const useStyles = makeStyles((theme: Theme) =>
         borderRadius:'20%'
       },
         TextField : {
-    width:'100%',
+    // width:'100%',
     marginTop: 26
   }
   }),
@@ -149,43 +154,47 @@ export default function VariantAvatars() {
             </div>
           </Paper>
 
-            <Paper elevation={2}  className='basic-info'>
-              <div className={classes.ChangePass}>
-                <h3>Change Password:</h3>
-                <form noValidate autoComplete="off">
-                  <div style={styles.TextField}>
-                      <TextField id="outlined-basic" label="Old Password" variant="outlined"  className='w-100'/>
-                  </div>
-                  <div style={styles.TextField}>
-                      <TextField id="outlined-basic" label="New Password" variant="outlined"  className='w-100'/>
-                  </div>
-                </form>
-            </div>
-            <div className={classes.AccountSetting}>
-                <h3 style={{margin:0}}>Account Setting:</h3>
-                <p className='text-color-size'>Change Laguage</p>
-                <FormControl variant="outlined" className='w-100'>
-                  <InputLabel ref={inputLabel} id="demo-simple-select-outlined-label">
-                    Select Language
-                  </InputLabel>
-                <Select
-                  labelId="demo-simple-select-outlined-label"
-                  id="demo-simple-select-outlined"
-                  value={age}
-                  labelWidth={labelWidth}
-                >
-              
-                  <MenuItem value={10}>Marathi</MenuItem>
-                  <MenuItem value={20}>English</MenuItem>
-                </Select>
-              </FormControl>
-              <div className='button'>
-                  <Button variant="contained" color="primary">
-                      Update
-                  </Button>
+            <div className='basic-info'>
+            <Grid container className={classes.Alignment}>
+               <Grid item xs={12} md={6}>
+                <div className={classes.ChangePass}>
+                  <h3>Change Password:</h3>
+                  <form noValidate autoComplete="off">
+                    <div style={styles.TextField}>
+                        <TextField id="outlined-basic" label="Old Password" variant="outlined"  className='w-100'/>
+                    </div>
+                    <div style={styles.TextField}>
+                        <TextField id="outlined-basic" label="New Password" variant="outlined"  className='w-100'/>
+                    </div>
+                  </form>
               </div>
-           </div>
-         </Paper>   
+                <div className={classes.AccountSetting}>
+                  <h3 style={{margin:0}}>Account Setting:</h3>
+                  <p className='text-color-size'>Change Laguage</p>
+                  <FormControl variant="outlined" className='w-100'>
+                    <InputLabel ref={inputLabel} id="demo-simple-select-outlined-label">
+                      Select Language
+                    </InputLabel>
+                  <Select
+                    labelId="demo-simple-select-outlined-label"
+                    id="demo-simple-select-outlined"
+                    value={age}
+                    labelWidth={labelWidth}
+                  >
+                
+                    <MenuItem value={10}>Marathi</MenuItem>
+                    <MenuItem value={20}>English</MenuItem>
+                  </Select>
+                </FormControl>
+                <div className='button mt-16'>
+                    <Button variant="contained" color="primary">
+                        Update
+                    </Button>
+                </div>
+            </div>
+              </Grid>
+            </Grid>
+          </div>   
         </Paper>
    </div>
   );

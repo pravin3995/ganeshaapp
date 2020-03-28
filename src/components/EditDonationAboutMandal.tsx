@@ -41,7 +41,7 @@ export default function EditAboutMandal() {
     console.log(data);
   };
   return (
-    <div className='edit-donation-about-mandal'>
+    <div className='edit-donation-about-mandal main-wrapper'>
             <CardContent className="pt-0">      
             <h2 className='h1-title'> Edit Donations Information </h2>    
             <h3 className='f-w-500'> Welcome Text</h3>
@@ -89,7 +89,7 @@ export default function EditAboutMandal() {
                     </Box>
                     </Grid>
 
-                    <Grid item  md={6} xs = {12}>
+                    <Grid item  md={12} xs = {12}>
                       <Grid container spacing = {3} >
                         <Grid item xs={6} md={6}>
                           <Box>
@@ -104,7 +104,7 @@ export default function EditAboutMandal() {
 														/>
                     			</Box>
                         </Grid>
-												<Grid item xs={6} >
+												<Grid item xs={6} md={6}>
 													<Box>
 														<span className='label'> PAN No:</span>
 														<TextField

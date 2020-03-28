@@ -128,7 +128,8 @@ export default function SimpleTabs() {
     });
   };
   return (
-    <div className={classes.root}>
+    <div className='main-wrapper'>
+      <div className={classes.root}>
       <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
           <Tab label=" Overview" {...a11yProps(0)} />
@@ -290,6 +291,7 @@ export default function SimpleTabs() {
          </div>
    
       </TabPanel>
+    </div>
     </div>
   );
 }

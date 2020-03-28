@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme: Theme) =>
       ProfileEdit: {
           position: 'absolute',
           left:'68%',
-          bottom :'12px'
+          bottom :'-6px'
 
       },
       ProfileEditPosition :{
@@ -134,6 +134,7 @@ export default function VariantAvatars() {
                 </Button>
             </div>
           </Paper>
+           <div className=' main-wrapper'>
             <div className='follow'>
                 <Grid container >
                     <Grid item xs={4}>
@@ -163,6 +164,7 @@ export default function VariantAvatars() {
                       </Button>
                   </div>
             </div>
+          </div>
        </Paper>
    </div>
   );

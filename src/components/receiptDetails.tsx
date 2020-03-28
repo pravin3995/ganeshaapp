@@ -8,9 +8,9 @@ import Grid, { GridSpacing } from '@material-ui/core/Grid'
 
 export default function Receipt() {
   return (
-    <div >
+    <div className="main-wrapper py-3" >
         <Grid container  >
-           <Grid item xs={12} md={6} lg={4}>
+           <Grid item xs={12} >
               <CardContent className='pt-0 pb-0'>
               <h2> 2020 </h2>
               <Link to='/details' className= 'text-decoration-none'>
@@ -48,7 +48,7 @@ export default function Receipt() {
               </Link>
             </CardContent>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid item xs={12} >
               <CardContent className='pt-0 pb-0'>
               <h2> 2019 </h2>
               <Link to='/details' className= 'text-decoration-none'>
@@ -86,7 +86,7 @@ export default function Receipt() {
               </Link>
             </CardContent>
             </Grid>
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid item xs={12} >
               <CardContent className='pt-0'>
                 <h2> 2018 </h2>
         <Link to='/details' className= 'text-decoration-none'>

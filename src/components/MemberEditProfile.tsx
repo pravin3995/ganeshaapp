@@ -123,7 +123,7 @@ export default function VariantAvatars() {
   const [age, setAge] = React.useState('');
   return (
    <div>
-        <Paper elevation={1} className='profile'>   
+        <Paper elevation={0} className='profile'>   
            <Paper className='profile-details' elevation={1}>
             <div className='changephoto'>
                 <Button variant="outlined" color="primary" className={classes.changeCover} >
@@ -154,7 +154,7 @@ export default function VariantAvatars() {
             </div>
           </Paper>
 
-            <Paper className='basic-info' elevation={2}>
+            <div className='basic-info main-wrapper' >
               <div className={classes.BasicInfo}>
                 <h3>Basic Information:</h3>
                 <form noValidate autoComplete="off">
@@ -191,7 +191,7 @@ export default function VariantAvatars() {
                           </InputAdornment>
                       </div>
                      </Grid>
-                     <Grid item xs={12} sm={6}>
+                     <Grid item xs={12} className='t-right'>
                         <Button variant="contained" color="primary">
                             Submit
                         </Button>
@@ -200,7 +200,7 @@ export default function VariantAvatars() {
                 </form>
    
             </div>
-            </Paper>
+            </div>
         </Paper>
    </div>
   );

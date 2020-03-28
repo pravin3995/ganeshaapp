@@ -69,6 +69,7 @@ export default function SimpleTabs() {
   };
 
   return (
+   <div className='main-wrapper'> 
     <div className={classes.root}>
       <Box className='about-mandal'>
         <CardContent className='pt-0 pb-0'>
@@ -148,5 +149,6 @@ export default function SimpleTabs() {
         
       </Box>
     </div>
+ </div>
   );
 }

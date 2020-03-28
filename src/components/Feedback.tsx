@@ -14,15 +14,15 @@ const style ={
     paper:{
         padding:20,
         borderRadius:'15px',
-        background: '#FAFAFA '
+        // background: '#FAFAFA '
     }
 }
 
 export default function MinHeightTextarea() {
   return(
-      <Paper elevation={1} style={style.paper}>     
+      <div style={style.paper} className='main-wrapper'>     
        <div>
-        <h2>Share your feedback with us</h2>
+        <h2 className='mt-0'>Share your feedback with us</h2>
         <p>How satisfied are you with overall application</p>
           <div> 
             <EmojiEmotionsOutlinedIcon style={style.emoji}/>
@@ -39,6 +39,6 @@ export default function MinHeightTextarea() {
             </Button>
         </div>
      </div>
-     </Paper>
+     </div>
   );
 }

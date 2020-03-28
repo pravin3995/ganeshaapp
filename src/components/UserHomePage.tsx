@@ -103,7 +103,7 @@ export default function VariantAvatars() {
   }
   return (
    <div className='add-new-post'>
-        <div className='profile'>   
+        <div className='profile h-600'>   
     
             <div className={classes.Addpost} >
                 <div className='icon' >

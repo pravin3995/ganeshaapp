@@ -146,7 +146,8 @@ export default function SimpleTabs() {
     });
   };
   return (
-    <div className={classes.root}>
+   <div className='main-wrapper'> 
+      <div className={classes.root}>
       <AppBar position="static">
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
           <Tab label=" Billing System" {...a11yProps(0)} />
@@ -154,7 +155,7 @@ export default function SimpleTabs() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-         <Card className={classes.Card}>
+         <div >
              <h3 className='m-0'>Billing Details</h3>
              <CardContent className='p-16'>
                 <Grid container  spacing={2}>
@@ -162,7 +163,7 @@ export default function SimpleTabs() {
                         <TextField
                             id="outlined-size-small"
                             variant="outlined"
-                            size="small"
+                            
                             placeholder="Item Name"
                             fullWidth
                         />
@@ -171,7 +172,7 @@ export default function SimpleTabs() {
                         <TextField
                             id="outlined-size-small"
                             variant="outlined"
-                            size="small"
+                            
                             placeholder="Amount"
                             fullWidth
                         />
@@ -180,7 +181,7 @@ export default function SimpleTabs() {
                         <TextField
                             id="outlined-size-small"
                             variant="outlined"
-                            size="small"
+                            
                             placeholder="Quantity"
                             fullWidth
                         />
@@ -191,7 +192,7 @@ export default function SimpleTabs() {
                                 <KeyboardDatePicker
                                     autoOk
                                     variant="inline"
-                                     size="small"
+                                     
                                     inputVariant="outlined"
                                     format="MM/dd/yyyy"
                                     fullWidth
@@ -249,7 +250,7 @@ export default function SimpleTabs() {
                         <TextField
                             id="outlined-size-small"
                             variant="outlined"
-                            size="small"
+                            
                             placeholder="Devotee / Sponser"
                             fullWidth
                         />
@@ -258,7 +259,7 @@ export default function SimpleTabs() {
                         <TextField
                             id="outlined-size-small"
                             variant="outlined"
-                            size="small"
+                            
                             placeholder="Amount"
                             fullWidth
                         />
@@ -295,7 +296,7 @@ export default function SimpleTabs() {
                      <TextField
                             id="outlined-size-small"
                             variant="outlined"
-                            size="small"
+                            
                             placeholder="Mobile Number"
                             fullWidth
                         />
@@ -323,7 +324,7 @@ export default function SimpleTabs() {
                         <TextField
                             id="outlined-size-small"
                             variant="outlined"
-                            size="small"
+                            
                             placeholder="Amount"
                             fullWidth
                         />
@@ -343,7 +344,7 @@ export default function SimpleTabs() {
                   <h2 className='m-0 font-30'>30,00,000</h2>
                 </div>
    
-         </Card>
+         </div>
          
       </TabPanel>
       <TabPanel value={value} index={1}>
@@ -352,10 +353,10 @@ export default function SimpleTabs() {
               <h3 className='m-0'>Billing History</h3>
               <a href=""  className='ml-10'> <SearchTwoToneIcon/></a>
             </div>
-            <Card className={classes.Card}>
+            <Card >
                 <CardContent className='p-0'>
                   <TableContainer >
-                    <Table className={classes.table} size="small" aria-label="a dense table">
+                    <Table className={classes.table}  aria-label="a dense table">
                       <TableHead>
             <TableRow>
               <TableCell>Item Name</TableCell>
@@ -386,10 +387,10 @@ export default function SimpleTabs() {
               <h3 className='m-0'>Credit History</h3>
               <a href=""  className='ml-10'> <SearchTwoToneIcon/></a>
             </div>
-            <Card className={classes.Card}>
+            <Card >
                 <CardContent className='p-0'>
                   <TableContainer >
-                    <Table className={classes.table} size="small" aria-label="a dense table">
+                    <Table className={classes.table}  aria-label="a dense table">
                       <TableHead>
                         <TableRow>
                           <TableCell>Item Name</TableCell>
@@ -418,5 +419,6 @@ export default function SimpleTabs() {
    
       </TabPanel>
     </div>
+  </div>
   );
 }

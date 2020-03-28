@@ -195,7 +195,7 @@ export default function CenteredGrid() {
   const save = (data: any) => {
     console.log(data);
   };
-  return (
+  return (   
     <div className={classes.root}>
         <div className='profile'>
           <Paper className='profile-details' elevation={1}>
@@ -228,281 +228,167 @@ export default function CenteredGrid() {
             </div>
           </Paper>
         </div>
-      <Grid container >
-        <Grid item xs={12} sm={6} md={6} lg={4}>  
-           <div className={classes.paper} >
-            <div className='follow' style={{textAlign:'center'}}>
-                <Grid container >
-                    <Grid item xs={4}>
-                        <p  className='f-14'>Post</p>
-                        <h2>02</h2>
+        <div className='main-wrapper'>
+           <Grid container >
+              <Grid item xs={12} >  
+              <div className={classes.paper} >
+                <div className='follow' style={{textAlign:'center'}}>
+                    <Grid container >
+                        <Grid item xs={4}>
+                            <p  className='f-14'>Post</p>
+                            <h2>02</h2>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <p className='f-14'>Following</p>
+                            <h2>10</h2>
+                        </Grid>
+                        <Grid item xs={4}>
+                            <p className='f-14'>Follows</p>
+                            <h2>02</h2>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={4}>
-                        <p className='f-14'>Following</p>
-                        <h2>10</h2>
-                    </Grid>
-                    <Grid item xs={4}>
-                        <p className='f-14'>Follows</p>
-                        <h2>02</h2>
-                    </Grid>
-                </Grid>
-              </div>
-            
-         </div>
-           <div className={classes.paper} >
-             <Card className='post-card' >
-              <CardHeader
-                  avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar}>
-                      Y
-                  </Avatar>
-                  }
-                 
-                  action={
-                   
-                  <IconButton aria-label="settings" >
-                      <span style={{fontSize:12}}>20 mins ago</span>
-                      <div>
-                        <IconButton
-                          aria-label="more"
-                          aria-controls="long-menu"
-                          aria-haspopup="true"
-                          onClick={handleClick}
-                        >
-                          <MoreVertIcon />
-                        </IconButton>
-                        <Menu
-                            id="fade-menu"
-                            anchorEl={anchorEl}
-                            keepMounted
-                            open={opens}
-                            TransitionComponent={Fade}
-                            onClose={handleCloses}
-                          >
-                            <MenuItem onClick={handleCloses} >Edit</MenuItem>
-                            <MenuItem onClick={handleClickOpen}>Delete</MenuItem>
-                            <MenuItem >Disable Commnets</MenuItem>
-                            <MenuItem >Disable Sharing</MenuItem>
-                          </Menu>
-                          {/* <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} /> */}
-                      </div>
-                  </IconButton>
-                  }
-                  title="Abhijeet Jachak"
-                  // titleTypographyProps={{variant:'h6' }}
-                  classes={{
-                    title: classes.title,
-                    subheader:classes.subheader,
-                  }}
-                  subheader="Member" 
-              />
-              {/* <img src={String(img)} /> */}
-              <CardMedia
-                  className={classes.media}
-                  image={require('../assets/images/1.jpg')}
-                  title="Paella dish"
-              />
-              <CardContent>
-                  <h3 style={{margin:'0 0 7px 0'}}>Post Title</h3>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                      This impressive paella is a perfect party dish and a fun meal to cook together with your
-                      guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                  </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                  <IconButton aria-label="add to favorites">
-                      <FavoriteIcon color="secondary" /><span className='f-14 f-w-600'> +1</span>
-                  </IconButton>
-                  
-                  <IconButton
-                      className={clsx(classes.expand, {
-                          [classes.expandOpen]: expanded,
-                      })}
-                      onClick={handleExpandClick}
-                      aria-expanded={expanded}
-                      aria-label="show more"
-                  >
-                  {/* <ExpandMoreIcon /> */}
-                  <span className='f-14 f-w-600'>Comments</span>
-                  </IconButton>
-                  <IconButton aria-label="share">
-                      {/* <ShareIcon /> */}
-                      <span className='f-14 f-w-600'>Share</span>
-                  </IconButton>
-              </CardActions>
-               
-              <Collapse in={expanded} timeout="auto" unmountOnExit>
+                  </div>
+                
+            </div>
+              <div className={classes.paper} >
+                <Card className='post-card' >
                   <CardHeader
                       avatar={
                       <Avatar aria-label="recipe" className={classes.avatar}>
                           Y
                       </Avatar>
                       }
-    
-                      title="Yogesh Jadhav"
+                    
+                      action={
+                      
+                      <IconButton aria-label="settings" className='p-0' >
+                          <span style={{fontSize:12}}>20 mins ago</span>
+                          <div>
+                            <IconButton
+                              aria-label="more"
+                              aria-controls="long-menu"
+                              aria-haspopup="true"
+                              onClick={handleClick}
+                              className='pr-0'
+                            >
+                              <MoreVertIcon  />
+                            </IconButton>
+                            <Menu
+                                id="fade-menu"
+                                anchorEl={anchorEl}
+                                keepMounted
+                                open={opens}
+                                TransitionComponent={Fade}
+                                onClose={handleCloses}
+                              >
+                                <MenuItem onClick={handleCloses} >Edit</MenuItem>
+                                <MenuItem onClick={handleClickOpen}>Delete</MenuItem>
+                                <MenuItem >Disable Commnets</MenuItem>
+                                <MenuItem >Disable Sharing</MenuItem>
+                              </Menu>
+                              {/* <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} /> */}
+                          </div>
+                      </IconButton>
+                      }
+                      title="Abhijeet Jachak"
                       // titleTypographyProps={{variant:'h6' }}
                       classes={{
                         title: classes.title,
                         subheader:classes.subheader,
                       }}
-                      subheader="Member"
-                      className='comment-border'
+                      subheader="Member" 
                   />
-                <CardContent  className='comment-content'>
-                    <Typography paragraph className='comment-paragraph'>
-                      Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-                      minutes.
-                    </Typography>
-                    <div className='reply-field'>
-                      <TextField
-                          id="outlined-size-small"
-                          placeholder="Reply ..."
-                          variant="outlined"
-                          size="small"
-                          className='w-100'
-                        />
-                        <SendIcon className='send'/>
-                    </div>
-                    <div className='edit-comment'>
-                    <TextareaAutosize aria-label="minimum height" className='w-100 edit-text' rowsMin={3} placeholder="Edit Comment..." />
-                        <div className='button-wrapper'>
-                            <Button size="small" variant="contained" color="primary">
-                              Cancel  
-                            </Button>
-                            <Button size="small" variant="contained" color="primary">
-                              Update
-                            </Button>
-                        </div>
-                    </div>
-                    <div className='comments-action'>
-                     <a href="">Reply</a> 
-                     <a href="">Edit</a> 
-                      <a href="">Delete</a> 
-                    </div>
+                  {/* <img src={String(img)} /> */}
+                  <CardMedia
+                      className={classes.media}
+                      image={require('../assets/images/1.jpg')}
+                      title="Paella dish"
+                  />
+                  <CardContent>
+                      <h3 style={{margin:'0 0 7px 0'}}>Post Title</h3>
+                      <Typography variant="body2" color="textSecondary" component="p">
+                          This impressive paella is a perfect party dish and a fun meal to cook together with your
+                          guests. Add 1 cup of frozen peas along with the mussels, if you like.
+                      </Typography>
                   </CardContent>
-              </Collapse>
-     
-             </Card>
-          </div>
-        </Grid>
-        <Grid item xs={12} sm={6} md={6} lg={4}>
-          <div className={classes.paper} >
-           <Card  className='post-card' >
-              <CardHeader
-                  avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar}>
-                      Y
-                  </Avatar>
-                  }
-                  action={
-                  <IconButton aria-label="settings" >
-                      <span style={{fontSize:12}}>20 mins ago</span>
-                      <MoreVertIcon style={{transform:'rotate(90deg)',marginLeft:10}} />
-                  </IconButton>
-                  }
-                  title="Yogesh Jadhav"
-                  // titleTypographyProps={{variant:'h6' }}
-                  classes={{
-                    title: classes.title,
-                    subheader:classes.subheader,
-                  }}
-                  subheader="Member" 
-              />
-              <CardMedia
-                  className={classes.media}
-                  image={require('../assets/images/1.jpg')}
-                  title="Paella dish"
-              />
-              <CardContent>
-                  <h3 style={{margin:'0 0 7px 0'}}>Post Title</h3>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                  This impressive paella is a perfect party dish and a fun meal to cook together with your
-                  guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                  </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                  <IconButton aria-label="add to favorites">
-                      <FavoriteIcon />
-                  </IconButton>
-                  <IconButton aria-label="share">
-                      <ShareIcon />
-                  </IconButton>
-                  <IconButton
-                      className={clsx(classes.expand, {
-                          [classes.expandOpen]: expanded,
-                      })}
-                      onClick={handleExpandClick}
-                      aria-expanded={expanded}
-                      aria-label="show more"
-                  >
-                  <ExpandMoreIcon />
-                  </IconButton>
-              </CardActions>
-              <Collapse in={expanded} timeout="auto" unmountOnExit>
-
-              </Collapse>
-             </Card>
-
-           <Card  className='post-card' >
-              <CardHeader
-                  avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar}>
-                      Y
-                  </Avatar>
-                  }
-                  action={
-                  <IconButton aria-label="settings" >
-                      <span style={{fontSize:12}}>20 mins ago</span>
-                      <MoreVertIcon style={{transform:'rotate(90deg)',marginLeft:10}} />
-                  </IconButton>
-                  }
-                  title="Yogesh Jadhav"
-                  // titleTypographyProps={{variant:'h6' }}
-                  classes={{
-                    title: classes.title,
-                    subheader:classes.subheader,
-                  }}
-                  subheader="Member" 
-              />
-              <CardMedia
-                  className={classes.media}
-                  image={require('../assets/images/1.jpg')}
-                  title="Paella dish"
-              />
-              <CardContent>
-                  <h3 style={{margin:'0 0 7px 0'}}>Post Title</h3>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                  This impressive paella is a perfect party dish and a fun meal to cook together with your
-                  guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                  </Typography>
-              </CardContent>
-              <CardActions disableSpacing>
-                  <IconButton aria-label="add to favorites">
-                      <FavoriteIcon />
-                  </IconButton>
-                  <IconButton aria-label="share">
-                      <ShareIcon />
-                  </IconButton>
-                  <IconButton
-                      className={clsx(classes.expand, {
-                          [classes.expandOpen]: expanded,
-                      })}
-                      onClick={handleExpandClick}
-                      aria-expanded={expanded}
-                      aria-label="show more"
-                  >
-                  <ExpandMoreIcon />
-                  </IconButton>
-              </CardActions>
-              <Collapse in={expanded} timeout="auto" unmountOnExit>
-
-              </Collapse>
-             </Card>
-
-          </div>
-        </Grid>
-  
-      </Grid>
-    </div>
+                  <CardActions disableSpacing>
+                      <IconButton aria-label="add to favorites">
+                          <FavoriteIcon color="secondary" /><span className='f-14 f-w-600'> +1</span>
+                      </IconButton>
+                      
+                      <IconButton
+                          className={clsx(classes.expand, {
+                              [classes.expandOpen]: expanded,
+                          })}
+                          onClick={handleExpandClick}
+                          aria-expanded={expanded}
+                          aria-label="show more"
+                      >
+                      {/* <ExpandMoreIcon /> */}
+                      <span className='f-14 f-w-600'>Comments</span>
+                      </IconButton>
+                      <IconButton aria-label="share">
+                          {/* <ShareIcon /> */}
+                          <span className='f-14 f-w-600'>Share</span>
+                      </IconButton>
+                  </CardActions>
+                  
+                  <Collapse in={expanded} timeout="auto" unmountOnExit>
+                      <CardHeader
+                          avatar={
+                          <Avatar aria-label="recipe" className={classes.avatar}>
+                              Y
+                          </Avatar>
+                          }
+        
+                          title="Yogesh Jadhav"
+                          // titleTypographyProps={{variant:'h6' }}
+                          classes={{
+                            title: classes.title,
+                            subheader:classes.subheader,
+                          }}
+                          subheader="Member"
+                          className='comment-border'
+                      />
+                    <CardContent  className='comment-content'>
+                        <Typography paragraph className='comment-paragraph'>
+                          Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
+                          minutes.
+                        </Typography>
+                        <div className='reply-field'>
+                          <TextField
+                              id="outlined-size-small"
+                              placeholder="Reply ..."
+                              variant="outlined"
+                              size="small"
+                              className='w-100'
+                            />
+                            <SendIcon className='send'/>
+                        </div>
+                        <div className='edit-comment'>
+                        <TextareaAutosize aria-label="minimum height" className='w-100 edit-text' rowsMin={3} placeholder="Edit Comment..." />
+                            <div className='button-wrapper'>
+                                <Button size="small" variant="contained" color="primary">
+                                  Cancel  
+                                </Button>
+                                <Button size="small" variant="contained" color="primary">
+                                  Update
+                                </Button>
+                            </div>
+                        </div>
+                        <div className='comments-action'>
+                        <a href="">Reply</a> 
+                        <a href="">Edit</a> 
+                          <a href="">Delete</a> 
+                        </div>
+                      </CardContent>
+                  </Collapse>
+        
+                </Card>
+              </div>
+            </Grid>
+          </Grid>
+      </div>
+    </div> 
   );
 }

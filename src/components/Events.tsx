@@ -81,7 +81,7 @@ export default function EventPage() {
     setOpen(false);
   };
   return (
-	<div className=' events-page'>	
+	<div className=' events-page main-wrapper'>	
 		<div>
 			<CardContent className='pb-0 pt-0'>
 				<Box display='flex' justifyContent='space-between' flexWrap='wrap' alignItems='center'>
@@ -143,7 +143,7 @@ export default function EventPage() {
 				</Box>
 			</CardContent>
 				<Grid container >
-					<Grid item xs={12} md={6}>								
+					<Grid item xs={12}>								
 						<CardContent className='pb-0'>
 							<Box mb = {1} className='f-w-500'>
 								Upcoming Events
@@ -181,7 +181,7 @@ export default function EventPage() {
 						</CardContent>
 					</Grid>
 				
-					<Grid item xs={12} md={6}>
+					<Grid item xs={12}>
 						<CardContent>
 			<Box mb = {1} className='f-w-500'>
 				Recent Events
