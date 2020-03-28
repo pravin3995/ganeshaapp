@@ -51,7 +51,8 @@ const useStyles = makeStyles((theme: Theme) =>
         height: '130px',
         borderRadius: '20px',
         marginTop:100,
-        background:'#ff9688'
+        background:'#ff9688',
+        marginBottom:0
       },
       ProfileEdit: {
           position: 'absolute',
@@ -130,7 +131,7 @@ export default function VariantAvatars() {
   const [age, setAge] = React.useState('');
   return (
    <div>
-        <Paper elevation={0} className='profile'>   
+        <div className='profile'>   
            <Paper className='profile-details b-r-0' elevation={1} style={styles.paperContainer}>
             <div className='changephoto'>
                 <Button variant="outlined" color="primary" className={classes.changeCover} >
@@ -208,7 +209,7 @@ export default function VariantAvatars() {
    
             </div>
             </div>
-        </Paper>
+        </div>
    </div>
   );
  }
