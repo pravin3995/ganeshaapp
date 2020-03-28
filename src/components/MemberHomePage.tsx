@@ -217,9 +217,11 @@ export default function CenteredGrid() {
                 className='user-pic'
               />
               <MUIRichTextEditor
-                onSave={save}
+                label="Type something here.."
+                controls={["title", "bold", "italic", "underline", "link"]}
                 inlineToolbar={true}
-                label="Type something here..."
+                inlineToolbarControls={["bold", "italic", "underline", "link"]}
+                onSave={save}
               />
             </div>
             <div className='button mb-4'>
