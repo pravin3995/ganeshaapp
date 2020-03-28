@@ -853,6 +853,7 @@ a.MuiButton-outlined{
     background-color: $primary;
     &:hover{
         background-color: darken($color: $primary, $amount: 15) !important;
+        color: $white;
     }
 }
 
@@ -893,7 +894,7 @@ a.MuiButton-outlined{
     margin-right: 0;
 }
 .MuiAvatar-colorDefault.MuiAvatar-circle,
-.MuiBadge-colorSecondary{
+.MuiBadge-colorSecondary.MuiBadge-badge{
     background-color: $secondary;
 }
 .notification-wrapper .all-notification{
@@ -950,3 +951,20 @@ a.MuiButton-outlined{
   .file-input.-chosen > .label {
     opacity: 1;
   }
+
+
+
+// Events Slider Page
+.slick-slide h3{
+  text-align: center;
+  color: $textColor;
+  background: $primary;
+  margin: 10px;
+}
+.px-3{
+    @include px(3);
+    width: auto !important;
+    &:focus{
+        outline: none;
+    }
+}
