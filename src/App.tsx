@@ -1,9 +1,9 @@
 import React from 'react';
 import Receipt from './components/receiptDetails'
-import { 
-	BrowserRouter, 
-	Route
-} from 'react-router-dom'; 
+import {
+  BrowserRouter,
+  Route
+} from 'react-router-dom';
 import ReceiptDetails from './components/Receipt';
 import Events from './components/Events';
 import Eventedit from './components/EventEdit';
@@ -27,21 +27,22 @@ import Feedback from './components/Feedback'
 import MemberEditProfile from './components/MemberEditProfile'
 import AddNewPost from './components/AddNewPost'
 import AccountSetting from './components/AccountSetting'
+import eventUpdated from './components/eventUpdated';
 
 export default function App() {
 
   return (
-      <div>
-        <BrowserRouter>
-        <NavBar/>
-        <Route exact path='/receipt' component={Receipt}></Route> 
-        <Route exact path='/details' component={ReceiptDetails}></Route> 
-        <Route exact path='/events' component={Events}></Route> 
-        <Route exact path='/eventsedit' component={Eventedit}></Route> 
-        <Route exact path='/membermainpage' component={MemberMainPage}></Route> 
-        <Route exact path='/aboutmandal' component={AboutMandal}></Route> 
-        <Route exact path='/editaboutmandal' component={EditAboutMandal}></Route> 
-        <Route exact path='/editdonationaboutmandal' component={EditDonationAboutMandal}></Route> 
+    <div>
+      <BrowserRouter>
+        <NavBar />
+        <Route exact path='/receipt' component={Receipt}></Route>
+        <Route exact path='/details' component={ReceiptDetails}></Route>
+        <Route exact path='/events' component={Events}></Route>
+        <Route exact path='/eventsedit' component={Eventedit}></Route>
+        <Route exact path='/membermainpage' component={MemberMainPage}></Route>
+        <Route exact path='/aboutmandal' component={AboutMandal}></Route>
+        <Route exact path='/editaboutmandal' component={EditAboutMandal}></Route>
+        <Route exact path='/editdonationaboutmandal' component={EditDonationAboutMandal}></Route>
         <Route exact path='/basicsetting' component={BasicSetting}></Route>
         <Route exact path='/resetpassword' component={ResetPAsswordPopup}></Route>
         <Route exact path='/treasurebilling' component={TreasurerBillingPage}></Route>
@@ -57,9 +58,10 @@ export default function App() {
         <Route exact path='/membereditprofile' component={MemberEditProfile}></Route>
         <Route exact path='/addnewpost' component={AddNewPost}></Route>
         <Route exact path='/accountsetting' component={AccountSetting}></Route>
+        <Route exact path='/eventupdated' component={eventUpdated}></Route>
 
 
-        </BrowserRouter>
-      </div>
-    );
+      </BrowserRouter>
+    </div>
+  );
 }

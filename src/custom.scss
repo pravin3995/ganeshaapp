@@ -892,3 +892,20 @@ a.MuiButton-outlined{
         color: $textColor;
     }
 }
+
+
+
+// Events Slider Page
+.slick-slide h3{
+  text-align: center;
+  color: $textColor;
+  background: $primary;
+  margin: 10px;
+}
+.px-3{
+    @include px(3);
+    width: auto !important;
+    &:focus{
+        outline: none;
+    }
+}
