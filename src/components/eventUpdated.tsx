@@ -143,9 +143,118 @@ export default function eventUpdated() {
                 </div>
             </Slider>
             <Box mt={1} className='t-right'>
-                <Button href='/events' size='small' target='_bank' className="button">
-                    See All Recent Events
+                <Button href='/events' size='small' target='_bank' className="btn">
+                    See All Upcoming Events
 			</Button>
+            </Box>
+            {/* Recent Events */}
+            <h2> Recent Events</h2>
+            <Slider {...settings}>
+                <div className="px-3">
+                    <Card>
+                        <CardContent >
+                            <span className="label">Feb 27,2020</span>
+                            <Typography variant='h6' component='h2' gutterBottom >
+                                Ganesh Chaturthi
+							</Typography>
+                            <Box mb={2} className='ganesh-chathurti-description'>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+							</Box>
+                            <Box className="mandal-premises">
+                                <Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
+                                    <LocationOnIcon />
+                                    <span >Mandal Premises </span>
+                                </Link>
+                            </Box>
+                        </CardContent>
+                    </Card>
+                </div>
+                <div className="px-3">
+                    <Card>
+                        <CardContent >
+                            <span className="label">Feb 27,2020</span>
+                            <Typography variant='h6' component='h2' gutterBottom >
+                                Ganesh Chaturthi
+							</Typography>
+                            <Box mb={2} className='ganesh-chathurti-description'>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+							</Box>
+                            <Box className="mandal-premises">
+                                <Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
+                                    <LocationOnIcon />
+                                    <span >Mandal Premises </span>
+                                </Link>
+                            </Box>
+                        </CardContent>
+                    </Card>
+                </div>
+                <div className="px-3">
+                    <Card>
+                        <CardContent >
+                            <span className="label">Feb 27,2020</span>
+                            <Typography variant='h6' component='h2' gutterBottom >
+                                Ganesh Chaturthi
+							</Typography>
+                            <Box mb={2} className='ganesh-chathurti-description'>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+							</Box>
+                            <Box className="mandal-premises">
+                                <Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
+                                    <LocationOnIcon />
+                                    <span >Mandal Premises </span>
+                                </Link>
+                            </Box>
+                        </CardContent>
+                    </Card>
+                </div>
+                <div className="px-3">
+                    <Card>
+                        <CardContent >
+                            <span className="label">Feb 27,2020</span>
+                            <Typography variant='h6' component='h2' gutterBottom >
+                                Ganesh Chaturthi
+							</Typography>
+                            <Box mb={2} className='ganesh-chathurti-description'>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+							</Box>
+                            <Box className="mandal-premises">
+                                <Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
+                                    <LocationOnIcon />
+                                    <span >Mandal Premises </span>
+                                </Link>
+                            </Box>
+                        </CardContent>
+                    </Card>
+                </div>
+                <div className="px-3">
+                    <Card>
+                        <CardContent >
+                            <span className="label">Feb 27,2020</span>
+                            <Typography variant='h6' component='h2' gutterBottom >
+                                Ganesh Chaturthi
+							</Typography>
+                            <Box mb={2} className='ganesh-chathurti-description'>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+							</Box>
+                            <Box className="mandal-premises">
+                                <Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
+                                    <LocationOnIcon />
+                                    <span >Mandal Premises </span>
+                                </Link>
+                            </Box>
+                        </CardContent>
+                    </Card>
+                </div>
+            </Slider>
+            <Box mt={1} className='t-right'>
+                <Button href='/events' size='small' target='_bank' className="btn">
+                    See All Recent Events
+			    </Button>
             </Box>
         </div>
     )

@@ -843,6 +843,7 @@ a.MuiButton-outlined{
     background-color: $primary;
     &:hover{
         background-color: darken($color: $primary, $amount: 15) !important;
+        color: $white;
     }
 }
 
@@ -883,7 +884,7 @@ a.MuiButton-outlined{
     margin-right: 0;
 }
 .MuiAvatar-colorDefault.MuiAvatar-circle,
-.MuiBadge-colorSecondary{
+.MuiBadge-colorSecondary.MuiBadge-badge{
     background-color: $secondary;
 }
 .notification-wrapper .all-notification{
