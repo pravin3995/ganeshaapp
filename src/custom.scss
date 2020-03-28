@@ -75,6 +75,7 @@ h6{
 .mr-10{margin-right: 10px!important;}
 .mt-0{margin-top: 0;}
 .pr-0{padding-right: 0!important;}
+.b-r-0{border-radius: 0!important;}
 
 .MUIRichTextEditor-placeHolder-169 {
     font-size: 14px;
@@ -255,9 +256,9 @@ h6{
         line-height: 1.8;
         // margin-top: 16px;
     }
-    .MuiGrid-spacing-xs-3 > .MuiGrid-item {
-        padding: 0;
-    }
+    // .MuiGrid-spacing-xs-3 > .MuiGrid-item {
+    //     padding: 0;
+    // }
 
 }
  
@@ -621,7 +622,7 @@ h6{
     // width:440px;
     // margin:0 auto;
     padding-bottom: 20px;
-    background: #FAFAFA!important;
+    // background: #FAFAFA!important;
     // height: 600px;
     display: flex;
     justify-content: center;

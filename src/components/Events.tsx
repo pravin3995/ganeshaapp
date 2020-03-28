@@ -47,7 +47,7 @@ const useStyles = makeStyles({
 		background: 'white'
 	},
 	button: {
-		backgroundColor: '#df3088',
+		backgroundColor: '#fb734e',
 		borderRadius: '15px',
 		color: 'white',
 		padding: '4px 22px'

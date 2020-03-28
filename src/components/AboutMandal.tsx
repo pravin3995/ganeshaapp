@@ -72,16 +72,8 @@ export default function SimpleTabs() {
    <div className='main-wrapper'> 
     <div className={classes.root}>
       <Box className='about-mandal'>
-        <CardContent className='pt-0 pb-0'>
-            <Box display='flex' justifyContent='space-between' alignItems='center' > 
-                  <h2 className='h1-title'>  About Mandal </h2>
-                <Button variant="contained" href='#' size='small' target='_bank' className={classes.button}>
-                  Edit Info
-                </Button>
-              </Box>
-        </CardContent>
-          <CardContent>
-         <Grid container spacing={3}>
+       
+         <Grid container >
           <Grid item xs={12}>
               <AppBar position="static">
                 <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
@@ -90,6 +82,12 @@ export default function SimpleTabs() {
                 </Tabs>
               </AppBar>
                 <TabPanel value={value} index={0}>
+                    <Box display='flex' justifyContent='space-between' alignItems='center' > 
+                          <h2 className='h1-title'>  About Mandal </h2>
+                        <Button variant="contained" size='small' className={classes.button}>
+                          Edit Info
+                        </Button>
+                      </Box>
                   <Image src="https://i.pinimg.com/originals/a4/96/c2/a496c2b6bc5d7cfe0e0674f6598c38ad.jpg"/>
                     <h3> History </h3>
                     <Box mt={1} mb={1}>
@@ -145,7 +143,6 @@ export default function SimpleTabs() {
               </TabPanel>
           </Grid>
       </Grid>
-        </CardContent>  
         
       </Box>
     </div>

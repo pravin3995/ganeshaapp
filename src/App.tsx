@@ -61,8 +61,6 @@ export default function App() {
         <Route exact path='/accountsetting' component={AccountSetting}></Route>
         <Route exact path='/error' component={ErrorMessage}></Route>
         <Route exact path='/eventupdated' component={eventUpdated}></Route>
-
-
       </BrowserRouter>
     </div>
   );

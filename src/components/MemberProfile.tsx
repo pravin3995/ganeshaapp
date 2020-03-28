@@ -31,6 +31,7 @@ import Dialog from '@material-ui/core/Dialog';
 import CloseIcon from '@material-ui/icons/Close';
 import TextField from '@material-ui/core/TextField';
 import SendIcon from '@material-ui/icons/Send';
+import Image from '../assets/images/1.jpg'
 const img = require('../assets/images/qr.png')
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -113,6 +114,13 @@ const useStyles = makeStyles((theme: Theme) =>
     },
   }),
 );
+const styles = {
+  paperContainer: {
+      backgroundImage: `url(${Image})`,
+      backgroundSize:'Cover',
+      backgroundRepeat:"no-repeat"
+  }
+};
 // const options = [
 //   'Edit',
 //   'Delete',
@@ -198,7 +206,8 @@ export default function CenteredGrid() {
   return (   
     <div className={classes.root}>
         <div className='profile'>
-          <Paper className='profile-details' elevation={1}>
+          
+          <Paper className='profile-details b-r-0' elevation={1} style={styles.paperContainer}>
             <div className='changephoto'>
                 <Button variant="outlined" color="primary" className={classes.changeCover} >
                     Change Cover Photo
