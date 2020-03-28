@@ -25,6 +25,7 @@ import CallIcon from '@material-ui/icons/Call';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import '../custom.scss';
+import Image from '../assets/images/1.jpg'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -99,10 +100,16 @@ const useStyles = makeStyles((theme: Theme) =>
   }
   }),
 );
+
 const styles = {
     paper:{
       padding:'30px'
     },
+    paperContainer: {
+      backgroundImage: `url(${Image})`,
+      backgroundSize:'Cover',
+      backgroundRepeat:"no-repeat"
+  },
     TextField : {
       width:'100%',
       // marginTop: 26
@@ -124,7 +131,7 @@ export default function VariantAvatars() {
   return (
    <div>
         <Paper elevation={0} className='profile'>   
-           <Paper className='profile-details' elevation={1}>
+           <Paper className='profile-details b-r-0' elevation={1} style={styles.paperContainer}>
             <div className='changephoto'>
                 <Button variant="outlined" color="primary" className={classes.changeCover} >
                     Change Cover Photo

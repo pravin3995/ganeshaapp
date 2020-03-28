@@ -48,7 +48,7 @@ function SimpleDialog(props: SimpleDialogProps) {
 
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <DialogTitle id="simple-dialog-title" className='delete-post'>Reset Password <a href=""><CloseIcon onClick={handleClose}/></a></DialogTitle>
+      <DialogTitle id="simple-dialog-title" className='delete-post'>Reset Password <a href=""><CloseIcon onClick={handleClose} className='f-30'/></a></DialogTitle>
       <List>
           <div className='p-15 t-center'>  
              <CheckCircleOutlineIcon style={style.SuccessIcon}/>
