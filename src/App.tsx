@@ -29,7 +29,10 @@ import AddNewPost from './components/AddNewPost'
 import AccountSetting from './components/AccountSetting'
 import ErrorMessage from './components/ErrorMessage'
 import eventUpdated from './components/eventUpdated';
-
+import Login from './components/Login'
+import SignUp from './components/SignUp'
+import ForgotPassword from './components/ForgotPassword'
+import EventDetails from './components/EventDetails'
 export default function App() {
 
   return ( 
@@ -54,13 +57,18 @@ export default function App() {
         <Route exact path='/successfully' component={Successfully}></Route>
         <Route exact path='/receiptform' component={ReceiptForm}></Route>
         <Route exact path='/memberprofile' component={MemberProfile}></Route>
-        <Route exact path='/' component={MemberHomeePage}></Route>
+        <Route exact path='/homepage' component={MemberHomeePage}></Route>
         <Route exact path='/feedback' component={Feedback}></Route>
         <Route exact path='/membereditprofile' component={MemberEditProfile}></Route>
         <Route exact path='/addnewpost' component={AddNewPost}></Route>
         <Route exact path='/accountsetting' component={AccountSetting}></Route>
         <Route exact path='/error' component={ErrorMessage}></Route>
         <Route exact path='/eventupdated' component={eventUpdated}></Route>
+        <Route exact path='/' component={Login}></Route>
+        <Route exact path='/signup' component={SignUp}></Route>
+        <Route exact path='/forgotpassword' component={ForgotPassword}></Route>
+        <Route exact path='/eventdetails' component={EventDetails}></Route>
+
       </BrowserRouter>
     </div>
   );
