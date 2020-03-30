@@ -33,6 +33,7 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import ForgotPassword from './components/ForgotPassword'
 import EventDetails from './components/EventDetails'
+import Footer from './components/Footer'
 export default function App() {
 
   return ( 
@@ -68,7 +69,7 @@ export default function App() {
         <Route exact path='/signup' component={SignUp}></Route>
         <Route exact path='/forgotpassword' component={ForgotPassword}></Route>
         <Route exact path='/eventdetails' component={EventDetails}></Route>
-
+        <Footer/>
       </BrowserRouter>
     </div>
   );

@@ -34,6 +34,7 @@ h6{
 }
 
 .text-capital { text-transform: uppercase; }
+.m-20{margin: 20px;}
 .m-0 {margin: 0;}
 .mb-0 {margin-bottom: 0;}
 .line-h-28 {line-height: 28px;}
@@ -75,6 +76,7 @@ h6{
 .pb-0{padding-bottom: 0!important;}
 .mr-10{margin-right: 10px!important;}
 .mt-0{margin-top: 0;}
+.mr-20{margin-right: 20px!important;}
 .pr-0{padding-right: 0!important;}
 .b-r-0{border-radius: 0!important;}
 
@@ -414,10 +416,12 @@ h6{
                 font-size: 14px;
             }
         }
-        
-
-
-
+        .details-wrapper{
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            align-items: center;
+        }
 
         // Member Page Css
 
