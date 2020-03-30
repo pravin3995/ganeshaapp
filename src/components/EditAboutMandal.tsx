@@ -56,11 +56,14 @@ export default function EditAboutMandal() {
 
             <Grid item md={6} xs={12}>
               <Box>
+              <small className='label'>
+                  Feautred Image:
                 <div className='file-input'>
                   <input type='file' />
                   <span className='button'>Choose</span>
                   <span className='label' data-js-label>No file selected</span>
                 </div>
+              </small>
               </Box>
             </Grid>
 

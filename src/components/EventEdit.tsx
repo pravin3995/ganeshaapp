@@ -81,7 +81,6 @@ export default function Eventedit() {
       </CardContent>
 
       <CardContent className='pt-0'>
-        <Card>
           <CardContent>
             <Grid container spacing={3}>
               <Grid item xs={12} md={6} >
@@ -91,7 +90,6 @@ export default function Eventedit() {
                 <TextField
                   fullWidth
                   id="outlined-number"
-                  size='small'
                   rowsMax="4"
                   placeholder='Enter Name Here...'
                   variant="outlined"
@@ -102,7 +100,11 @@ export default function Eventedit() {
               <Grid item xs={12} md={6} >
                 <small className='label'>
                   Feautred Image:
-            <input type="file" className='d-block' />
+                  <div className='file-input'>
+                  <input type='file' />
+                  <span className='button'>Choose</span>
+                  <span className='label' data-js-label>No file selected</span>
+                </div>
                 </small>
               </Grid>
 
@@ -133,7 +135,6 @@ export default function Eventedit() {
                     <KeyboardDatePicker
                       autoOk
                       fullWidth
-                      size='small'
                       variant="inline"
                       inputVariant="outlined"
                       format="MM/dd/yyyy"
@@ -152,7 +153,6 @@ export default function Eventedit() {
                 <TextField
                   fullWidth
                   id="outlined-number"
-                  size='small'
                   rowsMax="4"
                   placeholder='Enter Location'
                   variant="outlined"
@@ -168,7 +168,6 @@ export default function Eventedit() {
             </Grid>
 
           </CardContent>
-        </Card>
 
       </CardContent>
     </div>

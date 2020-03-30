@@ -232,8 +232,14 @@ export default function SimpleTabs() {
                         <Grid item xs={12} md={6}>
                           <Box mt={2}>
                               <Typography variant	='body2'>
-                                <span className='label d-block'> Main Image: </span>
-                                <input type='file' />
+                              <small className='label'>
+                                  Main Image
+                                <div className='file-input'>
+                                  <input type='file' />
+                                  <span className='button'>Choose</span>
+                                  <span className='label' data-js-label>No file selected</span>
+                                </div>
+                              </small>
                               </Typography>
                             </Box>
                         </Grid>
