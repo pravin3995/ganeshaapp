@@ -36,6 +36,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import { Drawer } from '@material-ui/core';
+const ganeshaImg = require('../assets/images/ganesha.jpg')
 const drawerWidth = 240;
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -363,7 +364,9 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Avatar className={classes.ProfileSize}>H</Avatar>
+          <Avatar className={classes.ProfileSize}>
+            <img src={String(ganeshaImg)} className="w-100" alt="ganeshaApp" />
+          </Avatar>
           <Typography variant="h6" noWrap>
             Ganesha App
           </Typography>

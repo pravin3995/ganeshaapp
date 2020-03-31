@@ -36,7 +36,7 @@ import EventDetails from './components/EventDetails'
 import Footer from './components/Footer'
 export default function App() {
 
-  return ( 
+  return (
     <div>
       <BrowserRouter>
         <NavBar />
@@ -69,7 +69,7 @@ export default function App() {
         <Route exact path='/signup' component={SignUp}></Route>
         <Route exact path='/forgotpassword' component={ForgotPassword}></Route>
         <Route exact path='/eventdetails' component={EventDetails}></Route>
-        <Footer/>
+        <Footer />
       </BrowserRouter>
     </div>
   );
