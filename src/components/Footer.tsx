@@ -5,14 +5,14 @@ import { makeStyles, Theme } from '@material-ui/core/styles'
 const useStyles = makeStyles((theme: Theme) => ({
   Footer: {
     width: '100%',
-    height:'40px',
-    background:'#323232',
-    display:'flex',
-    justifyContent:'center'
+    height: '40px',
+    background: '#323232',
+    display: 'flex',
+    justifyContent: 'center'
   },
-  CopyRight:{
-      color:'#fff',
-      fontSize:13
+  CopyRight: {
+    color: '#fff',
+    fontSize: 13
   }
 }));
 
@@ -21,7 +21,7 @@ export default function Footer() {
 
   return (
     <div className={classes.Footer}>
-        <p className={classes.CopyRight}>@Copyright.2020  Power by ivision</p>
+      <p className={classes.CopyRight}> &copy; 2020 Powered by iVision Web Studio </p>
     </div>
   );
 }
