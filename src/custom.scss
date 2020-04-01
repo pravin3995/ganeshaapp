@@ -1085,6 +1085,9 @@ a.MuiButton-outlined{
 .MuiTableHead-root{
     border-top: 1px solid #b4b4b4;
 }
+.MuiTableCell-head{
+    font-weight: 600!important;
+}
 // Homepage
 .editor #mui-rte-root #mui-rte-container #mui-rte-toolbar{
     padding: 3px;
