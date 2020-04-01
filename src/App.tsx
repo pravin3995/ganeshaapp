@@ -34,6 +34,7 @@ import SignUp from './components/SignUp'
 import ForgotPassword from './components/ForgotPassword'
 import EventDetails from './components/EventDetails'
 import Footer from './components/Footer'
+import BillingTable from './components/BillingTable'
 export default function App() {
 
   return ( 
@@ -69,7 +70,8 @@ export default function App() {
         <Route exact path='/signup' component={SignUp}></Route>
         <Route exact path='/forgotpassword' component={ForgotPassword}></Route>
         <Route exact path='/eventdetails' component={EventDetails}></Route>
-
+        <Route exact path='/billingtable' component={BillingTable}></Route>
+        
         <Footer/>
       </BrowserRouter>
     </div>

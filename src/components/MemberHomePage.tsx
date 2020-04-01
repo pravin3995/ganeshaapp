@@ -38,6 +38,7 @@ import MUIRichTextEditor from "mui-rte";
 import CloseIcon from '@material-ui/icons/Close';
 import TextField from '@material-ui/core/TextField';
 import SendIcon from '@material-ui/icons/Send';
+import { Link } from '@material-ui/core';
 const img = require('../assets/images/qr.png')
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -343,7 +344,9 @@ export default function CenteredGrid() {
                       size="small"
                       className='w-100'
                     />
-                    <SendIcon className='send' />
+                    <Link href="#.">
+                      <SendIcon className='send' />
+                    </Link>
                   </div>
                   <div className='edit-comment'>
                     <TextareaAutosize aria-label="minimum height" className='w-100' rowsMin={3} placeholder="Minimum 3 rows" />
