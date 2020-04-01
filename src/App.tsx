@@ -69,6 +69,7 @@ export default function App() {
         <Route exact path='/signup' component={SignUp}></Route>
         <Route exact path='/forgotpassword' component={ForgotPassword}></Route>
         <Route exact path='/eventdetails' component={EventDetails}></Route>
+
         <Footer/>
       </BrowserRouter>
     </div>

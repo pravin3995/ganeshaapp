@@ -426,7 +426,7 @@ export default function PrimarySearchAppBar() {
         </div>
         <Divider />
         <List>
-          <ListItem button component={Link} to="/">
+          <ListItem button component={Link} to="/homepage">
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
