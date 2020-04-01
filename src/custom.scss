@@ -1078,6 +1078,7 @@ a.MuiButton-outlined{
 }
 .MuiTableCell-paddingNone{
     border-right: 1px solid #b4b4b4;
+    padding: 16px!important;
 }
 .MuiTableCell-alignRight{
     border-right: 1px solid #b4b4b4;
@@ -1089,7 +1090,7 @@ a.MuiButton-outlined{
 .MuiTableCell-head{
     font-weight: 600!important;
 }
-.MuiTableCell-body{
+.MuiTableCell-root{
     border-right: 1px solid #b4b4b4;   
 }
 // Homepage
