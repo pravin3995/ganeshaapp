@@ -512,6 +512,7 @@ h6{
          }
          th.MuiTableCell-root.MuiTableCell-head {
             font-weight: 700;
+            border-right: 1px solid #b4b4b4;
         }
      }
     //  .select-wrapper{
@@ -1087,6 +1088,9 @@ a.MuiButton-outlined{
 }
 .MuiTableCell-head{
     font-weight: 600!important;
+}
+.MuiTableCell-body{
+    border-right: 1px solid #b4b4b4;   
 }
 // Homepage
 .editor #mui-rte-root #mui-rte-container #mui-rte-toolbar{

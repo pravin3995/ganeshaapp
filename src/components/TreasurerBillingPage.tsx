@@ -353,7 +353,6 @@ export default function SimpleTabs() {
               <h3 className='m-0'>Billing History</h3>
               <a href=""  className='ml-10'> <SearchTwoToneIcon/></a>
             </div>
-            <Card >
                 <CardContent className='p-0'>
                   <TableContainer >
                     <Table className={classes.table}  aria-label="a dense table">
@@ -380,14 +379,12 @@ export default function SimpleTabs() {
                      </Table>
                   </TableContainer>
                 </CardContent>
-            </Card>
          </div>
          <div className='billing-history'>
             <div className='billing-heading mt-30 mb-16'>
               <h3 className='m-0'>Credit History</h3>
               <a href=""  className='ml-10'> <SearchTwoToneIcon/></a>
             </div>
-            <Card >
                 <CardContent className='p-0'>
                   <TableContainer >
                     <Table className={classes.table}  aria-label="a dense table">
@@ -414,7 +411,6 @@ export default function SimpleTabs() {
                      </Table>
                   </TableContainer>
                 </CardContent>
-            </Card>
          </div>
    
       </TabPanel>
