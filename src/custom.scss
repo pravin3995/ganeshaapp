@@ -1107,6 +1107,12 @@ a.MuiButton-outlined{
 fieldset.MuiOutlinedInput-notchedOutline{
     border-radius: 10px;
 }
+.post-card{
+    .MuiButtonBase-root:hover{
+        background-color: transparent !important;
+        color: darken($grey, 20%);
+    }
+}
 
 
 // Login Page
@@ -1190,7 +1196,7 @@ body,
 
 @media screen and (max-width: 620px){
     .main-wrapper{
-        padding: 15px 10px;
+        padding: 15px 0px;
     }
     .comment-content{
         padding-left: 15px !important;
