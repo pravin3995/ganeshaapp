@@ -13,11 +13,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '100%',
     '& > * + *': {
     },
-    
+
   },
   textField: {
     minWidth: 280,
-    marginTop: 20,  
+    marginTop: 20,
   },
   contain: {
     margin: '0 auto'
@@ -48,28 +48,27 @@ export default function Forgot() {
 
   return (
     <div className={classes.root}>
-          <Grid container >
+      <Grid container >
         <Grid item xs={12} className={classes.contain}>
-            <Paper className=' form'  elevation={0} >
+          <Paper className=' form' elevation={0} >
             <div className=' p-30 forgot-form' >
-            <h2>Forgot Password </h2>
-            
-            <form className={classes.root} noValidate autoComplete='off'>
+              <h2 className='title'>Forgot Password </h2>
+              <form className={classes.root} noValidate autoComplete='off'>
                 <TextField id='outlined-basic' label='Email Address' variant='outlined' autoComplete='off'
-                    style={{ backgroundColor: '#edf0f7', borderRadius: 100 }}
-                    className={classes.textField}
-                    fullWidth
+                  style={{ backgroundColor: '#edf0f7', borderRadius: 100 }}
+                  className={classes.textField}
+                  fullWidth
                 />
-                <Button variant='contained' color='primary' className='signup-button form-button mt-30 ' style={{  borderRadius: 100 }}>
-                    Reset Password 
+                <Button variant='contained' color='primary' className='signup-button form-button mt-3'>
+                  Reset Password
                     </Button>
-                
-                </form>
-                </div>
-            </Paper>
+
+              </form>
+            </div>
+          </Paper>
         </Grid>
       </Grid>
-  
+
     </div>
   );
 }

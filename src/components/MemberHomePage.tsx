@@ -407,11 +407,9 @@ export default function CenteredGrid() {
               </CardContent>
               <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
-                  <FavoriteIcon />
+                  <FavoriteIcon color="secondary" /><span className='f-14 f-w-600'> +1</span>
                 </IconButton>
-                <IconButton aria-label="share">
-                  <ShareIcon />
-                </IconButton>
+
                 <IconButton
                   className={clsx(classes.expand, {
                     [classes.expandOpen]: expanded,
@@ -420,7 +418,12 @@ export default function CenteredGrid() {
                   aria-expanded={expanded}
                   aria-label="show more"
                 >
-                  <ExpandMoreIcon />
+                  {/* <ExpandMoreIcon /> */}
+                  <span className='f-14 f-w-600'>Comments</span>
+                </IconButton>
+                <IconButton aria-label="share">
+                  {/* <ShareIcon /> */}
+                  <span className='f-14 f-w-600'>Share</span>
                 </IconButton>
               </CardActions>
               <Collapse in={expanded} timeout="auto" unmountOnExit>
@@ -460,7 +463,7 @@ export default function CenteredGrid() {
                   guests. Add 1 cup of frozen peas along with the mussels, if you like.
                   </Typography>
               </CardContent>
-              <CardActions disableSpacing>
+              {/* <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
                   <FavoriteIcon />
                 </IconButton>
@@ -476,6 +479,27 @@ export default function CenteredGrid() {
                   aria-label="show more"
                 >
                   <ExpandMoreIcon />
+                </IconButton>
+              </CardActions> */}
+              <CardActions disableSpacing>
+                <IconButton aria-label="add to favorites">
+                  <FavoriteIcon color="secondary" /><span className='f-14 f-w-600'> +1</span>
+                </IconButton>
+
+                <IconButton
+                  className={clsx(classes.expand, {
+                    [classes.expandOpen]: expanded,
+                  })}
+                  onClick={handleExpandClick}
+                  aria-expanded={expanded}
+                  aria-label="show more"
+                >
+                  {/* <ExpandMoreIcon /> */}
+                  <span className='f-14 f-w-600'>Comments</span>
+                </IconButton>
+                <IconButton aria-label="share">
+                  {/* <ShareIcon /> */}
+                  <span className='f-14 f-w-600'>Share</span>
                 </IconButton>
               </CardActions>
               <Collapse in={expanded} timeout="auto" unmountOnExit>

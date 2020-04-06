@@ -706,7 +706,7 @@ h6{
 .editor {
     .MUIRichTextEditor-placeHolder-316{
         position: absolute;
-        left: 65px;
+        // left: 65px;
         top: 18px;
         width: 80%;
     }
@@ -1048,13 +1048,6 @@ a.MuiButton-outlined{
         color: #db4437;
     }
 }
-.form-button{
-    padding: 13px!important;
-    width: 100%;
-}
-.mt-30{
-    margin-top: 30px !important;
-}
 .mt-5{
     margin-top: 40px;
 }
@@ -1102,12 +1095,116 @@ a.MuiButton-outlined{
 .editor #mui-rte-root #mui-rte-container #mui-rte-toolbar .MuiIconButton-root{
     padding: 5px;
 }
+.editor #mui-rte-toolbar+div {
+    margin: 0;
+    padding-left: 67px;
+    margin-top: 10px;
+}
+.public-DraftEditor-content h2{
+    margin-top: 0;
+    word-break: break-word;
+}
+fieldset.MuiOutlinedInput-notchedOutline{
+    border-radius: 10px;
+}
+
+
+// Login Page
+.account{
+    a{
+        color: $secondary;
+        &:hover{
+            color: darken($secondary, $amount: 10%);
+        }
+    }
+}
+.login-form .text-right a{
+    color: $grey;
+    &:hover{
+        color: darken($grey, $amount: 20%);
+    }
+}
+.form form fieldset,
+.login-form .social-button button{
+    border: 2px solid #e5e5e5;
+}
+.login-form .social-button button:hover{
+    background-color: $primary;
+    border-color: $primary;
+    color: $white;
+}
+.form form{
+    .MuiOutlinedInput-input{
+        padding: 14.5px 14px;
+        line-height: 1.5;
+    }
+    legend{ height: 18px;}
+    fieldset{
+        &:hover{
+            border-color: $borderColor;
+        }
+    }    
+}
+.h-100vh{
+    height: 100vh;
+}
+.login-form{
+    .MuiFormControl-root{
+        min-width: auto;
+        width: 100%;
+    }
+}
+.MuiFormControl-fullWidth.MuiFormControl-root{
+    min-width: auto;
+    width: 100%;
+}
+// Forgot Password Page
+.forgot-form{
+    height: calc(100vh - 96px);
+    .MuiFormControl-root{
+        margin-top: 0;
+    }
+    .title{
+        margin-top: 0;
+    }
+}
+.signup-button.mt-3{
+    @include mt(3);
+}
+
+
+
+
+// Footer Bottom
+html,
+body,
+#root{
+    height: 100%;
+}
+#root>div{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
 
 @media screen and (max-width: 620px){
     .main-wrapper{
         padding: 15px 10px;
     }
     .comment-content{
-        padding-left: 0 !important;
+        padding-left: 15px !important;
     }
+    .comments-action{
+        @include mt(2);
+    }
+    .form{
+        margin: 0;
+        width: 100%;
+        min-width: 300px;
+        .b-radius{
+            border-radius: 0 0 30px 30px !important;
+        }
+    }
+    
 }

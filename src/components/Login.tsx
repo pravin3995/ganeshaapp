@@ -48,15 +48,14 @@ export default function Login() {
 
   return (
     <div className={classes.root}>
-      <Grid container >
+      <Grid container>
         <Grid item xs={12} className={classes.contain}>
-
-          <Paper className=' form b-radius' elevation={0}>
+          <Paper className='form b-radius h-100vh' elevation={0}>
             <div className='login-image'>
               <img src={String(img)} width='100%' className='b-radius' />
             </div>
             <div className='login-form p-30'>
-              <h2 className='m-0'>Login</h2>
+              <h1 className='m-0'>Login</h1>
               <form className={classes.root} noValidate autoComplete='off'>
                 <TextField id='outlined-basic' label='Email Address' variant='outlined' autoComplete='off' fullWidth
                   className={classes.textField}
