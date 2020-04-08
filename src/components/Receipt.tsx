@@ -7,6 +7,8 @@ import Card from '@material-ui/core/Card'
 import { Link } from 'react-router-dom'
 import Avatar from '@material-ui/core/Avatar' 
 import { Typography, Box } from '@material-ui/core'
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 const style ={
   AlignMent:{
@@ -34,7 +36,8 @@ const useStyles  =  makeStyles((theme: Theme)  =>
     button: {
       backgroundColor: '#df3088',
       borderRadius: '15px',
-      color: 'white'
+      color: 'white',
+      padding:'6px 16px'
     }
   }),
 );
@@ -42,14 +45,15 @@ const useStyles  =  makeStyles((theme: Theme)  =>
 export default function ReceiptDetails() {
   const classes  =  useStyles()
   return (
-     <div>
+     <div className='receipt-details'>
 			    <h2 className='h1-title t-center'> My Receipt </h2>
             <CardContent className='pt-0' >  
               <Grid spacing={2} style={style.AlignMent} >
                  <Grid item xs={12} sm={8} md={6} lg={4}>        
-                  <Card>
-                  <CardContent>
-                  <Box className='receipt-icon-b-border' pt={3} pb={3}>
+                 <Card>
+                  <CardContent className='card-wrap'>
+                    
+                     <Box className='receipt-icon-b-border' pt={1} pb={3}>
                     <Grid container spacing = {3} >
                       <Grid item xs = {4} sm={3} md={3}>
                         <Link to = '/practice'  target =  '_blank'>
@@ -68,53 +72,107 @@ export default function ReceiptDetails() {
                           <span className='label-color'> Reg. no:</span> 123456
                         </Typography>
                         
-                        <Box mt={1}>
+                        <Box mt={1} className='paid'>
                           <Button variant="outlined" href='/events' size='small' target='_bank' className={classes.button}>Paid</Button>
                         </Box>
                       </Grid>
                     </Grid>
                   </Box>
 
-                  <Box className='receipt-icon-b-border'> 
-                    <Grid container spacing = {3}>
-                      <Grid item xs = {6}>
-                        <Box mt={2} mb={2}> 
-                          <span className='label d-block
-                          '> Receipt Number: </span>
-                          <span className='f-bold'> #002 </span>
-                        </Box>
-                        
-                        <Box mt={2} mb={2} > 
-                          <span className='label d-block
-                          '> Full Name: </span>
-                          <span className='f-bold'> Baldev Pardesi </span>
-                        </Box>
-                        
-                        <Box mt={2} mb={2} > 
-                          <span className='label d-block
-                          '> Received by: </span>
-                          <span className='f-bold'> Akshay </span>
-                        </Box>
-                      </Grid>
-                      <Grid item xs = {6}>
-                        <Box mt={2} mb={2}> 
-                          <span className='label d-block
-                          '> Amount: </span>
-                          <span className='f-bold receipt-amout'> 5000 /- </span>
-                        </Box>
-                        <Box mt={2} mb={2} > 
-                          <span className='label d-block
-                          '> Date: </span>
-                          <span className='f-bold'> 8 December 2020 </span>
-                        </Box>
-                      </Grid>
-                    </Grid>
-                  </Box>
-                  <Box pt={3}>
+                      <Box className='receipt-icon-b-border'> 
+                        <Grid container spacing = {3}>
+                          <Grid item xs = {6}>
+                            <Box mt={2} mb={2}> 
+                              <span className='label d-block
+                              '> Receipt Number: </span>
+                              <span className='f-bold'> #002 </span>
+                            </Box>
+                            
+                            <Box mt={2} mb={2} > 
+                              <span className='label d-block
+                              '> Full Name: </span>
+                              <span className='f-bold'> Baldev Pardesi </span>
+                            </Box>
+                            
+                            <Box mt={2} mb={2} > 
+                              <span className='label d-block
+                              '> Received by: </span>
+                              <span className='f-bold'> Akshay </span>
+                            </Box>
+                          </Grid>
+                          <Grid item xs = {6}>
+                            <Box mt={2} mb={2}> 
+                              <span className='label d-block
+                              '> Amount: </span>
+                              <span className='f-bold receipt-amout'> 5000 /- </span>
+                            </Box>
+                            <Box mt={2} mb={2} > 
+                              <span className='label d-block
+                              '> Date: </span>
+                              <span className='f-bold'> 8 December 2020 </span>
+                            </Box>
+                          </Grid>
+                        </Grid>
+                      </Box>
+                      <Box pt={3}>
                     <Typography variant="h4" className='f-bold t-center'>
                       Thank You!
                     </Typography>
                   </Box>
+                  </CardContent>
+                </Card>
+                <Card elevation={0} className='mt-30'>
+                <div className='circle'>
+                      <FiberManualRecordIcon className='icon left-icon'/>
+                      <FiberManualRecordIcon className='icon right-icon'/>
+                    </div>
+                  
+                  <CardContent className='card-wrap'>
+                    <Box className=' payment-suc' pt={1} pb={3}>
+                        <CheckCircleIcon className='successfully-icon'/>
+                        <h2 className="successfully-text">Payment Successfully</h2>
+                        <p className='transaction-n'>Transaction Number: 14002505500</p>
+                      </Box>
+                      <Box className=' py-20'> 
+                        <Grid container>
+                          <Grid item xs = {6}>
+                            <Box mt={2} mb={2}> 
+                              <span className='label d-block
+                              '> Receipt Number: </span>
+                              <span className='f-bold'> #002 </span>
+                            </Box>
+                            
+                            <Box mt={2} mb={2} > 
+                              <span className='label d-block
+                              '> Full Name: </span>
+                              <span className='f-bold'> Baldev Pardesi </span>
+                            </Box>
+                            
+                            <Box mt={2} mb={2} > 
+                              <span className='label d-block
+                              '> Received by: </span>
+                              <span className='f-bold'> Akshay </span>
+                            </Box>
+                          </Grid>
+                          <Grid item xs = {6}>
+                            <Box mt={2} mb={2}> 
+                              <span className='label d-block
+                              '> Amount: </span>
+                              <span className='f-bold receipt-amout'> 5000 /- </span>
+                            </Box>
+                            <Box mt={2} mb={2} > 
+                              <span className='label d-block
+                              '> Date: </span>
+                              <span className='f-bold'> 8 December 2020 </span>
+                            </Box>
+                          </Grid>
+                        </Grid>
+                      </Box>
+                      {/* <Box pt={2}>
+                    <Typography variant="h5" className='f-bold t-center'>
+                      Thank You!
+                    </Typography>
+                  </Box> */}
                   </CardContent>
                 </Card>
               </Grid>

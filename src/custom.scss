@@ -66,7 +66,7 @@ p,.MuiTypography{
 .text-decoration-none {text-decoration: none;}
 .p-relative {position: relative;}
 .b-radius {border-radius: 15px!important; }
-.d-block {display: block;}
+.d-block {display: block;font-weight: 600;}
 .t-center {text-align: center;}
 .t-right {text-align: right;}
 .label-color {color: #929294; }
@@ -198,6 +198,7 @@ p,.MuiTypography{
     box-shadow: none;
     color: #929294; 
     font-size: 13px;
+    font-weight: 100;
     // display: block;
 }
 #root .MuiPaper-elevation1{
@@ -263,7 +264,72 @@ p,.MuiTypography{
 ::placeholder {
     font-size: 14px !important;
   }
-  
+ 
+.receipt-details{
+    .MuiTypography-caption{
+        font-family: 'Montserrat-Medium';
+        letter-spacing: 0;
+      }
+      .paid{
+        a{
+            padding: 6px 16px!important;
+        }
+      }
+      .card-wrap{
+          padding: 30px;
+      }
+      .MuiCardContent-root:last-child{
+          padding-bottom: 30px !important;
+      }
+     
+        .circle{
+            display: flex;
+            justify-content: space-between;
+            color: #f7f7f7;
+            margin-top: -60px;
+            .icon{
+                font-size: 60px;
+            }
+            .right-icon{
+                transform: translate(29px, 264px);
+            }
+            .left-icon{
+                transform: translate(-29px, 264px);
+            }
+        }
+      .payment-suc{
+          text-align: center;
+          border-bottom: 2px dashed rgba(0, 0, 0, 0.12);
+          .successfully-text{
+              margin-bottom: 0;
+              color:#22d39a;
+          }
+          .successfully-icon{
+              font-size:80px;
+              color:#22d39a;
+          }
+          .transaction-n{
+              font-size: 14px;
+              color: $grey;
+              margin-bottom: 8px;
+          }
+      }
+      .py-20{
+          padding: 20px 20px 0 20px;
+      }
+}
+.receipt{
+    .receipt-image{
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        width: 30%;
+        color: #f3f3f3;
+        border-radius: 15px;
+        font-size: 250px;
+        height: auto;
+    }
+}
 
 
 //   About Mandal
@@ -1171,7 +1237,9 @@ fieldset.MuiOutlinedInput-notchedOutline{
         color: darken($grey, 20%);
     }
 }
-
+.MuiCardContent-root:last-child{
+    padding-bottom: 16px!important;
+}
 
 // Login Page
 .account{
@@ -1303,9 +1371,16 @@ body,
             border-radius: 0 0 30px 30px !important;
         }
     }
-    
+    .signup-form,.login-form{
+        height: calc(100vh - 96px);
+    }
 }
 .color-text{
     color: $white;
     font-size: 14px;
+}
+@media screen and (max-width: 420px){
+    .signup-form,.login-form{
+        height: calc(100vh - 96px);
+    }
 }

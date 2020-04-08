@@ -160,7 +160,7 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(0, 1),
       // necessary for content to be below app bar
       ...theme.mixins.toolbar,
-      justifyContent: 'flex-end',
+      justifyContent: 'space-between',
     },
     content: {
       flexGrow: 1,
@@ -426,6 +426,7 @@ export default function PrimarySearchAppBar() {
         }}
       >
         <div className={classes.drawerHeader}>
+          <h3>Ganesha App</h3>
           <IconButton onClick={handleDrawerClose} className='color-text'>
             {theme.direction === 'ltr' ? <CloseIcon  className='color-text'/> : <CloseIcon className='color-text' />}
           </IconButton>
@@ -467,6 +468,12 @@ export default function PrimarySearchAppBar() {
               <MailIcon className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Events</ListItemText>
+          </ListItem>
+          <ListItem button component={Link} to="/adminbilling">
+            <ListItemIcon>
+              <MailIcon className='color-text'/>
+            </ListItemIcon>
+            <ListItemText className='color-text'>Billing</ListItemText>
           </ListItem>
 
           {/* {['Home', 'About Mandal', 'Profile', 'Receipt'].map((text, index) => (
