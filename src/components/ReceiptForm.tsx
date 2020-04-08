@@ -147,33 +147,33 @@ export default function SimpleTabs() {
 
 
   return (
-    <Grid container   style={styles.AlignMent}>
-      <Grid item xs={12} md={6}>
+    <Grid container   style={styles.AlignMent} >
+      <Grid item xs={12} md={12}>
          <div  className='receipt-form'>
-      <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+      <AppBar position="static"className='receipt-header'>
+        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100'>
           <Tab label="Receipt Form" {...a11yProps(0)}  className='tab'/>
           <Tab label="Pending Form" {...a11yProps(1)}  className='tab'/>
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <div style={styles.paper}>
+        <div className='receipt-inner'>
           <form className={classes.root} noValidate autoComplete="off">
-             <h2 className='heading m-0'>Receipt Form</h2>
+             <h3 className='heading m-0'>Receipt Form</h3>
              <div className='iconposition' style={styles.TextField}>
-                <TextField id="outlined-basic" label="User Name" variant="outlined" className='w-100'/>
+                <TextField id="outlined-basic" placeholder="User Name" variant="outlined" className='w-100'/>
                 <InputAdornment position="start" className='icon'>
                     <AccountCircle />
                 </InputAdornment>
              </div>
              <div className='iconposition' style={styles.TextField}>
-                <TextField id="outlined-basic" label="Email Address" variant="outlined"  className='w-100'/>
+                <TextField id="outlined-basic" placeholder="Email Address" variant="outlined"  className='w-100'/>
                 <InputAdornment position="start" className='icon'>
                    <MailIcon />
                 </InputAdornment>
              </div>
              <div className='iconposition' style={styles.TextField}>
-                <TextField id="outlined-basic" label="Mobile Number" variant="outlined"  className='w-100'/>
+                <TextField id="outlined-basic" placeholder="Mobile Number" variant="outlined"  className='w-100'/>
                 <InputAdornment position="start" className='icon'>
                     <CallIcon />
                 </InputAdornment>
@@ -181,7 +181,7 @@ export default function SimpleTabs() {
              <div style={{display:"flex"}}>
 
               <div className='iconposition' style={styles.TextField}>
-                <TextField id="outlined-basic" label="Amount" variant="outlined" className='amount w-100' />
+                <TextField id="outlined-basic" placeholder="Amount" variant="outlined" className='amount w-100' />
                 <InputAdornment position="start" className='icon'>
                   <AttachMoneyIcon />
                 </InputAdornment>
@@ -192,7 +192,7 @@ export default function SimpleTabs() {
                     autoOk
                     variant="inline"
                     inputVariant="outlined"
-                    label="Date"
+                    placeholder="Date"
                     format="MM/dd/yyyy"
                     value={selectedDate}
                     className='w-100'
@@ -232,7 +232,7 @@ export default function SimpleTabs() {
                     autoOk
                     variant="inline"
                     inputVariant="outlined"
-                    label=" late-Date"
+                    placeholder=" late-Date"
                     format="MM/dd/yyyy"
                     value={selectedDate}
                     InputAdornmentProps={{ position: "end" }}
@@ -273,7 +273,8 @@ export default function SimpleTabs() {
       </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Card className='pending-card' >
+      <h3 className='heading m-0'>Pending Form</h3>
+        <Card className='pending-card receipt-inner' >
            <CardContent className='card-content'>
               <div className='pending-details'>
                  <div >

@@ -10,6 +10,7 @@ import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import CloseIcon from '@material-ui/icons/Close';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
@@ -426,7 +427,7 @@ export default function PrimarySearchAppBar() {
       >
         <div className={classes.drawerHeader}>
           <IconButton onClick={handleDrawerClose} className='color-text'>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon  className='color-text'/> : <ChevronRightIcon className='color-text' />}
+            {theme.direction === 'ltr' ? <CloseIcon  className='color-text'/> : <CloseIcon className='color-text' />}
           </IconButton>
         </div>
         <Divider />
@@ -504,5 +505,6 @@ export default function PrimarySearchAppBar() {
       {noti ? Notification : renderMenu}
       {/* {noti ? Notification : renderMobileMenu} */}
     </div>
+    
   );
 }
