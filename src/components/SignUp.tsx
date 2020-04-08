@@ -51,23 +51,23 @@ export default function SignUp() {
       <Grid container >
         <Grid item xs={12} className={classes.contain}>
           <Paper className=' form' elevation={0}>
-            <div className='p-30 signup-form'>
-              <h2>Sign Up </h2>
+            <div className=' signup-form'>
+              <h3 className='m-0'>Sign Up </h3>
               <form className={classes.root} noValidate autoComplete='off'>
-                <TextField id='outlined-basic' label='Your Name' variant='outlined' autoComplete='off' fullWidth
+                <TextField id='outlined-basic' placeholder='Your Name' variant='outlined' autoComplete='off' fullWidth
                   style={{ backgroundColor: '#edf0f7', borderRadius: 100 }}
                   className={classes.textField}
                 />
-                <TextField id='outlined-basic' label='Email Address' variant='outlined' autoComplete='off' fullWidth
+                <TextField id='outlined-basic' placeholder='Email Address' variant='outlined' autoComplete='off' fullWidth
                   style={{ backgroundColor: '#edf0f7', borderRadius: 100 }}
                   className={classes.textField}
                 />
-                <TextField id='outlined-basic' label='Password' type='password' variant='outlined' fullWidth
+                <TextField id='outlined-basic' placeholder='Password' type='password' variant='outlined' fullWidth
                   style={{ backgroundColor: '#edf0f7', borderRadius: 100 }}
                   className={classes.textField}
                   autoComplete='new-password'
                 />
-                <Button variant='contained' color='primary' fullWidth className='signup-button form-button mt-30' style={{ borderRadius: 100 }}>
+                <Button variant='contained' color='primary' fullWidth className='signup-button form-button mt-30' >
                   Sign Up
                 </Button>
                 <p className='account'>Already a member? <Link to='/'>Log In</Link> </p>

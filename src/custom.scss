@@ -18,6 +18,7 @@
 //Layout
 @import "scss/layouts/footer";
 @import "scss/layouts/main-navigation.scss";
+@import"./fonts/Montserrat-Medium.ttf";
 
 *,
 *::after,
@@ -28,7 +29,10 @@ body {
     background-color: $bgcolor;
     color: $textColor;
 }
-
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url(./fonts/Montserrat-Medium.ttf);
+  }
 h1,
 h2,
 h3,
@@ -36,8 +40,14 @@ h4,
 h5,
 h6{
     color: $primary;
+    font-family: 'Montserrat-Medium';
 }
-
+p,.MuiTypography{
+    font-family: 'Montserrat-Medium'!important;
+}
+  body {
+    font-family: 'Montserrat-Medium';
+  }
 .text-capital { text-transform: uppercase; }
 .m-20{margin: 20px;}
 .m-0 {margin: 0;}
@@ -97,7 +107,7 @@ h6{
     }
     .MuiOutlinedInput-root{
         background-color: white;
-        border-radius: 15px;
+        // border-radius: 15px;
     }
 }
 
@@ -769,7 +779,7 @@ h6{
     }
     .MuiOutlinedInput-root{
         background-color: white;
-        border-radius: 15px;
+        // border-radius: 15px;
     }
 }
 .MuiInputBase-input {
@@ -877,7 +887,9 @@ a.MuiButton-outlined{
         color: $white;
     }
 }
-
+.MuiButton-containedPrimary{
+    background-color: $primary!important;
+}
 //Notification
 .mt-auto{
     margin-top: auto !important;
@@ -989,7 +1001,11 @@ a.MuiButton-outlined{
         outline: none;
     }
 }
+
 //Login form
+.signup-form,.login-form {
+    padding: 25px;
+}
 .login__button-box {
     display: flex;
     justify-content: space-around;
@@ -1034,15 +1050,17 @@ a.MuiButton-outlined{
     }
     .social-button{
         justify-content: space-evenly!important;
+        margin-top: 30px;
         button{
             border: 1px solid #eaeaea;
-            border-radius: 8%;
+            border-radius: 4px;
             padding: 9px 14px;
         }
     }
  
     .fa-facebook{
         color: #4266b2;
+       
     }
     .fa-google-plus{
         color: #db4437;
@@ -1060,8 +1078,13 @@ a.MuiButton-outlined{
     color: #fff!important;
 }
 .account{
-    font-size: 14px;
+    font-size: 12px;
     color: #878484;
+    margin:20px 0 0 0 ;
+    a{
+        text-decoration: none;
+        color: $grey;
+    }
 }
 .form{
     form {
@@ -1104,9 +1127,9 @@ a.MuiButton-outlined{
     margin-top: 0;
     word-break: break-word;
 }
-fieldset.MuiOutlinedInput-notchedOutline{
-    border-radius: 10px;
-}
+// fieldset.MuiOutlinedInput-notchedOutline{
+//     border-radius: 10px;
+// }
 .post-card{
     .MuiButtonBase-root:hover{
         background-color: transparent !important;
@@ -1118,7 +1141,7 @@ fieldset.MuiOutlinedInput-notchedOutline{
 // Login Page
 .account{
     a{
-        color: $secondary;
+        // color: $secondary;
         &:hover{
             color: darken($secondary, $amount: 10%);
         }
@@ -1126,23 +1149,29 @@ fieldset.MuiOutlinedInput-notchedOutline{
 }
 .login-form .text-right a{
     color: $grey;
+    font-size: 12px;
+    text-decoration: none;
     &:hover{
-        color: darken($grey, $amount: 20%);
+        color: darken($secondary, $amount: 10%);
     }
 }
 .form form fieldset,
 .login-form .social-button button{
-    border: 2px solid #e5e5e5;
+    border: 1px solid #e5e5e5;
 }
 .login-form .social-button button:hover{
     background-color: $primary;
     border-color: $primary;
     color: $white;
+    .fab{
+            color: $white;
+    }
 }
 .form form{
     .MuiOutlinedInput-input{
         padding: 14.5px 14px;
         line-height: 1.5;
+        font-size: 14px;
     }
     legend{ height: 18px;}
     fieldset{
@@ -1166,21 +1195,48 @@ fieldset.MuiOutlinedInput-notchedOutline{
 }
 // Forgot Password Page
 .forgot-form{
-    height: calc(100vh - 96px);
+    padding: 25px;
+    // height: calc(100vh - 96px);
     .MuiFormControl-root{
         margin-top: 0;
     }
     .title{
         margin-top: 0;
     }
+    .forgot-message{
+        font-size: 13px;
+        margin-bottom: 20px;
+        color:$grey;
+    }
 }
 .signup-button.mt-3{
     @include mt(3);
 }
 
+.signup-button{
+    margin-top: 20px!important;
+}
 
 
-
+.footer-wrap{
+    width: 100%;
+    height: 40px;
+    background: #202020;
+    display: flex;
+    justify-content: center;
+    
+    .copright{
+        color: $white;
+        font-size: 12px;
+        a{
+            color: $grey;
+            text-decoration: none;
+            &:hover{
+                color: darken($secondary, $amount: 10%);
+            }
+        }
+    }
+}
 // Footer Bottom
 html,
 body,
@@ -1205,7 +1261,7 @@ body,
         @include mt(2);
     }
     .form{
-        margin: 0;
+        margin: 0 auto;
         width: 100%;
         min-width: 300px;
         .b-radius{
@@ -1213,4 +1269,8 @@ body,
         }
     }
     
+}
+.color-text{
+    color: $white;
+    font-size: 14px;
 }

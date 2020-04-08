@@ -147,9 +147,11 @@ const useStyles = makeStyles((theme: Theme) =>
     drawer: {
       width: drawerWidth,
       flexShrink: 0,
+     
     },
     drawerPaper: {
       width: drawerWidth,
+      background: '#18202c'
     },
     drawerHeader: {
       display: 'flex',
@@ -367,8 +369,8 @@ export default function PrimarySearchAppBar() {
           <Avatar className={classes.ProfileSize}>
             <img src={String(ganeshaImg)} className="w-100" alt="ganeshaApp" />
           </Avatar>
-          <Typography variant="h6" noWrap>
-            Ganesha App
+          <Typography noWrap>
+            Shrimant Dagdushet
           </Typography>
           <div className={classes.grow} />
           <div >
@@ -423,47 +425,47 @@ export default function PrimarySearchAppBar() {
         }}
       >
         <div className={classes.drawerHeader}>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+          <IconButton onClick={handleDrawerClose} className='color-text'>
+            {theme.direction === 'ltr' ? <ChevronLeftIcon  className='color-text'/> : <ChevronRightIcon className='color-text' />}
           </IconButton>
         </div>
         <Divider />
         <List>
           <ListItem button component={Link} to="/homepage">
             <ListItemIcon>
-              <InboxIcon />
+              <InboxIcon  className='color-text'/>
             </ListItemIcon>
-            <ListItemText>Home</ListItemText>
+            <ListItemText className='color-text'>Home</ListItemText>
           </ListItem>
           <ListItem button component={Link} to="/aboutMandal">
             <ListItemIcon>
-              <InboxIcon />
+              <InboxIcon className='color-text' />
             </ListItemIcon>
-            <ListItemText>About Mandal</ListItemText>
+            <ListItemText className='color-text'>About Mandal</ListItemText>
           </ListItem>
           <ListItem button component={Link} to="/memberprofile">
             <ListItemIcon>
-              <AccountCircle />
-            </ListItemIcon>
-            <ListItemText>Profile</ListItemText>
+              <AccountCircle className='color-text'/>
+            </ListItemIcon >
+            <ListItemText className='color-text'>Profile</ListItemText>
           </ListItem>
           <ListItem button component={Link} to="/receipt">
             <ListItemIcon>
-              <MailIcon />
+              <MailIcon  className='color-text'/>
             </ListItemIcon>
-            <ListItemText>Receipt</ListItemText>
+            <ListItemText className='color-text'>Receipt</ListItemText>
           </ListItem>
           <ListItem button component={Link} to="/membermainpage">
             <ListItemIcon>
-              <MailIcon />
+              <MailIcon className='color-text'/>
             </ListItemIcon>
-            <ListItemText>Members</ListItemText>
+            <ListItemText className='color-text'>Members</ListItemText>
           </ListItem>
           <ListItem button component={Link} to="/events">
             <ListItemIcon>
-              <MailIcon />
+              <MailIcon className='color-text'/>
             </ListItemIcon>
-            <ListItemText>Events</ListItemText>
+            <ListItemText className='color-text'>Events</ListItemText>
           </ListItem>
 
           {/* {['Home', 'About Mandal', 'Profile', 'Receipt'].map((text, index) => (
@@ -477,15 +479,15 @@ export default function PrimarySearchAppBar() {
         <List className="mt-auto">
           <ListItem button component={Link} to="#.">
             <ListItemIcon>
-              <MailIcon />
+              <MailIcon  className='color-text'/>
             </ListItemIcon>
-            <ListItemText>Change Language</ListItemText>
+            <ListItemText className='color-text'>Change Language</ListItemText>
           </ListItem>
           <ListItem button component={Link} to="#.">
             <ListItemIcon>
-              <MailIcon />
+              <MailIcon className='color-text' />
             </ListItemIcon>
-            <ListItemText>Log Out</ListItemText>
+            <ListItemText className='color-text'>Log Out</ListItemText>
           </ListItem>
 
           {/* {['Change Language', 'Log Out', 'Spam'].map((text, index) => (

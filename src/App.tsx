@@ -1,5 +1,6 @@
 import React from 'react';
 import Receipt from './components/receiptDetails'
+
 import {
   BrowserRouter,
   Route

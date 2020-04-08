@@ -1,27 +1,12 @@
 import React from 'react';
 import { makeStyles, Theme } from '@material-ui/core/styles'
-
-
-const useStyles = makeStyles((theme: Theme) => ({
-  Footer: {
-    width: '100%',
-    height: '40px',
-    background: '#323232',
-    display: 'flex',
-    justifyContent: 'center'
-  },
-  CopyRight: {
-    color: '#fff',
-    fontSize: 13
-  }
-}));
+;
 
 export default function Footer() {
-  const classes = useStyles();
 
   return (
-    <div className={classes.Footer}>
-      <p className={classes.CopyRight}> &copy; 2020 Powered by iVision Web Studio </p>
+    <div className='footer-wrap' >
+      <p className='copright'> &copy; 2020 Powered by  <a href="https://ivisionstudio.in/" target='blank'>iVision Web Studio</a> </p>
     </div>
   );
 }

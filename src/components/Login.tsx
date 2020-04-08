@@ -50,25 +50,25 @@ export default function Login() {
     <div className={classes.root}>
       <Grid container>
         <Grid item xs={12} className={classes.contain}>
-          <Paper className='form b-radius h-100vh' elevation={0}>
+          <Paper className='form ' elevation={0}>
             <div className='login-image'>
-              <img src={String(img)} width='100%' className='b-radius' />
+              <img src={String(img)} width='100%'  />
             </div>
-            <div className='login-form p-30'>
-              <h1 className='m-0'>Login</h1>
+            <div className='login-form '>
+              <h3 className='m-0'>Login</h3>
               <form className={classes.root} noValidate autoComplete='off'>
-                <TextField id='outlined-basic' label='Email Address' variant='outlined' autoComplete='off' fullWidth
+                <TextField id='outlined-basic' placeholder='Email Address' variant='outlined' autoComplete='off' fullWidth
                   className={classes.textField}
 
                 />
-                <TextField id='outlined-basic' label='Password' type='password' variant='outlined' autoComplete='new-password' fullWidth
+                <TextField id='outlined-basic' placeholder='Password' type='password' variant='outlined' autoComplete='new-password' fullWidth
                   className={classes.textField}
                 />
                 <p className='text-right'><Link to='/forgotpassword'>Forgot Password?</Link></p>
-                <Button variant='contained' color='primary' className='login-button form-button' fullWidth style={{ borderRadius: 100 }} component={Link} to="/homepage">
+                <Button variant='contained' color='primary' className='login-button form-button' fullWidth  component={Link} to="/homepage">
                   Log In
                 </Button>
-                <div className='mt-5 social-button'>
+                <div className='social-button'>
                   <IconButton className='mr-10'
                   ><div className='fab fa-facebook '></div><span className='sign'>Sign In</span></IconButton>
                   <IconButton className='ml-10'
