@@ -25,7 +25,8 @@ export default function eventUpdated() {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 2.3
+                    slidesToShow: 2.3,
+                    
                 }
             },
             {

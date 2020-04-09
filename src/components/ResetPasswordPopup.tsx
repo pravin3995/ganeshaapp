@@ -7,6 +7,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import Dialog from '@material-ui/core/Dialog';
 import PersonIcon from '@material-ui/icons/Person';
 import AddIcon from '@material-ui/icons/Add';
@@ -14,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import { blue } from '@material-ui/core/colors';
 import CloseIcon from '@material-ui/icons/Close';
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline';
+import classes from '*.module.css';
 
 const emails = ['username@gmail.com', 'user02@gmail.com'];
 const useStyles = makeStyles({
@@ -21,11 +23,14 @@ const useStyles = makeStyles({
     backgroundColor: blue[100],
     color: blue[600],
   },
+  alignment:{
+    textAlign:'center',
+    marginTop:100
+  }
 });
 const style ={
     SuccessIcon : {
         fontSize:'70px',
-        color: 'green'
     }
 }
 export interface SimpleDialogProps {
@@ -48,12 +53,12 @@ function SimpleDialog(props: SimpleDialogProps) {
 
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <DialogTitle id="simple-dialog-title" className='delete-post'>Reset Password <a href=""><CloseIcon onClick={handleClose} className='f-30'/></a></DialogTitle>
+      <DialogTitle id="simple-dialog-title" className='delete-post'><h4 className='m-0 f-w-500'>Reset Password</h4> <CloseIcon onClick={handleClose} className='f-30 closebutton'/></DialogTitle>
       <List>
           <div className='p-15 t-center'>  
-             <CheckCircleOutlineIcon style={style.SuccessIcon}/>
-            <h2 className='t-center m-0 f-w-500'>SUCCESS!</h2>
-            <p className='f-w-500' style={{width:'240px'}}> You have changed your password succesfully!</p>
+             <CheckCircleIcon style={style.SuccessIcon} className='successfully-text'/>
+            <h2 className='t-center m-0 f-w-500 successfully-text'>SUCCESS!</h2>
+            <p className='f-w-500 success-message' > You have changed your password succesfully!</p>
             <div className='t-center mt-30 '>
                 <Button variant="contained" color="primary" onClick={handleClose}>
                     Go To the Homepage
@@ -67,6 +72,8 @@ function SimpleDialog(props: SimpleDialogProps) {
 }
 
 export default function SimpleDialogDemo() {
+  const classes = useStyles();
+
   const [open, setOpen] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState(emails[1]);
 
@@ -80,7 +87,7 @@ export default function SimpleDialogDemo() {
   };
 
   return (
-    <div>
+    <div className={classes.alignment}>
       <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Reset Password
       </Button>

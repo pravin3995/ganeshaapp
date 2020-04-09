@@ -4,9 +4,13 @@ import { fade, makeStyles, Theme, createStyles, useTheme } from '@material-ui/co
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
+import EventIcon from '@material-ui/icons/Event';
 import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
+import DescriptionIcon from '@material-ui/icons/Description';
 import InputBase from '@material-ui/core/InputBase';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import LanguageIcon from '@material-ui/icons/Language';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
@@ -16,6 +20,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import ReceiptIcon from '@material-ui/icons/Receipt';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -105,19 +110,7 @@ const useStyles = makeStyles((theme: Theme) =>
     //     display: 'none',
     //   },
     // },
-    Notification: {
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      margin: '6px 6px',
-      border: '1px solid transparent',
-      '&:hover': {
-        borderRadius: '15px',
-        border: '1px solid #c3c3c3',
-        cursor: 'pointer',
-        color: '#3f51b5',
-      }
-    },
+   
     MenuWrapper: {
       padding: '20px'
     },
@@ -255,7 +248,7 @@ export default function PrimarySearchAppBar() {
     >
       <h3>Notification</h3>
 
-      <Card elevation={0} className={classes.Notification}>
+      <Card elevation={0} className='notification'>
         <CardHeader
           avatar={
             <Avatar aria-label="recipe" >
@@ -273,7 +266,7 @@ export default function PrimarySearchAppBar() {
           <span className={classes.time}>20 mins ago</span>
         </CardContent>
       </Card>
-      <Card elevation={0} className={classes.Notification}>
+      <Card elevation={0} className='notification'>
         <CardHeader
           avatar={
             <Avatar aria-label="recipe" >
@@ -288,7 +281,7 @@ export default function PrimarySearchAppBar() {
           <span className={classes.time}>20 mins ago</span>
         </CardContent>
       </Card>
-      <Card elevation={0} className={classes.Notification}>
+      <Card elevation={0} className='notification'>
         <CardHeader
           avatar={
             <Avatar aria-label="recipe" >
@@ -367,9 +360,9 @@ export default function PrimarySearchAppBar() {
           >
             <MenuIcon />
           </IconButton>
-          <Avatar className={classes.ProfileSize}>
+          {/* <Avatar className={classes.ProfileSize}>
             <img src={String(ganeshaImg)} className="w-100" alt="ganeshaApp" />
-          </Avatar>
+          </Avatar> */}
           <Typography noWrap>
             Shrimant Dagdushet
           </Typography>
@@ -425,7 +418,12 @@ export default function PrimarySearchAppBar() {
           paper: classes.drawerPaper,
         }}
       >
+        <div className='side-bar-wrap'>
+          <Avatar variant='square' className='side-bar-logo' alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'/>	
+
+        </div>
         <div className={classes.drawerHeader}>
+        
           <h3>Ganesha App</h3>
           <IconButton onClick={handleDrawerClose} className='color-text'>
             {theme.direction === 'ltr' ? <CloseIcon  className='color-text'/> : <CloseIcon className='color-text' />}
@@ -453,25 +451,25 @@ export default function PrimarySearchAppBar() {
           </ListItem>
           <ListItem button component={Link} to="/receipt">
             <ListItemIcon>
-              <MailIcon  className='color-text'/>
+              <ReceiptIcon  className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Receipt</ListItemText>
           </ListItem>
           <ListItem button component={Link} to="/membermainpage">
             <ListItemIcon>
-              <MailIcon className='color-text'/>
+              <AccountCircle className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Members</ListItemText>
           </ListItem>
           <ListItem button component={Link} to="/events">
             <ListItemIcon>
-              <MailIcon className='color-text'/>
+              <EventIcon className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Events</ListItemText>
           </ListItem>
           <ListItem button component={Link} to="/adminbilling">
             <ListItemIcon>
-              <MailIcon className='color-text'/>
+              <DescriptionIcon className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Billing</ListItemText>
           </ListItem>
@@ -487,13 +485,13 @@ export default function PrimarySearchAppBar() {
         <List className="mt-auto">
           <ListItem button component={Link} to="#.">
             <ListItemIcon>
-              <MailIcon  className='color-text'/>
+              <LanguageIcon  className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Change Language</ListItemText>
           </ListItem>
           <ListItem button component={Link} to="#.">
             <ListItemIcon>
-              <MailIcon className='color-text' />
+              <ExitToAppIcon className='color-text' />
             </ListItemIcon>
             <ListItemText className='color-text'>Log Out</ListItemText>
           </ListItem>

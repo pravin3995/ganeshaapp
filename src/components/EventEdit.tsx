@@ -14,6 +14,7 @@ import {
   KeyboardTimePicker,
   KeyboardDatePicker,
 } from '@material-ui/pickers';
+import { Box } from '@material-ui/core'
 
 const useStyles = makeStyles({
   root: {
@@ -38,7 +39,7 @@ const useStyles = makeStyles({
 
   button: {
     backgroundColor: '#df3088',
-    borderRadius: '15px',
+    // borderRadius: '15px',
     color: 'white',
     padding: '4px 24px'
   },
@@ -73,15 +74,12 @@ export default function Eventedit() {
 
   return (
     <div className='add-edit-event main-wrapper'>
-      <CardContent className='pb-0 pt-0' >
-        <h2 className='h1-title'>
-          Add / Edit Event
-				</h2>
-
-      </CardContent>
-
+      
       <CardContent className='pt-0'>
           <CardContent>
+            <h3 className='mt-0'>
+               Add / Edit Event
+            </h3>
             <Grid container spacing={3}>
               <Grid item xs={12} md={6} >
                 <span className='label'>
@@ -114,13 +112,14 @@ export default function Eventedit() {
                   Description of Events:
             </span>
 
-                <div >
+                <div className='text-editior'>
                   <MUIRichTextEditor
                     label="Type something here.."
                     controls={["title", "bold", "italic", "underline", "link"]}
                     inlineToolbar={true}
                     inlineToolbarControls={["bold", "italic", "underline", "link"]}
                     onSave={save}
+                    
                   />
                 </div>
 
@@ -130,7 +129,7 @@ export default function Eventedit() {
                 <span className='label'>
                   Date of Event:
             </span>
-                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                <MuiPickersUtilsProvider  utils={DateFnsUtils}>
                   <Grid>
                     <KeyboardDatePicker
                       autoOk
@@ -141,6 +140,7 @@ export default function Eventedit() {
                       value={selectedDate}
                       InputAdornmentProps={{ position: "start" }}
                       onChange={date => handleDateChange(date)}
+                      className='evnet-date'
                     />
                   </Grid>
                 </MuiPickersUtilsProvider>
@@ -160,9 +160,9 @@ export default function Eventedit() {
                 />
               </Grid>
               <Grid item xs={12} className='t-right'>
-                <Button variant="contained" href='#' size='small' target='_bank' className={classes.button}>
-                  Save
-            </Button>
+              <Box className='t-right'>
+									<Button variant='contained' className={classes.button} size="small"> Save  </Button>
+						   </Box>
               </Grid>
 
             </Grid>

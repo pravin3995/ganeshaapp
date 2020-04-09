@@ -14,8 +14,12 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Grow from '@material-ui/core/Grow';
 import Paper from '@material-ui/core/Paper';
 import Popper from '@material-ui/core/Popper';
-import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
 
 
 const useStyles = makeStyles({
@@ -47,8 +51,8 @@ const useStyles = makeStyles({
 		background: 'white'
 	},
 	button: {
-		backgroundColor: '#fb734e',
-		borderRadius: '15px',
+		// backgroundColor: '#fb734e',
+		// borderRadius: '15px',
 		color: 'white',
 		padding: '4px 22px'
 	}
@@ -61,6 +65,11 @@ export default function EventPage() {
 	const anchorRef = React.useRef<HTMLDivElement>(null);
 	const [selectedIndex, setSelectedIndex] = React.useState(1);
 	const classes = useStyles()
+	const [age, setAge] = React.useState('');
+
+	const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
+	  setAge(event.target.value as string);
+	};
 	const handleMenuItemClick = (
 		event: React.MouseEvent<HTMLLIElement, MouseEvent>,
 		index: number,
@@ -87,27 +96,30 @@ export default function EventPage() {
 					<Box display='flex' justifyContent='space-between' flexWrap='wrap' alignItems='center'>
 						<Box>
 							<Typography className='mb-10'>
-								<h2 className='h1-title'>Events</h2>
+								<h3 className='h1-title'>Events</h3>
 							</Typography>
 						</Box>
 
 						<Box display='flex' alignContent='center' >
 							<Box mr={2}>
-								<ButtonGroup size='small' variant="contained" color="primary" ref={anchorRef} aria-label="split button">
-									<Button onClick={handleClick}>{options[selectedIndex]}</Button>
-									<Button
-										color="primary"
-										size="small"
-										aria-controls={open ? 'split-button-menu' : undefined}
-										aria-expanded={open ? 'true' : undefined}
-										aria-label="select merge strategy"
-										aria-haspopup="menu"
-										onClick={handleToggle}
+								
+								<FormControl variant="outlined" className={classes.formControl}>
+									<InputLabel id="demo-simple-select-outlined-label"> Year</InputLabel>
+									<Select
+									labelId="demo-simple-select-outlined-label"
+									id="demo-simple-select-outlined"
+									value={age}
+									onChange={handleChange}
+									label="Age"
 									>
-										<ArrowDropDownIcon />
-									</Button>
-								</ButtonGroup>
-
+									<MenuItem value="">
+										<em>None</em>
+									</MenuItem>
+									<MenuItem value={10}>2018</MenuItem>
+									<MenuItem value={20}>2019</MenuItem>
+									<MenuItem value={30}>2020</MenuItem>
+									</Select>
+								</FormControl>
 								<Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
 									{({ TransitionProps, placement }) => (
 										<Grow
@@ -137,7 +149,7 @@ export default function EventPage() {
 							</Box>
 
 							<Box>
-								<Button variant='contained' className={classes.button} size="small"> Add New Event </Button>
+								<Button variant='contained' className={classes.button} size="small"> Add  </Button>
 							</Box>
 						</Box>
 					</Box>
@@ -145,23 +157,23 @@ export default function EventPage() {
 				<Grid container >
 					<Grid item xs={12}>								
 						<CardContent className='pb-0'>
-							<Box mb={1} className='f-w-500'>
+							<Box mb={1} className='f-w-600'>
 								Upcoming Events
 							</Box>
-							<Card>
+							<Card className='post-card'> 
 								<CardContent >
 									<Grid container>
 										<Grid item xs={12}>
 											<span className='label'>
 												Feb 27,2020
-							</span>
-											<Typography variant='h6' component='h2' gutterBottom >
+											</span>
+											<h3 className='inner-heading'>
 												Ganesh Chaturthi
-							</Typography>
+											</h3>
 											<Box mb={2} className='ganesh-chathurti-description'>
 												Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 												Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-							</Box>
+											</Box>
 
 											<Box className="mandal-premises">
 												<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
@@ -173,33 +185,33 @@ export default function EventPage() {
 									</Grid>
 								</CardContent>
 							</Card>
-							<Box mt={1} className='t-right'>
-								<Button href='/events' size='small' target='_bank' className={classes.button}>
-									See All Recent Events
-								</Button>
+							<Box className='t-right'>
+								<Box >
+									<Button variant='contained' className={classes.button} size="small"> See All  </Button>
+								</Box>
 							</Box>
 						</CardContent>
 					</Grid>
 				
 					<Grid item xs={12}>
 						<CardContent>
-							<Box mb={1} className='f-w-500'>
+							<Box mb={1} className='f-w-600'>
 								Recent Events
-			</Box>
-							<Card>
+							</Box>
+							<Card className='post-card'>
 								<CardContent>
 									<Grid container>
 										<Grid item xs={12}>
 											<span className='label'>
 												Feb 27,2020
-							</span>
-											<Typography variant='h6' component='h2' gutterBottom >
+											</span>
+											<h3 className='inner-heading'>
 												Ganesh Chaturthi
-							</Typography>
+											</h3>
 											<Box mb={2} className='ganesh-chathurti-description'>
 												Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 												Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-							</Box>
+											</Box>
 
 											<Box className="mandal-premises">
 												<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
@@ -211,11 +223,11 @@ export default function EventPage() {
 									</Grid>
 								</CardContent>
 							</Card>
-							<Box mt={1} className='t-right'>
-								<Button href='/events' size='small' target='_bank' className={classes.button}>
-									See All Upcoming Events
-				</Button>
-							</Box>
+							<Box className='t-right'>
+								<Box >
+									<Button variant='contained' className={classes.button} size="small"> See All  </Button>
+								</Box>
+						   </Box>
 						</CardContent>
 					</Grid>
 				</Grid>

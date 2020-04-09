@@ -57,6 +57,9 @@ export default function Login() {
             <div className='login-form '>
               <h3 className='m-0'>Login</h3>
               <form className={classes.root} noValidate autoComplete='off'>
+              <TextField id='outlined-basic' placeholder='Mandal Name' variant='outlined' autoComplete='off' fullWidth
+                  className={classes.textField}
+                />
                 <TextField id='outlined-basic' placeholder='Email Address' variant='outlined' autoComplete='off' fullWidth
                   className={classes.textField}
 

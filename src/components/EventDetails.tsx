@@ -30,13 +30,14 @@ const styles = {
     },
     TextColor: {
       color: '#a5a5a5',
-      margin: '0 0 5px 0'
+      margin: '0 0 5px 0',
+      fontSize:'12px'
     },
     Card: {
       padding: '24px', 
       flex: 1,
     //    marginRight: '20px',
-      borderRadius: '15px',
+      borderRadius: '4px',
     //   background : '#f1f1f1',
       boxShadow: '10px 10px 19px -9px rgba(0,0,0,0.33)'
     },
@@ -57,30 +58,30 @@ export default function Login() {
 
   return (
     <div className='main-wrapper event-details'>
-      <CardContent>
+      <CardContent className='bg-color'>
         <div>
           <img src={String(img)} width='100%' height='300' />
         </div>
-        <h2>Ganesh Chaturthi</h2>
+        <h3>Ganesh Chaturthi</h3>
         <div className='details-wrapper' >
         <CardContent  style={styles.Card} className='boxshadow mr-20' >
-          <p style={styles.TextColor} >Event Date :</p>
+          <p className='description m-0 '>Event Date :</p>
           <h4 className='m-0'>Feb 26, 2020</h4>
         </CardContent>
         <CardContent style={styles.Card} className='boxshadow'>
-          <p  style={styles.TextColor}>Location :</p>
+          <p className='description m-0'>Location :</p>
           <h4 className='m-0'>Mandal Premise</h4>
         </CardContent>
         </div>
         <div className='mt-30'>
-            <p style={styles.ParagraphColor}>
+            <p className='description'>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
             </p>
-            <p style={styles.ParagraphColor}>
+            <p className='description'>
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
             </p>
         </div>
-         <div  style={styles.Person} className='mt-30'>
+         <div  className='mt-30 person'>
             <AccountCircleIcon style={{marginRight: '6px'}}/>  <span style={{fontWeight: 600}}>Pravin Jadhav</span>
          </div>
       </CardContent>

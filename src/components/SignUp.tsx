@@ -55,15 +55,15 @@ export default function SignUp() {
               <h3 className='m-0'>Sign Up </h3>
               <form className={classes.root} noValidate autoComplete='off'>
                 <TextField id='outlined-basic' placeholder='Your Name' variant='outlined' autoComplete='off' fullWidth
-                  style={{ backgroundColor: '#edf0f7', borderRadius: 100 }}
                   className={classes.textField}
                 />
-                <TextField id='outlined-basic' placeholder='Email Address' variant='outlined' autoComplete='off' fullWidth
-                  style={{ backgroundColor: '#edf0f7', borderRadius: 100 }}
+                <TextField id='outlined-basic' placeholder='Mandal Name' variant='outlined' autoComplete='off' fullWidth
+                  className={classes.textField}
+                />
+                 <TextField id='outlined-basic' placeholder='Email Address' variant='outlined' autoComplete='off' fullWidth
                   className={classes.textField}
                 />
                 <TextField id='outlined-basic' placeholder='Password' type='password' variant='outlined' fullWidth
-                  style={{ backgroundColor: '#edf0f7', borderRadius: 100 }}
                   className={classes.textField}
                   autoComplete='new-password'
                 />
