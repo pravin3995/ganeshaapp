@@ -367,7 +367,7 @@ export default function PrimarySearchAppBar() {
             Shrimant Dagdushet
           </Typography>
           <div className={classes.grow} />
-          <div >
+          <div className='header-icon-wrap'>
             {/* <IconButton aria-label="show 4 new mails" color="inherit">
               <Badge badgeContent={4} color="secondary">
                 <MailIcon />
@@ -378,6 +378,7 @@ export default function PrimarySearchAppBar() {
               aria-controls={menuIds}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
+              className='notification-icon'
 
             >
               <Badge badgeContent={17} color="secondary">

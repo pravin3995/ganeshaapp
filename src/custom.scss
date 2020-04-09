@@ -1496,6 +1496,12 @@ body,
 .closebutton{
     cursor: pointer;
 }
+.header-icon-wrap{
+    .notification-icon{
+        margin-right: 0px;
+    }
+}
+
 @media screen and (max-width: 620px){
     .main-wrapper{
         padding: 15px 0px;
