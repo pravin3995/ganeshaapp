@@ -286,15 +286,19 @@ p,.MuiTypography{
             display: flex;
             justify-content: space-between;
             color: #f7f7f7;
-            margin-top: -60px;
+            // margin-top: -60px;
+            position: absolute;
+            top: 40%;
             .icon{
                 font-size: 60px;
             }
             .right-icon{
-                transform: translate(29px, 264px);
+                position: absolute;
+                right: -525px;
             }
             .left-icon{
-                transform: translate(-29px, 264px);
+                position: absolute;
+                left: -28px;
             }
         }
       .payment-suc{
@@ -317,6 +321,35 @@ p,.MuiTypography{
       .py-20{
           padding: 20px 20px 0 20px;
       }
+      .thank-you-title{
+        text-align: center;
+        //  padding-bottom: 30px;
+         font-style: italic;
+         font-family: initial;
+         font-size: 60px;
+         margin-top: 0;
+        }
+        //Circle shap paid
+        .circle-shape{float:left;margin:10px;}
+        .circle-4{
+            position: absolute;;
+            width:80px;
+            right: -60px;
+            top: -60px;
+            height:80px;
+            border:2px solid red;
+            border-radius:50% 50% 50% 0;
+            border-bottom:10px solid red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .p-relative{
+            position: relative;
+        }
+        .MuiCard-root{
+            overflow: unset;
+        }
 }
 .receipt{
     .receipt-image{
@@ -1352,7 +1385,6 @@ body,
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
 }
-
 @media screen and (max-width: 620px){
     .main-wrapper{
         padding: 15px 0px;
