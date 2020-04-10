@@ -1593,7 +1593,7 @@ body,
             border-radius: 0 0 30px 30px !important;
         }
     }
-    .signup-form,.login-form{
+    .signup-form{
         height: calc(100vh - 96px);
     }
 }
@@ -1602,7 +1602,7 @@ body,
     font-size: 14px;
 }
 @media screen and (max-width: 420px){
-    .signup-form,.login-form{
+    .signup-form{
         height: calc(100vh - 96px);
     }
 }
