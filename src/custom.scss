@@ -41,6 +41,7 @@ h5,
 h6{
     color: $primary;
     font-family: 'Montserrat-Medium';
+    letter-spacing: 0.5px;
 }
 p,.MuiTypography{
     font-family: 'Montserrat-Medium'!important;
@@ -60,7 +61,7 @@ p,.MuiTypography{
 .justify-between {justify-content: space-between;}
 .bg-white {background-color: white;}
 .justify-center {justify-content: center;}
-.h1-title {font-size: 24px;} 
+.h1-title {font-size: 20px;} 
 .main-card { background-color: #fafafa; }
 .main-wrapper {margin: 40px 15px;}
 .text-decoration-none {text-decoration: none;}
@@ -137,15 +138,15 @@ p,.MuiTypography{
     .MuiDialog-paper {
         background-color:#FAFAFA;
         margin-right: 50px;
-        min-width: 350px;
-        border-radius: 15px;
+        // min-width: 350px;
+        border-radius: 4px;
         // margin-Bottom:110px;
     }
     .MuiDialogTitle-root {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 1px solid #8f8484;
+        // border-bottom: 1px solid #8f8484;
         padding-top: 6px;
         padding-bottom: 6px;
     }
@@ -253,11 +254,11 @@ p,.MuiTypography{
 
 
 // Receipt Page css
-.receipt-main-card {
-    border-radius: 15px;
-    background-color: #FAFAFA  !important;
-    border: 1px solid #ccc9c9;
-}
+// .receipt-main-card {
+//     border-radius: 15px;
+//     background-color: #FAFAFA  !important;
+//     border: 1px solid #ccc9c9;
+// }
 
 .apple-icon.MuiSvgIcon-root{
     position: absolute;
@@ -633,18 +634,41 @@ p,.MuiTypography{
     font-size: 12px;
 
 }
+//Member main page
 .MuiCardContent-root  .member-photo {
-    width: 80%;
-    height: 200px;
-    border-radius: 15px;
+    width: 100%;
+    height:100%;
+    border-radius: 4px;
     margin: 0 auto;
+    img{
+        max-width: 300px;
+        height: 100%;
+    }
+}
+    .delete-message{
+        a{
+            text-decoration: none;
+            // color: $grey;
+        }
+    }
+.dialogbox{
+    .member_icon{
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+.m-16{
+    margin: 16px 0;
 }
 
 .input-placeholder{
-    &::placeholder{
-        font-size: 14px;
+    .MuiOutlinedInput-input {
+       
+        font-size: 13px;
         font-family: 'Montserrat-Medium';
+        letter-spacing: 0;
     }
+ 
 }
 
         // Setting page css
