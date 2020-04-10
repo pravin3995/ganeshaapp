@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme: Theme) =>
       ProfileEdit: {
           position: 'absolute',
           left:'68%',
-          bottom :'12px'
+          bottom :'-4px'
 
       },
       ProfileEditPosition :{
@@ -167,33 +167,33 @@ export default function VariantAvatars() {
                 <h3>Basic Information:</h3>
                 <form noValidate autoComplete="off">
                   <Grid container spacing={3}>
-                    <Grid item xs={12} sm={6}>
-                      <div className='iconposition' style={styles.TextField} >
-                          <TextField id="outlined-basic" label="User Name" variant="outlined"  className='w-100'/>
+                    <Grid item xs={12} >
+                      <div className='iconposition input-placeholder' style={styles.TextField} >
+                          <TextField id="outlined-basic" placeholder="User Name" variant="outlined"  className='w-100'/>
                           <InputAdornment position="start" className='icon'>
                               <AccountCircle />
                           </InputAdornment>
                       </div>
                      </Grid>
-                     <Grid item xs={12} sm={6}>
-                      <div className='iconposition' style={styles.TextField}>
-                          <TextField id="outlined-basic" label="Email Address" variant="outlined"  className='w-100'/>
+                     <Grid item xs={12} >
+                      <div className='iconposition input-placeholder' style={styles.TextField}>
+                          <TextField id="outlined-basic" placeholder="Email Address" variant="outlined"  className='w-100'/>
                           <InputAdornment position="start" className='icon'>
                             <MailIcon />
                           </InputAdornment>
                       </div>
                      </Grid>
-                     <Grid item xs={12} sm={6}>
-                      <div className='iconposition' style={styles.TextField}>
-                          <TextField id="outlined-basic" label="Mobile Number" variant="outlined"  className='w-100'/>
+                     <Grid item xs={12} >
+                      <div className='iconposition input-placeholder' style={styles.TextField}>
+                          <TextField id="outlined-basic" placeholder="Mobile Number" variant="outlined"  className='w-100'/>
                           <InputAdornment position="start" className='icon'>
                               <CallIcon />
                           </InputAdornment>
                       </div>
                      </Grid>
-                     <Grid item xs={12} sm={6}>
-                      <div className='iconposition' style={styles.TextField}>
-                          <TextField id="outlined-basic" label="City" variant="outlined"  className='w-100'/>
+                     <Grid item xs={12} >
+                      <div className='iconposition input-placeholder' style={styles.TextField}>
+                          <TextField id="outlined-basic" placeholder="City" variant="outlined"  className='w-100'/>
                           <InputAdornment position="start" className='icon'>
                               <LocationCityIcon />
                           </InputAdornment>

@@ -419,7 +419,7 @@ export default function PrimarySearchAppBar() {
           paper: classes.drawerPaper,
         }}
       >
-        <div className='side-bar-wrap'>
+        <div className='side-bar-wrap mt-16'>
           <Avatar variant='square' className='side-bar-logo' alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'/>	
 
         </div>

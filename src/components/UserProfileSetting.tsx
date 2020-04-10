@@ -43,7 +43,8 @@ const useStyles = makeStyles((theme: Theme) =>
       ProfileEdit: {
           position: 'absolute',
           left:'68%',
-          bottom :'12px'
+          bottom :'12px',
+          cursor:'pointer'
 
       },
       ProfileEditPosition :{
@@ -111,7 +112,7 @@ export default function VariantAvatars() {
   const [age, setAge] = React.useState('');
   return (
    <div >
-        <Paper elevation={1} className='profile'>   
+        <div className='profile'>   
            <Paper className='profile-details' elevation={1}>
             {/* <div className='changephoto'>
                 <Button variant="outlined" color="primary" className={classes.changeCover} >
@@ -141,60 +142,45 @@ export default function VariantAvatars() {
                 </Button>
             </div> */}
           </Paper>
-          <div className='follow' style={{textAlign:'center'}}>
-                <Grid container  justify='center'>
-                    {/* <Grid item xs={4}>
-                        <p  className='f-14'>Post</p>
-                        <h2>02</h2>
-                    </Grid> */}
-                    <Grid item xs={4}>
-                        <p className='f-14'>Following</p>
-                        <h2>10</h2>
-                    </Grid>
-                    {/* <Grid item xs={4}>
-                        <p className='f-14'>Follows</p>
-                        <h2>02</h2>
-                    </Grid> */}
-                </Grid>
-          </div>
+         
           <div className='basic-info main-wrapper' >
               <div className={classes.BasicInfo}>
                 <h3>Basic Information:</h3>
                 <form noValidate autoComplete="off">
                   <Grid container spacing={3}>
                     <Grid item xs={12} >
-                      <div className='iconposition' style={styles.TextField} >
-                          <TextField id="outlined-basic" label="User Name" variant="outlined"  className='w-100'/>
+                      <div className='iconposition input-placeholder' style={styles.TextField} >
+                          <TextField id="outlined-basic" placeholder="User Name" variant="outlined"  className='w-100'/>
                           <InputAdornment position="start" className='icon'>
                               <AccountCircle />
                           </InputAdornment>
                       </div>
                      </Grid>
                      <Grid item xs={12} >
-                      <div className='iconposition' style={styles.TextField}>
-                          <TextField id="outlined-basic" label="Email Address" variant="outlined"  className='w-100'/>
+                      <div className='iconposition input-placeholder' style={styles.TextField}>
+                          <TextField id="outlined-basic" placeholder="Email Address" variant="outlined"  className='w-100'/>
                           <InputAdornment position="start" className='icon'>
                             <MailIcon />
                           </InputAdornment>
                       </div>
                      </Grid>
                      <Grid item xs={12} >
-                      <div className='iconposition' style={styles.TextField}>
-                          <TextField id="outlined-basic" label="Mobile Number" variant="outlined"  className='w-100'/>
+                      <div className='iconposition input-placeholder' style={styles.TextField}>
+                          <TextField id="outlined-basic" placeholder="Mobile Number" variant="outlined"  className='w-100'/>
                           <InputAdornment position="start" className='icon'>
                               <CallIcon />
                           </InputAdornment>
                       </div>
                      </Grid>
                      <Grid item xs={12} >
-                      <div className='iconposition' style={styles.TextField}>
-                          <TextField id="outlined-basic" label="City" variant="outlined"  className='w-100'/>
+                      <div className='iconposition input-placeholder' style={styles.TextField}>
+                          <TextField id="outlined-basic" placeholder="City" variant="outlined"  className='w-100'/>
                           <InputAdornment position="start" className='icon'>
                               <LocationCityIcon />
                           </InputAdornment>
                       </div>
                      </Grid>
-                     <Grid item xs={12}  style={{textAlign:'right'}}>
+                     <Grid item xs={12} className='t-right'>
                         <Button variant="contained" color="primary">
                             Submit
                         </Button>
@@ -204,8 +190,8 @@ export default function VariantAvatars() {
    
             </div>
             </div>
-  
-        </Paper>
+       
+        </div>
    </div>
   );
  }

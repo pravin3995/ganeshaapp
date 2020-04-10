@@ -61,13 +61,14 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '130px',
       height: '130px',
       borderRadius: '20px',
-      margin:'100px 16px 16px 16px',
+      margin:'100px 16px 0 16px',
       background:'#ff9688'
     },
     ProfileEdit: {
       position: 'absolute',
       left:'68%',
-      bottom :'12px'
+      bottom :'-4px',
+      cursor:'pointer'
 
   },
   ProfileEditPosition :{
@@ -75,10 +76,12 @@ const useStyles = makeStyles((theme: Theme) =>
   },
 
     title :{
-      fontWeight:600
+      // fontWeight:600,
+      fontFamily: 'Montserrat-Medium',
     },
     subheader :{
-      fontSize:12
+      fontSize:12,
+      fontFamily: 'Montserrat-Medium',
     },
     ProfileName :{
         alignSelf:'flex-end',
@@ -88,11 +91,14 @@ const useStyles = makeStyles((theme: Theme) =>
     EditButton : {
         transform:' translate(7px, -22px)',
         marginRight:'24px',
-        fontSize:'10px'
+        fontSize:'10px',
+      fontFamily: 'Montserrat-Medium'
+
     },
     changeCover:{
       fontSize:'10px',
-      transform: 'translate(-16px, 16px)'
+      transform: 'translate(-16px, 16px)',
+      fontFamily: 'Montserrat-Medium'
     },
     media: {
       height: 0,
@@ -148,17 +154,17 @@ function SimpleDialog(props: SimpleDialogProps) {
   };
 
   return (
-    <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <DialogTitle id="simple-dialog-title" className='delete-post-heading'>Delete Post <a href=""><CloseIcon onClick={handleClose}/></a></DialogTitle>
+    <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} className='delete-post'>
+      <DialogTitle id="simple-dialog-title" className='delete-post-heading pb-0'><h4 className='m-0'>Delete Post</h4> <a href="" className='close-icon'><CloseIcon onClick={handleClose}/></a></DialogTitle>
       <List>
         <ListItem >
-           <p style={{marginTop:0}}>Are you sure you want to delete the post?</p>
+           <p className='delete-message f-14'>Are you sure you want to delete the post?</p>
         </ListItem>
         <ListItem className='popup-button'>
-            <Button variant="contained" color="primary" onClick={handleClose}>
+            <Button variant="contained" size='small' color="primary" onClick={handleClose}>
                 Cancel
             </Button>
-            <a href="">Delete</a>
+            <a href="" className='delete-button'>Delete</a>
             {/* <Button variant="contained" color="secondary">
                 Delete
             </Button> */}
@@ -186,7 +192,7 @@ export default function CenteredGrid() {
 
   const handleClose = (value: string) => {
     setOpen(false);
-    // setSelectedValue(value);
+    setSelectedValue(value);
   };
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
@@ -204,7 +210,7 @@ export default function CenteredGrid() {
     console.log(data);
   };
   return (   
-    <div className={classes.root}>
+    <div className={classes.root} >
         <div className='profile'>
           
           <Paper className='profile-details b-r-0' elevation={1} style={styles.paperContainer}>
@@ -271,7 +277,7 @@ export default function CenteredGrid() {
                       action={
                       
                       <IconButton aria-label="settings" className='p-0' >
-                          <span style={{fontSize:12}}>20 mins ago</span>
+                          <span className='post-time'>20 mins ago</span>
                           <div>
                             <IconButton
                               aria-label="more"
@@ -289,13 +295,15 @@ export default function CenteredGrid() {
                                 open={opens}
                                 TransitionComponent={Fade}
                                 onClose={handleCloses}
+                                className='menu-options'
                               >
                                 <MenuItem onClick={handleCloses} >Edit</MenuItem>
                                 <MenuItem onClick={handleClickOpen}>Delete</MenuItem>
                                 <MenuItem >Disable Commnets</MenuItem>
                                 <MenuItem >Disable Sharing</MenuItem>
                               </Menu>
-                              {/* <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} /> */}
+                              <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
+                              
                           </div>
                       </IconButton>
                       }
@@ -314,7 +322,7 @@ export default function CenteredGrid() {
                       title="Paella dish"
                   />
                   <CardContent>
-                      <h3 style={{margin:'0 0 7px 0'}}>Post Title</h3>
+                      <h4 className='post-title'>Post Title</h4>
                       <Typography variant="body2" color="textSecondary" component="p">
                           This impressive paella is a perfect party dish and a fun meal to cook together with your
                           guests. Add 1 cup of frozen peas along with the mussels, if you like.
@@ -334,11 +342,11 @@ export default function CenteredGrid() {
                           aria-label="show more"
                       >
                       {/* <ExpandMoreIcon /> */}
-                      <span className='f-14 f-w-600'>Comments</span>
+                      <span className=' f-w-600 comment'>Comments</span>
                       </IconButton>
                       <IconButton aria-label="share">
                           {/* <ShareIcon /> */}
-                          <span className='f-14 f-w-600'>Share</span>
+                          <span className='f-w-600 share'>Share</span>
                       </IconButton>
                   </CardActions>
                   
@@ -370,13 +378,13 @@ export default function CenteredGrid() {
                               placeholder="Reply ..."
                               variant="outlined"
                               size="small"
-                              className='w-100'
+                              className='w-100 reply-input'
                             />
                             <SendIcon className='send'/>
                         </div>
                         <div className='edit-comment'>
                         <TextareaAutosize aria-label="minimum height" className='w-100 edit-text' rowsMin={3} placeholder="Edit Comment..." />
-                            <div className='button-wrapper'>
+                            <div className='comment-button-wrapper'>
                                 <Button size="small" variant="contained" color="primary">
                                   Cancel  
                                 </Button>
