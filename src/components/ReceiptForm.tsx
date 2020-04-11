@@ -149,8 +149,8 @@ export default function SimpleTabs() {
   return (
     <Grid container   style={styles.AlignMent} >
       <Grid item xs={12} md={12}>
-         <div  className='receipt-form'>
-      <AppBar position="static"className='receipt-header'>
+         <div  className='receipt-form tab-wrap'>
+      <AppBar position="static"className='tab-header'>
         <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100'>
           <Tab label="Receipt Form" {...a11yProps(0)}  className='tab'/>
           <Tab label="Pending Form" {...a11yProps(1)}  className='tab'/>
@@ -159,7 +159,7 @@ export default function SimpleTabs() {
       <TabPanel value={value} index={0}>
         <div className='receipt-inner'>
           <form className={classes.root} noValidate autoComplete="off">
-             <h3 className='heading m-0'>Receipt Form</h3>
+             <h3 className='heading m-0 h1-title'>Receipt Form</h3>
              <div className='iconposition' style={styles.TextField}>
                 <TextField id="outlined-basic" placeholder="User Name" variant="outlined" className='w-100'/>
                 <InputAdornment position="start" className='icon'>

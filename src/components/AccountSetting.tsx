@@ -63,8 +63,8 @@ const useStyles = makeStyles((theme: Theme) =>
         //   marginLeft:20
       },
       EditButton : {
-          transform:' translate(7px, -46px)',
-          marginRight:'24px',
+          transform:' translate(7px, -33px)',
+          marginRight:'22px',
           fontSize:'10px'
       },
       changeCover:{
@@ -158,21 +158,21 @@ export default function VariantAvatars() {
             <Grid container className={classes.Alignment}>
                <Grid item xs={12} md={6}>
                 <div className={classes.ChangePass}>
-                  <h3>Change Password:</h3>
+                  <h4>Change Password:</h4>
                   <form noValidate autoComplete="off">
-                    <div style={styles.TextField}>
-                        <TextField id="outlined-basic" label="Old Password" variant="outlined"  className='w-100'/>
+                    <div className='input-placeholder m-16'>
+                        <TextField id="outlined-basic" placeholder="Old Password" variant="outlined"  className='w-100'/>
                     </div>
-                    <div style={styles.TextField}>
-                        <TextField id="outlined-basic" label="New Password" variant="outlined"  className='w-100'/>
+                    <div className='input-placeholder m-16'>
+                        <TextField id="outlined-basic" placeholder="New Password" variant="outlined"  className='w-100'/>
                     </div>
                   </form>
               </div>
                 <div className={classes.AccountSetting}>
-                  <h3 style={{margin:0}}>Account Setting:</h3>
+                  <h4 className='m-0'>Account Setting:</h4>
                   <p className='text-color-size'>Change Laguage</p>
                   <FormControl variant="outlined" className='w-100'>
-                    <InputLabel ref={inputLabel} id="demo-simple-select-outlined-label">
+                    <InputLabel ref={inputLabel} id="demo-simple-select-outlined-label" className='select-language' >
                       Select Language
                     </InputLabel>
                   <Select
@@ -180,13 +180,14 @@ export default function VariantAvatars() {
                     id="demo-simple-select-outlined"
                     value={age}
                     labelWidth={labelWidth}
+                    className='change-language'
                   >
                 
                     <MenuItem value={10}>Marathi</MenuItem>
                     <MenuItem value={20}>English</MenuItem>
                   </Select>
                 </FormControl>
-                <div className='button mt-16'>
+                <div className='t-right mt-16'>
                     <Button variant="contained" color="primary">
                         Update
                     </Button>

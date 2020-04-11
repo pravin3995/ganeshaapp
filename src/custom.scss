@@ -43,7 +43,7 @@ h6{
     font-family: 'Montserrat-Medium';
     letter-spacing: 0.5px;
 }
-p,.MuiTypography{
+p,.MuiTypography,span{
     font-family: 'Montserrat-Medium'!important;
 }
   body {
@@ -61,7 +61,7 @@ p,.MuiTypography{
 .justify-between {justify-content: space-between;}
 .bg-white {background-color: white;}
 .justify-center {justify-content: center;}
-.h1-title {font-size: 20px;} 
+.h1-title {font-size: 18px;} 
 .main-card { background-color: #fafafa; }
 .main-wrapper {margin: 40px 15px;}
 .text-decoration-none {text-decoration: none;}
@@ -89,7 +89,7 @@ p,.MuiTypography{
 .p-8{padding: 8px;}
 .p-16{padding:16px 0!important;}
 .p-20{padding:20px!important;}
-
+ .mb-20{margin-bottom: 20px;}
 .pt-0{padding-top:0!important;}
 .pb-0{padding-bottom: 0!important;}
 .mr-10{margin-right: 10px!important;}
@@ -133,11 +133,14 @@ p,.MuiTypography{
 
 .MuiFormControl-root .MuiInputLabel-root{
     font-size: 14px;
+    font-family: 'Montserrat-Medium';
+    color: $grey;
+
 }
 .delete-popup {
     .MuiDialog-paper {
         background-color:#FAFAFA;
-        margin-right: 50px;
+        // margin-right: 50px;
         // min-width: 350px;
         border-radius: 4px;
         // margin-Bottom:110px;
@@ -410,7 +413,11 @@ p,.MuiTypography{
     // .MuiGrid-spacing-xs-3 > .MuiGrid-item {
     //     padding: 0;
     // }
-
+ .about-image{
+     div{
+        padding-top: calc(60%)!important;
+     }
+ }
 }
  
 
@@ -457,9 +464,7 @@ p,.MuiTypography{
                 flex-direction: column;
                 justify-content: space-between;
                 height: 150px;
-                border: 1px solid #ccc9c9;
                 font-size: 14px;
-                border-radius: 15px;
             }
             #mui-rte-toolbar {
                 order: 2;
@@ -474,6 +479,19 @@ p,.MuiTypography{
                 }
             }
        
+        }
+        .editor #mui-rte-toolbar + div{
+            margin: 0;
+            padding-left:17px;
+            margin-top: 20px;
+            font-family: 'Montserrat-Medium';
+            color: $grey;
+            
+        }
+        .editor #mui-rte-root #mui-rte-container #mui-rte-editor{
+            padding-left:17px;
+            margin-top: 10px;
+
         }
     }
 
@@ -915,7 +933,7 @@ p,.MuiTypography{
     }
     .follow{
         text-align: center;
-        margin-top: 36px;
+        margin-top: 26px;
     }
     
 }
@@ -939,15 +957,21 @@ p,.MuiTypography{
 // .account-setting-wrap{
 //     margin-top: 30px;
 // }
-//Add new post
+    .MuiMenu-list{
+        .MuiMenuItem-root{
+            font-size: 14px;
+            font-family: 'Montserrat-Medium';
 
+        }
+    }
+//Add new post
 .add-new-post{
     // margin-top: 30px;
     .icon{
         text-align: center;
     }
     .background-icon{
-        font-size:170px!important;
+        font-size:130px!important;
         color:#80808057;
     }
     .add-new-button{
@@ -1257,7 +1281,7 @@ a.MuiButton-outlined{
     display: inline-block;
     cursor: pointer;
     background: $primary;
-    padding: 14px 16px;
+    padding: 7px 16px;
     border-radius: 4px;
     margin-right: 8px;
     margin-top: 0;
@@ -1330,21 +1354,27 @@ a.MuiButton-outlined{
     padding: 30px;
 }
 //Tab
-.receipt-form{
-    .MuiTabs-flexContainer{
-        justify-content: center;
-    }
-    .receipt-header{
-        display: flex;
-        // justify-content: center;
-        align-items: center;
-        box-shadow: none;
-    }
+.tab-wrap{
     .MuiTab-root{
         text-transform: capitalize;
         font-family: 'Montserrat-Medium';
         width: 100%;
     }
+    .MuiTabs-flexContainer{
+        justify-content: center;
+    }
+    .tab-header{
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        box-shadow: none;
+    }
+}
+
+.receipt-form{
+    
+   
+   
     .receipt-inner{
         max-width:700px ;
         margin: 0 auto;

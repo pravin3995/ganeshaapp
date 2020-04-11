@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import CardContent from '@material-ui/core/CardContent'
 import Card from '@material-ui/core/Card'
-import { Typography, Box, AppBar } from '@material-ui/core'
+import { Typography, Box, AppBar, Avatar } from '@material-ui/core'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Image from 'material-ui-image'
@@ -51,8 +51,7 @@ const useStyles  =  makeStyles((theme: Theme)  =>
       padding: theme.spacing(2),
     },
     button: {
-      backgroundColor: '#df3088',
-      borderRadius: '15px',
+      // backgroundColor: '#df3088',
       color: 'white',
       padding: '4px 24px'
     }
@@ -69,27 +68,33 @@ export default function SimpleTabs() {
   };
 
   return (
-   <div className='main-wrapper'> 
+   
     <div className={classes.root}>
       <Box className='about-mandal'>
        
          <Grid container >
           <Grid item xs={12}>
-              <AppBar position="static">
-                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-                  <Tab label="About US" {...a11yProps(0)} />
-                  <Tab label="Donations" {...a11yProps(1)} />
+            <div className='tab-wrap'>
+              <AppBar position="static" className='tab-header' >
+                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100'>
+                  <Tab label="About US" {...a11yProps(0)} className='tab' />
+                  <Tab label="Donations" {...a11yProps(1)} className='tab' />
                 </Tabs>
               </AppBar>
-                <TabPanel value={value} index={0}>
-                    <Box display='flex' justifyContent='space-between' alignItems='center' > 
-                          <h2 className='h1-title'>  About Mandal </h2>
-                        <Button variant="contained" size='small' className={classes.button}>
-                          Edit Info
-                        </Button>
+              </div>
+                 <TabPanel value={value} index={0}>
+                   <div className='main-wrapper pt-0'> 
+                      <Box display='flex' justifyContent='space-between' alignItems='center' className='mb-20' > 
+                          <h4 className='h1-title m-0 '>  About Mandal </h4>
+                          <Button variant="contained" color='primary' size='small' className={classes.button}>
+                            Edit Info
+                          </Button>
                       </Box>
-                  <Image src="https://i.pinimg.com/originals/a4/96/c2/a496c2b6bc5d7cfe0e0674f6598c38ad.jpg"/>
-                    <h3> History </h3>
+                      <div className='about-image'>
+                          <Image className='ratio' src="https://i.pinimg.com/originals/a4/96/c2/a496c2b6bc5d7cfe0e0674f6598c38ad.jpg"/>
+
+                      </div>
+                      <h3> History </h3>
                     <Box mt={1} mb={1}>
                     <Typography variant	='body2'>
                       Contrary to popular belief, Lorem Ipsum is not simply random text. 
@@ -109,9 +114,11 @@ export default function SimpleTabs() {
                       It has roots in a piece of classical Latin literature from 45 BC.
                     </Typography>
                     </Box> 
+                   </div>
                   </TabPanel>
-            <TabPanel value={value} index={1}>
-                <Grid container> 
+               <TabPanel value={value} index={1}>
+                  <div className='main-wrapper pt-0'> 
+                    <Grid container> 
                   <Grid item xs={12}>
                     <Box>
                       <Typography variant	='body2' className="donation-details">                
@@ -125,7 +132,7 @@ export default function SimpleTabs() {
 
                       <h3> Address:</h3> 
                     <Box>
-                      <span>Lions Club Mitra Mandal </span>
+                      <p className='font-14 m-0'>Lions Club Mitra Mandal </p>
                       <p className='font-14 m-0'> Mhasoba Chowk,</p>
                       <p className='font-14 m-0'> Dattawadi, pune-411030</p>
                       <p className="font-14"> For online donation, send your remittance at following details.</p>
@@ -140,12 +147,12 @@ export default function SimpleTabs() {
                   </Box>
                   </Grid>
                 </Grid>
-              </TabPanel>
+                  </div>
+                </TabPanel>
           </Grid>
       </Grid>
         
       </Box>
-    </div>
  </div>
   );
 }

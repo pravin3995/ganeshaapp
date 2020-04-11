@@ -23,12 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
     control: {
       padding: theme.spacing(2),
     },
-    button: {
-      backgroundColor: '#df3088',
-      borderRadius: '15px',
-      color: 'white',
-      padding: '4px 24px'
-    },
+  
     label: {
       fontSize: '13px'
     }
@@ -44,9 +39,8 @@ export default function EditAboutMandal() {
     <div className='edit-donation-about-mandal main-wrapper'>
       <CardContent className="pt-0">
         <h2 className='h1-title'> Edit Donations Information </h2>
-        <h3 className='f-w-500'> Welcome Text</h3>
-        <Card>
-          <CardContent>
+        <h4 className='f-w-500 mb-0'> Welcome Text</h4>
+        <div>
             <Box>
               <Grid container spacing={3} >
                 <Grid item xs={12}>
@@ -65,58 +59,39 @@ export default function EditAboutMandal() {
 
                 <Grid item md={6} xs={12}>
                   <Box>
+                    
+                    <div className='input-placeholder'>
                     <span className='label'> Bank Name:</span>
-                    <TextField
-                      fullWidth
-                      id="outlined-number"
-                      size='small'
-                      rowsMax="4"
-                      placeholder='Enter Bank Name'
-                      variant="outlined"
-                    />
+                        <TextField id="outlined-basic" placeholder="Bank Name" variant="outlined"  className='w-100'/>
+                    </div>
                   </Box>
                 </Grid>
 
                 <Grid item md={6} xs={12}>
                   <Box>
-                    <span className='label'> Account Number:</span>
-                    <TextField
-                      fullWidth
-                      id="outlined-number"
-                      size='small'
-                      placeholder='Enter Account Number'
-                      rowsMax="4"
-                      variant="outlined"
-                    />
+                    <div className='input-placeholder'>
+                      <span className='label'>Account Number:</span>
+                          <TextField id="outlined-basic" placeholder="Enter Account Name" variant="outlined"  className='w-100'/>
+                    </div>
                   </Box>
                 </Grid>
 
                 <Grid item md={12} xs={12}>
                   <Grid container spacing={3} >
-                    <Grid item xs={6} md={6}>
+                    <Grid item xs={12} md={6}>
                       <Box>
-                        <span className='label'> Branch Code:</span>
-                        <TextField
-                          fullWidth
-                          id="outlined-number"
-                          size='small'
-                          placeholder='Enter Branch Number'
-                          rowsMax="4"
-                          variant="outlined"
-                        />
+                        <div className='input-placeholder'>
+                            <span className='label'>Branch Code:</span>
+                            <TextField id="outlined-basic" placeholder="Enter Branch Code Name" variant="outlined"  className='w-100'/>
+                        </div>
                       </Box>
                     </Grid>
-                    <Grid item xs={6} md={6}>
+                    <Grid item xs={12} md={6}>
                       <Box>
-                        <span className='label'> PAN No:</span>
-                        <TextField
-                          fullWidth
-                          id="outlined-number"
-                          size='small'
-                          placeholder='Enter PAN Number'
-                          rowsMax="4"
-                          variant="outlined"
-                        />
+                        <div className='input-placeholder'>
+                            <span className='label'>PAN No:</span>
+                            <TextField id="outlined-basic" placeholder="Enter PAN No " variant="outlined"  className='w-100'/>
+                        </div>
                       </Box>
                     </Grid>
                   </Grid>
@@ -125,69 +100,48 @@ export default function EditAboutMandal() {
 
                 <Grid item md={6} xs={12}>
                   <Box>
-                    <span className='label'> IFSC Code:</span>
-                    <TextField
-                      fullWidth
-                      id="outlined-number"
-                      size='small'
-                      placeholder='Enter IFSC '
-                      rowsMax="4"
-                      variant="outlined"
-                    />
+                      <div className='input-placeholder'>
+                          <span className='label'>IFSC Code:</span>
+                          <TextField id="outlined-basic" placeholder="Enter IFSC Code " variant="outlined"  className='w-100'/>
+                      </div>
                   </Box>
                 </Grid>
 
                 <Grid item md={6} xs={12}>
                   <Box>
-                    <span className='label'> Mobile Number:</span>
-                    <TextField
-                      fullWidth
-                      id="outlined-number"
-                      size='small'
-                      placeholder='Enter Mobile Number '
-                      rowsMax="4"
-                      variant="outlined"
-                    />
+                    <div className='input-placeholder'>
+                        <span className='label'>Mobile Number:</span>
+                        <TextField id="outlined-basic" placeholder="Enter Mobile Number " variant="outlined"  className='w-100'/>
+                    </div>
                   </Box>
                 </Grid>
 
                 <Grid item md={6} xs={12}>
                   <Box>
-                    <span className='label'> Email Address:</span>
-                    <TextField
-                      fullWidth
-                      id="outlined-number"
-                      size='small'
-                      placeholder='Enter Email Address'
-                      rowsMax="4"
-                      variant="outlined"
-                    />
+                    <div className='input-placeholder'>
+                        <span className='label'> Email Address:</span>
+                        <TextField id="outlined-basic" placeholder="Enter Email Address " variant="outlined"  className='w-100'/>
+                    </div>
                   </Box>
                 </Grid>
 
                 <Grid item md={6} xs={12}>
                   <Box>
-                    <span className='label'> UPI:</span>
-                    <TextField
-                      fullWidth
-                      id="outlined-number"
-                      size='small'
-                      placeholder='Enter UPI Address'
-                      rowsMax="4"
-                      variant="outlined"
-                    />
+                    <div className='input-placeholder'>
+                        <span className='label'> UPI:</span>
+                        <TextField id="outlined-basic" placeholder="Enter UPI Address " variant="outlined"  className='w-100'/>
+                    </div>
                   </Box>
                 </Grid>
 
               </Grid>
               <Box className='t-right' mt={3}>
-                <Button variant="contained" href='#' size='small' target='_bank' className={classes.button}>
+                <Button variant="contained" href='#' color="primary" size='small' target='_bank' className='button'>
                   Save
             </Button>
               </Box>
             </Box>
-          </CardContent>
-        </Card>
+        </div>
       </CardContent>
     </div>
   )

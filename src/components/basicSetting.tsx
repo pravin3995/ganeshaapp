@@ -114,10 +114,10 @@ const useStyles  =  makeStyles((theme: Theme)  =>
       padding: theme.spacing(2),
     },
     button: {
-      backgroundColor: '#df3088',
-      borderRadius: '15px',
+      // backgroundColor: '#df3088',  
+      // borderRadius: '15px',
       color: 'white',
-      padding: '3px 24px'
+      // padding: '3px 24px'
     },
     formControl: {
       // margin: theme.spacing(1),
@@ -199,32 +199,28 @@ export default function SimpleTabs() {
   };
 
   return (
-    <div className='setting-page main-wrapper'>
+    <div className='setting-page '>
       <Box className='about-mandal'>
-            
-            <AppBar position="static">
-              <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-                <Tab label="Basic Information" {...a11yProps(0)} />
-                <Tab label="User Roles" {...a11yProps(1)} />
-                <Tab label="Users" {...a11yProps(2)} />
+        <div className='tab-wrap'>  
+            <AppBar position="static" className='tab-header'>
+              <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100'>
+                <Tab label="Basic Information" {...a11yProps(0)} className='tab' />
+                <Tab label="User Roles" {...a11yProps(1)} className='tab' />
+                <Tab label="Users" {...a11yProps(2)} className='tab'/>
               </Tabs>
             </AppBar>
-
+        </div>
               <TabPanel value={value} index={0}>
-                 <div className='abc'>
+                 <div className='abc main-wrapper pt-0 pb-0'>
                     <h2 className='h1-title m-0'> Basic Informastion </h2>
                       <Grid container spacing={2}> 
                         <Grid item xs={12} md={6}>
                           <Box mt={2}>
                               <Typography variant	='body2'>
-                                <span className='label'> Name of the Mandal: </span>
-                                <TextField
-                                      fullWidth
-                                      id="outlined-number"
-                                      placeholder="Enter Mandal Name Here..."
-                                      rowsMax="4"
-                                      variant="outlined"
-                                 />
+                                 <div className='input-placeholder '>
+                                    <span className='label'> Name of the Mandal: </span>
+                                    <TextField id="outlined-basic" placeholder="Enter Mandal Name Here..." variant="outlined"  className='w-100'/>
+                                </div>
                               </Typography>
                             </Box>
                         </Grid>
@@ -242,41 +238,33 @@ export default function SimpleTabs() {
                               </small>
                               </Typography>
                             </Box>
-                        </Grid>
+                        </Grid> 
 
                         <Grid item xs={12} md={6}>
-                          <Box mt={2}>
+                          <Box>
                               <Typography variant	='body2'>
-                                <span className='label d-block'> Mandal Address: </span>
-                                <TextField
-                                      fullWidth
-                                      id="outlined-number"
-                                      placeholder="Enter Mandal Address Here..."
-                                      rowsMax="4"
-                                      variant="outlined"
-                                      />
+                                <div className='input-placeholder '>
+                                    <span className='label'> Mandal Address: </span>
+                                    <TextField id="outlined-basic" placeholder="Enter Mandal Address Here..." variant="outlined"  className='w-100'/>
+                                </div>
                               </Typography>
                             </Box>
                         </Grid>
 
                         <Grid item xs={12} md={6}>
-                        <Box mt={2}>
+                        <Box >
                             <Typography variant	='body2'>
-                              <span className='label d-block'> Registration Number: </span>
-                              <TextField
-                                    fullWidth
-                                    id="outlined-number"
-                                    placeholder="Enter Registration Number Here..."
-                                    rowsMax="4"
-                                    variant="outlined"
-                                    />
+                                  <div className='input-placeholder '>
+                                    <span className='label'> Registration Number: </span>
+                                    <TextField id="outlined-basic" placeholder="Enter Registration Number Here..." variant="outlined"  className='w-100'/>
+                                 </div>
                             </Typography>
                           </Box>
 
                         </Grid>
 
                         <Grid item xs={12}> 
-                        <Box mt={2}>
+                        <Box >
                           <h4 className='m-0'> Social Icons: </h4>
                         </Box> 
                         </Grid>
@@ -284,63 +272,51 @@ export default function SimpleTabs() {
                         <Grid item xs={12} md={6}>
                         <Box>
                             <Typography variant	='body2'>
-                              <span className='label d-block'> Facebook </span>
-                              <TextField
-                                    fullWidth
-                                    id="outlined-number"
-                                    placeholder="Enter Facebook Link Here..."
-                                    rowsMax="4"
-                                    variant="outlined"
-                                    />
+                                  <div className='input-placeholder '>
+                                    <span className='label'>Facebook: </span>
+                                    <TextField id="outlined-basic" placeholder="Enter Facebook Link Here..." variant="outlined"  className='w-100'/>
+                                 </div>
                             </Typography>
                           </Box>
                         </Grid>
 
                         <Grid item xs={12} md={6}> 
-                        <Box mb={3}>
+                        <Box >
                             <Typography variant	='body2'>
-                              <span className='label d-block'> Instagram </span>
-                              <TextField
-                                    fullWidth
-                                    id="outlined-number"
-                                    placeholder="Enter Instagram Link Here..."
-                                    rowsMax="4"
-                                    variant="outlined"
-                                    />
+                                 <div className='input-placeholder '>
+                                  <span className='label'>Instagram : </span>
+                                  <TextField id="outlined-basic" placeholder="Enter Instagram Link Here..." variant="outlined"  className='w-100'/>
+                                </div>
                             </Typography>
                           </Box>
                         </Grid>
                       </Grid>
 
-                    <CardContent>
-                      <Box className='t-right'>
-                        <Button variant="outlined" href='/events'  target='_bank' className={classes.button}>
+                      <Box className='t-right' mt={2}>
+                        <Button variant="outlined" href='/events'  color='primary' target='_bank' className={classes.button}>
                             Save
                         </Button>
                       </Box>
-                    </CardContent>
                   </div>
               </TabPanel>  
 
               <TabPanel value={value} index={1}>
+                <div className='main-wrapper pt-0'>
                     <Grid container spacing={1}>
-                      <Grid item xs={8} sm={10} md={11}lg={11}>
-                      <Box mb={1}>
+                      <Grid item xs={12} sm={12} md={12}lg={12}>
+                        <Box mb={1}>
                           <Typography variant	='body2'>
-                            <span className='label d-block'> Add User Role </span>
-                            <TextField
-                                  fullWidth
-                                  id="outlined-number"
-                                  placeholder="Enter User Role Name Here..."
-                                  rowsMax="4"
-                                  variant="outlined"
-                                  />
+                            
+                                  <div className='input-placeholder '>
+                                    <span className='label'>  Add User Role </span>
+                                    <TextField id="outlined-basic" placeholder="Enter User Role Name Here..." variant="outlined"  className='w-100'/>
+                                </div>
                           </Typography>
                         </Box>
                       </Grid>
 
-                      <Grid item xs={4} sm={2} md={1} lg={1}> 
-                      <Box className='t-right' mt={3}  mb={1}>
+                      <Grid item sm={12} xs={12}  md={12} lg={12}> 
+                      <Box className='t-right'mb={2}>
                         <Button variant="outlined" href='/events'  target='_bank' className={classes.button}>
                           Add
                         </Button>
@@ -348,7 +324,7 @@ export default function SimpleTabs() {
                       </Grid>
                       
                       <Grid item xs={12} sm={6}>
-                        <Box mr={1} mb={1}>
+                        <Box mb={1}>
                         <FormControl  fullWidth variant="outlined" className={classes.formControl}>
                           <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
                               Member Name
@@ -371,7 +347,7 @@ export default function SimpleTabs() {
                       </Grid>
 
                       <Grid item xs={12} sm={6}>
-                        <Box mr={2}>
+                        <Box >
                         <FormControl  fullWidth variant="outlined" className={classes.formControl}>
                           <InputLabel ref={inputLabel} htmlFor="outlined-age-native-simple">
                               User Access Type
@@ -393,114 +369,124 @@ export default function SimpleTabs() {
                         </Box> 
                       </Grid>
                     </Grid>
-                <CardContent>
-                <Box className='t-right' mb={2}>
-                    <Button variant="outlined" href='/events'  target='_bank' className={classes.button}>
-                      Save
-                    </Button>
-                  </Box>
-                </CardContent>
+                    <Box className='t-right' mt={1}>
+                      <Button variant="outlined" href='/events'  target='_bank' className={classes.button}>
+                        Save
+                      </Button>
+                    </Box>
+                </div>
               </TabPanel>   
 
               <TabPanel value={value} index={2}>
+                <div className='main-wrapper pt-0'> 
                  <Grid container spacing={2}>
-                <Grid item xs={12} > 
-                    <Card className='boxshadow'>
-                      <CardContent>
-                          <div className='userseditform'>
-                            <span className='f-w-500'>Treasure</span>
-                            <div className='useredit'>
-                              <IconButton> <EditIcon /></IconButton>
-                              <IconButton onClick={handleClickOpen}> <DeleteIcon/></IconButton>
-                              <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleCloses} />
-                            </div>
-                          </div>
-                      </CardContent>
-                    </Card>
-                    <Card className='mt-16 addmember boxshadow'>
-                     < CardContent>
-                        <TextField   id="outlined-basic" value='Treasure' variant="outlined" className={classes.TextField}/>
-                        <div className={classes.EditUserAccess}>
-                          <p className='f-w-500 '>
-                            Edit User Access
-                          </p>
-                          <a href="">Add New</a>
-                        </div>
-                        <TextField  id="outlined-basic" placeholder='Type Member Name Here...' variant="outlined" className={classes.TextField}/>
-                        <Card  className='mt-16 boxshadow'>
-                          <CardContent className={classes.CardContents}>
+                    <Grid item xs={12} > 
+                        <Card className='boxshadow'>
+                          <CardContent>
                               <div className='userseditform'>
-                                <span>Yogesh Jadhav </span>
-                                <div className='useredit' >
-                                   <IconButton className='p-0'><DeleteIcon /></IconButton> 
+                                <span className='f-w-500'>Treasure</span>
+                                <div className='useredit'>
+                                  <IconButton> <EditIcon /></IconButton>
+                                  <IconButton onClick={handleClickOpen}> <DeleteIcon/></IconButton>
+                                  <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleCloses} />
                                 </div>
-                                {/* <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleCloses} /> */}
                               </div>
                           </CardContent>
-                         
                         </Card>
-                        <Card  className='mt-16 boxshadow'>
-                          <CardContent className={classes.CardContents}>
+                        <Card className='mt-16 addmember boxshadow'>
+                        < CardContent>
+                            {/* <TextField   id="outlined-basic" value='Treasure' variant="outlined" className={classes.TextField}/> */}
+                            <div className='input-placeholder m-16'>
+                               <TextField id="outlined-basic" placeholder="Treasure" variant="outlined"  className='w-100'/>
+                             </div> 
+                            <div className={classes.EditUserAccess}>
+                              <p className='f-w-500 '>
+                                Edit User Access
+                              </p>
+                              <Box className='t-right'>
+                                <Button variant="outlined" href='/events'  target='_bank' className={classes.button}>
+                                  Add New
+                                </Button>
+                                </Box>
+                              {/* <a href="">Add New</a> */}
+                            </div>
+                            <div className='input-placeholder m-16'>
+                               <TextField id="outlined-basic" placeholder="Type Member Name Here..." variant="outlined"  className='w-100'/>
+                             </div>
+                            <Card  className='mt-16 boxshadow'>
+                              <CardContent className={classes.CardContents}>
+                                  <div className='userseditform'>
+                                    <span>Yogesh Jadhav </span>
+                                    <div className='useredit' >
+                                      <IconButton className='p-0'><DeleteIcon /></IconButton> 
+                                    </div>
+                                    {/* <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleCloses} /> */}
+                                  </div>
+                              </CardContent>
+                            
+                            </Card>
+                            <Card  className='mt-16 boxshadow'>
+                              <CardContent className={classes.CardContents}>
+                                  <div className='userseditform'>
+                                    <span>Baldev Perdeshi</span>
+                                    <div className='useredit' >
+                                      <IconButton className='p-0'><DeleteIcon /></IconButton> 
+                                    </div>
+                                    {/* <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleCloses} /> */}
+                                  </div>
+                              </CardContent>
+                            
+                            </Card>
+            
+                            <Box className='t-right mt-16'>
+                              <Button variant="outlined" href='/events'  target='_bank' className={classes.button}>
+                                Save
+                              </Button>
+                            </Box>
+                        </CardContent>
+                        </Card>
+                    </Grid>
+                    <Grid item xs={12} >
+                      <Card className='boxshadow'>
+                          <CardContent>
                               <div className='userseditform'>
-                                <span>Baldev Perdeshi</span>
-                                <div className='useredit' >
-                                   <IconButton className='p-0'><DeleteIcon /></IconButton> 
+                                <span className='f-w-500'>Vice President</span>
+                                <div className='useredit'>
+                                  <IconButton> <EditIcon /></IconButton>
+                                  <IconButton > <DeleteIcon/></IconButton>
                                 </div>
-                                {/* <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleCloses} /> */}
                               </div>
                           </CardContent>
-                         
                         </Card>
-         
-                        <Box className='t-right mt-16'>
-                          <Button variant="outlined" href='/events'  target='_bank' className={classes.button}>
-                            Save
-                          </Button>
-                        </Box>
-                     </CardContent>
-                    </Card>
-                </Grid>
-                <Grid item xs={12} >
-                   <Card className='boxshadow'>
-                      <CardContent>
-                          <div className='userseditform'>
-                            <span className='f-w-500'>Vice President</span>
-                            <div className='useredit'>
-                              <IconButton> <EditIcon /></IconButton>
-                              <IconButton > <DeleteIcon/></IconButton>
-                            </div>
-                          </div>
-                      </CardContent>
-                    </Card>
-                </Grid>
-                <Grid item xs={12} >
-                   <Card className='boxshadow'>
-                      <CardContent>
-                          <div className='userseditform'>
-                            <span className='f-w-500'>Receipt Receiver</span>
-                            <div className='useredit'>
-                              <IconButton> <EditIcon /></IconButton>
-                              <IconButton > <DeleteIcon/></IconButton>
-                            </div>
-                          </div>
-                      </CardContent>
-                    </Card>
-                </Grid>
-                <Grid item xs={12} >
-                   <Card className='boxshadow'>
-                      <CardContent>
-                          <div className='userseditform'>
-                            <span className='f-w-500'>Secretory</span>
-                            <div className='useredit'>
-                              <IconButton> <EditIcon /></IconButton>
-                              <IconButton > <DeleteIcon/></IconButton>
-                            </div>
-                          </div>
-                      </CardContent>
-                    </Card>
-                </Grid>
-                
-              </Grid> 
+                    </Grid>
+                    <Grid item xs={12} >
+                      <Card className='boxshadow'>
+                          <CardContent>
+                              <div className='userseditform'>
+                                <span className='f-w-500'>Receipt Receiver</span>
+                                <div className='useredit'>
+                                  <IconButton> <EditIcon /></IconButton>
+                                  <IconButton > <DeleteIcon/></IconButton>
+                                </div>
+                              </div>
+                          </CardContent>
+                        </Card>
+                    </Grid>
+                    <Grid item xs={12} >
+                      <Card className='boxshadow'>
+                          <CardContent>
+                              <div className='userseditform'>
+                                <span className='f-w-500'>Secretory</span>
+                                <div className='useredit'>
+                                  <IconButton> <EditIcon /></IconButton>
+                                  <IconButton > <DeleteIcon/></IconButton>
+                                </div>
+                              </div>
+                          </CardContent>
+                        </Card>
+                    </Grid>
+                  </Grid> 
+               </div>
               </TabPanel>
       </Box>
     </div>

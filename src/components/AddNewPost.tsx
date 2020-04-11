@@ -66,8 +66,8 @@ const useStyles = makeStyles((theme: Theme) =>
         //   marginLeft:20
       },
       EditButton : {
-          transform:' translate(7px, -46px)',
-          marginRight:'24px',
+          transform:' translate(7px, -33px)',
+          marginRight:'22px',
           fontSize:'10px'
       },
       changeCover:{
@@ -139,15 +139,15 @@ export default function VariantAvatars() {
                 <Grid container >
                     <Grid item xs={4}>
                         <p className='f-14'>Post</p>
-                        <h2>0</h2>
+                        <h3>0</h3>
                     </Grid>
                     <Grid item xs={4}>
                         <p className='f-14'>Following</p>
-                        <h2>10</h2>
+                        <h3>10</h3>
                     </Grid>
                     <Grid item xs={4}>
                         <p className='f-14'>Follows</p>
-                        <h2>02</h2>
+                        <h3>02</h3>
                     </Grid>
                 </Grid>
             </div>
