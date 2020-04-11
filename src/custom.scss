@@ -33,6 +33,10 @@ body {
     font-family: 'Montserrat-Medium';
     src: url(./fonts/Montserrat-Medium.ttf);
   }
+  @font-face {
+    font-family: 'Montserrat-Regular';
+    src: url(./fonts/Montserrat-Regular.ttf);
+  }
 h1,
 h2,
 h3,
@@ -41,10 +45,10 @@ h5,
 h6{
     color: $primary;
     font-family: 'Montserrat-Medium';
-    letter-spacing: 0.5px;
+    // letter-spacing: 0.5px;
 }
 p,.MuiTypography,span{
-    font-family: 'Montserrat-Medium'!important;
+    font-family: 'Montserrat-Regular'!important;
 }
   body {
     font-family: 'Montserrat-Medium';
@@ -98,7 +102,7 @@ p,.MuiTypography,span{
 .pr-0{padding-right: 0!important;}
 .b-r-0{border-radius: 0!important;}
 .pb-16{padding-bottom: 16px!important;}
-
+.m-10{margin: 10px 0;}
 
 .MUIRichTextEditor-placeHolder-169 {
     font-size: 14px;
@@ -152,8 +156,11 @@ p,.MuiTypography,span{
         justify-content: space-between;
         align-items: center;
         // border-bottom: 1px solid #8f8484;
-        padding-top: 6px;
-        padding-bottom: 6px;
+       
+        padding: 11px 16px;
+        .close-icon{
+            cursor: pointer;
+        }
     }
     // .MuiTypography-gutterBottom{
     //     // margin-bottom: 15px;
@@ -161,7 +168,20 @@ p,.MuiTypography,span{
     DialogTitle {
         border-bottom: 1ps solid white;
     }
+  
+}
+.user-delete-message{
+    // color: $grey;
+    font-size: 14px;
+    line-height: 28px;
     
+}
+.popup-button{
+    a{
+        text-decoration: none;
+        font-size: 14px;
+        
+    }
 }
 .delete-post{
     .close-icon{
@@ -1150,7 +1170,7 @@ textarea{
     }
 }
 .f-w-600{
-    font-weight: 600;
+    font-weight: 600!important;
 }
 .reply-field{
     position: relative;

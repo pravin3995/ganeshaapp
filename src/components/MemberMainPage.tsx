@@ -95,9 +95,7 @@ const DialogTitle = withStyles(styles)((props: DialogTitleProps) => {
     <MuiDialogTitle disableTypography {...other}>
       <Typography variant="h6">{children}</Typography>
       {onClose ? (
-        <IconButton aria-label="close" onClick={onClose}>
-          <CloseIcon />
-        </IconButton>
+          <CloseIcon onClick={onClose} className='close-icon'/>
       ) : null}
     </MuiDialogTitle>
   );
@@ -179,10 +177,10 @@ export default function Member() {
 											{/* <Typography gutterBottom style={{fontWeight: 500,margin:0 , fontSize: '13px' , textAlign: 'center'}}>
 												Are you sure you want to remove this member ?
 											</Typography> */}
-											<CardContent className='pt-0' >	
+											<CardContent className='p-0 mb-10' >	
 													
 													<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo mb-10' />	
-													<Typography className='t-center'> Yogesh Jadhav </Typography>
+													<Typography className='t-center f-w-600'> Yogesh Jadhav </Typography>
 													<Box className='label t-center'> President </Box>
 														{/* <Button variant = 'contained' className={classes.button}> 
 															Follow
@@ -215,17 +213,17 @@ export default function Member() {
 											<CardContent className='p-0'>			
 												<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg' className='member-photo' />	
 												
-												<div className='input-placeholder m-16'>
+												<div className='input-placeholder m-10'>
 													<span className='label' > Name</span>
-													<TextField id="outlined-basic"  size='small' placeholder="Enter the Name"  variant="outlined"  className='w-100'/>
+													<TextField id="outlined-basic"   placeholder="Enter the Name"  variant="outlined"  className='w-100'/>
 												</div>
-												<div className='input-placeholder m-16'>
+												<div className='input-placeholder m-10'>
 													<span className='label' > Email Address</span>
-													<TextField id="outlined-basic"  size='small' placeholder="Enter the email"  variant="outlined"  className='w-100'/>
+													<TextField id="outlined-basic"   placeholder="Enter the email"  variant="outlined"  className='w-100'/>
 												</div>
-												<div className='input-placeholder m-16'>
+												<div className='input-placeholder m-10'>
 													<span className='label' > Mobile Number</span>
-													<TextField id="outlined-basic"  size='small' placeholder="Enter the mob no"  variant="outlined"  className='w-100'/>
+													<TextField id="outlined-basic"   placeholder="Enter the mob no"  variant="outlined"  className='w-100'/>
 												</div>
 												<div className='t-right m-16'>
 													<Button  variant = 'contained' className={classes.button}> 
@@ -262,10 +260,10 @@ export default function Member() {
 											{/* <Typography gutterBottom style={{fontWeight: 500,margin:0 , fontSize: '13px' , textAlign: 'center'}}>
 												Are you sure you want to remove this member ?
 											</Typography> */}
-											<CardContent className='pt-0' >	
+											<CardContent className='p-0 mb-10' >	
 													
 													<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo mb-10' />	
-													<Typography className='t-center'> Yogesh Jadhav </Typography>
+													<Typography className='t-center f-w-600'> Yogesh Jadhav </Typography>
 													<Box className='label t-center'> President </Box>
 														{/* <Button variant = 'contained' className={classes.button}> 
 															Follow
@@ -298,17 +296,17 @@ export default function Member() {
 											<CardContent className='p-0'>			
 												<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg' className='member-photo' />	
 												
-												<div className='input-placeholder m-16'>
+												<div className='input-placeholder m-10'>
 													<span className='label' > Name</span>
-													<TextField id="outlined-basic"  size='small' placeholder="Enter the Name"  variant="outlined"  className='w-100'/>
+													<TextField id="outlined-basic"   placeholder="Enter the Name"  variant="outlined"  className='w-100'/>
 												</div>
-												<div className='input-placeholder m-16'>
+												<div className='input-placeholder m-10'>
 													<span className='label' > Email Address</span>
-													<TextField id="outlined-basic"  size='small' placeholder="Enter the email"  variant="outlined"  className='w-100'/>
+													<TextField id="outlined-basic"   placeholder="Enter the email"  variant="outlined"  className='w-100'/>
 												</div>
-												<div className='input-placeholder m-16'>
+												<div className='input-placeholder m-10'>
 													<span className='label' > Mobile Number</span>
-													<TextField id="outlined-basic"  size='small' placeholder="Enter the mob no"  variant="outlined"  className='w-100'/>
+													<TextField id="outlined-basic"   placeholder="Enter the mob no"  variant="outlined"  className='w-100'/>
 												</div>
 												<div className='t-right m-16'>
 													<Button  variant = 'contained' className={classes.button}> 

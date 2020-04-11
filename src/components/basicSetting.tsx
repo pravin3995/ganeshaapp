@@ -55,11 +55,11 @@ function SimpleDialog(props: SimpleDialogProps) {
 
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open}>
-      <DialogTitle id="simple-dialog-title" className='delete-post'>Delete User <a href=""><CloseIcon onClick={handleClose}/></a></DialogTitle>
+      <DialogTitle id="simple-dialog-title" className='delete-post'><h4 className='m-0 h1-title'>Delete User</h4> <a href=""><CloseIcon onClick={handleClose}/></a></DialogTitle>
       <List>
-          <div className='p-15'>  
+          <div className='p-15 user-delete-message'>  
             <p className='m-0'>Are you sure you want to delete this user role?</p>
-            <p className='m-0'><span className='f-w-500'>Please Note :</span> Deleting user role will delete all the user assigned to it.</p>
+            <p className='m-0'><span className='f-w-600'>Please Note :</span> Deleting user role will delete all the user assigned to it.</p>
           </div>
           <ListItem className='popup-button'>
             <Button variant="contained" color="primary" onClick={handleClose}>
@@ -384,7 +384,7 @@ export default function SimpleTabs() {
                         <Card className='boxshadow'>
                           <CardContent>
                               <div className='userseditform'>
-                                <span className='f-w-500'>Treasure</span>
+                                <span className='f-w-600'>Treasure</span>
                                 <div className='useredit'>
                                   <IconButton> <EditIcon /></IconButton>
                                   <IconButton onClick={handleClickOpen}> <DeleteIcon/></IconButton>
@@ -400,7 +400,7 @@ export default function SimpleTabs() {
                                <TextField id="outlined-basic" placeholder="Treasure" variant="outlined"  className='w-100'/>
                              </div> 
                             <div className={classes.EditUserAccess}>
-                              <p className='f-w-500 '>
+                              <p className='f-w-600 '>
                                 Edit User Access
                               </p>
                               <Box className='t-right'>
@@ -416,7 +416,7 @@ export default function SimpleTabs() {
                             <Card  className='mt-16 boxshadow'>
                               <CardContent className={classes.CardContents}>
                                   <div className='userseditform'>
-                                    <span>Yogesh Jadhav </span>
+                                    <span className='f-w-600'>Yogesh Jadhav </span>
                                     <div className='useredit' >
                                       <IconButton className='p-0'><DeleteIcon /></IconButton> 
                                     </div>
@@ -428,7 +428,7 @@ export default function SimpleTabs() {
                             <Card  className='mt-16 boxshadow'>
                               <CardContent className={classes.CardContents}>
                                   <div className='userseditform'>
-                                    <span>Baldev Perdeshi</span>
+                                    <span className='f-w-600'>Baldev Perdeshi</span>
                                     <div className='useredit' >
                                       <IconButton className='p-0'><DeleteIcon /></IconButton> 
                                     </div>
@@ -450,7 +450,7 @@ export default function SimpleTabs() {
                       <Card className='boxshadow'>
                           <CardContent>
                               <div className='userseditform'>
-                                <span className='f-w-500'>Vice President</span>
+                                <span className='f-w-600'>Vice President</span>
                                 <div className='useredit'>
                                   <IconButton> <EditIcon /></IconButton>
                                   <IconButton > <DeleteIcon/></IconButton>
@@ -463,7 +463,7 @@ export default function SimpleTabs() {
                       <Card className='boxshadow'>
                           <CardContent>
                               <div className='userseditform'>
-                                <span className='f-w-500'>Receipt Receiver</span>
+                                <span className='f-w-600'>Receipt Receiver</span>
                                 <div className='useredit'>
                                   <IconButton> <EditIcon /></IconButton>
                                   <IconButton > <DeleteIcon/></IconButton>
@@ -476,7 +476,7 @@ export default function SimpleTabs() {
                       <Card className='boxshadow'>
                           <CardContent>
                               <div className='userseditform'>
-                                <span className='f-w-500'>Secretory</span>
+                                <span className='f-w-600'>Secretory</span>
                                 <div className='useredit'>
                                   <IconButton> <EditIcon /></IconButton>
                                   <IconButton > <DeleteIcon/></IconButton>
