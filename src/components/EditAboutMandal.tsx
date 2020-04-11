@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(2),
     },
     button: {
-      backgroundColor: '#df3088',
-      borderRadius: '15px',
+      // backgroundColor: '#df3088',
+      // borderRadius: '15px',
       color: 'white',
       padding: '3px 24px'
     }
@@ -41,21 +41,17 @@ export default function EditAboutMandal() {
         <h2 className='h1-title'> Edit About Mandal </h2>
         <Box>
           <Grid container spacing={3} >
-            <Grid item md={6} xs={12}>
+            <Grid item sm={6} xs={12}>
               <Box>
-                <span className='label'> Name of the Mandal:</span>
-                <TextField
-                  fullWidth
-                  id="outlined-number"
-                  placeholder='Enter Name of the mandal'
-                  rowsMax="4"
-                  variant="outlined"
-                />
+                <div className='input-placeholder'>
+                    <span className='label'> Name of the Mandal:</span>
+                    <TextField id="outlined-basic" placeholder="Enter Name of the mandal" variant="outlined"  className='w-100'/>
+                  </div> 
               </Box>
             </Grid>
 
-            <Grid item md={6} xs={12}>
-              <Box>
+            <Grid item sm={6} xs={12}>
+              <Box mt={1}>
               <small className='label'>
                   Feautred Image:
                 <div className='file-input'>
@@ -70,21 +66,22 @@ export default function EditAboutMandal() {
             <Grid item lg={12} xs={12}>
               <Box>
                 <span className='label'> Description of event:</span>
-                <div className='editor'>
+                <div className='editor' >
                   <MUIRichTextEditor
                     label="Type something here.."
                     controls={["title", "bold", "italic", "underline", "link"]}
                     inlineToolbar={true}
                     inlineToolbarControls={["bold", "italic", "underline", "link"]}
                     onSave={save}
+
                   />
                 </div>
               </Box>
 
-              <Box className='t-right' mt={3}>
-                <Button variant="outlined" href='/events' size='small' target='_bank' className={classes.button}>
+              <Box className='t-right' mt={2}>
+                <Button variant="outlined" href='/events'color='primary' size='small' target='_bank' className={classes.button}>
                   Save
-                        </Button>
+                 </Button>
               </Box>
             </Grid>
           </Grid>

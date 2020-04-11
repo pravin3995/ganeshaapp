@@ -166,9 +166,8 @@ export default function Member() {
 				</CardContent>	
 				<Grid container className={classes.root} spacing={2}>
      			 	<Grid item xs={6} sm={4} md={4} lg={3}>
-						
-					<Card>
-						<CardContent>
+						<Card>
+						<CardContent className='pb-16'>
 							<Box display="flex" justifyContent="space-between" className='mb-10'>
 								<Box className="delete-dialogbox dialogbox">	
 									<DeleteIcon  onClick={handleClickOpen} className='member_icon pr-0' />								
@@ -241,17 +240,99 @@ export default function Member() {
 							<Box className='t-center' >
 								<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo mb-10' />
 								<h4 className='mb-0 f-14'> Abhijit Jachak </h4>
-									<Box className='label' mb={2}> President </Box>
+								<Box className='label' mb={1}> President </Box>
 								<Button variant = 'contained' className={classes.button}> 
 									Follow
 								</Button> 
-							</Box>
+						   </Box>
 						</CardContent>
 					</Card>				
 					</Grid>
-						</Grid>
-				</CardContent>
-				
+					<Grid item xs={6} sm={4} md={4} lg={3}>
+						<Card>
+						<CardContent className='pb-16'>
+							<Box display="flex" justifyContent="space-between" className='mb-10'>
+								<Box className="delete-dialogbox dialogbox">	
+									<DeleteIcon  onClick={handleClickOpen} className='member_icon pr-0' />								
+									<Dialog className="delete-popup" onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
+										<DialogTitle id="customized-dialog-title" onClose={handleClose} >
+											<h5 className='m-0'>Delete Member</h5>
+										</DialogTitle>
+										<DialogContent className='pt-0'  >
+											{/* <Typography gutterBottom style={{fontWeight: 500,margin:0 , fontSize: '13px' , textAlign: 'center'}}>
+												Are you sure you want to remove this member ?
+											</Typography> */}
+											<CardContent className='pt-0' >	
+													
+													<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo mb-10' />	
+													<Typography className='t-center'> Yogesh Jadhav </Typography>
+													<Box className='label t-center'> President </Box>
+														{/* <Button variant = 'contained' className={classes.button}> 
+															Follow
+														</Button> */}
+													
+											</CardContent >
+											<Box className='t-center d-flex' justifyContent='space-evenly' alignItems='center'>
+												<Button variant = 'contained' className={classes.button}> 
+													Cancel
+												</Button> 
+												<Typography className='delete-message'>
+													<a href="/events"> Yes, I'am sure </a>
+												</Typography>
+											</Box>
+										</DialogContent>
+									</Dialog>
+								</Box>
+
+								<Box className="edit-dialogbox dialogbox " >	
+									<EditIcon onClick={handleClickOpenEdit} className="member_icon"/>							
+									<Dialog className="delete-popup" onClose={handleClose} aria-labelledby="customized-dialog-title" open={openEdit}>
+										<DialogTitle id="customized-dialog-title" onClose={handleCloseEdit}>
+											<h5 className='m-0 h1'>Edit Member</h5>
+										</DialogTitle>
+									
+										<DialogContent className='pb-0 pt-0'>
+											{/* <p className='member-photo t-center f-14 m-0'  >
+												Are you sure you want to edit this member ?
+											</p> */}
+											<CardContent className='p-0'>			
+												<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg' className='member-photo' />	
+												
+												<div className='input-placeholder m-16'>
+													<span className='label' > Name</span>
+													<TextField id="outlined-basic"  size='small' placeholder="Enter the Name"  variant="outlined"  className='w-100'/>
+												</div>
+												<div className='input-placeholder m-16'>
+													<span className='label' > Email Address</span>
+													<TextField id="outlined-basic"  size='small' placeholder="Enter the email"  variant="outlined"  className='w-100'/>
+												</div>
+												<div className='input-placeholder m-16'>
+													<span className='label' > Mobile Number</span>
+													<TextField id="outlined-basic"  size='small' placeholder="Enter the mob no"  variant="outlined"  className='w-100'/>
+												</div>
+												<div className='t-right m-16'>
+													<Button  variant = 'contained' className={classes.button}> 
+														Save
+													</Button> 
+												</div>
+											</CardContent>
+										</DialogContent>
+									</Dialog>
+								</Box>
+							</Box>
+							<Box className='t-center' >
+								<Avatar alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'  className='member-photo mb-10' />
+								<h4 className='mb-0 f-14'> Abhijit Jachak </h4>
+								<Box className='label' mb={1}> President </Box>
+								<Button variant = 'contained' className={classes.button}> 
+									Follow
+								</Button> 
+						   </Box>
+						</CardContent>
+					</Card>				
+					</Grid>
+				</Grid>
+			</CardContent>
 		</div>
    	</div>
   );

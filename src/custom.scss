@@ -97,6 +97,8 @@ p,.MuiTypography,span{
 .mr-20{margin-right: 20px!important;}
 .pr-0{padding-right: 0!important;}
 .b-r-0{border-radius: 0!important;}
+.pb-16{padding-bottom: 16px!important;}
+
 
 .MUIRichTextEditor-placeHolder-169 {
     font-size: 14px;
@@ -420,7 +422,24 @@ p,.MuiTypography,span{
  }
 }
  
-
+.edit-about-mandal{
+    .editor #mui-rte-toolbar + div{
+        margin: 0;
+        padding-left:17px;
+        margin-top: 20px;
+        font-family: 'Montserrat-Medium';
+        color: $grey;
+        
+    }
+    .editor #mui-rte-root{
+        margin: 0;
+        #mui-rte-container #mui-rte-editor{
+            padding-left:17px;
+            margin-top: 10px;
+    
+        }
+    } 
+}
 
 // text editior
 
@@ -659,8 +678,10 @@ p,.MuiTypography,span{
     border-radius: 4px;
     margin: 0 auto;
     img{
-        max-width: 300px;
+        max-width: 350px;
         height: 100%;
+     border-radius: 4px;
+
     }
 }
     .delete-message{
@@ -673,6 +694,7 @@ p,.MuiTypography,span{
     .member_icon{
         font-size: 20px;
         cursor: pointer;
+        color: $grey;
     }
 }
 .m-16{
