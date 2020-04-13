@@ -143,7 +143,8 @@ const useStyles  =  makeStyles((theme: Theme)  =>
     },
     CardContents:{
       padding:'12px !important'
-    }
+    },
+   
   }),
 );
 

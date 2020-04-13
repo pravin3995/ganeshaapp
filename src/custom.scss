@@ -535,7 +535,21 @@ p,.MuiTypography,span{
     }
 
 
-
+// Billing 
+.billing-date{
+    .MuiOutlinedInput-input {
+        font-size: 14px;
+        font-family: 'Montserrat-Medium';
+    }
+    .MuiSvgIcon-root{
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.54);
+    }
+    .MuiButtonBase-root:hover{
+        background-color: transparent!important;
+      
+    }
+}
 
     // add-edit-event
     .add-edit-event {
@@ -773,7 +787,7 @@ p,.MuiTypography,span{
          }
      }
      .boxshadow{
-        box-shadow: 0px 7px 30px 0px rgba(77, 84, 93, 0.08), 0px 9px 30px 0px rgba(0, 177, 179, 0.08), 0px 9px 1px -1px rgba(54, 98, 154, 0.08)!important;
+        box-shadow:$cardboxshadow;
      }
      .notification-wrapper{
         // .MuiMenu-paper{
@@ -801,14 +815,64 @@ p,.MuiTypography,span{
          }
      }
      //Billing
+     .treasure-billing {
+         .MuiBox-root{
+             padding: 0;
+         }
+         .box-padding{
+             padding: 24px;
+         }
+     }
+     .admin-billing{
+        .MuiBox-root{
+            padding: 0;
+        }
+        .current-balance{
+            margin: 24px;
+        }
+     }
      .billing-history{
          .billing-heading{
              display: flex;
              justify-content: space-between;
+             padding: 20px 20px 0;
+             align-items: center;
          }
          th.MuiTableCell-root.MuiTableCell-head {
             font-weight: 700;
             border-right: 1px solid #b4b4b4;
+            border-left: 1px solid #b4b4b4;
+            font-family: 'Montserrat-Medium';
+
+        }
+        .MuiTableRow-root.Mui-selected, 
+        .MuiTableRow-root.Mui-selected:hover{
+            background-color: darken($color: $primary, $amount: 1) ;
+            .MuiTableCell-body,
+            .MuiCheckbox-colorSecondary.Mui-checked{
+                color: $white;
+            }
+
+        }
+        .MuiButtonBase-root:hover{
+            // background: transparent!important;
+            color: $grey;
+        }
+        tr{
+            .MuiButtonBase-root:hover{
+                background: transparent!important;
+
+            }
+        }
+        .MuiTableCell-root{
+            font-family: 'Montserrat-Medium';
+            border-left: 1px solid #b4b4b4;
+
+        }
+        .see-all{
+            color: #333;
+            text-decoration:none;
+            font-weight: 500;
         }
      }
     //  .select-wrapper{
@@ -939,6 +1003,7 @@ p,.MuiTypography,span{
     text-transform: capitalize!important;
     font-family: 'Montserrat-Medium'!important;
     letter-spacing: 0!important;
+    color: $white !important;
 }
 .profile{
     // width:440px;
@@ -1397,10 +1462,13 @@ a.MuiButton-outlined{
 }
 //Tab
 .tab-wrap{
+    .MuiTab-wrapper{
+        font-weight: 600;
+    }
     .MuiTab-root{
         text-transform: capitalize;
         font-family: 'Montserrat-Medium';
-        width: 100%;
+        // width: 100%;
     }
     .MuiTabs-flexContainer{
         justify-content: center;
@@ -1514,6 +1582,7 @@ a.MuiButton-outlined{
 }
 .MuiTableCell-root{
     border-right: 1px solid #b4b4b4;   
+
 }
 // Homepage
 .editor #mui-rte-root #mui-rte-container #mui-rte-toolbar{
@@ -1701,4 +1770,12 @@ body,
     .signup-form{
         height: calc(100vh - 96px);
     }
+    .billing-history{
+        .billing-heading{
+            display: block;
+            h3{
+              margin-bottom: 14px;
+            }
+        }
+    } 
 }

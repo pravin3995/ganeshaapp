@@ -1,14 +1,14 @@
 import React from 'react';
-import { makeStyles, Theme, createStyles, lighten } from '@material-ui/core/styles';
+import { makeStyles, Theme, createStyles, lighten, fade } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import { Card, CardContent, TextField, Grid, Button, Checkbox, IconButton, Toolbar, TableSortLabel } from '@material-ui/core';
+import { Card, CardContent, TextField, Grid, Button, Checkbox, IconButton, Toolbar, TableSortLabel, InputBase } from '@material-ui/core';
 import DateFnsUtils from '@date-io/date-fns';
 import clsx from 'clsx';
-
+import SearchIcon from '@material-ui/icons/Search';
 import {
   MuiPickersUtilsProvider,
   KeyboardTimePicker,
@@ -235,7 +235,7 @@ const useStyles = makeStyles((theme: Theme) =>
       marginBottom: theme.spacing(2),
     },
     table: {
-      minWidth: 750,
+      minWidth: 500,
     },
     visuallyHidden: {
       border: 0,
@@ -247,6 +247,48 @@ const useStyles = makeStyles((theme: Theme) =>
       position: 'absolute',
       top: 20,
       width: 1,
+    },
+
+    search: {
+      position: 'relative',
+      borderRadius: theme.shape.borderRadius,
+      backgroundColor: fade(theme.palette.common.white, 0.15),
+      '&:hover': {
+        backgroundColor: fade(theme.palette.common.white, 0.25),
+      },
+      marginLeft: 0,
+      // width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        marginLeft: theme.spacing(1),
+        width: 'auto',
+      },
+    },
+    searchIcon: {
+      padding: theme.spacing(0, 2),
+      height: '100%',
+      left:'-22px',
+      position: 'absolute',
+      pointerEvents: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    inputRoot: {
+      color: 'inherit',
+    },
+    inputInput: {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      // paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+      paddingLeft:'24px',
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        width: '12ch',
+        '&:focus': {
+          width: '20ch',
+        },
+      },
     },
   }),
 );
@@ -431,164 +473,210 @@ export default function SimpleTabs() {
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
   return (
-   <div className='main-wrapper'> 
+   <div className='admin-billing mb-20'> 
       <div className={classes.root}>
-      <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
+      <div className='tab-wrap'>
+        <AppBar position="static" className='tab-header'>
+        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example"className='w-100 ' >
           <Tab label=" Overview" {...a11yProps(0)} />
-          <Tab label=" Credit Amount" {...a11yProps(1)} />
-          <Tab label=" Debit Amount" {...a11yProps(2)} />
+          <Tab label=" Credit Amount" {...a11yProps(1)}className='tab' />
+          <Tab label=" Debit Amount" {...a11yProps(2)} className='tab'/>
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        <Card className='p-20'>
-          <h3 className='m-0'>Current Balance</h3>
-          <h2 className='m-0 font-36'>40,00,000</h2>
-          <p className='font-14 m-0'>Last Update on 20 feb 2020</p>
-          <h4 className='mb-0'>Open Balance: 30,000</h4>
-        </Card>
-        <div className='billing-history mt-30'>
-            <div className='billing-heading mt-0 mb-16'>
-              <h3 className='m-0'>Latest Credited Amount </h3>
-              <a href=""  className='ml-10'> <SearchTwoToneIcon/></a>
-            </div>
-                <CardContent className='p-0'>
-                  <TableContainer>
-                     <Table
-                    className={classes.table}
-                    aria-labelledby="tableTitle"
-                    size={dense ? 'small' : 'medium'}
-                    aria-label="enhanced table"
-                  >
-                  <EnhancedTableHead
-                    classes={classes}
-                    numSelected={selected.length}
-                    order={order}
-                    orderBy={orderBy}
-                    onSelectAllClick={handleSelectAllClick}
-                    onRequestSort={handleRequestSort}
-                    rowCount={rows.length}
-                  />
-                 <TableBody>
-              {stableSort(rows, getComparator(order, orderBy))
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row, index) => {
-                  const isItemSelected = isSelected(row.name);
-                  const labelId = `enhanced-table-checkbox-${index}`;
+      </div>
+        <TabPanel value={value} index={0}>
+          <div className='main-wrapper pb-0 pt-0 '>
+            <Card className='p-20 current-balance'>
+              <h3 className='m-0'>Current Balance</h3>
+              <h2 className='m-0 font-36'>40,00,000</h2>
+              <p className='font-14 m-0'>Last Update on 20 feb 2020</p>
+              <h4 className='mb-0'>Open Balance: 30,000</h4>
+            </Card>
+            <div className='billing-history mt-30'>
+                <div className='billing-heading mt-0 mb-16'>
+                  <h3 className='m-0'>Latest Credited Amount </h3>
+                  <div className={classes.search}>
+                    <div className={classes.searchIcon}>
+                      <SearchIcon />
+                    </div>
+                    <InputBase
+                      placeholder="Search…"
+                      classes={{
+                        root: classes.inputRoot,
+                        input: classes.inputInput,
+                      }}
+                      inputProps={{ 'aria-label': 'search' }}
+                    />
+                  </div>
+                </div>
+                    <CardContent className='p-0'>
+                      <TableContainer>
+                        <Table
+                        className={classes.table}
+                        aria-labelledby="tableTitle"
+                        size={dense ? 'small' : 'medium'}
+                        aria-label="enhanced table"
+                      >
+                      <EnhancedTableHead
+                        classes={classes}
+                        numSelected={selected.length}
+                        order={order}
+                        orderBy={orderBy}
+                        onSelectAllClick={handleSelectAllClick}
+                        onRequestSort={handleRequestSort}
+                        rowCount={rows.length}
+                      />
+                    <TableBody>
+                  {stableSort(rows, getComparator(order, orderBy))
+                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                    .map((row, index) => {
+                      const isItemSelected = isSelected(row.name);
+                      const labelId = `enhanced-table-checkbox-${index}`;
 
-                  return (
-                    <TableRow
-                      hover
-                      onClick={(event) => handleClick(event, row.name)}
-                      role="checkbox"
-                      aria-checked={isItemSelected}
-                      tabIndex={-1}
-                      key={row.name}
-                      selected={isItemSelected}
-                    >
-                      <TableCell padding="checkbox">
-                        <Checkbox
-                          checked={isItemSelected}
-                          inputProps={{ 'aria-labelledby': labelId }}
-                        />
-                      </TableCell>
-                      <TableCell component="th" id={labelId} scope="row" padding="none">
-                        {row.name}
-                      </TableCell>
-                      <TableCell align="right">{row.calories}</TableCell>
-                      <TableCell align="right">{row.fat}</TableCell>
-                      <TableCell align="right">{row.carbs}</TableCell>
-                      {/* <TableCell align="right">{row.protein}</TableCell> */}
+                      return (
+                        <TableRow
+                          hover
+                          onClick={(event) => handleClick(event, row.name)}
+                          role="checkbox"
+                          aria-checked={isItemSelected}
+                          tabIndex={-1}
+                          key={row.name}
+                          selected={isItemSelected}
+                        >
+                          <TableCell padding="checkbox">
+                            <Checkbox
+                              checked={isItemSelected}
+                              inputProps={{ 'aria-labelledby': labelId }}
+                            />
+                          </TableCell>
+                          <TableCell component="th" id={labelId} scope="row" padding="none">
+                            {row.name}
+                          </TableCell>
+                          <TableCell align="right">{row.calories}</TableCell>
+                          <TableCell align="right">{row.fat}</TableCell>
+                          <TableCell align="right">{row.carbs}</TableCell>
+                          {/* <TableCell align="right">{row.protein}</TableCell> */}
+                        </TableRow>
+                      );
+                    })}
+                  {emptyRows > 0 && (
+                    <TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
+                      <TableCell colSpan={6} />
                     </TableRow>
-                  );
-                })}
-              {emptyRows > 0 && (
-                <TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
-                  <TableCell colSpan={6} />
-                </TableRow>
-              )}
-            </TableBody>
-                 </Table>
-             </TableContainer>
-         </CardContent>
-        </div>
-        <div className='t-right mt-16'>
-          <a href="" >See All</a>
-         </div>
-         <div className='billing-history mt-30'>
-            <div className='billing-heading mt-0 mb-16'>
-              <h3 className='m-0'>Latest Spent Amount </h3>
-              <a href=""  className='ml-10'> <SearchTwoToneIcon/></a>
+                  )}
+                </TableBody>
+                    </Table>
+                </TableContainer>
+                <Box className='t-right' mt={2} mr={1} >
+                     <Button variant="contained" color="primary" >
+                        See All
+                     </Button>
+                  </Box> 
+            </CardContent>
             </div>
-                <CardContent className='p-0'>
-                  <TableContainer>
-                     <Table
-                    className={classes.table}
-                    aria-labelledby="tableTitle"
-                    size={dense ? 'small' : 'medium'}
-                    aria-label="enhanced table"
-                  >
-                  <EnhancedTableHead
-                    classes={classes}
-                    numSelected={selected.length}
-                    order={order}
-                    orderBy={orderBy}
-                    onSelectAllClick={handleSelectAllClick}
-                    onRequestSort={handleRequestSort}
-                    rowCount={rows.length}
-                  />
-                 <TableBody>
-              {stableSort(rows, getComparator(order, orderBy))
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row, index) => {
-                  const isItemSelected = isSelected(row.name);
-                  const labelId = `enhanced-table-checkbox-${index}`;
+            <div className='billing-history mt-30'>
+                <div className='billing-heading mt-0 mb-16'>
+                  <h3 className='m-0'>Latest Spent Amount </h3>
+                  <div className={classes.search}>
+                    <div className={classes.searchIcon}>
+                      <SearchIcon />
+                    </div>
+                    <InputBase
+                      placeholder="Search…"
+                      classes={{
+                        root: classes.inputRoot,
+                        input: classes.inputInput,
+                      }}
+                      inputProps={{ 'aria-label': 'search' }}
+                    />
+                  </div>
+                </div>
+                    <CardContent className='p-0'>
+                      <TableContainer>
+                        <Table
+                        className={classes.table}
+                        aria-labelledby="tableTitle"
+                        size={dense ? 'small' : 'medium'}
+                        aria-label="enhanced table"
+                      >
+                      <EnhancedTableHead
+                        classes={classes}
+                        numSelected={selected.length}
+                        order={order}
+                        orderBy={orderBy}
+                        onSelectAllClick={handleSelectAllClick}
+                        onRequestSort={handleRequestSort}
+                        rowCount={rows.length}
+                      />
+                    <TableBody>
+                  {stableSort(rows, getComparator(order, orderBy))
+                    .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                    .map((row, index) => {
+                      const isItemSelected = isSelected(row.name);
+                      const labelId = `enhanced-table-checkbox-${index}`;
 
-                  return (
-                    <TableRow
-                      hover
-                      onClick={(event) => handleClick(event, row.name)}
-                      role="checkbox"
-                      aria-checked={isItemSelected}
-                      tabIndex={-1}
-                      key={row.name}
-                      selected={isItemSelected}
-                    >
-                      <TableCell padding="checkbox">
-                        <Checkbox
-                          checked={isItemSelected}
-                          inputProps={{ 'aria-labelledby': labelId }}
-                        />
-                      </TableCell>
-                      <TableCell component="th" id={labelId} scope="row" padding="none">
-                        {row.name}
-                      </TableCell>
-                      <TableCell align="right">{row.calories}</TableCell>
-                      <TableCell align="right">{row.fat}</TableCell>
-                      <TableCell align="right">{row.carbs}</TableCell>
-                      {/* <TableCell align="right">{row.protein}</TableCell> */}
+                      return (
+                        <TableRow
+                          hover
+                          onClick={(event) => handleClick(event, row.name)}
+                          role="checkbox"
+                          aria-checked={isItemSelected}
+                          tabIndex={-1}
+                          key={row.name}
+                          selected={isItemSelected}
+                        >
+                          <TableCell padding="checkbox">
+                            <Checkbox
+                              checked={isItemSelected}
+                              inputProps={{ 'aria-labelledby': labelId }}
+                            />
+                          </TableCell>
+                          <TableCell component="th" id={labelId} scope="row" padding="none">
+                            {row.name}
+                          </TableCell>
+                          <TableCell align="right">{row.calories}</TableCell>
+                          <TableCell align="right">{row.fat}</TableCell>
+                          <TableCell align="right">{row.carbs}</TableCell>
+                          {/* <TableCell align="right">{row.protein}</TableCell> */}
+                        </TableRow>
+                      );
+                    })}
+                  {emptyRows > 0 && (
+                    <TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
+                      <TableCell colSpan={6} />
                     </TableRow>
-                  );
-                })}
-              {emptyRows > 0 && (
-                <TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
-                  <TableCell colSpan={6} />
-                </TableRow>
-              )}
-            </TableBody>
-                 </Table>
-             </TableContainer>
-         </CardContent>
-         </div>
-         <div className='t-right mt-16'>
-          <a href="" >See All</a>
-         </div>
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-         <div className='billing-history'>
+                  )}
+                </TableBody>
+                    </Table>
+                </TableContainer>
+                <Box className='t-right' mt={2} mr={1}>
+                    <Button variant="contained" color="primary" >
+                      See All
+                    </Button>
+                </Box> 
+            </CardContent>
+            </div>
+            
+          </div>
+        </TabPanel>
+
+        <TabPanel value={value} index={1}>
+         <div className='billing-history main-wrapper pt-0 pb-0'>
             <div className='billing-heading mt-0 mb-16'>
               <h3 className='m-0'>Credit Amount History</h3>
-              <a href=""  className='ml-10'> <SearchTwoToneIcon/></a>
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon />
+                </div>
+                <InputBase
+                  placeholder="Search…"
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                  inputProps={{ 'aria-label': 'search' }}
+                />
+          </div>
             </div>
                 <CardContent className='p-0'>
                   <TableContainer>
@@ -648,15 +736,32 @@ export default function SimpleTabs() {
             </TableBody>
                  </Table>
              </TableContainer>
+             <Box className='t-right' mt={2} mr={1} >
+                     <Button variant="contained" color="primary" >
+                        See All
+                     </Button>
+                  </Box> 
          </CardContent>
            </div>
            
       </TabPanel>
-      <TabPanel value={value} index={2}>
-         <div className='billing-history'>
+        <TabPanel value={value} index={2}>
+         <div className='billing-history main-wrapper'>
             <div className='billing-heading mt-0 mb-16'>
               <h3 className='m-0'>Debit Amount History</h3>
-              <a href=""  className='ml-10'> <SearchTwoToneIcon/></a>
+              <div className={classes.search}>
+                <div className={classes.searchIcon}>
+                  <SearchIcon />
+                </div>
+                <InputBase
+                  placeholder="Search…"
+                  classes={{
+                    root: classes.inputRoot,
+                    input: classes.inputInput,
+                  }}
+                  inputProps={{ 'aria-label': 'search' }}
+                />
+              </div>
             </div>
                 <CardContent className='p-0'>
                   <TableContainer>
@@ -716,6 +821,11 @@ export default function SimpleTabs() {
             </TableBody>
                  </Table>
              </TableContainer>
+             <Box className='t-right' mt={2} mr={1} >
+                  <Button variant="contained" color="primary" >
+                    See All
+                  </Button>
+              </Box> 
          </CardContent>
            </div>
            

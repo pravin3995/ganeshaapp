@@ -1,14 +1,14 @@
 import React from 'react';
-import { makeStyles, Theme, createStyles, lighten } from '@material-ui/core/styles';
+import { makeStyles, Theme, createStyles, lighten, fade } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import { Card, CardContent, TextField, Grid, Button, Checkbox, IconButton, Toolbar, TableSortLabel } from '@material-ui/core';
+import { Card, CardContent, TextField, Grid, Button, Checkbox, IconButton, Toolbar, TableSortLabel, InputBase } from '@material-ui/core';
 import DateFnsUtils from '@date-io/date-fns';
 import clsx from 'clsx';
-
+import SearchIcon from '@material-ui/icons/Search';
 import {
   MuiPickersUtilsProvider,
   KeyboardTimePicker,
@@ -230,12 +230,15 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       width: '100%',
     },
+    button:{
+      background:'red'
+    },
     paper: {
       width: '100%',
       marginBottom: theme.spacing(2),
     },
     table: {
-      minWidth: 750,
+      minWidth: 500,
     },
     visuallyHidden: {
       border: 0,
@@ -248,8 +251,49 @@ const useStyles = makeStyles((theme: Theme) =>
       top: 20,
       width: 1,
     },
+
+    search: {
+      position: 'relative',
+      borderRadius: theme.shape.borderRadius,
+      backgroundColor: fade(theme.palette.common.white, 0.15),
+      '&:hover': {
+        backgroundColor: fade(theme.palette.common.white, 0.25),
+      },
+      marginLeft: 0,
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        marginLeft: theme.spacing(1),
+        width: 'auto',
+      },
+    },
+    searchIcon: {
+      padding: theme.spacing(0, 2),
+      height: '100%',
+      position: 'absolute',
+      pointerEvents: 'none',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    inputRoot: {
+      color: 'inherit',
+    },
+    inputInput: {
+      padding: theme.spacing(1, 1, 1, 0),
+      // vertical padding + font size from searchIcon
+      paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+      transition: theme.transitions.create('width'),
+      width: '100%',
+      [theme.breakpoints.up('sm')]: {
+        width: '12ch',
+        '&:focus': {
+          width: '20ch',
+        },
+      },
+    },
   }),
 );
+
 
 
 interface TabPanelProps {
@@ -431,342 +475,349 @@ export default function SimpleTabs() {
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
   return (
-   <div className='main-wrapper'> 
+   <div className='treasure-billing mb-20'> 
       <div className={classes.root}>
-      <AppBar position="static">
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example">
-          <Tab label=" Billing System" {...a11yProps(0)} />
-          <Tab label=" Billing History" {...a11yProps(1)} />
-        </Tabs>
-      </AppBar>
-      <TabPanel value={value} index={0}>
-         <div >
-             <h3 className='m-0'>Billing Details</h3>
-             <CardContent className='p-16'>
-                <Grid container  spacing={2}>
-                    <Grid item xs={12} md={6} lg={6}>
-                        <TextField
-                            id="outlined-size-small"
-                            variant="outlined"
-                            
-                            placeholder="Item Name"
-                            fullWidth
-                        />
-                     </Grid>
-                     <Grid item xs={12} md={6} lg={6}>
-                        <TextField
-                            id="outlined-size-small"
-                            variant="outlined"
-                            
-                            placeholder="Amount"
-                            fullWidth
-                        />
-                     </Grid>
-                     <Grid item xs={6} md={6} lg={6}>
-                        <TextField
-                            id="outlined-size-small"
-                            variant="outlined"
-                            
-                            placeholder="Quantity"
-                            fullWidth
-                        />
-                     </Grid>
-                     <Grid item xs={6} md={6} lg={6}>
-                         <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                            <Grid container justify="space-around">
-                                <KeyboardDatePicker
-                                    autoOk
-                                    variant="inline"
-                                     
-                                    inputVariant="outlined"
-                                    format="MM/dd/yyyy"
-                                    fullWidth
-                                    placeholder='Date'
-                                    value={selectedDate}
-                                    InputAdornmentProps={{ position: "start" }}
-                                    onChange={date => handleDateChange(date)}
-                                />
-                            </Grid>
-                        </MuiPickersUtilsProvider>
-                     </Grid>
-                     <Grid item xs={12} md={12} lg={12}>
-                         <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                            <Grid container justify="space-around">
-                                <FormControl variant="outlined" className='w-100 select-wrapper'>
-                                    <InputLabel  ref={inputLabel} htmlFor="outliniveed-age-nat-simple" className='transform'>
-                                         Concerned Member or person
-                                    </InputLabel>
-                                        <Select
-                                            native
-                                            value={state.age}
-                                            onChange={handleChanges('age')}
-                                            labelWidth={labelWidth}
-                                            fullWidth
-                                            className='slectbox'
-                                            inputProps={{
-                                                name: 'age',    
-                                                id: 'outlined-age-native-simple',
-                                            }}
-                                            >
-                                            <option value="" />
-                                            <option value={10}>Ten</option>
-                                            <option value={20}>Twenty</option>
-                                            <option value={30}>Thirty</option>
-                                    </Select>
-                                </FormControl>
-                              
-                            </Grid>
-                        </MuiPickersUtilsProvider>
-                     </Grid>
-                     <Grid item xs={12}>
-                        <Box className='t-right'>
-                              <Button variant="outlined" href='/events' size='small' target='_bank' >
-                                save
-                              </Button>
-                          </Box> 
-                     </Grid>
-                 </Grid>    
-             </CardContent>
-             <div className='create-amount border-top'>
-                <h3 className='mb-0'>Create Amount</h3>
-                <CardContent className='p-16'>
-                <Grid container  spacing={2}>
-                    <Grid item xs={12} md={6} lg={6}>
-                        <TextField
-                            id="outlined-size-small"
-                            variant="outlined"
-                            
-                            placeholder="Devotee / Sponser"
-                            fullWidth
-                        />
-                     </Grid>
-                     <Grid item xs={6} md={6} lg={6}>
-                        <TextField
-                            id="outlined-size-small"
-                            variant="outlined"
-                            
-                            placeholder="Amount"
-                            fullWidth
-                        />
-                     </Grid>
-                     <Grid item xs={6} md={6} lg={6}>
-                        <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                                <Grid container justify="space-around">
-                                    <FormControl variant="outlined" className='w-100 select-wrapper'>
-                                        <InputLabel  ref={inputLabel} htmlFor="outliniveed-age-nat-simple" className='transform'>
-                                            Type
-                                        </InputLabel>
-                                            <Select
-                                                native
-                                                value={state.age}
-                                                onChange={handleChanges('age')}
-                                                labelWidth={labelWidth}
-                                                className=' slectbox'
-                                                fullWidth  
-                                                inputProps={{
-                                                    name: 'age',    
-                                                    id: 'outlined-age-native-simple',
-                                                }}
-                                                >
-                                                <option value="" />
-                                                <option value={10}>Devotee</option>
-                                                <option value={20}>Sponser</option>
-                                        </Select>
-                                    </FormControl>
-                                  
-                                </Grid>
-                            </MuiPickersUtilsProvider>
-                     </Grid>
-                     <Grid item xs={12} md={6} lg={6 }>
-                     <TextField
-                            id="outlined-size-small"
-                            variant="outlined"
-                            
-                            placeholder="Mobile Number"
-                            fullWidth
-                        />
-                     </Grid>
-                     <Grid item xs={12}>
-                        <Box className='t-right'>
-                              <Button variant="outlined" href='/events' size='small' target='_bank' >
-                                save
-                              </Button>
-                          </Box> 
-                     </Grid>
-                 </Grid>    
+        <div className='tab-wrap'>
+           <AppBar position="static" className='tab-header'>
+           <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100 '>
+             <Tab label=" Billing System" {...a11yProps(0)} className='tab tab-padding' />
+             <Tab label=" Billing History" {...a11yProps(1)} className='tab'/>
+           </Tabs>
+         </AppBar>
+        </div>
+
+        <TabPanel value={value} index={0} >
+          <div className='main-wrapper box-padding'>
+              <h3 className='m-0'>Billing Details</h3>
+              <CardContent className='p-16'>
+                  <Grid container  spacing={2}>
+                      <Grid item xs={12} md={6} lg={6}>
+                          
+                          <div className='input-placeholder'>
+                              <TextField id="outlined-basic" placeholder="Item Name" variant="outlined"  className='w-100'/>
+                          </div>
+                      </Grid>
+                      <Grid item xs={12} md={6} lg={6}>
+                          <div className='input-placeholder '>
+                              <TextField id="outlined-basic" placeholder="Amount" variant="outlined"  className='w-100'/>
+                          </div>
+                      </Grid>
+                      <Grid item xs={6} md={6} lg={6}>
+                          <div className='input-placeholder '>
+                              <TextField id="outlined-basic" placeholder="Quantity" variant="outlined"  className='w-100'/>
+                          </div>
+                      </Grid>
+                      <Grid item xs={6} md={6} lg={6}>
+                          <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                              <Grid container justify="space-around" className='billing-date'>
+                                  <KeyboardDatePicker
+                                      autoOk
+                                      variant="inline"
+                                      inputVariant="outlined"
+                                      format="MM/dd/yyyy"
+                                      fullWidth
+                                      placeholder='Date'
+                                      value={selectedDate}
+                                      InputAdornmentProps={{ position: "start" }}
+                                      onChange={date => handleDateChange(date)}
+                                  />
+                              </Grid>
+                          </MuiPickersUtilsProvider>
+                      </Grid>
+                      <Grid item xs={12} md={12} lg={12}>
+                          <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                              <Grid container justify="space-around">
+                                  <FormControl variant="outlined" className='w-100 select-wrapper'>
+                                      <InputLabel  ref={inputLabel} htmlFor="outliniveed-age-nat-simple" className='transform'>
+                                          Concerned Member or person
+                                      </InputLabel>
+                                          <Select
+                                              native
+                                              value={state.age}
+                                              onChange={handleChanges('age')}
+                                              labelWidth={labelWidth}
+                                              fullWidth
+                                              className='slectbox'
+                                              inputProps={{
+                                                  name: 'age',    
+                                                  id: 'outlined-age-native-simple',
+                                              }}
+                                              >
+                                              <option value={10}>Ten</option>
+                                              <option value={20}>Twenty</option>
+                                              <option value={30}>Thirty</option>
+                                      </Select>
+                                  </FormControl>
+                                
+                              </Grid>
+                          </MuiPickersUtilsProvider>
+                      </Grid>
+                      <Grid item xs={12}>
+                          <Box className='t-right'>
+                                <Button variant="outlined" href='/events'  >
+                                  save
+                                </Button>
+                            </Box> 
+                      </Grid>
+                  </Grid>    
+              </CardContent>
+              <div className='create-amount border-top'>
+                  <h3 className='mb-0'>Create Amount</h3>
+                  <CardContent className='p-16'>
+                  <Grid container  spacing={2}>
+                      <Grid item xs={12} md={6} lg={6}>
+                          <div className='input-placeholder '>
+                              <TextField id="outlined-basic" placeholder="Devotee / Sponser" variant="outlined"  className='w-100'/>
+                          </div>
+                      </Grid>
+                      <Grid item xs={6} md={6} lg={6}>
+                          <div className='input-placeholder '>
+                              <TextField id="outlined-basic" placeholder="Amount" variant="outlined"  className='w-100'/>
+                          </div>
+                      </Grid>
+                      <Grid item xs={6} md={6} lg={6}>
+                          <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                                  <Grid container justify="space-around">
+                                      <FormControl variant="outlined" className='w-100 select-wrapper'>
+                                          <InputLabel  ref={inputLabel} htmlFor="outliniveed-age-nat-simple" className='transform'>
+                                              Type
+                                          </InputLabel>
+                                              <Select
+                                                  native
+                                                  value={state.age}
+                                                  onChange={handleChanges('age')}
+                                                  labelWidth={labelWidth}
+                                                  className=' slectbox'
+                                                  fullWidth  
+                                                  inputProps={{
+                                                      name: 'age',    
+                                                      id: 'outlined-age-native-simple',
+                                                  }}
+                                                  >
+                                                  <option value="" />
+                                                  <option value={10}>Devotee</option>
+                                                  <option value={20}>Sponser</option>
+                                          </Select>
+                                      </FormControl>
+                                    
+                                  </Grid>
+                              </MuiPickersUtilsProvider>
+                      </Grid>
+                      <Grid item xs={12} md={6} lg={6 }>
+                        <div className='input-placeholder '>
+                              <TextField id="outlined-basic" placeholder="Mobile Number" variant="outlined"  className='w-100'/>
+                          </div>
+                      </Grid>
+                      <Grid item xs={12}>
+                          <Box className='t-right'>
+                                <Button variant="outlined" href='/events'  target='_bank' >
+                                  save
+                                </Button>
+                            </Box> 
+                      </Grid>
+                  </Grid>    
+              </CardContent>
+              </div>
+              <div className='opening-amount border-top'>
+                  <div className='opening-heading mt-16'>
+                    <h3>Opening Amount</h3>
+                    <BootstrapTooltip title="The Amount Can be updated once.">
+                        <a href=""  className='ml-10'> <HelpOutlineIcon/></a>
+                    </BootstrapTooltip>
+                  </div>
+                  <CardContent className='p-16'>
+                    <Grid container spacing={2}>
+                      <Grid item xs={12} md={12} lg={12}>
+                          <div className='input-placeholder '>
+                              <TextField id="outlined-basic" placeholder="Amount" variant="outlined"  className='w-100'/>
+                          </div>
+                      </Grid>
+                        <Grid item xs={12}>
+                          <Box className='t-right'>
+                                <Button variant="outlined" href='/events'  target='_bank' >
+                                  save
+                                </Button>
+                            </Box> 
+                      </Grid>
+                  </Grid>    
+                  </CardContent>
+              </div>
+                  <div className='balance border-top'>
+                    <h3 className='mb-0'>Balance</h3>
+                    <h2 className='m-0 font-30'>30,00,000</h2>
+                  </div>
+    
+          </div>
+          
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <div className='billing-history main-wrapper'>
+              <div className='billing-heading mt-0 mb-16'>
+                <h3 className='m-0'>Billing History</h3>
+                <div className={classes.search}>
+                  <div className={classes.searchIcon}>
+                    <SearchIcon />
+                  </div>
+                  <InputBase
+                    placeholder="Search…"
+                    classes={{
+                      root: classes.inputRoot,
+                      input: classes.inputInput,
+                    }}
+                    inputProps={{ 'aria-label': 'search' }}
+                  />
+                </div>
+              </div>
+                  <CardContent className='p-0'>
+                    <TableContainer>
+                      <Table
+                        className={classes.table}
+                        aria-labelledby="tableTitle"
+                        size={dense ? 'small' : 'medium'}
+                        aria-label="enhanced table"
+                      >
+                      <EnhancedTableHead
+                        classes={classes}
+                        numSelected={selected.length}
+                        order={order}
+                        orderBy={orderBy}
+                        onSelectAllClick={handleSelectAllClick}
+                        onRequestSort={handleRequestSort}
+                        rowCount={rows.length}
+                      />
+                    <TableBody>
+                {stableSort(rows, getComparator(order, orderBy))
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map((row, index) => {
+                    const isItemSelected = isSelected(row.name);
+                    const labelId = `enhanced-table-checkbox-${index}`;
+
+                    return (
+                      <TableRow
+                        hover
+                        onClick={(event) => handleClick(event, row.name)}
+                        role="checkbox"
+                        aria-checked={isItemSelected}
+                        tabIndex={-1}
+                        key={row.name}
+                        selected={isItemSelected}
+                      >
+                        <TableCell padding="checkbox">
+                          <Checkbox
+                            checked={isItemSelected}
+                            inputProps={{ 'aria-labelledby': labelId }}
+                          />
+                        </TableCell>
+                        <TableCell component="th" id={labelId} scope="row" padding="none">
+                          {row.name}
+                        </TableCell>
+                        <TableCell align="right">{row.calories}</TableCell>
+                        <TableCell align="right">{row.fat}</TableCell>
+                        <TableCell align="right">{row.carbs}</TableCell>
+                        {/* <TableCell align="right">{row.protein}</TableCell> */}
+                      </TableRow>
+                    );
+                  })}
+                {emptyRows > 0 && (
+                  <TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
+                    <TableCell colSpan={6} />
+                  </TableRow>
+                )}
+              </TableBody>
+                 </Table>
+              </TableContainer>
+                  <Box className='t-right' mt={2} >
+                     <Button variant="contained" color="primary" >
+                        See All
+                     </Button>
+                  </Box> 
+
              </CardContent>
              </div>
-             <div className='opening-amount border-top'>
-                <div className='opening-heading mt-16'>
-                  <h3>Opening Amount</h3>
-                 <BootstrapTooltip title="The Amount Can be updated once.">
-                     <a href=""  className='ml-10'> <HelpOutlineIcon/></a>
-                </BootstrapTooltip>
+            <div className='billing-history main-wrapper mt-30 mb-20'>
+              <div className='billing-heading mt-0 mb-16'>
+                <h3 className='m-0'>Credit History</h3>
+                <div className={classes.search}>
+                  <div className={classes.searchIcon}>
+                    <SearchIcon />
+                  </div>
+                  <InputBase
+                    placeholder="Search…"
+                    classes={{
+                      root: classes.inputRoot,
+                      input: classes.inputInput,
+                    }}
+                    inputProps={{ 'aria-label': 'search' }}
+                  />
                 </div>
-                <CardContent className='p-16'>
-                  <Grid container spacing={2}>
-                    <Grid item xs={12} md={12} lg={12}>
-                        <TextField
-                            id="outlined-size-small"
-                            variant="outlined"
-                            
-                            placeholder="Amount"
-                            fullWidth
-                        />
-                     </Grid>
-                       <Grid item xs={12}>
-                        <Box className='t-right'>
-                              <Button variant="outlined" href='/events' size='small' target='_bank' >
-                                save
-                              </Button>
-                          </Box> 
-                     </Grid>
-                 </Grid>    
-                </CardContent>
-             </div>
-                <div className='balance border-top'>
-                  <h3 className='mb-0'>Balance</h3>
-                  <h2 className='m-0 font-30'>30,00,000</h2>
-                </div>
-   
-         </div>
-         
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-         <div className='billing-history'>
-            <div className='billing-heading mt-0 mb-16'>
-              <h3 className='m-0'>Billing History</h3>
-              <a href=""  className='ml-10'> <SearchTwoToneIcon/></a>
-            </div>
-                <CardContent className='p-0'>
-                  <TableContainer>
-                     <Table
-            className={classes.table}
-            aria-labelledby="tableTitle"
-            size={dense ? 'small' : 'medium'}
-            aria-label="enhanced table"
-          >
-            <EnhancedTableHead
-              classes={classes}
-              numSelected={selected.length}
-              order={order}
-              orderBy={orderBy}
-              onSelectAllClick={handleSelectAllClick}
-              onRequestSort={handleRequestSort}
-              rowCount={rows.length}
-            />
-            <TableBody>
-              {stableSort(rows, getComparator(order, orderBy))
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row, index) => {
-                  const isItemSelected = isSelected(row.name);
-                  const labelId = `enhanced-table-checkbox-${index}`;
+              </div>
+                  <CardContent className='p-0'>
+                    <TableContainer>
+                      <Table
+              className={classes.table}
+              aria-labelledby="tableTitle"
+              size={dense ? 'small' : 'medium'}
+              aria-label="enhanced table"
+            >
+              <EnhancedTableHead
+                classes={classes}
+                numSelected={selected.length}
+                order={order}
+                orderBy={orderBy}
+                onSelectAllClick={handleSelectAllClick}
+                onRequestSort={handleRequestSort}
+                rowCount={rows.length}
+              />
+              <TableBody>
+                {stableSort(rows, getComparator(order, orderBy))
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map((row, index) => {
+                    const isItemSelected = isSelected(row.name);
+                    const labelId = `enhanced-table-checkbox-${index}`;
 
-                  return (
-                    <TableRow
-                      hover
-                      onClick={(event) => handleClick(event, row.name)}
-                      role="checkbox"
-                      aria-checked={isItemSelected}
-                      tabIndex={-1}
-                      key={row.name}
-                      selected={isItemSelected}
-                    >
-                      <TableCell padding="checkbox">
-                        <Checkbox
-                          checked={isItemSelected}
-                          inputProps={{ 'aria-labelledby': labelId }}
-                        />
-                      </TableCell>
-                      <TableCell component="th" id={labelId} scope="row" padding="none">
-                        {row.name}
-                      </TableCell>
-                      <TableCell align="right">{row.calories}</TableCell>
-                      <TableCell align="right">{row.fat}</TableCell>
-                      <TableCell align="right">{row.carbs}</TableCell>
-                      {/* <TableCell align="right">{row.protein}</TableCell> */}
-                    </TableRow>
-                  );
-                })}
-              {emptyRows > 0 && (
-                <TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
-                  <TableCell colSpan={6} />
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
-                  </TableContainer>
-     
-                </CardContent>
-           </div>
-           <div className='billing-history mt-30'>
-            <div className='billing-heading mt-0 mb-16'>
-              <h3 className='m-0'>Credit History</h3>
-              <a href=""  className='ml-10'> <SearchTwoToneIcon/></a>
+                    return (
+                      <TableRow
+                        hover
+                        onClick={(event) => handleClick(event, row.name)}
+                        role="checkbox"
+                        aria-checked={isItemSelected}
+                        tabIndex={-1}
+                        key={row.name}
+                        selected={isItemSelected}
+                      >
+                        <TableCell padding="checkbox">
+                          <Checkbox
+                            checked={isItemSelected}
+                            inputProps={{ 'aria-labelledby': labelId }}
+                          />
+                        </TableCell>
+                        <TableCell component="th" id={labelId} scope="row" padding="none">
+                          {row.name}
+                        </TableCell>
+                        <TableCell align="right">{row.calories}</TableCell>
+                        <TableCell align="right">{row.fat}</TableCell>
+                        <TableCell align="right">{row.carbs}</TableCell>
+                        {/* <TableCell align="right">{row.protein}</TableCell> */}
+                      </TableRow>
+                    );
+                  })}
+                {emptyRows > 0 && (
+                  <TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
+                    <TableCell colSpan={6} />
+                  </TableRow>
+                )}
+              </TableBody>
+            </Table>
+           </TableContainer>
+           <Box className='t-right' mt={2} >
+                <Button variant="contained" color="primary" >
+                  See All
+                </Button>
+            </Box> 
+           </CardContent>
             </div>
-                <CardContent className='p-0'>
-                  <TableContainer>
-                     <Table
-            className={classes.table}
-            aria-labelledby="tableTitle"
-            size={dense ? 'small' : 'medium'}
-            aria-label="enhanced table"
-          >
-            <EnhancedTableHead
-              classes={classes}
-              numSelected={selected.length}
-              order={order}
-              orderBy={orderBy}
-              onSelectAllClick={handleSelectAllClick}
-              onRequestSort={handleRequestSort}
-              rowCount={rows.length}
-            />
-            <TableBody>
-              {stableSort(rows, getComparator(order, orderBy))
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row, index) => {
-                  const isItemSelected = isSelected(row.name);
-                  const labelId = `enhanced-table-checkbox-${index}`;
-
-                  return (
-                    <TableRow
-                      hover
-                      onClick={(event) => handleClick(event, row.name)}
-                      role="checkbox"
-                      aria-checked={isItemSelected}
-                      tabIndex={-1}
-                      key={row.name}
-                      selected={isItemSelected}
-                    >
-                      <TableCell padding="checkbox">
-                        <Checkbox
-                          checked={isItemSelected}
-                          inputProps={{ 'aria-labelledby': labelId }}
-                        />
-                      </TableCell>
-                      <TableCell component="th" id={labelId} scope="row" padding="none">
-                        {row.name}
-                      </TableCell>
-                      <TableCell align="right">{row.calories}</TableCell>
-                      <TableCell align="right">{row.fat}</TableCell>
-                      <TableCell align="right">{row.carbs}</TableCell>
-                      {/* <TableCell align="right">{row.protein}</TableCell> */}
-                    </TableRow>
-                  );
-                })}
-              {emptyRows > 0 && (
-                <TableRow style={{ height: (dense ? 33 : 53) * emptyRows }}>
-                  <TableCell colSpan={6} />
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
-                  </TableContainer>
-     
-                </CardContent>
-           </div>
-        
-      </TabPanel>
+          
+        </TabPanel>
     </div>
   </div>
   );
