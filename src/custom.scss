@@ -1600,6 +1600,8 @@ a.MuiButton-outlined{
     margin: 0;
     padding-left: 67px;
     margin-top: 26px;
+    font-family: 'Montserrat-Medium';
+
 }
 .public-DraftEditor-content h2{
     margin-top: 0;
@@ -1619,6 +1621,7 @@ fieldset.MuiOutlinedInput-notchedOutline{
 // }
 //Slick Slider
 .list{
+  
     .slick-slide {
         transform: scale(1);
         //opacity: .5;
@@ -1630,9 +1633,48 @@ fieldset.MuiOutlinedInput-notchedOutline{
     }
     .slick-list{
         padding:100px 100px;
+      
     }
     .slider-card{
         margin:40px 0;
+        // &::after{
+        //     content: "";
+        //     position: absolute;
+        //     background: rgba(00,00,00,0.3);
+        //     bottom: 0;
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     margin: 0;
+        //   }
+        
+    }
+    // .slick-active{
+    //     .slider-card{
+    //       &::after{
+    //         display: none;
+    //       }
+    //     }
+    // }
+    .slick-next:before,
+    .slick-prev:before{
+        // content: '→';
+        color:$grey;
+        font-size: 30px;
+    }
+    .slick-next{
+        right: 24px;
+        &:before{
+            position: absolute;
+            left: 0; 
+         }
+    }
+    .slick-prev{
+        z-index: 1;
+        &:before{
+            position: absolute;
+            left: 45px;
+        }
     }
 }
 // Login Page
@@ -1762,7 +1804,11 @@ body,
     }
 }
 
-
+@media screen and (max-width: 768px){
+    .event-slider{
+        width: 100%;
+    }
+}
 @media screen and (max-width: 620px){
     .main-wrapper{
         padding: 15px 0px;
@@ -1784,6 +1830,26 @@ body,
     .signup-form{
         height: calc(100vh - 96px);
     }
+    //slider
+    .list{
+        .slick-next{
+            &:before{
+                position: absolute;
+                left: -16px; 
+             }
+        }
+         .slick-prev{
+             z-index: 1;
+             &:before{
+                 position: absolute;
+                 left: 30px;
+             }
+         }
+         .px-3{
+             padding-left: 5px;
+         }
+    }
+  
 }
 .color-text{
     color: $white;
