@@ -207,7 +207,7 @@ export default function CenteredGrid() {
     console.log(data);
   };
   return (
-    <div className="main-wrapper py-3">
+    <div className="main-wrapper py-3 p-0">
       <Grid container>
 
         <Grid item xs={12} sm={12} md={12} lg={12}>
