@@ -49,6 +49,7 @@ h6{
 }
 p,.MuiTypography,span{
     font-family: 'Montserrat-Regular'!important;
+    font-size: 14px;
 }
   body {
     font-family: 'Montserrat-Medium';
@@ -659,19 +660,23 @@ p,.MuiTypography,span{
    }
 }
         // Event Page Css
-        .events-page {
-            // .MuiButtonGroup-root .MuiButton-containedPrimary {
-            //     background-color:#df3088 ;
-            // }
-
-            // .MuiButton-root:hover:hover{
-            //     box-shadow: none;
-            //     background: #df3088;
-            // }
-            .ganesh-chathurti-description {
-                line-height: 22px;
-                font-size: 14px;
+        .ganesh-chathurti-description {
+            line-height: 22px;
+            font-size: 14px;
+            p{
+                line-height: 1.5;
             }
+        // .events-page {
+        //     // .MuiButtonGroup-root .MuiButton-containedPrimary {
+        //     //     background-color:#df3088 ;
+        //     // }
+
+        //     // .MuiButton-root:hover:hover{
+        //     //     box-shadow: none;
+        //     //     background: #df3088;
+        //     // }
+           
+        //     }
             .MuiOutlinedInput-root{
                 height: 45px;
             }
@@ -1612,7 +1617,24 @@ fieldset.MuiOutlinedInput-notchedOutline{
 // .MuiCardContent-root:last-child{
 //     padding-bottom: 16px!important;
 // }
-
+//Slick Slider
+.list{
+    .slick-slide {
+        transform: scale(1);
+        //opacity: .5;
+        transition: .3s ease-in-out all;
+    }
+    .slick-slide.slick-center {
+        opacity: 1;
+        transform: scale(1.08);
+    }
+    .slick-list{
+        padding:100px 100px;
+    }
+    .slider-card{
+        margin:40px 0;
+    }
+}
 // Login Page
 .account{
     a{
@@ -1740,6 +1762,7 @@ body,
     }
 }
 
+
 @media screen and (max-width: 620px){
     .main-wrapper{
         padding: 15px 0px;
@@ -1779,3 +1802,5 @@ body,
         }
     } 
 }
+
+
