@@ -151,7 +151,7 @@ export default function SimpleTabs() {
       <Grid item xs={12} md={12}>
          <div  className='receipt-form tab-wrap'>
       <AppBar position="static"className='tab-header'>
-        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100'>
+        <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100' indicatorColor="primary">
           <Tab label="Receipt Form" {...a11yProps(0)}  className='tab'/>
           <Tab label="Pending Form" {...a11yProps(1)}  className='tab'/>
         </Tabs>
@@ -227,7 +227,7 @@ export default function SimpleTabs() {
               </RadioGroup>
             </FormControl>
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                <Grid container justify="space-around" className='latedate' >
+                <Grid container justify="space-around" className='latedate date' >
                   <KeyboardDatePicker className='w-100 '
                     autoOk
                     variant="inline"

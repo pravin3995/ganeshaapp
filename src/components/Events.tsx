@@ -147,10 +147,11 @@ export default function EventPage() {
 									)}
 								</Popper>
 							</Box>
-
-							<Box>
-								<Button variant='contained' className={classes.button} size="small"> Add  </Button>
-							</Box>
+							<Link to='/eventsedit' className= 'text-decoration-none'>
+								<Box>
+									<Button variant='contained' className={classes.button} size="small"> Create </Button>
+								</Box>
+							</Link>
 						</Box>
 					</Box>
 				</CardContent>
@@ -160,7 +161,8 @@ export default function EventPage() {
 							<Box mb={1} className='f-w-600'>
 								Upcoming Events
 							</Box>
-							<Card className='post-card'> 
+							<Link to='/eventdetails' className= 'text-decoration-none'>
+								<Card className='post-card'> 
 								<CardContent >
 									<Grid container>
 										<Grid item xs={12}>
@@ -185,11 +187,14 @@ export default function EventPage() {
 									</Grid>
 								</CardContent>
 							</Card>
-							<Box className='t-right'>
-								<Box >
-									<Button variant='contained' className={classes.button} size="small"> See All  </Button>
+							</Link>
+							<Link to='/allevents' className= 'text-decoration-none'>
+								<Box className='t-right'>
+									<Box >
+										<Button variant='contained' className={classes.button} size="small"> See All  </Button>
+									</Box>
 								</Box>
-							</Box>
+							</Link>
 						</CardContent>
 					</Grid>
 				
@@ -223,11 +228,13 @@ export default function EventPage() {
 									</Grid>
 								</CardContent>
 							</Card>
-							<Box className='t-right'>
-								<Box >
-									<Button variant='contained' className={classes.button} size="small"> See All  </Button>
+							<Link to='/allevents' className= 'text-decoration-none'>
+								<Box className='t-right'>
+									<Box >
+										<Button variant='contained' className={classes.button} size="small"> See All  </Button>
+									</Box>
 								</Box>
-						   </Box>
+						    </Link>
 						</CardContent>
 					</Grid>
 				</Grid>

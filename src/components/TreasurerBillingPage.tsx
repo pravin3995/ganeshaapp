@@ -479,7 +479,7 @@ export default function SimpleTabs() {
       <div className={classes.root}>
         <div className='tab-wrap'>
            <AppBar position="static" className='tab-header'>
-           <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100 '>
+           <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100 ' indicatorColor="primary">
              <Tab label=" Billing System" {...a11yProps(0)} className='tab tab-padding' />
              <Tab label=" Billing History" {...a11yProps(1)} className='tab'/>
            </Tabs>

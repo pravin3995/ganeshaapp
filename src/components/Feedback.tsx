@@ -20,9 +20,9 @@ const style ={
 
 export default function MinHeightTextarea() {
   return(
-      <div style={style.paper} className='main-wrapper'>     
-       <div>
-        <h2 className='mt-0'>Share your feedback with us</h2>
+      <div style={style.paper} >     
+       <div className='main-wrapper'>
+        <h3 className='mt-0'>Share your feedback with us</h3>
         <p>How satisfied are you with overall application</p>
           <div> 
             <EmojiEmotionsOutlinedIcon style={style.emoji}/>

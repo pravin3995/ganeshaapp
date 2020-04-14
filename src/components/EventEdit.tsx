@@ -112,7 +112,7 @@ export default function Eventedit() {
                   Description of Events:
             </span>
 
-                <div className='text-editior'>
+                <div className='text-editior editor'>
                   <MUIRichTextEditor
                     label="Type something here.."
                     controls={["title", "bold", "italic", "underline", "link"]}

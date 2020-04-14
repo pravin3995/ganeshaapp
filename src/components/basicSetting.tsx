@@ -204,7 +204,7 @@ export default function SimpleTabs() {
       <Box className='about-mandal'>
         <div className='tab-wrap'>  
             <AppBar position="static" className='tab-header'>
-              <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100'>
+              <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100' indicatorColor="primary">
                 <Tab label="Basic Information" {...a11yProps(0)} className='tab' />
                 <Tab label="User Roles" {...a11yProps(1)} className='tab' />
                 <Tab label="Users" {...a11yProps(2)} className='tab'/>

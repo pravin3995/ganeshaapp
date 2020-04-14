@@ -5,6 +5,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import EventIcon from '@material-ui/icons/Event';
+import FeedbackIcon from '@material-ui/icons/Feedback';
 import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
 import DescriptionIcon from '@material-ui/icons/Description';
@@ -41,6 +42,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
+import SettingsIcon from '@material-ui/icons/Settings';
 import { Drawer } from '@material-ui/core';
 const ganeshaImg = require('../assets/images/ganesha.jpg')
 const drawerWidth = 240;
@@ -363,7 +365,7 @@ export default function PrimarySearchAppBar() {
           {/* <Avatar className={classes.ProfileSize}>
             <img src={String(ganeshaImg)} className="w-100" alt="ganeshaApp" />
           </Avatar> */}
-          <Typography noWrap>
+          <Typography className='ml-10' noWrap>
             Shrimant Dagdushet
           </Typography>
           <div className={classes.grow} />
@@ -468,12 +470,25 @@ export default function PrimarySearchAppBar() {
             </ListItemIcon>
             <ListItemText className='color-text'>Events</ListItemText>
           </ListItem>
+          {/* <ListItem button component={Link} to="/receiptform">
+            <ListItemIcon>
+              <DescriptionIcon className='color-text'/>
+            </ListItemIcon>
+            <ListItemText className='color-text'>Receipt Form</ListItemText>
+          </ListItem> */}
           <ListItem button component={Link} to="/adminbilling">
             <ListItemIcon>
               <DescriptionIcon className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Billing</ListItemText>
           </ListItem>
+          <ListItem button component={Link} to="/feedback">
+            <ListItemIcon>
+              <FeedbackIcon className='color-text'/>
+            </ListItemIcon>
+            <ListItemText className='color-text'>Feedback</ListItemText>
+          </ListItem>
+          
 
           {/* {['Home', 'About Mandal', 'Profile', 'Receipt'].map((text, index) => (
             <ListItem button key={text}>
@@ -484,17 +499,23 @@ export default function PrimarySearchAppBar() {
         </List>
         <Divider />
         <List className="mt-auto">
+        <ListItem button component={Link} to="/basicsetting">
+            <ListItemIcon>
+              <SettingsIcon className='color-text'/>
+            </ListItemIcon>
+            <ListItemText className='color-text'>Setting</ListItemText>
+          </ListItem>
           <ListItem button component={Link} to="#.">
             <ListItemIcon>
               <LanguageIcon  className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Change Language</ListItemText>
           </ListItem>
-          <ListItem button component={Link} to="#.">
+          <ListItem button component={Link} to="/ ">
             <ListItemIcon>
               <ExitToAppIcon className='color-text' />
             </ListItemIcon>
-            <ListItemText className='color-text'>Log Out</ListItemText>
+            <ListItemText className='color-text' >Log Out</ListItemText>
           </ListItem>
 
           {/* {['Change Language', 'Log Out', 'Spam'].map((text, index) => (

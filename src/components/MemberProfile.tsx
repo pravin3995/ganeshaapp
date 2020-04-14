@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme: Theme) =>
         marginLeft:6
     },
     EditButton : {
-        transform:' translate(7px, -22px)',
+        // transform:' translate(7px, -22px)',
         marginRight:'24px',
         fontSize:'10px',
       fontFamily: 'Montserrat-Medium'
@@ -220,28 +220,30 @@ export default function CenteredGrid() {
                 </Button>
             </div>
             <div className='profil-img'>
+              <div className='info-wrapper'>
                 <div className={classes.ProfileEditPosition}>
 
-                    <div className={classes.root}>
-                        <Avatar  variant="rounded" alt="Remy Sharp" src="" className={classes.large} />
-                    </div>
-                    <div className={classes.ProfileEdit}>
-                        <Avatar >
-                        < EditIcon />
-                        </Avatar>
-                    </div>
+                  <div className={classes.root}>
+                      <Avatar  variant="rounded" alt="Remy Sharp" src="" className={classes.large} />
+                  </div>
+                  <div className={classes.ProfileEdit}>
+                      <Avatar >
+                      < EditIcon />
+                      </Avatar>
+                  </div>
                 </div>
-                <div className={classes.ProfileName}>
+                  <div className={classes.ProfileName}>
                     <h3 >Yogesh Jadhav</h3>
                     <p className='role'>Member</p>
-                </div>
-            </div>
-            <div className='editprofile'>
+                  </div>
+              </div>
+              <div className='editprofile'>
                 <Button variant="contained" color="primary" className={classes.EditButton}>
                     Edit Profile
                 </Button>
+             </div>
             </div>
-          </Paper>
+           </Paper>
         </div>
         <div className='main-wrapper'>
            <Grid container >

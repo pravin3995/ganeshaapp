@@ -62,7 +62,6 @@ const useStyles  =  makeStyles((theme: Theme)  =>
 export default function SimpleTabs() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-
   const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
     setValue(newValue);
   };
@@ -76,7 +75,7 @@ export default function SimpleTabs() {
           <Grid item xs={12}>
             <div className='tab-wrap'>
               <AppBar position="static" className='tab-header' >
-                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100'>
+                <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100' indicatorColor="primary">
                   <Tab label="About US" {...a11yProps(0)} className='tab' />
                   <Tab label="Donations" {...a11yProps(1)} className='tab' />
                 </Tabs>
@@ -85,11 +84,11 @@ export default function SimpleTabs() {
                  <TabPanel value={value} index={0}>
                    <div className='main-wrapper pt-0'> 
                       <Box display='flex' justifyContent='space-between' alignItems='center' className='mb-20' > 
-                          <h4 className='h1-title m-0 '>  About Mandal </h4>
-                          <Button variant="contained" color='primary' size='small' className={classes.button}>
-                            Edit Info
-                          </Button>
-                      </Box>
+                          <h4 className='h1-title m-0 '>  About Mandal</h4>
+                            <Button variant="contained" color='primary' size='small' className={classes.button}>
+                             <a href="/editaboutmandal" className='link'> Edit Info</a>
+                            </Button>
+                       </Box>
                       <div className='about-image'>
                           <Image className='ratio' src="https://i.pinimg.com/originals/a4/96/c2/a496c2b6bc5d7cfe0e0674f6598c38ad.jpg"/>
 
@@ -121,7 +120,7 @@ export default function SimpleTabs() {
                   <Box display='flex' justifyContent='space-between' alignItems='center' className='mb-20' > 
                           <h4 className='h1-title m-0 '>  Donation </h4>
                           <Button variant="contained" color='primary' size='small' className={classes.button}>
-                           Edit Info
+                           <a href="/editdonationaboutmandal" className='link'>Edit Info</a>
                           </Button>
                       </Box>
                     <Grid container> 

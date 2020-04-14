@@ -77,8 +77,8 @@ export default function Login() {
                   <IconButton className='ml-10'
                   > <div className='fab fa-google-plus'></div> <span className='sign'>Sign In</span></IconButton>
                 </div>
-                <p className='account'>Don't have a account? <Link to='/signup '>Sign Up</Link> </p>
-
+                <p className=' account'>Don't have a account?<Link to='/signup'>Sign Up</Link></p>
+                
               </form>
             </div>
           </Paper>

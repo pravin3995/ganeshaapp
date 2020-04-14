@@ -37,6 +37,8 @@ import EventDetails from './components/EventDetails'
 import Footer from './components/Footer'
 import BillingTable from './components/BillingTable'
 import YearSlider from './components/YearSlider'
+import AllEvents from './components/AllEvents'
+
 
 export default function App() {
 
@@ -75,6 +77,7 @@ export default function App() {
         <Route exact path='/eventdetails' component={EventDetails}></Route>
         <Route exact path='/billingtable' component={BillingTable}></Route>
         <Route exact path='/yearslider' component={YearSlider}></Route>
+        <Route exact path='/allevents' component={AllEvents}></Route>
 
         
         <Footer/>
