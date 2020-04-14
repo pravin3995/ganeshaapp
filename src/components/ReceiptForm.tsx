@@ -159,7 +159,7 @@ export default function SimpleTabs() {
       <TabPanel value={value} index={0}>
         <div className='receipt-inner'>
           <form className={classes.root} noValidate autoComplete="off">
-             <h3 className='heading m-0 h1-title'>Receipt Form</h3>
+             <h3 className='heading m-0 '>Receipt Form</h3>
              <div className='iconposition' style={styles.TextField}>
                 <TextField id="outlined-basic" placeholder="User Name" variant="outlined" className='w-100'/>
                 <InputAdornment position="start" className='icon'>
