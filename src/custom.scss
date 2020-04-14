@@ -345,7 +345,7 @@ p,.MuiTypography,span{
             }
             .right-icon{
                 position: absolute;
-                right: -525px;
+                right: -696px;
             }
             .left-icon{
                 position: absolute;
@@ -390,8 +390,8 @@ p,.MuiTypography,span{
         .circle-4{
             position: absolute;;
             width:80px;
-            right: -46px;
-            top: -46px;
+            right: -20px;
+            top: -23px;
             height:80px;
             border:2px solid #22d39a;
             border-radius:50% 50% 50% 0;
@@ -1619,64 +1619,83 @@ fieldset.MuiOutlinedInput-notchedOutline{
 // .MuiCardContent-root:last-child{
 //     padding-bottom: 16px!important;
 // }
-//Slick Slider
-.list{
-  
-    .slick-slide {
-        transform: scale(1);
-        //opacity: .5;
-        transition: .3s ease-in-out all;
-    }
-    .slick-slide.slick-center {
-        opacity: 1;
-        transform: scale(1.08);
-    }
-    .slick-list{
-        padding:100px 100px;
-      
-    }
-    .slider-card{
-        margin:40px 0;
-        // &::after{
-        //     content: "";
-        //     position: absolute;
-        //     background: rgba(00,00,00,0.3);
-        //     bottom: 0;
-        //     top: 0;
-        //     left: 0;
-        //     right: 0;
-        //     margin: 0;
-        //   }
-        
-    }
-    // .slick-active{
-    //     .slider-card{
-    //       &::after{
-    //         display: none;
-    //       }
-    //     }
-    // }
-    .slick-next:before,
-    .slick-prev:before{
-        // content: '→';
-        color:$grey;
-        font-size: 30px;
-    }
-    .slick-next{
-        right: 24px;
-        &:before{
-            position: absolute;
-            left: 0; 
-         }
-    }
-    .slick-prev{
-        z-index: 1;
-        &:before{
-            position: absolute;
-            left: 45px;
+.year-slider{
+    .year-list{
+        width: 150px;
+        margin: 0 auto;
+        .slick-next:before,
+        .slick-prev:before{
+            // content: '→';
+            color:$grey;
+            font-size: 30px;
+        }
+        .slick-list{
+            text-align: center;
         }
     }
 }
+
+//Slick Slider
+.event-slider{
+    .list{
+  
+        .slick-slide {
+            transform: scale(1);
+            //opacity: .5;
+            transition: .3s ease-in-out all;
+        }
+        .slick-slide.slick-center {
+            opacity: 1;
+            transform: scale(1.08);
+        }
+        .slick-list{
+            padding:100px 100px;
+          
+        }
+        .slider-card{
+            margin:40px 0;
+            // &::after{
+            //     content: "";
+            //     position: absolute;
+            //     background: rgba(00,00,00,0.3);
+            //     bottom: 0;
+            //     top: 0;
+            //     left: 0;
+            //     right: 0;
+            //     margin: 0;
+            //   }
+            
+        }
+        // .slick-active{
+        //     .slider-card{
+        //       &::after{
+        //         display: none;
+        //       }
+        //     }
+        // }
+        .slick-next:before,
+        .slick-prev:before{
+            // content: '→';
+            color:$grey;
+            font-size: 30px;
+        }
+        .slick-next{
+            right: 24px;
+            &:before{
+                position: absolute;
+                left: 0; 
+             }
+        }
+        .slick-prev{
+            z-index: 1;
+            &:before{
+                position: absolute;
+                left: 45px;
+            }
+        }
+    }
+}
+
 // Login Page
 .account{
     a{
@@ -1808,6 +1827,10 @@ body,
     .event-slider{
         width: 100%;
     }
+    //Recipt
+    .receipt-details .circle .right-icon{
+        right: -635px;
+    }
 }
 @media screen and (max-width: 620px){
     .main-wrapper{
@@ -1831,31 +1854,59 @@ body,
         height: calc(100vh - 96px);
     }
     //slider
-    .list{
-        .slick-next{
-            &:before{
-                position: absolute;
-                left: -16px; 
+    .event-slider{
+        .list{
+            .slick-next{
+                &:before{
+                    position: absolute;
+                    left: -16px; 
+                 }
+            }
+             .slick-prev{
+                 z-index: 1;
+                 &:before{
+                     position: absolute;
+                     left: 30px;
+                 }
+             }
+             .px-3{
+                 padding-left: 5px;
              }
         }
-         .slick-prev{
-             z-index: 1;
-             &:before{
-                 position: absolute;
-                 left: 30px;
-             }
-         }
-         .px-3{
-             padding-left: 5px;
-         }
     }
-  
+    //Recipt Details
+    .receipt-details {
+        .thank-you-title{
+            font-size: 40px;
+        }
+        .circle-4{
+            width: 60px;
+            height: 60px;
+            right: -23px;
+            top: -28px;
+        }
+         //circle
+     .circle{
+         top:41%;
+         .icon{
+             font-size: 40px;
+         }
+        .right-icon{
+            right: -384px;
+        }
+        .left-icon{
+            left:-18px;
+        }
+      } 
+    }
+   
 }
 .color-text{
     color: $white;
     font-size: 14px;
 }
 @media screen and (max-width: 420px){
+    
     .signup-form{
         height: calc(100vh - 96px);
     }

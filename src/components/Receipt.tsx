@@ -9,6 +9,11 @@ import Avatar from '@material-ui/core/Avatar'
 import { Typography, Box } from '@material-ui/core'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import Slider from 'react-slick'
+
+
 
 const style ={
   AlignMent:{
@@ -45,12 +50,78 @@ const useStyles  =  makeStyles((theme: Theme)  =>
 
 export default function ReceiptDetails() {
   const classes  =  useStyles()
+  let settings = {
+    // centerMode: true,
+    // centerPadding: '200px',
+    focusOnSelect: false,
+    slidesToShow: 1,
+    speed:400,
+    
+    // afterChange: current => this.setState({ activeSlide: current }),
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          arrows: true,
+          centerMode: false,
+          centerPadding: '100px',
+          focusOnSelect: false,
+          slidesToShow: 1
+        }
+      },
+      // {
+      //   breakpoint: 768,
+      //   settings: {
+      //     arrows: true,
+      //     centerMode: true,
+      //     centerPadding: '100px',
+      //     focusOnSelect: false,
+      //     slidesToShow: 1
+      //   }
+      // },
+      // {
+      //   breakpoint: 580,
+      //   settings: {
+      //     arrows: true,
+      //     centerMode: true,
+      //     centerPadding: '60px',
+      //     focusOnSelect: false,
+      //     slidesToShow: 1
+      //   }
+      // },
+      // {
+      //   breakpoint: 500,
+      //   settings: {
+      //     arrows: false,
+      //     centerMode: true,
+      //     centerPadding: '60px',
+      //     focusOnSelect: false,
+      //     slidesToShow: 1
+      //   }
+      // }
+
+    ]
+}
   return (
-     <div className='receipt-details'>
-			    <h2 className='h1-title t-center'> My Receipt </h2>
-            <CardContent className='pt-0' >  
-              <Grid spacing={2} style={style.AlignMent} >
-                 <Grid item xs={12} sm={8} md={6} lg={4}>        
+     <div className='receipt-details '>
+       <div className="year-slider t-center">
+          <h4 className='mb-0'>Select Year</h4>
+            <Slider {...settings} className='year-list'>
+                <div className='t-center'>
+                    <h5 className='year'>2020</h5>
+                </div>
+                <div className='t-center'>
+                    <h5 className='year'>2019</h5>
+                </div>
+                <div className='t-center'>
+                    <h5 className='year'>2018</h5>
+                </div>
+             </Slider>
+          
+        </div>
+			    <h2 className='h1-title t-center'> 2020 </h2>
+            <CardContent className='pt-0  main-wrapper' >  
+                    
                  
                 <Card elevation={0} className='p-relative'>
                   <div className="circle-shape circle-4"><span>Paid</span></div>
@@ -111,8 +182,7 @@ export default function ReceiptDetails() {
                   </Box>
                   </CardContent>
                 </Card>
-              </Grid>
-              </Grid>
+              
             </CardContent>
 			</div>
   )
