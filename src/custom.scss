@@ -368,6 +368,25 @@ p,.MuiTypography,span{
               color: $grey;
               margin-bottom: 8px;
           }
+          &::after{
+              content: '';
+              width: 35px;
+              height: 35px;
+              background: #f7f7f7;
+              border-radius: 100%;
+              position: absolute;
+              right: -14px;
+          }
+          &::before{
+            content: '';
+            width: 35px;
+            height: 35px;
+            background: #f7f7f7;
+            border-radius: 100%;
+            position: absolute;
+            left: -14px;
+            bottom: 52%;
+        }
       }
       .py-20{
           padding: 20px 20px 0 20px;
@@ -1886,18 +1905,10 @@ body,
             top: -28px;
         }
          //circle
-     .circle{
-         top:41%;
-         .icon{
-             font-size: 40px;
-         }
-        .right-icon{
-            right: -384px;
-        }
-        .left-icon{
-            left:-18px;
-        }
-      } 
+     
+       .payment-suc::before{
+           bottom: 50%;
+       }
     }
    
 }
