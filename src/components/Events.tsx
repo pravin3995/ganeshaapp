@@ -90,7 +90,7 @@ export default function EventPage() {
 		setOpen(false);
 	};
 	return (
-		<div className=' events-page main-wrapper'>
+		<div className=' events-page main-wrapper pt-0'>
 			<div>
 				<CardContent className='pb-0 pt-0'>
 					<Box display='flex' justifyContent='space-between' flexWrap='wrap' alignItems='center'>
@@ -103,7 +103,7 @@ export default function EventPage() {
 						<Box display='flex' alignContent='center' >
 							<Box mr={2}>
 								
-								<FormControl variant="outlined" className={classes.formControl}>
+								{/* <FormControl variant="outlined" className={classes.formControl}>
 									<InputLabel id="demo-simple-select-outlined-label"> Year</InputLabel>
 									<Select
 									labelId="demo-simple-select-outlined-label"
@@ -119,7 +119,7 @@ export default function EventPage() {
 									<MenuItem value={20}>2019</MenuItem>
 									<MenuItem value={30}>2020</MenuItem>
 									</Select>
-								</FormControl>
+								</FormControl> */}
 								<Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
 									{({ TransitionProps, placement }) => (
 										<Grow
@@ -167,9 +167,9 @@ export default function EventPage() {
 											<span className='label'>
 												Feb 27,2020
 											</span>
-											<h3 className='inner-heading'>
+											<h4 className='inner-heading'>
 												Ganesh Chaturthi
-											</h3>
+											</h4>
 											<Box mb={2} className='ganesh-chathurti-description'>
 												Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 												Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
@@ -205,9 +205,9 @@ export default function EventPage() {
 											<span className='label'>
 												Feb 27,2020
 											</span>
-											<h3 className='inner-heading'>
+											<h4 className='inner-heading'>
 												Ganesh Chaturthi
-											</h3>
+											</h4>
 											<Box mb={2} className='ganesh-chathurti-description'>
 												Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 												Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.

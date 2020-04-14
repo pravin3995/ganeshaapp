@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid'
 import Button from '@material-ui/core/Button'
 import CardContent from '@material-ui/core/CardContent'
 import Card from '@material-ui/core/Card'
-import { Typography, Box, AppBar, Avatar } from '@material-ui/core'
+import { Typography, Box, AppBar, Avatar, Link } from '@material-ui/core'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
 import Image from 'material-ui-image'
@@ -118,6 +118,12 @@ export default function SimpleTabs() {
                   </TabPanel>
                <TabPanel value={value} index={1}>
                   <div className='main-wrapper pt-0'> 
+                  <Box display='flex' justifyContent='space-between' alignItems='center' className='mb-20' > 
+                          <h4 className='h1-title m-0 '>  Donation </h4>
+                          <Button variant="contained" color='primary' size='small' className={classes.button}>
+                           Edit Info
+                          </Button>
+                      </Box>
                     <Grid container> 
                   <Grid item xs={12}>
                     <Box>
