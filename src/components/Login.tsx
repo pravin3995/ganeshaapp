@@ -45,12 +45,11 @@ const useStyles = makeStyles((theme: Theme) => ({
 export default function Login() {
   const classes = useStyles();
 
-
   return (
     <div className={classes.root}>
       <Grid container>
         <Grid item xs={12} className={classes.contain}>
-          <Paper className='form ' elevation={0}>
+          <Paper className='form' elevation={0}>
             <div className='login-image'>
               <img src={String(img)} width='100%'  />
             </div>

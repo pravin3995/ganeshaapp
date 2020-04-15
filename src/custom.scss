@@ -1849,6 +1849,7 @@ fieldset.MuiOutlinedInput-notchedOutline{
 // Forgot Password Page
 .forgot-form{
     padding: 25px;
+    margin-top: 50px;
     // height: calc(100vh - 96px);
     .MuiFormControl-root{
         margin-top: 0;
@@ -1944,8 +1945,9 @@ header.MuiAppBar-colorPrimary{
         @include mt(2);
     }
     .form{
-        margin: 0 auto;
+        // margin: 0 auto;
         width: 100%;
+        margin-top:56px;
         min-width: 300px;
         .b-radius{
             border-radius: 0 0 30px 30px !important;
@@ -1953,6 +1955,7 @@ header.MuiAppBar-colorPrimary{
     }
     .signup-form{
         height: calc(100vh - 96px);
+        margin-top: 50px;
     }
     //slider
     .event-slider{
@@ -2031,6 +2034,13 @@ header.MuiAppBar-colorPrimary{
                 bottom: 52%;
             }
         }
+    }
+    .form{
+        // margin: 0 auto;
+        width: 100%;
+        margin-top:56px;
+        min-width: 300px;
+        margin-bottom: 0;
     }
 }
 
