@@ -103,146 +103,205 @@ export default function EventPage() {
 					</Box>
 				</CardContent>
 				<Grid container >
-                <Grid item xs={12} sm={6} md={6} >
-						<CardContent className='pb-0'>
-                         <Link to='/eventdetails' className= 'text-decoration-none'>
-							<Card className='post-card'>
-								<CardContent>
-									<Grid container>
-										<Grid item xs={12}>
-											<span className='label'>
-												Feb 27,2020
-											</span>
-											<h4 className='inner-heading'>
-												Ganesh Chaturthi
-											</h4>
-											<Box mb={2} className='ganesh-chathurti-description'>
-												Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-												Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-											</Box>
-
-											<Box className="mandal-premises">
-												<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
-													<LocationOnIcon />
-													<span >Mandal Premises </span>
-												</Link>
-											</Box>
-                                            <Box display='flex' justifyContent='space-between' alignItems='center' mt={3}>
-                                                <div className='events-icon-wrapper'>
-                                                    <EmailIcon className='icon'/>
-                                                    <a href="">Invite</a>
-                                                </div>
-                                                <div  className='events-icon-wrapper'>
-                                                    <EditIcon className='icon'/>
-                                                    <a href="">Edit</a>
-                                                </div>
-                                                <div  className='events-icon-wrapper'>
-                                                    <ShareIcon className='icon'/>
-                                                    <a href="">Share</a>
-                                                </div>
-                                                
-                                            </Box>
-										</Grid>
-									</Grid>
-								</CardContent>
-							</Card>
-							</Link>
-						</CardContent>
-					</Grid>
-				  
 					<Grid item xs={12} sm={6} md={6} >
-						<CardContent className='pb-0'>
-                         <Link to='/eventdetails' className= 'text-decoration-none'>
-							<Card className='post-card'>
-								<CardContent>
-									<Grid container>
-										<Grid item xs={12}>
-											<span className='label'>
-												Feb 27,2020
-											</span>
-											<h4 className='inner-heading'>
-												Ganesh Chaturthi
-											</h4>
-											<Box mb={2} className='ganesh-chathurti-description'>
-												Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-												Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-											</Box>
+							<CardContent className='pb-0'>
+							
+								<Card className='post-card'>
+									<CardContent>
+										<Grid container>
+											<Grid item xs={12}>
+												<Link to='/eventdetails' className= 'text-decoration-none'>
+													<Card elevation={0}>
+														<span className='label'>
+															Feb 27,2020
+														</span>
+														<h4 className='inner-heading'>
+															Ganesh Chaturthi
+														</h4>
+														<Box mb={2} className='ganesh-chathurti-description'>
+															Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+															Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+														</Box>
 
-											<Box className="mandal-premises">
-												<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
-													<LocationOnIcon />
-													<span >Mandal Premises </span>
+														<Box className="mandal-premises">
+															<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
+																<LocationOnIcon />
+																<span >Mandal Premises </span>
+															</Link>
+														</Box>
+													</Card>
 												</Link>
-											</Box>
-                                            <Box display='flex' justifyContent='space-between' alignItems='center' mt={3}>
-                                                <div className='events-icon-wrapper'>
-                                                    <EmailIcon className='icon'/>
-                                                    <a href="">Invite</a>
-                                                </div>
-                                                <div  className='events-icon-wrapper'>
-                                                    <EditIcon className='icon'/>
-                                                    <a href="">Edit</a>
-                                                </div>
-                                                <div  className='events-icon-wrapper'>
-                                                    <ShareIcon className='icon'/>
-                                                    <a href="">Share</a>
-                                                </div>
-                                                
-                                            </Box>
+												<Box display='flex' justifyContent='space-between' alignItems='center' mt={3}>
+													<div className='events-icon-wrapper'>
+														<EmailIcon className='icon'/>
+														<a href="">Invite</a>
+													</div>
+													<div  className='events-icon-wrapper'>
+														<EditIcon className='icon'/>
+														<a href="/eventsedit">Edit</a>
+													</div>
+													<div  className='events-icon-wrapper'>
+														<ShareIcon className='icon'/>
+														<a href="">Share</a>
+													</div>
+													
+												</Box>
+											</Grid>
 										</Grid>
-									</Grid>
-								</CardContent>
-							</Card>
-							</Link>
-						</CardContent>
-					</Grid>
-                    <Grid item xs={12} sm={6} md={6} >
-						<CardContent className='pb-0'>
-                         <Link to='/eventdetails' className= 'text-decoration-none'>
-							<Card className='post-card'>
-								<CardContent>
-									<Grid container>
-										<Grid item xs={12}>
-											<span className='label'>
-												Feb 27,2020
-											</span>
-											<h4 className='inner-heading'>
-												Ganesh Chaturthi
-											</h4>
-											<Box mb={2} className='ganesh-chathurti-description'>
-												Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-												Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-											</Box>
+									</CardContent>
+								</Card>
+								
+							</CardContent>
+						</Grid>
+					<Grid item xs={12} sm={6} md={6} >
+							<CardContent className='pb-0'>
+							
+								<Card className='post-card'>
+									<CardContent>
+										<Grid container>
+											<Grid item xs={12}>
+												<Link to='/eventdetails' className= 'text-decoration-none'>
+													<Card elevation={0}>
+														<span className='label'>
+															Feb 27,2020
+														</span>
+														<h4 className='inner-heading'>
+															Ganesh Chaturthi
+														</h4>
+														<Box mb={2} className='ganesh-chathurti-description'>
+															Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+															Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+														</Box>
 
-											<Box className="mandal-premises">
-												<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
-													<LocationOnIcon />
-													<span >Mandal Premises </span>
+														<Box className="mandal-premises">
+															<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
+																<LocationOnIcon />
+																<span >Mandal Premises </span>
+															</Link>
+														</Box>
+													</Card>
 												</Link>
-											</Box>
-                                            <Box display='flex' justifyContent='space-between' alignItems='center' mt={3}>
-                                                <div className='events-icon-wrapper'>
-                                                    <EmailIcon className='icon'/>
-                                                    <a href="">Invite</a>
-                                                </div>
-                                                <div  className='events-icon-wrapper'>
-                                                    <EditIcon className='icon'/>
-                                                    <a href="">Edit</a>
-                                                </div>
-                                                <div  className='events-icon-wrapper'>
-                                                    <ShareIcon className='icon'/>
-                                                    <a href="">Share</a>
-                                                </div>
-                                                
-                                            </Box>
+												<Box display='flex' justifyContent='space-between' alignItems='center' mt={3}>
+													<div className='events-icon-wrapper'>
+														<EmailIcon className='icon'/>
+														<a href="">Invite</a>
+													</div>
+													<div  className='events-icon-wrapper'>
+														<EditIcon className='icon'/>
+														<a href="/eventsedit">Edit</a>
+													</div>
+													<div  className='events-icon-wrapper'>
+														<ShareIcon className='icon'/>
+														<a href="">Share</a>
+													</div>
+													
+												</Box>
+											</Grid>
 										</Grid>
-									</Grid>
-								</CardContent>
-							</Card>
-							</Link>
-						</CardContent>
-					</Grid>
-				  
+									</CardContent>
+								</Card>
+								
+							</CardContent>
+						</Grid>
+						<Grid item xs={12} sm={6} md={6} >
+							<CardContent className='pb-0'>
+							
+								<Card className='post-card'>
+									<CardContent>
+										<Grid container>
+											<Grid item xs={12}>
+												<Link to='/eventdetails' className= 'text-decoration-none'>
+													<Card elevation={0}>
+														<span className='label'>
+															Feb 27,2020
+														</span>
+														<h4 className='inner-heading'>
+															Ganesh Chaturthi
+														</h4>
+														<Box mb={2} className='ganesh-chathurti-description'>
+															Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+															Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+														</Box>
+
+														<Box className="mandal-premises">
+															<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
+																<LocationOnIcon />
+																<span >Mandal Premises </span>
+															</Link>
+														</Box>
+													</Card>
+												</Link>
+												<Box display='flex' justifyContent='space-between' alignItems='center' mt={3}>
+													<div className='events-icon-wrapper'>
+														<EmailIcon className='icon'/>
+														<a href="">Invite</a>
+													</div>
+													<div  className='events-icon-wrapper'>
+														<EditIcon className='icon'/>
+														<a href="/eventsedit">Edit</a>
+													</div>
+													<div  className='events-icon-wrapper'>
+														<ShareIcon className='icon'/>
+														<a href="">Share</a>
+													</div>
+													
+												</Box>
+											</Grid>
+										</Grid>
+									</CardContent>
+								</Card>
+								
+							</CardContent>
+						</Grid>
+					<Grid item xs={12} sm={6} md={6} >
+							<CardContent className='pb-0'>
+								<Card className='post-card'>
+									<CardContent>
+										<Grid container>
+											<Grid item xs={12}>
+												<Link to='/eventdetails' className= 'text-decoration-none'>
+													<Card elevation={0}>
+														<span className='label'>
+															Feb 27,2020
+														</span>
+														<h4 className='inner-heading'>
+															Ganesh Chaturthi
+														</h4>
+														<Box mb={2} className='ganesh-chathurti-description'>
+															Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+															Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+														</Box>
+
+														<Box className="mandal-premises">
+															<Link to="https://goo.gl/maps/r3Zxt2iM9zrurHdD8" target='_blank' >
+																<LocationOnIcon />
+																<span >Mandal Premises </span>
+															</Link>
+														</Box>
+													</Card>
+												</Link>
+												<Box display='flex' justifyContent='space-between' alignItems='center' mt={3}>
+													<div className='events-icon-wrapper'>
+														<EmailIcon className='icon'/>
+														<a href="">Invite</a>
+													</div>
+													<div  className='events-icon-wrapper'>
+														<EditIcon className='icon'/>
+														<a href="/eventsedit">Edit</a>
+													</div>
+													<div  className='events-icon-wrapper'>
+														<ShareIcon className='icon'/>
+														<a href="">Share</a>
+													</div>
+													
+												</Box>
+											</Grid>
+										</Grid>
+									</CardContent>
+								</Card>
+								
+							</CardContent>
+						</Grid>
                 </Grid>
 			</div>
 		</div>
