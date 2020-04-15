@@ -1555,6 +1555,11 @@ a.MuiButton-outlined{
 .p-30{
     padding: 30px;
 }
+a.link-color {
+    line-height: 0;
+    margin-left: 5px;
+    color: $grey;
+}
 //Tab
 .tab-wrap{
     // width: calc(100% - 240px);

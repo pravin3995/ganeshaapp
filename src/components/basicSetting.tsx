@@ -386,8 +386,8 @@ export default function SimpleTabs() {
                               <div className='userseditform'>
                                 <span className='f-w-500'>Treasure</span>
                                 <div className='useredit'>
-                                  <IconButton> <EditIcon /></IconButton>
-                                  <IconButton onClick={handleClickOpen}> <DeleteIcon/></IconButton>
+                                  <a href='#' className='link-color'> <EditIcon /></a>
+                                  <a href='#' className='link-color' onClick={handleClickOpen}> <DeleteIcon/></a>
                                   <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleCloses} />
                                 </div>
                               </div>
@@ -418,7 +418,7 @@ export default function SimpleTabs() {
                                   <div className='userseditform'>
                                     <span className='f-w-500'>Yogesh Jadhav </span>
                                     <div className='useredit' >
-                                      <IconButton className='p-0'><DeleteIcon /></IconButton> 
+                                      <a href='#' className='link-color' onClick={handleClickOpen}> <DeleteIcon/></a>
                                     </div>
                                     {/* <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleCloses} /> */}
                                   </div>
@@ -430,7 +430,7 @@ export default function SimpleTabs() {
                                   <div className='userseditform'>
                                     <span className='f-w-500'>Baldev Perdeshi</span>
                                     <div className='useredit' >
-                                      <IconButton className='p-0'><DeleteIcon /></IconButton> 
+                                      <a href='#' className='link-color' onClick={handleClickOpen}> <DeleteIcon/></a>
                                     </div>
                                     {/* <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleCloses} /> */}
                                   </div>
@@ -452,8 +452,8 @@ export default function SimpleTabs() {
                               <div className='userseditform'>
                                 <span className='f-w-500'>Vice President</span>
                                 <div className='useredit'>
-                                  <IconButton> <EditIcon /></IconButton>
-                                  <IconButton > <DeleteIcon/></IconButton>
+                                  <a href='#' className='link-color'> <EditIcon /></a>
+                                  <a href='#' className='link-color' onClick={handleClickOpen}> <DeleteIcon/></a>
                                 </div>
                               </div>
                           </CardContent>
@@ -465,8 +465,8 @@ export default function SimpleTabs() {
                               <div className='userseditform'>
                                 <span className='f-w-500'>Receipt Receiver</span>
                                 <div className='useredit'>
-                                  <IconButton> <EditIcon /></IconButton>
-                                  <IconButton > <DeleteIcon/></IconButton>
+                                  <a href='#' className='link-color'> <EditIcon /></a>
+                                  <a href='#' className='link-color' onClick={handleClickOpen}> <DeleteIcon/></a>
                                 </div>
                               </div>
                           </CardContent>
@@ -478,8 +478,8 @@ export default function SimpleTabs() {
                               <div className='userseditform'>
                                 <span className='f-w-500'>Secretory</span>
                                 <div className='useredit'>
-                                  <IconButton> <EditIcon /></IconButton>
-                                  <IconButton > <DeleteIcon/></IconButton>
+                                  <a href='#' className='link-color'> <EditIcon /></a>
+                                  <a href='#' className='link-color' onClick={handleClickOpen}> <DeleteIcon/></a>
                                 </div>
                               </div>
                           </CardContent>
