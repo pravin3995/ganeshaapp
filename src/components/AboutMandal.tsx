@@ -85,9 +85,11 @@ export default function SimpleTabs() {
                    <div className='main-wrapper pt-0'> 
                       <Box display='flex' justifyContent='space-between' alignItems='center' className='mb-20' > 
                           <h4 className='h1-title m-0 '>  About Mandal</h4>
+                          <a href="/editaboutmandal" className='link'>
                             <Button variant="contained" color='primary' size='small' className={classes.button}>
-                             <a href="/editaboutmandal" className='link'> Edit Info</a>
+                             Edit Info
                             </Button>
+                            </a>
                        </Box>
                       <div className='about-image'>
                           <Image className='ratio' src="https://i.pinimg.com/originals/a4/96/c2/a496c2b6bc5d7cfe0e0674f6598c38ad.jpg"/>
@@ -119,9 +121,11 @@ export default function SimpleTabs() {
                   <div className='main-wrapper pt-0'> 
                   <Box display='flex' justifyContent='space-between' alignItems='center' className='mb-20' > 
                           <h4 className='h1-title m-0 '>  Donation </h4>
+                          <a href="/editdonationaboutmandal" className='link'>
                           <Button variant="contained" color='primary' size='small' className={classes.button}>
-                           <a href="/editdonationaboutmandal" className='link'>Edit Info</a>
+                           Edit Info
                           </Button>
+                          </a>
                       </Box>
                     <Grid container> 
                   <Grid item xs={12}>

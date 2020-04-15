@@ -75,8 +75,8 @@ export default function Eventedit() {
   return (
     <div className='add-edit-event main-wrapper'>
       
-      <CardContent className='pt-0'>
-          <CardContent>
+      <CardContent className='p-0'>
+          <CardContent className='pl-0'>
             <h3 className='mt-0'>
                Add / Edit Event
             </h3>

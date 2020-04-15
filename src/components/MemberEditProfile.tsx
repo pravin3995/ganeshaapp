@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       EditButton : {
           // transform:' translate(7px, -46px)',
-          marginRight:'24px',
+          marginRight:'14px',
           fontSize:'10px'
       },
       changeCover:{
@@ -156,11 +156,11 @@ export default function VariantAvatars() {
                     <p className='role'>Member</p>
                   </div>
               </div>
-                <div className='editprofile'>
+                {/* <div className='editprofile'>
                   <Button variant="contained" color="primary" className={classes.EditButton}>
                       Edit Profile
                   </Button>
-              </div>
+              </div> */}
             </div>
           </Paper>
 

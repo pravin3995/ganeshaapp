@@ -44,6 +44,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import SettingsIcon from '@material-ui/icons/Settings';
 import { Drawer } from '@material-ui/core';
+
 const ganeshaImg = require('../assets/images/ganesha.jpg')
 const drawerWidth = 240;
 const useStyles = makeStyles((theme: Theme) =>
@@ -511,7 +512,7 @@ export default function PrimarySearchAppBar() {
             </ListItemIcon>
             <ListItemText className='color-text'>Change Language</ListItemText>
           </ListItem>
-          <ListItem button component={Link} to="/ ">
+          <ListItem button component={Link} to="/">
             <ListItemIcon>
               <ExitToAppIcon className='color-text' />
             </ListItemIcon>

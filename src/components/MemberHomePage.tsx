@@ -152,10 +152,12 @@ function SimpleDialog(props: SimpleDialogProps) {
 
   return (
     <Dialog onClose={handleClose} aria-labelledby="simple-dialog-title" open={open} className='delete-post'>
-    <DialogTitle id="simple-dialog-title" className='delete-post-heading pb-0'><h4 className='m-0'>Delete Post</h4> <a href="" className='close-icon'><CloseIcon onClick={handleClose}/></a></DialogTitle>
-    <List>
+    <DialogTitle id="simple-dialog-title" className='delete-post-heading pb-0'><h4 className='m-0 h1-title'>Delete User</h4><a href="" className='close-icon'><CloseIcon onClick={handleClose}/></a></DialogTitle>
+    <List className='pt-0'>
       <ListItem >
-         <p className='delete-message f-14'>Are you sure you want to delete the post?</p>
+          <div className=' user-delete-message'>  
+            <p className='m-0'>Are you sure you want to delete the post?</p>
+          </div>
       </ListItem>
       <ListItem className='popup-button'>
           <Button variant="contained" size='small' color="primary" onClick={handleClose}>
