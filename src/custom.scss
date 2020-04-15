@@ -321,6 +321,10 @@ p,.MuiTypography,span{
   }
  
 .receipt-details{
+    .receipt-size{
+        max-width: 500px;
+        margin: 0 auto;
+    }
     .MuiTypography-caption{
         font-family: 'Montserrat-Medium';
         letter-spacing: 0;
@@ -1567,6 +1571,7 @@ a.MuiButton-outlined{
     .MuiTabs-flexContainer{
         // justify-content: center;
         display: block;
+        // margin-left: 10px;
     }
     .tab-header{
         display: flex;
@@ -2020,6 +2025,7 @@ header.MuiAppBar-colorPrimary{
     
     .signup-form{
         height: calc(100vh - 96px);
+        margin-top: 0;
     }
     .billing-history{
         .billing-heading{

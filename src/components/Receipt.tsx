@@ -120,7 +120,7 @@ export default function ReceiptDetails() {
           
         </div>
 			    <h2 className='h1-title t-center'> 2020 </h2>
-            <CardContent className='pt-0  main-wrapper' >  
+            <CardContent className='pt-0 receipt-size' >  
                     
                  
                 <Card elevation={0} className='p-relative'>

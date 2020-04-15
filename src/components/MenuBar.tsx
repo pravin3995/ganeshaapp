@@ -2,6 +2,7 @@ import React from 'react';
 import { Router, Route, Link } from "react-router-dom";
 import { fade, makeStyles, Theme, createStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
+import HomeIcon from '@material-ui/icons/Home';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import EventIcon from '@material-ui/icons/Event';
@@ -9,6 +10,7 @@ import FeedbackIcon from '@material-ui/icons/Feedback';
 import clsx from 'clsx';
 import Typography from '@material-ui/core/Typography';
 import DescriptionIcon from '@material-ui/icons/Description';
+import InfoIcon from '@material-ui/icons/Info';
 import InputBase from '@material-ui/core/InputBase';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import LanguageIcon from '@material-ui/icons/Language';
@@ -91,6 +93,12 @@ const useStyles = makeStyles((theme: Theme) =>
       flexGrow: 1,
       padding: theme.spacing(3),
     },
+    title: {
+      flexGrow: 1,
+      color:'white',
+      margin:'0',
+      // alignSelf: 'flex-end',
+    },
   }),
 );
 
@@ -124,13 +132,13 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
         <List>
           <ListItem button component={Link} to="/homepage">
             <ListItemIcon>
-              <InboxIcon  className='color-text'/>
+              <HomeIcon  className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Home</ListItemText>
           </ListItem>
           <ListItem button component={Link} to="/aboutMandal">
             <ListItemIcon>
-              <InboxIcon className='color-text' />
+              <InfoIcon className='color-text' />
             </ListItemIcon>
             <ListItemText className='color-text'>About Mandal</ListItemText>
           </ListItem>
@@ -398,9 +406,10 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+           <h4 className={classes.title}> Shrimant Dagdushet</h4>
+          {/* <Typography className={classes.title} variant="h6" noWrap>
             Shrimant Dagdushet
-          </Typography>
+          </Typography> */}
           <div className={classes.grow} />
           <div className='header-icon-wrap'>
             {/* <IconButton aria-label="show 4 new mails" color="inherit">
