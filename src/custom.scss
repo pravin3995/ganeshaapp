@@ -1947,14 +1947,14 @@ header.MuiAppBar-colorPrimary{
     .form{
         // margin: 0 auto;
         width: 100%;
-        margin-top:56px;
+        margin-top:0;
         min-width: 300px;
         .b-radius{
             border-radius: 0 0 30px 30px !important;
         }
     }
     .signup-form{
-        height: calc(100vh - 96px);
+        height: calc(100vh - 140px);
         margin-top: 50px;
     }
     //slider
@@ -2007,6 +2007,9 @@ header.MuiAppBar-colorPrimary{
     // margin-left: 240px;
     // margin-top: 56px; 
     margin-left: 0;
+    .MuiTabs-flexContainer{
+        display: flex;
+    }
  }
 }
 .color-text{
@@ -2039,7 +2042,7 @@ header.MuiAppBar-colorPrimary{
     .form{
         // margin: 0 auto;
         width: 100%;
-        margin-top:56px;
+        margin-top:0;
         min-width: 300px;
         margin-bottom: 0;
     }
