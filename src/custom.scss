@@ -68,7 +68,7 @@ p,.MuiTypography,span{
 .justify-center {justify-content: center;}
 .h1-title {font-size: 18px;} 
 .main-card { background-color: #fafafa; }
-.main-wrapper {margin: 40px 15px;}
+// .main-wrapper {margin: 40px 15px;}
 .text-decoration-none {text-decoration: none;}
 .p-relative {position: relative;}
 .b-radius {border-radius: 15px!important; }
@@ -1115,7 +1115,7 @@ p,.MuiTypography,span{
     .profil-img{
         display:flex;
         // padding-bottom:16px;
-        max-width: 700px;
+        max-width: 800px;
         margin: 30px auto;
         justify-content: space-between;
         align-items: flex-end;
@@ -1421,8 +1421,11 @@ a.MuiButton-outlined{
 }
 //wrapper
 .main-wrapper{
-    max-width: 700px;
-    margin: 0px auto;    
+    max-width: 800px;
+    margin: 0 auto;    
+    // width: calc(100% - 240px);
+    // margin-left: 240px;
+    // margin-top: 50px;
     // @include my(3);
 }
 .editor{
@@ -1550,6 +1553,9 @@ a.MuiButton-outlined{
 }
 //Tab
 .tab-wrap{
+    // width: calc(100% - 240px);
+    // margin-left: 240px;
+    // margin-top: 64px;
     .MuiTab-wrapper{
         font-weight: 500;
     }
@@ -1559,7 +1565,8 @@ a.MuiButton-outlined{
         // width: 100%;
     }
     .MuiTabs-flexContainer{
-        justify-content: center;
+        // justify-content: center;
+        display: block;
     }
     .tab-header{
         display: flex;
@@ -1571,7 +1578,7 @@ a.MuiButton-outlined{
 
 .receipt-form{
     .receipt-inner{
-        max-width:700px ;
+        max-width:800px ;
         margin: 0 auto;
     }
     .pending-card{
@@ -1896,11 +1903,17 @@ body,
 #root{
     height: 100%;
 }
+header.MuiAppBar-colorPrimary{
+    box-shadow: none!important;
+}
 #root>div{
     min-height: 100%;
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 100%;
+    width: calc(100% - 240px);
+    margin-left: 240px;
+    margin-top: 64px;
 }
 .closebutton{
     cursor: pointer;
@@ -1979,7 +1992,18 @@ body,
            bottom: 50%;
        }
     }
-   
+   #root>div{
+       width: 100%;
+       margin: 0;
+    // margin-top: 56px; 
+       
+   }
+   .tab-wrap{
+    width: 100%;
+    // margin-left: 240px;
+    // margin-top: 56px; 
+    margin-left: 0;
+ }
 }
 .color-text{
     color: $white;

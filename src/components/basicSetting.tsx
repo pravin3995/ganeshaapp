@@ -210,7 +210,6 @@ export default function SimpleTabs() {
                 <Tab label="Users" {...a11yProps(2)} className='tab'/>
               </Tabs>
             </AppBar>
-        </div>
               <TabPanel value={value} index={0}>
                  <div className='abc main-wrapper pt-0 pb-0'>
                     <h2 className='h1-title m-0'> Basic Informastion </h2>
@@ -489,6 +488,8 @@ export default function SimpleTabs() {
                   </Grid> 
                </div>
               </TabPanel>
+        </div>
+
       </Box>
     </div>
   );

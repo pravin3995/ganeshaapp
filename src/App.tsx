@@ -45,7 +45,7 @@ export default function App() {
   return ( 
     <div>
       <BrowserRouter>
-        <NavBar />
+        <MenuBar />
         <Route exact path='/receipt' component={Receipt}></Route>
         <Route exact path='/details' component={ReceiptDetails}></Route>
         <Route exact path='/events' component={Events}></Route>

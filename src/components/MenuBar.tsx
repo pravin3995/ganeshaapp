@@ -43,7 +43,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import SettingsIcon from '@material-ui/icons/Settings';
-import { Drawer } from '@material-ui/core';
+import { Drawer, Hidden } from '@material-ui/core';
 
 
 const drawerWidth = 240;
@@ -85,6 +85,7 @@ const useStyles = makeStyles((theme: Theme) =>
     toolbar: theme.mixins.toolbar,
     drawerPaper: {
       width: drawerWidth,
+      background:'black'
     },
     content: {
       flexGrow: 1,
@@ -113,7 +114,12 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
 
   const drawer = (
     <div>
-      <div className={classes.toolbar} />
+      {/* <div className={classes.toolbar} /> */}
+      <div className='side-bar-wrap mt-16'>
+          <Avatar variant='square' className='side-bar-logo' alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'/>	
+
+        </div>
+        <h3 className='t-center'>Ganesha App</h3>
       <Divider />
         <List>
           <ListItem button component={Link} to="/homepage">
@@ -381,21 +387,18 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
   );
   return (
     <div className={classes.root}>
-       <AppBar position="static">
+      <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
-            onClick={handleDrawerOpen}
             edge="start"
-            className={clsx(classes.menuButton, open && classes.hide)}
+            onClick={handleDrawerToggle}
+            className={classes.menuButton}
           >
             <MenuIcon />
           </IconButton>
-          {/* <Avatar className={classes.ProfileSize}>
-            <img src={String(ganeshaImg)} className="w-100" alt="ganeshaApp" />
-          </Avatar> */}
-          <Typography className='ml-10' noWrap>
+          <Typography variant="h6" noWrap>
             Shrimant Dagdushet
           </Typography>
           <div className={classes.grow} />
@@ -429,21 +432,12 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
             </IconButton>
 
           </div>
-          {/* <div className={classes.sectionMobile}>
-            <IconButton
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </div> */}
         </Toolbar>
+        
       </AppBar>
-       <nav className={classes.drawer} aria-label="mailbox folders">
+      <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+        <Hidden smUp implementation="css">
           <Drawer
             container={container}
             variant="temporary"
@@ -459,6 +453,8 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
           >
             {drawer}
           </Drawer>
+        </Hidden>
+        <Hidden xsDown implementation="css">
           <Drawer
             classes={{
               paper: classes.drawerPaper,
@@ -468,6 +464,7 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
           >
             {drawer}
           </Drawer>
+        </Hidden>
       </nav>
        </div>
   );
