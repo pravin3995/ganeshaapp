@@ -464,6 +464,9 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
           >
             {drawer}
           </Drawer>
+          {renderMobileMenu}
+      {}
+      {noti ? Notification : renderMenu}
         </Hidden>
       </nav>
        </div>
