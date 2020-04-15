@@ -1559,6 +1559,12 @@ a.link-color {
     line-height: 0;
     margin-left: 5px;
     color: $grey;
+    .MuiSvgIcon-root{
+        font-size: 20px;
+    }
+    &:hover{
+        color:#333;
+    }
 }
 //Tab
 .tab-wrap{

@@ -54,19 +54,21 @@ export default function SignUp() {
             <div className=' signup-form'>
               <h3 className='m-0'>Sign Up </h3>
               <form className={classes.root} noValidate autoComplete='off'>
-                <TextField id='outlined-basic' placeholder='Your Name' variant='outlined' autoComplete='off' fullWidth
-                  className={classes.textField}
-                />
-                <TextField id='outlined-basic' placeholder='Mandal Name' variant='outlined' autoComplete='off' fullWidth
-                  className={classes.textField}
-                />
-                 <TextField id='outlined-basic' placeholder='Email Address' variant='outlined' autoComplete='off' fullWidth
-                  className={classes.textField}
-                />
-                <TextField id='outlined-basic' placeholder='Password' type='password' variant='outlined' fullWidth
-                  className={classes.textField}
-                  autoComplete='new-password'
-                />
+                
+                  <div className='input-placeholder'>
+                      <TextField id="outlined-basic"placeholder='Your Name' variant="outlined"   className={classes.textField}/>
+                    </div>
+               
+                  <div className='input-placeholder'>
+                      <TextField id="outlined-basic"placeholder='Mandal Name' variant="outlined"   className={classes.textField}/>
+                    </div>
+               
+                   <div className='input-placeholder '>
+                      <TextField id="outlined-basic" placeholder='Email Address' variant="outlined"  className={classes.textField}/>
+                    </div>
+                    <div className='input-placeholder '>
+                      <TextField id="outlined-basic" placeholder='Password' type='password' variant="outlined"  className={classes.textField}/>
+                    </div>
                 <Button variant='contained' color='primary' fullWidth className='signup-button form-button mt-30' >
                   Sign Up
                 </Button>

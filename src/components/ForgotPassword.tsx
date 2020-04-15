@@ -16,8 +16,9 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   },
   textField: {
-    minWidth: 280,
+    // minWidth: 280,
     marginTop: 20,
+    width:'100%'
   },
   contain: {
     margin: '0 auto'
@@ -55,11 +56,10 @@ export default function Forgot() {
               <h3 className='title'>Forgot Password </h3>
               <form className={classes.root} noValidate autoComplete='off'>
                 <Typography className='forgot-message'>No Worries! Enter your email and we will send you a reset</Typography>
-                <TextField id='outlined-basic' placeholder='Email Address' variant='outlined' autoComplete='off'
-                  style={{ backgroundColor: '#edf0f7', borderRadius: 100 }}
-                  className={classes.textField}
-                  fullWidth
-                />
+                <div className='input-placeholder'>
+                      <TextField id="outlined-basic"placeholder='Email Address' variant="outlined"   className={classes.textField}/>
+                    </div>
+                
                 <Button variant='contained' color='primary' className='signup-button form-button mt-3'>
                   Reset Password
                     </Button>
