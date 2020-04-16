@@ -45,7 +45,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 
 export default function Login() {
   const classes = useStyles();
- 
+  let element:any = document.getElementById("root");
+  element.classList.add("mystyle");
   return (
     <div className={classes.root}>
       <Grid container >

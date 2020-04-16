@@ -208,6 +208,8 @@ export default function CenteredGrid() {
   const save = (data: any) => {
     console.log(data);
   };
+  let element:any = document.getElementById("root");
+  element.classList.remove("mystyle");
   return (
     <div className="main-wrapper py-3 p-0">
       <Grid container>

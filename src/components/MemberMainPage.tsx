@@ -163,7 +163,7 @@ export default function Member() {
 					</Box>
 				</CardContent>	
 				<Grid container className={classes.root} spacing={2}>
-     			 	<Grid item xs={6} sm={4} md={4} lg={3}>
+     			 	<Grid item xs={6} sm={6} md={6} lg={3}>
 						<Card>
 						<CardContent className='pb-16'>
 							<Box display="flex" justifyContent="space-between" className='mb-10'>
@@ -246,7 +246,7 @@ export default function Member() {
 						</CardContent>
 					</Card>				
 					</Grid>
-					<Grid item xs={6} sm={4} md={4} lg={3}>
+					<Grid item xs={6} sm={6} md={6} lg={3}>
 						<Card>
 						<CardContent className='pb-16'>
 							<Box display="flex" justifyContent="space-between" className='mb-10'>

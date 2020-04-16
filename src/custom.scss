@@ -825,6 +825,9 @@ p,.MuiTypography,span{
         font-size: 20px;
         cursor: pointer;
         color: $grey;
+        &:hover{
+            color: #666;
+        }
     }
 }
 .m-16{
@@ -1955,7 +1958,12 @@ header.MuiAppBar-colorPrimary{
         margin-right: 0px;
     }
 }
-
+///
+.mystyle > div{
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 0!important;
+}
 @media screen and (max-width: 768px){
     .event-slider{
         width: 100%;

@@ -38,6 +38,7 @@ import Footer from './components/Footer'
 import BillingTable from './components/BillingTable'
 import YearSlider from './components/YearSlider'
 import AllEvents from './components/AllEvents'
+
 const DefaultContainer = () => (
   <div>
   <MenuBar />
