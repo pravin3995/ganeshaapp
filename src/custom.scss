@@ -716,7 +716,17 @@ p,.MuiTypography,span{
     }
 }
 
-
+.center{
+    align-self: center;
+}
+.events-page{
+    .center{
+        align-self: center;
+    }
+    .MuiOutlinedInput-input{
+        padding: 13.5px 14px;
+    }
+}
 //events details
 .event-details{
     .bg-color{

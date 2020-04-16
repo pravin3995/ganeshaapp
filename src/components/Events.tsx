@@ -54,7 +54,7 @@ const useStyles = makeStyles({
 		// backgroundColor: '#fb734e',
 		// borderRadius: '15px',
 		color: 'white',
-		padding: '4px 22px'
+		// padding: '4px 22px'
 	}
 })
 
@@ -103,8 +103,8 @@ export default function EventPage() {
 						<Box display='flex' alignContent='center' >
 							<Box mr={2}>
 								
-								{/* <FormControl variant="outlined" className={classes.formControl}>
-									<InputLabel id="demo-simple-select-outlined-label"> Year</InputLabel>
+								<FormControl variant="outlined" className={classes.formControl}>
+									<InputLabel id="demo-simple-select-outlined-label" className='year-select'> Year</InputLabel>
 									<Select
 									labelId="demo-simple-select-outlined-label"
 									id="demo-simple-select-outlined"
@@ -119,7 +119,7 @@ export default function EventPage() {
 									<MenuItem value={20}>2019</MenuItem>
 									<MenuItem value={30}>2020</MenuItem>
 									</Select>
-								</FormControl> */}
+								</FormControl>
 								<Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
 									{({ TransitionProps, placement }) => (
 										<Grow
@@ -147,9 +147,9 @@ export default function EventPage() {
 									)}
 								</Popper>
 							</Box>
-							<Link to='/eventsedit' className= 'text-decoration-none'>
+							<Link to='/eventsedit' className= 'text-decoration-none center'>
 								<Box>
-									<Button variant='contained' className={classes.button} size="small"> Create </Button>
+									<Button variant='contained' className={classes.button} > Create </Button>
 								</Box>
 							</Link>
 						</Box>
@@ -191,7 +191,7 @@ export default function EventPage() {
 							<Link to='/allevents' className= 'text-decoration-none'>
 								<Box className='t-right'>
 									<Box >
-										<Button variant='contained' className={classes.button} size="small"> See All  </Button>
+										<Button variant='contained' className={classes.button} > See All  </Button>
 									</Box>
 								</Box>
 							</Link>
@@ -231,7 +231,7 @@ export default function EventPage() {
 							<Link to='/allevents' className= 'text-decoration-none'>
 								<Box className='t-right'>
 									<Box >
-										<Button variant='contained' className={classes.button} size="small"> See All  </Button>
+										<Button variant='contained' className={classes.button} > See All  </Button>
 									</Box>
 								</Box>
 						    </Link>
