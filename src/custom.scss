@@ -501,7 +501,7 @@ p,.MuiTypography,span{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 150px;
+            min-height: 150px;
             font-size: 14px;
             border: 1px solid #e5e5e5;
             border-radius: 4px;
@@ -593,7 +593,7 @@ p,.MuiTypography,span{
             padding-left:15px;
             margin-top: 20px;
             font-family: 'Montserrat-Medium';
-            color: $grey;
+            // color: $grey;
             
         }
         .editor #mui-rte-root #mui-rte-container #mui-rte-editor{
@@ -1648,10 +1648,13 @@ a.link-color {
  
     .fa-facebook{
         color: #4266b2;
+        font-size: 21px;
        
     }
     .fa-google-plus{
         color: #db4437;
+        font-size: 21px;
+
     }
 }
 .mt-5{
@@ -1930,6 +1933,7 @@ header.MuiAppBar-colorPrimary{
     grid-template-columns: 100%;
     width: calc(100% - 240px);
     margin-left: 240px;
+    // width: 100%;
     margin-top: 64px;
 }
 .closebutton{

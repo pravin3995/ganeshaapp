@@ -16,7 +16,8 @@ const useStyles = makeStyles((theme: Theme) => ({
 
   },
   textField: {
-    minWidth: 280,
+    // minWidth: 280,
+    width:"100%",
     marginTop: 20,
   },
   contain: {

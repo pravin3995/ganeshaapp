@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme: Theme) =>
     paper: {
       padding: theme.spacing(1),
       // textAlign: 'center',
-      color: theme.palette.text.secondary,
+      // color: theme.palette.text.secondary,
 
     },
     Recentpost: {
@@ -231,7 +231,7 @@ export default function CenteredGrid() {
                 onSave={save}
               />
             </div>
-            <div className='button mb-4'>
+            <div className='mt-16 mb-10 t-right'>
               <Button variant="contained" color="primary">
                 Post
                 </Button>
@@ -295,7 +295,7 @@ export default function CenteredGrid() {
                   />
                   <CardContent>
                       <h4 className='post-title'>Post Title</h4>
-                      <Typography variant="body2" color="textSecondary" component="p">
+                      <Typography variant="body2"  component="p">
                           This impressive paella is a perfect party dish and a fun meal to cook together with your
                           guests. Add 1 cup of frozen peas along with the mussels, if you like.
                       </Typography>
@@ -435,7 +435,7 @@ export default function CenteredGrid() {
                   />
                   <CardContent>
                       <h4 className='post-title'>Post Title</h4>
-                      <Typography variant="body2" color="textSecondary" component="p">
+                      <Typography variant="body2"  component="p">
                           This impressive paella is a perfect party dish and a fun meal to cook together with your
                           guests. Add 1 cup of frozen peas along with the mussels, if you like.
                       </Typography>

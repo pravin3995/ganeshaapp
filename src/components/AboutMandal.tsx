@@ -130,6 +130,7 @@ export default function SimpleTabs() {
                     <Grid container> 
                   <Grid item xs={12}>
                     <Box>
+                      
                       <Typography variant	='body2' className="donation-details">                
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's.

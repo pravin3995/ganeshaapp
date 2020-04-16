@@ -1,9 +1,9 @@
 import React from 'react';
 import Receipt from './components/receiptDetails'
-
 import {
   BrowserRouter,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom';
 import ReceiptDetails from './components/Receipt';
 import Events from './components/Events';
@@ -38,50 +38,50 @@ import Footer from './components/Footer'
 import BillingTable from './components/BillingTable'
 import YearSlider from './components/YearSlider'
 import AllEvents from './components/AllEvents'
-
-
+const DefaultContainer = () => (
+  <div>
+  <MenuBar />
+    <Route  path='/receipt' component={Receipt}></Route>
+    <Route  path='/details' component={ReceiptDetails}></Route>
+    <Route  path='/events' component={Events}></Route>
+    <Route  path='/eventsedit' component={Eventedit}></Route>
+    <Route  path='/membermainpage' component={MemberMainPage}></Route>
+    <Route  path='/aboutmandal' component={AboutMandal}></Route>
+    <Route  path='/editaboutmandal' component={EditAboutMandal}></Route>
+    <Route  path='/editdonationaboutmandal' component={EditDonationAboutMandal}></Route>
+    <Route  path='/basicsetting' component={BasicSetting}></Route>
+    <Route  path='/resetpassword' component={ResetPAsswordPopup}></Route>
+    <Route  path='/treasurebilling' component={TreasurerBillingPage}></Route>
+    <Route  path='/adminbilling' component={AdminBilling}></Route>
+    <Route  path='/menubar' component={MenuBar}></Route>
+    <Route  path='/userhome' component={UserHomePage}></Route>
+    <Route  path='/userprofilesetting' component={UserProfileSetting}></Route>
+    <Route  path='/successfully' component={Successfully}></Route>
+    <Route  path='/receiptform' component={ReceiptForm}></Route>
+    <Route  path='/memberprofile' component={MemberProfile}></Route>
+    <Route  path='/homepage' component={MemberHomeePage}></Route>
+    <Route  path='/feedback' component={Feedback}></Route>
+    <Route  path='/membereditprofile' component={MemberEditProfile}></Route>
+    <Route  path='/addnewpost' component={AddNewPost}></Route>
+    <Route  path='/accountsetting' component={AccountSetting}></Route>
+    <Route  path='/error' component={ErrorMessage}></Route>
+    <Route  path='/eventupdated' component={eventUpdated}></Route>
+    <Route  path='/eventdetails' component={EventDetails}></Route>
+    <Route  path='/billingtable' component={BillingTable}></Route>
+    <Route  path='/yearslider' component={YearSlider}></Route>
+    <Route  path='/allevents' component={AllEvents}></Route>
+    <Footer/>
+  </div>
+)
 export default function App() {
-
   return ( 
-    <div>
-      <BrowserRouter>
-        <MenuBar />
-        <Route exact path='/receipt' component={Receipt}></Route>
-        <Route exact path='/details' component={ReceiptDetails}></Route>
-        <Route exact path='/events' component={Events}></Route>
-        <Route exact path='/eventsedit' component={Eventedit}></Route>
-        <Route exact path='/membermainpage' component={MemberMainPage}></Route>
-        <Route exact path='/aboutmandal' component={AboutMandal}></Route>
-        <Route exact path='/editaboutmandal' component={EditAboutMandal}></Route>
-        <Route exact path='/editdonationaboutmandal' component={EditDonationAboutMandal}></Route>
-        <Route exact path='/basicsetting' component={BasicSetting}></Route>
-        <Route exact path='/resetpassword' component={ResetPAsswordPopup}></Route>
-        <Route exact path='/treasurebilling' component={TreasurerBillingPage}></Route>
-        <Route exact path='/adminbilling' component={AdminBilling}></Route>
-        <Route exact path='/menubar' component={MenuBar}></Route>
-        <Route exact path='/userhome' component={UserHomePage}></Route>
-        <Route exact path='/userprofilesetting' component={UserProfileSetting}></Route>
-        <Route exact path='/successfully' component={Successfully}></Route>
-        <Route exact path='/receiptform' component={ReceiptForm}></Route>
-        <Route exact path='/memberprofile' component={MemberProfile}></Route>
-        <Route exact path='/homepage' component={MemberHomeePage}></Route>
-        <Route exact path='/feedback' component={Feedback}></Route>
-        <Route exact path='/membereditprofile' component={MemberEditProfile}></Route>
-        <Route exact path='/addnewpost' component={AddNewPost}></Route>
-        <Route exact path='/accountsetting' component={AccountSetting}></Route>
-        <Route exact path='/error' component={ErrorMessage}></Route>
-        <Route exact path='/eventupdated' component={eventUpdated}></Route>
-        <Route exact path='/' component={Login}></Route>
-        <Route exact path='/signup' component={SignUp}></Route>
-        <Route exact path='/forgotpassword' component={ForgotPassword}></Route>
-        <Route exact path='/eventdetails' component={EventDetails}></Route>
-        <Route exact path='/billingtable' component={BillingTable}></Route>
-        <Route exact path='/yearslider' component={YearSlider}></Route>
-        <Route exact path='/allevents' component={AllEvents}></Route>
-
-        
-        <Footer/>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Login}/>
+      <Route  path="/signup" component={SignUp}/>
+      <Route  path='/forgotpassword' component={ForgotPassword}></Route>
+      <Route component={DefaultContainer}/>
+    </Switch>
+  </BrowserRouter>
   );
 }
