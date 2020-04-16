@@ -92,7 +92,7 @@ export default function EventPage() {
 	return (
 		<div className=' events-page main-wrapper pt-0'>
 			<div>
-				<CardContent className='pb-0 pt-0'>
+				<CardContent className='pb-0 '>
 					<Box display='flex' justifyContent='space-between' flexWrap='wrap' alignItems='center'>
 						<Box>
 							<Typography className='mb-10'>
