@@ -8,6 +8,7 @@ import { Grid, Paper, TextField, Divider, IconButton } from '@material-ui/core';
 import '../custom.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 const img = require('../assets/images/ganesha.jpg')
+
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     width: '100%',
@@ -52,6 +53,9 @@ export default function SignUp() {
       <Grid container >
         <Grid item xs={12} className={classes.contain}>
           <Paper className=' form' elevation={0}>
+            <div className='login-image'>
+              <img src={String(img)} width='100%'  />
+            </div>
             <div className=' signup-form'>
               <h3 className='m-0'>Sign Up </h3>
               <form className={classes.root} noValidate autoComplete='off'>

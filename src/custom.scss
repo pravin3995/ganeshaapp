@@ -190,7 +190,7 @@ p,.MuiTypography,span{
 }
 .delete-post{
     .close-icon{
-        color: $grey;
+        color: $icon-color;
     }
     .delete-message{
         color: $grey;
@@ -233,7 +233,19 @@ p,.MuiTypography,span{
     
 }
 
-
+//Member-homepage
+.more-option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .post-time{
+        margin-right: 15px;
+    }
+    .more-icon{
+        color:$icon-color;
+        cursor: pointer;
+    }
+}
 // Common Css
 // .MuiBox-root {
 //     .MuiButton-root:hover{
@@ -661,10 +673,10 @@ p,.MuiTypography,span{
         }
     }
     .add-edit-event  {
-        .MuiSvgIcon-root {
-            height: 16px;
-            width: 16px;
-        }
+        // .MuiSvgIcon-root {
+        //     height: 16px;
+        //     width: 16px;
+        // }
 
         #mui-rte-container {
             display:flex;
@@ -695,7 +707,7 @@ p,.MuiTypography,span{
         display: flex;
         &:hover{
            a,.icon{
-               color: #666;
+               color: $icon-color;
            }
         }
         
@@ -709,7 +721,7 @@ p,.MuiTypography,span{
        }
        .icon{
            font-size: 18px;
-           color: $grey;
+           color: $icon-color;
        }
     }
     .MuiCardContent-root:last-child{
@@ -787,6 +799,7 @@ p,.MuiTypography,span{
 // Member Page Css
 .post-time{
     font-size: 12px;
+    color: $grey;
     font-family: 'Montserrat-Medium';
 }
 
@@ -798,8 +811,11 @@ p,.MuiTypography,span{
     }
 }
 .comment, .share{
-    font-family: 'Montserrat-Medium';
+    font-family: 'Montserrat-regular';
     font-size: 12px;
+    cursor: pointer;
+    color: $grey;
+    margin-right: 15px;
 
 }
 //Member main page
@@ -825,7 +841,7 @@ p,.MuiTypography,span{
     .member_icon{
         font-size: 20px;
         cursor: pointer;
-        color: $grey;
+        color: $icon-color;
         &:hover{
             color: #666;
         }
@@ -1006,7 +1022,7 @@ p,.MuiTypography,span{
     .icon{
         position: absolute;
         top:28px;
-        color: rgba(0, 0, 0, 0.54);
+        color:$icon-color;
         padding-left: 10px;
         z-index: 1;
     }
@@ -1271,6 +1287,8 @@ p,.MuiTypography,span{
     }
     .MuiOutlinedInput-root{
         background-color: white;
+        font-family: 'Montserrat-Medium';
+
         // border-radius: 15px;
     }
 }
@@ -1365,7 +1383,7 @@ textarea{
         position: absolute;
         top: 5px;
         right: 9px;
-        color: $grey;
+        color: $icon-color;
         cursor: pointer;
     }
     ::placeholder{

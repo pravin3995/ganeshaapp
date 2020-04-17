@@ -232,7 +232,7 @@ export default function SimpleTabs() {
                     autoOk
                     variant="inline"
                     inputVariant="outlined"
-                    placeholder=" late-Date"
+                    placeholder=" Late-Date"
                     format="MM/dd/yyyy"
                     value={selectedDate}
                     InputAdornmentProps={{ position: "end" }}

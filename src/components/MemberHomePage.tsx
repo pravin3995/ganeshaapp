@@ -211,7 +211,7 @@ export default function CenteredGrid() {
   let element:any = document.getElementById("root");
   element.classList.remove("mystyle");
   return (
-    <div className="main-wrapper py-3 p-0">
+    <div className="main-wrapper py-3 p-0 member-home">
       <Grid container>
 
         <Grid item xs={12} sm={12} md={12} lg={12}>
@@ -251,18 +251,18 @@ export default function CenteredGrid() {
                     
                       action={
                       
-                      <IconButton aria-label="settings" className='p-0' >
+                      <div aria-label="settings" className='p-0 more-option' >
                           <span className='post-time'>20 mins ago</span>
                           <div>
-                            <IconButton
+                            <div
                               aria-label="more"
                               aria-controls="long-menu"
                               aria-haspopup="true"
                               onClick={handleClick}
-                              className='pr-0'
+                              className='pr-0 more-icon'
                             >
                               <MoreVertIcon  />
-                            </IconButton>
+                            </div>
                             <Menu
                                 id="fade-menu"
                                 anchorEl={anchorEl}
@@ -280,7 +280,7 @@ export default function CenteredGrid() {
                               <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
                               
                           </div>
-                      </IconButton>
+                      </div>
                       }
                       title="Abhijeet Jachak"
                       // titleTypographyProps={{variant:'h6' }}
@@ -308,21 +308,22 @@ export default function CenteredGrid() {
                           <FavoriteIcon color="secondary" /><span className='f-14 f-w-600'> +1</span>
                       </IconButton>
                       
-                      <IconButton
+                      <div
                           className={clsx(classes.expand, {
                               [classes.expandOpen]: expanded,
                           })}
                           onClick={handleExpandClick}
                           aria-expanded={expanded}
                           aria-label="show more"
+                          
                       >
                       {/* <ExpandMoreIcon /> */}
                       <span className=' f-w-600 comment'>Comments</span>
-                      </IconButton>
-                      <IconButton aria-label="share">
+                      </div>
+                      <div aria-label="share">
                           {/* <ShareIcon /> */}
                           <span className='f-w-600 share'>Share</span>
-                      </IconButton>
+                      </div>
                   </CardActions>
                   
                   <Collapse in={expanded} timeout="auto" unmountOnExit>
@@ -384,147 +385,6 @@ export default function CenteredGrid() {
                 </Card>
             </div>
         </Grid>
-        <Grid item xs={12} sm={12} md={12} lg={12}>
-          <div className={classes.paper} >
-          <Card className='post-card' >
-              <CardHeader
-                  avatar={
-                  <Avatar aria-label="recipe" className={classes.avatar}>
-                      Y
-                  </Avatar>
-                  }
-                
-                  action={
-                  
-                  <IconButton aria-label="settings" className='p-0' >
-                      <span className='post-time'>20 mins ago</span>
-                      <div>
-                        <IconButton
-                          aria-label="more"
-                          aria-controls="long-menu"
-                          aria-haspopup="true"
-                          onClick={handleClick}
-                          className='pr-0'
-                        >
-                          <MoreVertIcon  />
-                        </IconButton>
-                        <Menu
-                            id="fade-menu"
-                            anchorEl={anchorEl}
-                            keepMounted
-                            open={opens}
-                            TransitionComponent={Fade}
-                            onClose={handleCloses}
-                            className='menu-options'
-                          >
-                            <MenuItem onClick={handleCloses} >Edit</MenuItem>
-                            <MenuItem onClick={handleClickOpen}>Delete</MenuItem>
-                            <MenuItem >Disable Commnets</MenuItem>
-                            <MenuItem >Disable Sharing</MenuItem>
-                          </Menu>
-                          <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
-                          
-                      </div>
-                  </IconButton>
-                  }
-                  title="Abhijeet Jachak"
-                  // titleTypographyProps={{variant:'h6' }}
-                  classes={{
-                    title: classes.title,
-                    subheader:classes.subheader,
-                  }}
-                  subheader="Member" 
-              />
-                  {/* <img src={String(img)} /> */}
-                  <CardMedia
-                      className={classes.media}
-                      image={require('../assets/images/1.jpg')}
-                      title="Paella dish"
-                  />
-                  <CardContent>
-                      <h4 className='post-title'>Post Title</h4>
-                      <Typography variant="body2"  component="p">
-                          This impressive paella is a perfect party dish and a fun meal to cook together with your
-                          guests. Add 1 cup of frozen peas along with the mussels, if you like.
-                      </Typography>
-                  </CardContent>
-                  <CardActions disableSpacing>
-                      <IconButton aria-label="add to favorites">
-                          <FavoriteIcon color="secondary" /><span className='f-14 f-w-600'> +1</span>
-                      </IconButton>
-                      
-                      <IconButton
-                          className={clsx(classes.expand, {
-                              [classes.expandOpen]: expanded,
-                          })}
-                          onClick={handleExpandClick}
-                          aria-expanded={expanded}
-                          aria-label="show more"
-                      >
-                      {/* <ExpandMoreIcon /> */}
-                      <span className=' f-w-600 comment'>Comments</span>
-                      </IconButton>
-                      <IconButton aria-label="share">
-                          {/* <ShareIcon /> */}
-                          <span className='f-w-600 share'>Share</span>
-                      </IconButton>
-                  </CardActions>
-                  
-                  <Collapse in={expanded} timeout="auto" unmountOnExit>
-                      <CardHeader
-                          avatar={
-                          <Avatar aria-label="recipe" className={classes.avatar}>
-                              Y
-                          </Avatar>
-                          }
-        
-                          title="Yogesh Jadhav"
-                          // titleTypographyProps={{variant:'h6' }}
-                          classes={{
-                            title: classes.title,
-                            subheader:classes.subheader,
-                          }}
-                          subheader="Member"
-                          className='comment-border'
-                      />
-                    <CardContent  className='comment-content'>
-                        <Typography paragraph className='comment-paragraph'>
-                          Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-                          minutes.
-                        </Typography>
-                        <div className='reply-field'>
-                          <TextField
-                              id="outlined-size-small"
-                              placeholder="Reply ..."
-                              variant="outlined"
-                              size="small"
-                              className='w-100 reply-input'
-                            />
-                            <SendIcon className='send'/>
-                        </div>
-                        <div className='edit-comment'>
-                        <TextareaAutosize aria-label="minimum height" className='w-100 edit-text' rowsMin={3} placeholder="Edit Comment..." />
-                            <div className='comment-button-wrapper'>
-                                <Button size="small" variant="contained" color="primary">
-                                  Cancel  
-                                </Button>
-                                <Button size="small" variant="contained" color="primary">
-                                  Update
-                                </Button>
-                            </div>
-                        </div>
-                        <div className='comments-action'>
-                        <a href="">Reply</a> 
-                        <a href="">Edit</a> 
-                          <a href="">Delete</a> 
-                        </div>
-                      </CardContent>
-                  </Collapse>
-        
-                </Card>
-        </div>
-        </Grid>
-
       </Grid>
     </div>
   );

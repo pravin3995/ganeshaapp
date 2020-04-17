@@ -136,6 +136,7 @@ export default function Eventedit() {
                       fullWidth
                       variant="inline"
                       inputVariant="outlined"
+                      placeholder=" Date"
                       format="MM/dd/yyyy"
                       value={selectedDate}
                       InputAdornmentProps={{ position: "start" }}
