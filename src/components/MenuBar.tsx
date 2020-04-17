@@ -161,8 +161,8 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Divider />
             <List component="div" disablePadding>
-              <ListItem button className={classes.menuItem}>
-                <ListItemText className='color-text t-center ml-10'>About Mandal</ListItemText>
+              <ListItem button component={Link} to="/aboutmandal" className={classes.menuItem}>
+                <ListItemText   className='color-text t-center ml-10'>About Mandal</ListItemText>
               </ListItem>
               <ListItem button className={classes.menuItem}>
                 <ListItemText className='color-text' inset primary="Donation" />
