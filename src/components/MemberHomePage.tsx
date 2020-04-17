@@ -227,15 +227,16 @@ export default function CenteredGrid() {
               />
               <MUIRichTextEditor
                 label="Type something here.."
-                controls={["title", "bold", "italic", "underline", "link"]}
+                controls={["title", "bold", "italic", "underline", "link","media"]}
                 inlineToolbar={true}
                 inlineToolbarControls={["bold", "italic", "underline", "link"]}
                 onSave={save}
+                
               />
             </div>
             <div className='mt-16 mb-10 t-right'>
-              <Button variant="contained" color="primary">
-                Post
+                <Button variant="contained" color="primary">
+                  Submit
                 </Button>
             </div>
           </div>
@@ -331,7 +332,12 @@ export default function CenteredGrid() {
                               Y
                           </Avatar>
                           }
-        
+                          action={
+                      
+                                <span className='post-time'>20 mins ago</span>
+                             
+                            }
+                           
                           title="Yogesh Jadhav"
                           // titleTypographyProps={{variant:'h6' }}
                           classes={{

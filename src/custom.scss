@@ -230,6 +230,7 @@ p,.MuiTypography,span{
 .mui-rte-container .MUIRichTextEditor-editorContainer-133 {
     padding: 0px 0px 8px 7px;
     font-size: 14px;
+    
 }
 
 
@@ -1245,10 +1246,21 @@ p,.MuiTypography,span{
         padding: 8px 0 0 65px;
     }
 }
+///Editor
 .editor #mui-rte-root #mui-rte-container #mui-rte-editor {
     margin: 0;
     padding-left:67px;
     margin-top: 20px;
+    .public-DraftEditor-content h2{
+        color: #000;
+        line-height: .5;
+       span{
+            font-size: 16px;
+       }
+    }
+    .MuiIconButton-root{
+        border-radius: 0;
+    }
 }
 .MUIRichTextEditor-placeHolder-169 {
     font-size: 14px;
@@ -1723,6 +1735,17 @@ a.link-color {
 }
 .editor #mui-rte-root #mui-rte-container #mui-rte-toolbar .MuiIconButton-root{
     padding: 5px;
+    border-radius: 0;
+    &:hover{
+        background-color: #f0f0f0!important;
+        color: #333;
+    }
+   
+
+}
+.MuiButton-text{
+    background-color: $primary!important;
+    margin-left: 10px;
 }
 .editor #mui-rte-toolbar+div {
     margin: 0;

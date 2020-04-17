@@ -96,10 +96,25 @@ export default function EventPage() {
 		<div className=' all-events main-wrapper pt-0'>
 			<div>
 				<CardContent className='pb-0 pt-0'>
-					<Box display='flex' justifyContent='space-between' flexWrap='wrap' alignItems='center'>
-						<Box>
+					<Box display='flex' justifyContent='space-between' flexWrap='wrap' alignItems='center' mt={2}>
 							<h3 className='h1-title'> Upcomming Events</h3>
-						</Box>
+							<FormControl variant="outlined" className={classes.formControl}>
+									<InputLabel id="demo-simple-select-outlined-label" className='year-select'> Year</InputLabel>
+									<Select
+									labelId="demo-simple-select-outlined-label"
+									id="demo-simple-select-outlined"
+									value={age}
+									onChange={handleChange}
+									label="Age"
+									>
+									<MenuItem value="">
+										<em>None</em>
+									</MenuItem>
+									<MenuItem value={10}>2018</MenuItem>
+									<MenuItem value={20}>2019</MenuItem>
+									<MenuItem value={30}>2020</MenuItem>
+									</Select>
+								</FormControl>
 					</Box>
 				</CardContent>
 				<Grid container >

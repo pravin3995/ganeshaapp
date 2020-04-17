@@ -8,6 +8,8 @@ import IconButton from '@material-ui/core/IconButton';
 import EventIcon from '@material-ui/icons/Event';
 import FeedbackIcon from '@material-ui/icons/Feedback';
 import clsx from 'clsx';
+import IconExpandLess from '@material-ui/icons/ExpandLess'
+import IconExpandMore from '@material-ui/icons/ExpandMore'
 import Typography from '@material-ui/core/Typography';
 import DescriptionIcon from '@material-ui/icons/Description';
 import InfoIcon from '@material-ui/icons/Info';
@@ -45,7 +47,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import SettingsIcon from '@material-ui/icons/Settings';
-import { Drawer, Hidden } from '@material-ui/core';
+import { Drawer, Hidden, Collapse } from '@material-ui/core';
 
 
 const drawerWidth = 240;
@@ -61,6 +63,12 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     grow: {
       flexGrow: 1,
+    },
+    menuItem: {
+      width: drawerWidth,
+    },
+    menuItemIcon: {
+      color: '#97c05c',
     },
     hide: {
       display: 'none',
@@ -86,7 +94,7 @@ const useStyles = makeStyles((theme: Theme) =>
     // necessary for content to be below app bar
     toolbar: theme.mixins.toolbar,
     drawerPaper: {
-      width: drawerWidth,
+      // width: drawerWidth,
       background:'#18202c'
     },
     content: {
@@ -119,7 +127,14 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+  const [open, setOpen] = React.useState(false)
 
+  function handleClick() {
+    setOpen(!open)
+  }
+  function handleClickr() {
+    setOpen(!open)
+  }
   const drawer = (
     <div>
       {/* <div className={classes.toolbar} /> */}
@@ -127,7 +142,7 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
           <Avatar variant='square' className='side-bar-logo' alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'/>	
 
         </div>
-        <h3 className='t-center'>Ganesha App</h3>
+        <h3 className='t-center mb-0'>Ganesha App</h3>
       <Divider />
         <List>
           <ListItem button component={Link} to="/homepage">
@@ -136,24 +151,48 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
             </ListItemIcon>
             <ListItemText className='color-text'>Home</ListItemText>
           </ListItem>
-          <ListItem button component={Link} to="/aboutMandal">
+          <ListItem button onClick={handleClick} className={classes.menuItem}>
             <ListItemIcon>
               <InfoIcon className='color-text' />
             </ListItemIcon>
-            <ListItemText className='color-text'>About Mandal</ListItemText>
+            <ListItemText className='color-text'>About </ListItemText>
+            {open ? <IconExpandLess className='color-text'/> : <IconExpandMore className='color-text'/>}
           </ListItem>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <Divider />
+            <List component="div" disablePadding>
+              <ListItem button className={classes.menuItem}>
+                <ListItemText className='color-text t-center ml-10'>About Mandal</ListItemText>
+              </ListItem>
+              <ListItem button className={classes.menuItem}>
+                <ListItemText className='color-text' inset primary="Donation" />
+              </ListItem>
+            </List>
+          </Collapse>
           <ListItem button component={Link} to="/memberprofile">
             <ListItemIcon>
               <AccountCircle className='color-text'/>
             </ListItemIcon >
             <ListItemText className='color-text'>Profile</ListItemText>
           </ListItem>
-          <ListItem button component={Link} to="/receipt">
+          <ListItem  button onClick={handleClickr} className={classes.menuItem}>
             <ListItemIcon>
               <ReceiptIcon  className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Receipt</ListItemText>
+            {open ? <IconExpandLess className='color-text'/> : <IconExpandMore className='color-text'/>}
           </ListItem>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <Divider />
+            <List component="div" disablePadding>
+              <ListItem button className={classes.menuItem}>
+                <ListItemText className='color-text t-center ml-10'>Receipt Details</ListItemText>
+              </ListItem>
+              <ListItem button className={classes.menuItem}>
+                <ListItemText className='color-text' inset primary="Receipt Form" />
+              </ListItem>
+            </List>
+          </Collapse>
           <ListItem button component={Link} to="/membermainpage">
             <ListItemIcon>
               <AccountCircle className='color-text'/>
@@ -178,12 +217,7 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
             </ListItemIcon>
             <ListItemText className='color-text'>Billing</ListItemText>
           </ListItem>
-          <ListItem button component={Link} to="/feedback">
-            <ListItemIcon>
-              <FeedbackIcon className='color-text'/>
-            </ListItemIcon>
-            <ListItemText className='color-text'>Feedback</ListItemText>
-          </ListItem>
+         
           
 
           {/* {['Home', 'About Mandal', 'Profile', 'Receipt'].map((text, index) => (
@@ -224,7 +258,7 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
       
     </div>
   );
-  const [open, setOpen] = React.useState(false);
+  // const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);

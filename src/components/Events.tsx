@@ -103,23 +103,7 @@ export default function EventPage() {
 						<Box display='flex' alignContent='center' >
 							<Box mr={2}>
 								
-								<FormControl variant="outlined" className={classes.formControl}>
-									<InputLabel id="demo-simple-select-outlined-label" className='year-select'> Year</InputLabel>
-									<Select
-									labelId="demo-simple-select-outlined-label"
-									id="demo-simple-select-outlined"
-									value={age}
-									onChange={handleChange}
-									label="Age"
-									>
-									<MenuItem value="">
-										<em>None</em>
-									</MenuItem>
-									<MenuItem value={10}>2018</MenuItem>
-									<MenuItem value={20}>2019</MenuItem>
-									<MenuItem value={30}>2020</MenuItem>
-									</Select>
-								</FormControl>
+								
 								<Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
 									{({ TransitionProps, placement }) => (
 										<Grow
@@ -149,7 +133,7 @@ export default function EventPage() {
 							</Box>
 							<Link to='/eventsedit' className= 'text-decoration-none center'>
 								<Box>
-									<Button variant='contained' className={classes.button} > Create </Button>
+									<Button variant='contained' className={classes.button} > Add New </Button>
 								</Box>
 							</Link>
 						</Box>
