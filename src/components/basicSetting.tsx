@@ -205,17 +205,75 @@ export default function SimpleTabs() {
         <div className='tab-wrap'>  
             <AppBar position="static" className='tab-header'>
               <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" className='w-100' indicatorColor="primary">
-                <Tab label="Basic Information" {...a11yProps(0)} className='tab' />
-                <Tab label="User Roles" {...a11yProps(1)} className='tab' />
-                <Tab label="Users" {...a11yProps(2)} className='tab'/>
+                <Tab label="Basic Info" {...a11yProps(0)} className='tab' />
+                <Tab label="Mandal Info" {...a11yProps(1)} className='tab' />
+                <Tab label="User Roles" {...a11yProps(2)} className='tab' />
+                <Tab label="Users" {...a11yProps(3)} className='tab'/>
               </Tabs>
             </AppBar>
-              <TabPanel value={value} index={0}>
+            <TabPanel value={value} index={0}>
                  <div className='abc main-wrapper pt-0 pb-0'>
-                    <h2 className='h1-title m-0'> Basic Informastion </h2>
+                    <h2 className='h1-title mt-0'> Basic Information </h2>
                       <Grid container spacing={2}> 
                         <Grid item xs={12} md={6}>
-                          <Box mt={2}>
+                          <Box >
+                              <Typography variant	='body2'>
+                                 <div className='input-placeholder '>
+                                    <span className='label'>User Name </span>
+                                    <TextField id="outlined-basic" placeholder="Enter User Name Here..." variant="outlined"  className='w-100'/>
+                                </div>
+                              </Typography>
+                            </Box>
+                        </Grid>
+
+                        <Grid item xs={12} md={6}>
+                        <Box>
+                              <Typography variant	='body2'>
+                                 <div className='input-placeholder '>
+                                    <span className='label'>Email Address </span>
+                                    <TextField id="outlined-basic" placeholder="Enter Email Address Name Here..." variant="outlined"  className='w-100'/>
+                                </div>
+                              </Typography>
+                            </Box>
+                        </Grid> 
+
+                        <Grid item xs={12} md={6}>
+                          <Box>
+                              <Typography variant	='body2'>
+                                <div className='input-placeholder '>
+                                    <span className='label'> Mandal Address: </span>
+                                    <TextField id="outlined-basic" placeholder="Enter Mandal Address Here..." variant="outlined"  className='w-100'/>
+                                </div>
+                              </Typography>
+                            </Box>
+                        </Grid>
+
+                        <Grid item xs={12} md={6}>
+                        <Box >
+                            <Typography variant	='body2'>
+                                  <div className='input-placeholder '>
+                                    <span className='label'> Registration Number: </span>
+                                    <TextField id="outlined-basic" placeholder="Enter Registration Number Here..." variant="outlined"  className='w-100'/>
+                                 </div>
+                            </Typography>
+                          </Box>
+
+                        </Grid>
+                      </Grid>
+
+                      <Box className='t-right' mt={2}>
+                        <Button variant="outlined" href='/events'  color='primary' target='_bank' className={classes.button}>
+                            Save
+                        </Button>
+                      </Box>
+                  </div>
+              </TabPanel>  
+              <TabPanel value={value} index={1}>
+                 <div className='abc main-wrapper pt-0 pb-0'>
+                    <h2 className='h1-title mt-0'> Mandal Information </h2>
+                      <Grid container spacing={2}> 
+                        <Grid item xs={12} md={6}>
+                          <Box >
                               <Typography variant	='body2'>
                                  <div className='input-placeholder '>
                                     <span className='label'> Name of the Mandal: </span>
@@ -226,7 +284,7 @@ export default function SimpleTabs() {
                         </Grid>
 
                         <Grid item xs={12} md={6}>
-                          <Box mt={2}>
+                          <Box >
                               <Typography variant	='body2'>
                               <small className='label'>
                                   Main Image
@@ -300,7 +358,7 @@ export default function SimpleTabs() {
                   </div>
               </TabPanel>  
 
-              <TabPanel value={value} index={1}>
+              <TabPanel value={value} index={2}>
                 <div className='main-wrapper pt-0'>
                     <Grid container spacing={1}>
                       <Grid item xs={12} sm={12} md={12}lg={12}>
@@ -377,7 +435,7 @@ export default function SimpleTabs() {
                 </div>
               </TabPanel>   
 
-              <TabPanel value={value} index={2}>
+              <TabPanel value={value} index={3}>
                 <div className='main-wrapper pt-0'> 
                  <Grid container spacing={2}>
                     <Grid item xs={12} > 

@@ -14,6 +14,7 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
+import CameraAltIcon from '@material-ui/icons/CameraAlt';
 import Collapse from '@material-ui/core/Collapse';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationCityIcon from '@material-ui/icons/LocationCity';
@@ -57,6 +58,7 @@ const useStyles = makeStyles((theme: Theme) =>
       ProfileEdit: {
           position: 'absolute',
           left:'68%',
+          cursor:'pointer',
           bottom :'-4px'
 
       },
@@ -134,9 +136,12 @@ export default function VariantAvatars() {
         <div className='profile'>   
            <Paper className='profile-details b-r-0' elevation={1} style={styles.paperContainer}>
             <div className='changephoto'>
-                <Button variant="outlined" color="primary" className={classes.changeCover} >
-                    Change Cover Photo
-                </Button>
+              <div  color="primary"  className={classes.changeCover}  >
+                  <div className='file-input'>
+                      <input type='file' />
+                      <CameraAltIcon className='camera'/>
+                    </div>
+                </div>
             </div>
             <div className='profil-img'>
               <div className='info-wrapper'>
@@ -147,7 +152,7 @@ export default function VariantAvatars() {
                   </div>
                   <div className={classes.ProfileEdit}>
                       <Avatar >
-                      < EditIcon />
+                      <CameraAltIcon />
                       </Avatar>
                   </div>
                 </div>

@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme: Theme) =>
       },
     },
     menuButton: {
-      marginRight: theme.spacing(2),
+      marginRight: theme.spacing(1),
       [theme.breakpoints.up('sm')]: {
         display: 'none',
       },
@@ -132,9 +132,7 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
   function handleClick() {
     setOpen(!open)
   }
-  function handleClickr() {
-    setOpen(!open)
-  }
+  
   const drawer = (
     <div>
       {/* <div className={classes.toolbar} /> */}
@@ -175,7 +173,7 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
             </ListItemIcon >
             <ListItemText className='color-text'>Profile</ListItemText>
           </ListItem>
-          <ListItem  button onClick={handleClickr} className={classes.menuItem}>
+          <ListItem  button onClick={handleClick} className={classes.menuItem}>
             <ListItemIcon>
               <ReceiptIcon  className='color-text'/>
             </ListItemIcon>
@@ -233,7 +231,7 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
             <ListItemIcon>
               <SettingsIcon className='color-text'/>
             </ListItemIcon>
-            <ListItemText className='color-text'>Setting</ListItemText>
+            <ListItemText className='color-text'>Settings</ListItemText>
           </ListItem>
           <ListItem button component={Link} to="#.">
             <ListItemIcon>
@@ -440,7 +438,7 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
           >
             <MenuIcon />
           </IconButton>
-           <h4 className={classes.title}> Shrimant Dagdushet</h4>
+           <h4 className={classes.title}> Shrimant Dagdusheth</h4>
           {/* <Typography className={classes.title} variant="h6" noWrap>
             Shrimant Dagdushet
           </Typography> */}
@@ -456,7 +454,7 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
               aria-controls={menuIds}
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
-              className='notification-icon'
+              className='notification-icon icon'
 
             >
               <Badge badgeContent={17} color="secondary">
@@ -470,6 +468,7 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
               aria-haspopup="true"
               onClick={handleProfileMenuOpen1}
               color="inherit"
+              className='account-icon icon'
             >
               <AccountCircle />
             </IconButton>

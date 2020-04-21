@@ -27,7 +27,7 @@ import ListItem from '@material-ui/core/ListItem';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Dialog from '@material-ui/core/Dialog';
-
+import CameraAltIcon from '@material-ui/icons/CameraAlt';
 import CloseIcon from '@material-ui/icons/Close';
 import TextField from '@material-ui/core/TextField';
 import SendIcon from '@material-ui/icons/Send';
@@ -99,7 +99,8 @@ const useStyles = makeStyles((theme: Theme) =>
     changeCover:{
       fontSize:'10px',
       transform: 'translate(-16px, 16px)',
-      fontFamily: 'Montserrat-Medium'
+      fontFamily: 'Montserrat-Medium',
+      cursor:'pointer'
     },
     media: {
       height: 0,
@@ -218,9 +219,13 @@ export default function CenteredGrid() {
           
           <Paper className='profile-details b-r-0' elevation={1} style={styles.paperContainer}>
             <div className='changephoto'>
-                <Button variant="outlined" color="primary" className={classes.changeCover} >
-                    Change Cover Photo
-                </Button>
+                <div  color="primary"  className={classes.changeCover}  >
+                  <div className='file-input'>
+                      <input type='file' />
+                      <CameraAltIcon className='camera'/>
+                    </div>
+                </div>
+                  
             </div>
             <div className='profil-img'>
               <div className='info-wrapper'>
@@ -231,7 +236,7 @@ export default function CenteredGrid() {
                   </div>
                   <div className={classes.ProfileEdit}>
                       <Avatar >
-                      < EditIcon />
+                      <CameraAltIcon/>
                       </Avatar>
                   </div>
                 </div>

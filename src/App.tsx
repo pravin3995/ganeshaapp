@@ -38,6 +38,8 @@ import Footer from './components/Footer'
 import BillingTable from './components/BillingTable'
 import YearSlider from './components/YearSlider'
 import AllEvents from './components/AllEvents'
+import AddMemberForm from './components/AddMemberForm'
+
 
 const DefaultContainer = () => (
   <div>
@@ -71,6 +73,7 @@ const DefaultContainer = () => (
     <Route  path='/billingtable' component={BillingTable}></Route>
     <Route  path='/yearslider' component={YearSlider}></Route>
     <Route  path='/allevents' component={AllEvents}></Route>
+    <Route path='/addmember' component={AddMemberForm}></Route>    
     <Footer/>
   </div>
 )

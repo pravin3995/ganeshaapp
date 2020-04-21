@@ -4,7 +4,7 @@ import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import Button from '@material-ui/core/Button'
 import SearchIcon from '@material-ui/icons/Search'
-import { Box, WithStyles, withStyles, IconButton, Theme, TextField, InputBase } from '@material-ui/core'
+import { Box, WithStyles, withStyles, IconButton, Theme, TextField, InputBase, Link } from '@material-ui/core'
 import Avatar from '@material-ui/core/Avatar'
 import Typography from '@material-ui/core/Typography'
 import DeleteIcon from '@material-ui/icons/Delete'
@@ -158,7 +158,9 @@ export default function Member() {
 								inputProps={{ 'aria-label': 'search' }}
 								/>
 							</div>
-							<Button variant="contained" className={classes.button}> Add </Button>		
+							<a href="/addmember" className='text-decoration-none'>
+							<Button variant="contained"  className={classes.button}> Add </Button>		
+							</a>
 						</Box>
 					</Box>
 				</CardContent>	
@@ -166,9 +168,9 @@ export default function Member() {
      			 	<Grid item xs={6} sm={6} md={6} lg={3}>
 						<Card>
 						<CardContent className='pb-16'>
-							<Box display="flex" justifyContent="space-between" className='mb-10'>
+							<Box display="flex" justifyContent="flex-end" className='mb-10'>
 								<Box className="delete-dialogbox dialogbox">	
-									<DeleteIcon  onClick={handleClickOpen} className='member_icon pr-0' />								
+									<DeleteIcon  onClick={handleClickOpen} className='member_icon pr-0 ' />								
 									<Dialog className="delete-popup" onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
 										<DialogTitle id="customized-dialog-title" onClose={handleClose} >
 											<h5 className='m-0'>Delete Member</h5>
@@ -200,7 +202,7 @@ export default function Member() {
 								</Box>
 
 								<Box className="edit-dialogbox dialogbox " >	
-									<EditIcon onClick={handleClickOpenEdit} className="member_icon"/>							
+															
 									<Dialog className="delete-popup" onClose={handleClose} aria-labelledby="customized-dialog-title" open={openEdit}>
 										<DialogTitle id="customized-dialog-title" onClose={handleCloseEdit}>
 											<h5 className='m-0 h1'>Edit Member</h5>
@@ -249,9 +251,9 @@ export default function Member() {
 					<Grid item xs={6} sm={6} md={6} lg={3}>
 						<Card>
 						<CardContent className='pb-16'>
-							<Box display="flex" justifyContent="space-between" className='mb-10'>
+							<Box display="flex" justifyContent="flex-end" className='mb-10'>
 								<Box className="delete-dialogbox dialogbox">	
-									<DeleteIcon  onClick={handleClickOpen} className='member_icon pr-0' />								
+									<DeleteIcon  onClick={handleClickOpen} className='member_icon pr-0 t-right' />								
 									<Dialog className="delete-popup" onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
 										<DialogTitle id="customized-dialog-title" onClose={handleClose} >
 											<h5 className='m-0'>Delete Member</h5>
@@ -283,7 +285,7 @@ export default function Member() {
 								</Box>
 
 								<Box className="edit-dialogbox dialogbox " >	
-									<EditIcon onClick={handleClickOpenEdit} className="member_icon"/>							
+															
 									<Dialog className="delete-popup" onClose={handleClose} aria-labelledby="customized-dialog-title" open={openEdit}>
 										<DialogTitle id="customized-dialog-title" onClose={handleCloseEdit}>
 											<h5 className='m-0 h1'>Edit Member</h5>
