@@ -111,13 +111,13 @@ export default function EventPage() {
 	return (
 		<div className=' all-events main-wrapper pt-0'>
 			<div>
-				<CardContent className='pb-0 pt-0'>
+				<CardContent className='pb-0 '>
 					<Box display='flex' justifyContent='space-between' flexWrap='wrap' alignItems='center' mt={2}>
 						<h3 className='h1-title mt-0 mb-0'> Upcomming Events</h3>
 					</Box>
 				</CardContent>
 				<Grid container >
-					<Grid item xs={12} sm={6} md={6} >
+					<Grid item xs={12} sm={12} md={6} >
 							<CardContent className='pb-0'>
 								<Card className='post-card'>
 									<CardContent>
@@ -199,12 +199,7 @@ export default function EventPage() {
 																		<FacebookIcon className='facebook-icon icon-size'/>
 																		<TwitterIcon className='twitter-icon icon-size'/>
 																	</div>
-																	<DialogActions className='pr-0 '>
-																		<Button  color="primary">
-																			{/* <SendIcon/> */}
-																			Cancel
-																		</Button>
-																	</DialogActions>
+																	
 																</DialogContent>
 														</Dialog>
 													</div>
