@@ -214,11 +214,11 @@ export default function CenteredGrid() {
     console.log(data);
   };
   return (   
-    <div className={classes.root} >
+    <div >
         <div className='profile'>
           
           <Paper className='profile-details b-r-0' elevation={1} style={styles.paperContainer}>
-            <div className='changephoto'>
+            <div className='changephoto mobile-view'>
                 <div  color="primary"  className={classes.changeCover}  >
                   <div className='file-input'>
                       <input type='file' />
@@ -226,6 +226,11 @@ export default function CenteredGrid() {
                     </div>
                 </div>
                   
+            </div>
+            <div className='changephoto desktop-view'>
+                <Button variant="contained" color="primary" className={classes.changeCover} >
+                    Change Cover Photo
+                </Button>
             </div>
             <div className='profil-img'>
               <div className='info-wrapper'>

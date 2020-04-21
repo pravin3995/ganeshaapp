@@ -125,7 +125,6 @@ export default function ReceiptDetails() {
                  
                 <Card elevation={0} className='p-relative'>
                   <div className="circle-shape circle-4"><span>Paid</span></div>
-
                   {/* <div className='circle'>
                       <FiberManualRecordIcon className='icon left-icon'/>
                       <FiberManualRecordIcon className='icon right-icon'/>

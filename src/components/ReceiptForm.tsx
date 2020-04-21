@@ -285,10 +285,10 @@ export default function SimpleTabs() {
                       Pravin Jadhav
                    </Typography>
                   </div>
-                  <div style={{textAlign:'right'}}>
-                     <IconButton aria-label="display more actions" edge="end" color="inherit" className='edit-icon' >
+                  <div className='t-right'>
+                     <div aria-label="display more actions" color="inherit" className='edit-icon' >
                          < EditIcon />
-                      </IconButton>
+                      </div>
                   </div>
                 </div> 
                <Typography color="textSecondary" gutterBottom className='amount-text '>

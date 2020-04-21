@@ -51,6 +51,9 @@ p,.MuiTypography,span{
     font-family: 'Montserrat-Medium'!important;
     font-size: 14px;
 }
+a:active{
+    color:$icon-color;
+}
   body {
     font-family: 'Montserrat-Medium';
   }
@@ -706,12 +709,12 @@ p,.MuiTypography,span{
     .events-icon-wrapper{
         display: flex;
         &:hover{
-           a,.icon{
-               color: $icon-color;
+           span,.icon{
+               color: #858789;
            }
         }
         
-       a{
+       span{
            margin-left: 4px;
            font-size: 14px;
            text-decoration: none;
@@ -723,12 +726,39 @@ p,.MuiTypography,span{
            font-size: 18px;
            color: $icon-color;
        }
+       a{
+           display: flex;
+       }
     }
     .MuiCardContent-root:last-child{
         padding: 16px;
     }
+   
 }
-
+.dialog-wrapper{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.social-icon{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px 0;
+    cursor: pointer;
+    .icon-size{
+        font-size: 40px;
+        margin-right: 15px;
+    }
+    .whatsup-icon{
+        color: #09df09;
+    }
+    .facebook-icon{
+        color: #000091;
+    }
+    .twitter-icon{
+        color: #00b8ff;
+    }
+}
 .center{
     align-self: center;
 }
@@ -843,7 +873,7 @@ p,.MuiTypography,span{
         cursor: pointer;
         color: $icon-color;
         &:hover{
-            color: #666;
+            color: #858789;
         }
     }
 }
@@ -1106,6 +1136,11 @@ p,.MuiTypography,span{
     }
     .edit-icon{
         padding: 0;
+        color: $icon-color;
+        cursor: pointer;
+        &:hover{
+            color: #858789;
+        }
     }
 }
 // Profile form
@@ -1130,6 +1165,9 @@ p,.MuiTypography,span{
     display: flex;
     justify-content: center;
     flex-direction: column;
+    .mobile-view{
+        display: none;
+    }
     .profile-details{
         // border-radius:20px;
         background:#fff9c7;
@@ -1171,6 +1209,7 @@ p,.MuiTypography,span{
     }
     .changephoto{
         text-align: right;
+        // margin-top: 10px;
         .camera{
             color: $icon-color;
             cursor: pointer;
@@ -1303,7 +1342,7 @@ p,.MuiTypography,span{
     .MuiOutlinedInput-root{
         background-color: white;
         font-family: 'Montserrat-Medium';
-
+        font-size: 14px;
         // border-radius: 15px;
     }
 }
@@ -1622,7 +1661,7 @@ a.link-color {
         font-size: 20px;
     }
     &:hover{
-        color:#333;
+        color:#858789;
     }
 }
 //Tab
@@ -1659,7 +1698,7 @@ a.link-color {
     .pending-card{
         margin-bottom:20px;
         // border-radius:15px!important;
-        margin-top:26px;
+        margin-top:20px;
         // width:420px;
         box-shadow: 4px 5px 14px -2px rgba(0,0,0,0.33);
     }
@@ -2027,6 +2066,32 @@ header.MuiAppBar-colorPrimary{
     margin-left: 0 !important;
     margin-top: 0!important;
 }
+///
+.paid{
+    position:relative;
+  }
+  .paid h2{
+    position:absolute;
+    color:rgb(0,200,0);
+    font-size:3.5rem;
+    padding:5px 20px;
+    border:5px solid rgb(0,200,0);
+    display:table;
+    transform: rotate(-20deg);
+    top:33px;
+    background-color: #fff;
+    z-index: 1;
+    font-family: sans-serif;
+    font-weight: 900;
+      border-radius:10px;
+  }
+  .circle{
+    border:45px solid rgb(0,200,0);
+    padding:80px;
+    position: absolute;
+    border-radius:50%;
+    left: 38px;
+  }
 @media screen and (max-width: 768px){
     .event-slider{
         width: 100%;
@@ -2112,6 +2177,14 @@ header.MuiAppBar-colorPrimary{
     .MuiTabs-flexContainer{
         display: flex;
     }
+ }
+ .profile{
+     .mobile-view{
+         display: block;
+     }
+     .desktop-view{
+         display: none;
+     }
  }
 }
 @media screen and (max-width: 460px){

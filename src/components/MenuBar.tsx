@@ -183,10 +183,10 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Divider />
             <List component="div" disablePadding>
-              <ListItem button className={classes.menuItem}>
+              <ListItem button className={classes.menuItem} component={Link} to="/details">
                 <ListItemText className='color-text t-center ml-10'>Receipt Details</ListItemText>
               </ListItem>
-              <ListItem button className={classes.menuItem}>
+              <ListItem button className={classes.menuItem}  component={Link} to="/receiptform">
                 <ListItemText className='color-text' inset primary="Receipt Form" />
               </ListItem>
             </List>

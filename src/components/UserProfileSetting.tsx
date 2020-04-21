@@ -11,6 +11,7 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import TextField from '@material-ui/core/TextField';
+import CameraAltIcon from '@material-ui/icons/CameraAlt';
 import CallIcon from '@material-ui/icons/Call';
 import '../custom.scss';
 
@@ -128,7 +129,7 @@ export default function VariantAvatars() {
                   </div>
                   <div className={classes.ProfileEdit}>
                       <Avatar >
-                      < EditIcon />
+                      < CameraAltIcon />
                       </Avatar>
                   </div>
                 </div>
