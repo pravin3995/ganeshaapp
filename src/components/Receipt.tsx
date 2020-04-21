@@ -119,10 +119,7 @@ export default function ReceiptDetails() {
              </Slider>
           
         </div>
-			    <h2 className='h1-title t-center'> 2020 </h2>
             <CardContent className='pt-0 receipt-size' >  
-                    
-                 
                 <Card elevation={0} className='p-relative'>
                   <div className="circle-shape circle-4"><span>Paid</span></div>
                   {/* <div className='circle'>
