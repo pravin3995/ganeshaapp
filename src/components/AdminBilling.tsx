@@ -736,11 +736,7 @@ export default function SimpleTabs() {
             </TableBody>
                  </Table>
              </TableContainer>
-             <Box className='t-right' mt={2} mr={1} >
-                     <Button variant="contained" color="primary" >
-                        See All
-                     </Button>
-                  </Box> 
+             
          </CardContent>
            </div>
            
@@ -821,11 +817,6 @@ export default function SimpleTabs() {
             </TableBody>
                  </Table>
              </TableContainer>
-             <Box className='t-right' mt={2} mr={1} >
-                  <Button variant="contained" color="primary" >
-                    See All
-                  </Button>
-              </Box> 
          </CardContent>
            </div>
            

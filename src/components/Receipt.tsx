@@ -56,6 +56,7 @@ export default function ReceiptDetails() {
     focusOnSelect: false,
     slidesToShow: 1,
     speed:400,
+    fade: true,
     
     // afterChange: current => this.setState({ activeSlide: current }),
     responsive: [

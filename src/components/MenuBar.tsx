@@ -209,13 +209,24 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
             </ListItemIcon>
             <ListItemText className='color-text'>Receipt Form</ListItemText>
           </ListItem> */}
-          <ListItem button component={Link} to="/adminbilling">
+          <ListItem button onClick={handleClick} className={classes.menuItem}>
             <ListItemIcon>
               <DescriptionIcon className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Billing</ListItemText>
+            {open ? <IconExpandLess className='color-text'/> : <IconExpandMore className='color-text'/>}
           </ListItem>
-         
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <Divider />
+            <List component="div" disablePadding>
+              <ListItem button className={classes.menuItem} component={Link} to="/adminbilling">
+                <ListItemText className='color-text t-center ml-10'>Admin Billing</ListItemText>
+              </ListItem>
+              <ListItem button className={classes.menuItem}  component={Link} to="/treasurebilling">
+                <ListItemText className='color-text' inset primary="Treasure Billing" />
+              </ListItem>
+            </List>
+          </Collapse>
           
 
           {/* {['Home', 'About Mandal', 'Profile', 'Receipt'].map((text, index) => (
@@ -315,6 +326,8 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
   //notification
   const menuIds = 'primary-search-account-menus';
   const Notification = (
+    <div className='notification-main-wrap'>
+
     <Menu
       anchorEl={anchorEl}
       anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
@@ -379,6 +392,7 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
         <a href=''>See All</a>
       </div>
     </Menu>
+    </div>
   );
 
   const mobileMenuId = 'primary-search-account-menu-mobile';
