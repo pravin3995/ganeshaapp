@@ -134,9 +134,9 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
   }
   
   const drawer = (
-    <div>
+    <div className='side-bar-wrap'>
       {/* <div className={classes.toolbar} /> */}
-      <div className='side-bar-wrap mt-16'>
+      <div className=' mt-16'>
           <Avatar variant='square' className='side-bar-logo' alt = 'Jay Ganesh' src = 'https://i.pinimg.com/originals/6d/a6/03/6da6030949f48ddd94d4ce117da336d5.jpg'/>	
 
         </div>
@@ -244,12 +244,24 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
             </ListItemIcon>
             <ListItemText className='color-text'>Settings</ListItemText>
           </ListItem>
-          <ListItem button component={Link} to="#.">
+          <ListItem button onClick={handleClick} className={classes.menuItem}>
             <ListItemIcon>
               <LanguageIcon  className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Change Language</ListItemText>
+            {open ? <IconExpandLess className='color-text'/> : <IconExpandMore className='color-text'/>}
           </ListItem>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <Divider />
+            <List component="div" disablePadding>
+              <ListItem button className={classes.menuItem}>
+                <ListItemText className='color-text t-center ml-10'>Marathi</ListItemText>
+              </ListItem>
+              <ListItem button className={classes.menuItem}>
+                <ListItemText className='color-text t-center ml-10'>English</ListItemText>
+              </ListItem>
+            </List>
+          </Collapse>
           <ListItem button component={Link} to="/ ">
             <ListItemIcon>
               <ExitToAppIcon className='color-text' />

@@ -178,6 +178,12 @@ a:active{
     }
   
 }
+
+.side-bar-wrap{
+    .MuiListItemIcon-root{
+        min-width: 40px;
+    }
+}
 .user-delete-message{
     // color: $grey;
     font-size: 14px;
@@ -943,7 +949,7 @@ a:active{
              padding: 0;
              h3{
                  padding: 0 20px;
-                 margin-bottom: 0;
+                 margin-bottom: 8px;
              }
          }
          .all-notification{
