@@ -212,6 +212,7 @@ export default function EventPage() {
 								
 							</CardContent>
 						</Grid>
+				    
 				</Grid>
 			</div>
 		</div>

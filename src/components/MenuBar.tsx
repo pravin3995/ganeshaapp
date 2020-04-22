@@ -127,8 +127,20 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const [open, setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
+  const [open1, setOpen1] = React.useState(false);
+  const [open2, setOpen2] = React.useState(false);
+  const [open3, setOpen3] = React.useState(false);
 
+  function handleClick1() {
+    setOpen1(!open1)
+  }
+  function handleClick2() {
+    setOpen2(!open2)
+  }
+  function handleClick3() {
+    setOpen3(!open3)
+  }
   function handleClick() {
     setOpen(!open)
   }
@@ -173,14 +185,14 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
             </ListItemIcon >
             <ListItemText className='color-text'>Profile</ListItemText>
           </ListItem>
-          <ListItem  button onClick={handleClick} className={classes.menuItem}>
+          <ListItem  button onClick={handleClick1} className={classes.menuItem}>
             <ListItemIcon>
               <ReceiptIcon  className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Receipt</ListItemText>
-            {open ? <IconExpandLess className='color-text'/> : <IconExpandMore className='color-text'/>}
+            {open1 ? <IconExpandLess className='color-text'/> : <IconExpandMore className='color-text'/>}
           </ListItem>
-          <Collapse in={open} timeout="auto" unmountOnExit>
+          <Collapse in={open1} timeout="auto" unmountOnExit>
             <Divider />
             <List component="div" disablePadding>
               <ListItem button className={classes.menuItem} component={Link} to="/details">
@@ -209,14 +221,14 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
             </ListItemIcon>
             <ListItemText className='color-text'>Receipt Form</ListItemText>
           </ListItem> */}
-          <ListItem button onClick={handleClick} className={classes.menuItem}>
+          <ListItem button onClick={handleClick2} className={classes.menuItem}>
             <ListItemIcon>
               <DescriptionIcon className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Billing</ListItemText>
-            {open ? <IconExpandLess className='color-text'/> : <IconExpandMore className='color-text'/>}
+            {open2 ? <IconExpandLess className='color-text'/> : <IconExpandMore className='color-text'/>}
           </ListItem>
-          <Collapse in={open} timeout="auto" unmountOnExit>
+          <Collapse in={open2} timeout="auto" unmountOnExit>
             <Divider />
             <List component="div" disablePadding>
               <ListItem button className={classes.menuItem} component={Link} to="/adminbilling">
@@ -244,14 +256,14 @@ export default function ResponsiveDrawer(props: ResponsiveDrawerProps) {
             </ListItemIcon>
             <ListItemText className='color-text'>Settings</ListItemText>
           </ListItem>
-          <ListItem button onClick={handleClick} className={classes.menuItem}>
+          <ListItem button onClick={handleClick3} className={classes.menuItem}>
             <ListItemIcon>
               <LanguageIcon  className='color-text'/>
             </ListItemIcon>
             <ListItemText className='color-text'>Change Language</ListItemText>
-            {open ? <IconExpandLess className='color-text'/> : <IconExpandMore className='color-text'/>}
+            {open3 ? <IconExpandLess className='color-text'/> : <IconExpandMore className='color-text'/>}
           </ListItem>
-          <Collapse in={open} timeout="auto" unmountOnExit>
+          <Collapse in={open3} timeout="auto" unmountOnExit>
             <Divider />
             <List component="div" disablePadding>
               <ListItem button className={classes.menuItem}>

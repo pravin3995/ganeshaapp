@@ -966,6 +966,12 @@ a:active{
              margin: 0
          }
      }
+     .MuiTableCell-head{
+        .MuiCheckbox-colorSecondary.Mui-checked{
+            color: darken($color: $primary, $amount: 1) ;
+        }
+     }
+   
      //Billing
      .treasure-billing {
          .MuiBox-root{
@@ -2098,6 +2104,7 @@ header.MuiAppBar-colorPrimary{
     border-radius:50%;
     left: 38px;
   }
+ 
 @media screen and (max-width: 768px){
     .event-slider{
         width: 100%;

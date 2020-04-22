@@ -172,12 +172,12 @@ const useToolbarStyles = makeStyles((theme: Theme) =>
     highlight:
       theme.palette.type === 'light'
         ? {
-            color: theme.palette.secondary.main,
-            backgroundColor: lighten(theme.palette.secondary.light, 0.85),
+            color: theme.palette.primary.main,
+            backgroundColor: lighten(theme.palette.primary.light, 0.85),
           }
         : {
             color: theme.palette.text.primary,
-            backgroundColor: theme.palette.secondary.dark,
+            backgroundColor: theme.palette.primary.dark,
           },
     title: {
       flex: '1 1 100%',
@@ -323,47 +323,6 @@ function a11yProps(index: any) {
     'aria-controls': `simple-tabpanel-${index}`,
   };
 }
-//table
-// function createData(name: string, date: string, amount: number, quantity: number) {
-//   return { name, date, amount, quantity };
-// } 
-// const rows = [
-//   createData('Frozen yoghurt', '20-feb', 6.0, 24),
-//   createData('Ice cream sandwich', '20-feb', 9.0, 37),
-//   createData('Eclair', '20-feb', 16.0, 24),
-//   createData('Cupcake', '20-feb', 3.7, 67),
-//   createData('Gingerbread', '20-feb', 16.0, 49),
-// ];
-// const useStyles = makeStyles((theme: Theme) => ({
-//   root: {
-//     flexGrow: 1,
-//     backgroundColor: theme.palette.background.paper,
-//   },
-//   Card:{
-//       padding:20,
-//       boxShadow:' 0px 7px 30px 0px rgba(77, 84, 93, 0.08), 0px 9px 30px 0px rgba(0, 177, 179, 0.08), 0px 9px 1px -1px rgba(54, 98, 154, 0.08)!important'
-//   },
-//   table: {
-  
-//     minWidth: 300,
-//   },
-//   input:{
-//     padding:10,
-//   },
-//   formControl: {
-//     margin: theme.spacing(1),
-//     minWidth: 120,
-//   },
-//   selectEmpty: {
-//     marginTop: theme.spacing(2),
-//   },
-//   button: {
-//     backgroundColor: '#df3088',
-//     borderRadius: '15px',
-//     color: 'white',
-//     padding: '3px 24px'
-//   }
-// }));
 //tooltip
 const useStylesBootstrap = makeStyles((theme: Theme) => ({
   arrow: {
