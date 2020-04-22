@@ -75,6 +75,7 @@ const options = ['2020', '2019', '2018'];
 
 export default function EventPage() {
 	const [open, setOpen] = React.useState(false);
+	const [open1, setOpen1] = React.useState(false);
 	const anchorRef = React.useRef<HTMLDivElement>(null);
 	const [selectedIndex, setSelectedIndex] = React.useState(1);
 	const classes = useStyles()
@@ -84,7 +85,7 @@ export default function EventPage() {
 		setOpen(true);
 	  };
 	const handleClickOpenShare = () => {
-		setOpen(true);
+		setOpen1(true);
 	  };
 	const handleChange = (event: React.ChangeEvent<{ value: unknown }>) => {
 	  setAge(event.target.value as string);
@@ -188,7 +189,7 @@ export default function EventPage() {
 															<ShareIcon className='icon'/>
 															<span>Share</span>
 														</div>
-														<Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title" className='dialog-wrapper'>
+														<Dialog open={open1} onClose={handleClose} aria-labelledby="form-dialog-title" className='dialog-wrapper'>
 															<DialogTitle id="simple-dialog-title" className='delete-post'><h4 className='m-0 h1-title'>Share</h4> <a href=""><CloseIcon /></a></DialogTitle>
 															   <DialogContent className='pt-0'>
 																	<DialogContentText className='mt-0'>
