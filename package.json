@@ -25,7 +25,7 @@
     "material-ui-image": "^3.2.3",
     "memoize-one": "^5.1.1",
     "mui-rte": "^1.13.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.0",
     "react-data-export": "^0.6.0",
     "react-data-table": "^1.0.2",
